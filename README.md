@@ -1,14 +1,9 @@
-# Default starter for Gridsome
+# Reliably Documentation with Gridsome
 
-This is the project you get when you run `gridsome create new-project`.
+This is the Documentation for Reliably, built with <a href="https://gridsome.org" target="_blank" rel="noopener noreferer">Gridsome</a>.
 
-### 1. Install Gridsome CLI tool if you don't have
+## Contribute
 
-`npm install --global @gridsome/cli`
-
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+1. Install Gridsome CLI tool if you don't already have: `npm install --global @gridsome/cli`
+2. `gridsome develop` to start a local dev server at `http://localhost:8080`
+3. Happy coding 🎉🙌
