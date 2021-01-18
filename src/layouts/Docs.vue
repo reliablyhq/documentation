@@ -85,7 +85,6 @@ export default {
       return flat;
     },
     currentIndex () {
-      console.log(this.items);
       return this.items.findIndex(item => {
         return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
       })
