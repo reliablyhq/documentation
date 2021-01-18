@@ -1,0 +1,16 @@
+section.doc-content {
+  padding-top: 1.2%;
+
+  .docs-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space);
+    padding-bottom: var(--space);
+
+    border-top: 1px solid var(--border-color);
+
+    &__link {
+      border: 1px solid var(--border-color);
+    }
+  }
+}

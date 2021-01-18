@@ -1,0 +1,46 @@
+- title: Prologue
+  items:
+    - title: Introduction
+      link: /docs/
+- title: Getting Started
+  items:
+    - title: Install
+      link: /docs/getting-started/install/
+    - title: Login
+      link: /docs/getting-started/login/
+    - title: Scan your first project
+      link: /docs/getting-started/scan-your-first-project/
+    - title: Review past scans
+      link: /docs/getting-started/review-past-scans/
+    - title: Configure
+      link: /docs/getting-started/Configure/
+    - title: Run as part of your CI pipeline
+      link: /docs/getting-started/ci-pipeline/
+
+- title: Guides
+  items:
+    - title: Visual Studio Code Plugin
+      link: /docs/guides/vscode/
+    - title: GitHub Action
+      link: /docs/guides/github-action/
+    - title: GitLab Pipeline
+      link: /docs/guides/gitlab-pipeline/
+    - title: Jenkins Build
+      link: /docs/guides/jenkins/
+    - title: Circle CI
+      link: /docs/guides/circle-ci/
+    - title: Kubernetes Operator
+      link: /docs/guides/kubernetes-operator/
+    - title: CRON Job
+      link: /docs/guides/cron-job/
+
+- title: Reference
+  items:
+    - title: CLI
+      items:
+        - title: auth
+          link: /docs/reference/cli/auth/
+        - title: discover
+          link: /docs/reference/cli/discover/
+    - title: REST API
+      link: /docs/reference/rest-api/

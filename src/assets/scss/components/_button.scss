@@ -1,0 +1,132 @@
+.button {
+  position: relative;
+  z-index: 1;
+
+	display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  padding: .5em 1em;
+  
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+
+  color: var(--primary-color-dark);
+  font-weight: 500;
+  letter-spacing: .5px;
+  text-decoration: none;
+  
+  transition: transform .2s, background .3s, box-shadow .3s, color .3s;
+
+  > span {
+    z-index: 2;
+  }
+
+  > svg + span {
+    margin-left: .5em;
+  }
+
+  &:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-1px);
+  }
+
+  &:after {
+    content: " ";
+
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    
+    border: 1px solid;
+    border-radius: 3px;
+    box-shadow: inset -1px -2px 0px 0px rgba(0,0,0,.05);
+    opacity: .6;
+
+    transition: opacity .3s, box-shadow .3s;
+  }
+
+  &:active:after {
+    box-shadow: none;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &.primary {
+    color: white;
+    background-color: var(--primary-color-dark);
+    
+    &:after {
+      border-color: rgba(0,0,0,.1);
+    }
+
+    &:before {
+      content: "";
+
+      position: absolute;
+      right: 100%;
+      bottom: 100%;
+      z-index: -1;
+      
+      height: 1em;
+      width: 1em;
+      
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      
+      transform-origin: center;
+      transform: translate(50%, 50%) scale(0);
+      transition: transform .2s ease-in-out;
+    }
+
+    &:focus:before,
+    &:hover:before {
+      transform: translate(50%, 50%) scale(20);
+    }
+  }
+
+  &--small {
+    padding: .5em 1em;
+    font-size: .85em;
+  }
+
+  &--xsmall {
+    padding: .5em 1em;
+    font-size: .7em;
+  }
+
+  &--icon {
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    
+  }
+
+  &--blank {
+    padding-right: 0;
+    padding-left: 0;
+
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none!important;
+
+    &:not(:hover) {
+      opacity: .6;
+
+      color: currentColor;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &--large {
+    padding: 1em 2em;
+
+    font-size: 1.2em;
+  }
+}

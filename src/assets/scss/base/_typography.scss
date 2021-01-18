@@ -1,0 +1,26 @@
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  // color: $brown;
+  font-display: swap;
+  font-family: 'Filson Pro', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.agrandir {
+  font-family: 'Agrandir', sans-serif;
+  font-weight: 700;
+  letter-spacing: .02em;
+  &--light {
+    font-weight: 300;
+  }
+}

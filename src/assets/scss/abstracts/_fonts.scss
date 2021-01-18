@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Agrandir';
+  src: local(''),
+       url('../fonts/Agrandir-WideLight-c27598.woff2') format('woff2'),
+       url('../fonts/Agrandir-WideLight-4b56b3.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: local(''),
+       url('../fonts/Agrandir-GrandHeavy-f20007.woff2') format('woff2'),
+       url('../fonts/Agrandir-GrandHeavy-923046.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: local(''),
+       url('../fonts/FilsonPro-Regular-9c6371.woff2') format('woff2'),
+       url('../fonts/FilsonPro-Regular-c441a4.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: local(''),
+       url('../fonts/FilsonPro-Bold-759790.woff2') format('woff2'),
+       url('../fonts/FilsonPro-Bold-ce7d2c.woff') format('woff');
+  font-weight: 700;
+}
