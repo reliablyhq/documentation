@@ -1,8 +1,8 @@
 ---
-title: Run as part of your CI pipeline
+title: Getting started
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["getting-started"]
 status: published
-type: doc
+type: overview
 ---
-# Run as part of your CI pipeline
+# Getting started (overview)

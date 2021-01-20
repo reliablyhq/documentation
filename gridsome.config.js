@@ -22,7 +22,7 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
-        index: ['README'],
+        index: ['index'],
         baseDir: './docs',
         pathPrefix: '/docs',
         typeName: 'DocPage',
@@ -40,13 +40,13 @@ module.exports = {
         }
       }
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'docs/**/*.md',
-        typeName: 'DocPage'
-      }
-    }
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     path: 'docs/**/*.md',
+    //     typeName: 'DocPage'
+    //   }
+    // }
   ],
   // transformers: {
   //   remark: {

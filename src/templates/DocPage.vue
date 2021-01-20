@@ -1,5 +1,5 @@
 <template>
-  <DocsLayout :subtitles="subtitles" :links="links">
+  <DocsLayout :subtitles="subtitles" :allLinks="links">
     <VueRemarkContent class="post mb"></VueRemarkContent>
   </DocsLayout>
 </template>
@@ -21,11 +21,20 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import links from '@/data/doc-links.yaml'
+import rootLinks from '@/data/doc-root-links.yaml';
+import gettingStartedLinks from '@/data/doc-getting-started-links.yaml';
+import guideLinks from '@/data/doc-guides-links.yaml';
+import referenceLinks from '@/data/doc-reference-links.yaml';
+
 export default {
   computed: {
-    links () {
-      return links
+    links() {
+      return {
+        rootLinks: rootLinks,
+        guideLinks: guideLinks,
+        gettingStartedLinks: gettingStartedLinks,
+        referenceLinks: referenceLinks,
+      };
     },
     subtitles() {
       // Remove h1, h4, h5, h6 titles

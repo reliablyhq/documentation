@@ -1,8 +1,8 @@
 ---
-title: reliably auth
+title: CLI Reference
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["reference", "cli"]
 status: published
-type: doc
+type: overview
 ---
-# reliably auth
+# CLI Reference
