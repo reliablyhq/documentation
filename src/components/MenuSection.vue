@@ -33,8 +33,12 @@ export default {
     }
   },
   mounted () {
-    console.log("mounted");
     this.maybeOpenSection();
+  },
+  watch:{
+    $route (to, from){
+      this.maybeOpenSection();
+    }
   },
   methods: {
     maybeOpenSection() {
