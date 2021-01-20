@@ -1,8 +1,8 @@
 ---
-title: reliably auth
+title: CRON Job
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "cli"]
+categories: ["guides", "run-continuously"]
 status: published
 type: doc
 ---
-# reliably auth
+# CRON Job

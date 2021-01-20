@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  // color: $brown;
+  color: var(--body-color);
   font-display: swap;
   font-family: 'Filson Pro', sans-serif;
   font-size: 1.6rem;
@@ -14,6 +14,10 @@ body {
 
 strong {
   font-weight: 700;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 .agrandir {

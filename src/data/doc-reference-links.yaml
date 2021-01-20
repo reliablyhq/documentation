@@ -1,0 +1,11 @@
+- title: CLI
+  slug: cli
+  items:
+    - title: Overview
+      link: /docs/reference/cli/
+    - title: reliably auth
+      link: /docs/reference/cli/reliably-auth/
+    - title: reliably-discover
+      link: /docs/reference/cli/reliably-discover/
+- title: REST API
+  link: /docs/reference/rest-api/

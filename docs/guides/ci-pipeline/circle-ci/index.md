@@ -1,8 +1,8 @@
 ---
-title: reliably auth
+title: Circle CI
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "cli"]
+categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
 ---
-# reliably auth
+# Circle CI
