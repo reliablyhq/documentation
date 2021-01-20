@@ -3,51 +3,36 @@
     <div class="container flex flex-align-top">
       <div class="sidebar">
         <template v-if="links">
-            <g-link v-if="isSubSection" class="sidebar-backlink" to="/docs/">&larr; Docs</g-link>
-            <nav class="sidebar-nav">
-              <div class="sidebar-nav__header">
-                <template v-if="currentPath.startsWith('/docs/getting-started/')">
-                  <div class="menu-item">
-                    Getting Started
-                    <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
-                  </div>
-                  <g-link to="/docs/getting-started" class="menu-link">Overview</g-link>
-                </template>
-                <template v-if="currentPath.startsWith('/docs/guides/')">
-                  <div class="menu-item">
-                    Guides
-                    <span class="count">{{ pagesPerCategory.guides }}</span>
-                  </div>
-                  <g-link to="/docs/guides" class="menu-link">Overview</g-link>
-                </template>
-                <template v-if="currentPath.startsWith('/docs/reference/')">
-                  <div class="menu-item">
-                    Reference
-                    <span class="count">{{ pagesPerCategory.reference }}</span>
-                  </div>
-                  <g-link to="/docs/reference" class="menu-link">Overview</g-link>
-                </template>
-              </div>
-              <template v-for="(group, i1) in links">
-                <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
-                <g-link v-else :key="i1" :to="group.link" class="menu-link">{{ group.title }}</g-link>
+          <g-link v-if="isSubSection" class="sidebar-backlink" to="/docs/">&larr; Docs</g-link>
+          <nav class="sidebar-nav">
+            <div class="sidebar-nav__header">
+              <template v-if="currentPath.startsWith('/docs/getting-started/')">
+                <div class="menu-item">
+                  Getting Started
+                  <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
+                </div>
+                <g-link to="/docs/getting-started" class="menu-link">Overview</g-link>
               </template>
-              
-            </nav>
-          <!-- <template v-else>
-
-
-
-              <div class="menu-item" :key="`title-${i1}`">
-                {{ group.title }}
-              </div>
-              <template v-for="(item, i2) in group.items">
-                <g-link :exact="item.link == '/docs/'" class="menu-item menu-link" :to="item.link" :key="`link-${i1}-${i2}`">
-                  {{ item.title }}
-                </g-link>
+              <template v-if="currentPath.startsWith('/docs/guides/')">
+                <div class="menu-item">
+                  Guides
+                  <span class="count">{{ pagesPerCategory.guides }}</span>
+                </div>
+                <g-link to="/docs/guides" class="menu-link">Overview</g-link>
               </template>
+              <template v-if="currentPath.startsWith('/docs/reference/')">
+                <div class="menu-item">
+                  Reference
+                  <span class="count">{{ pagesPerCategory.reference }}</span>
+                </div>
+                <g-link to="/docs/reference" class="menu-link">Overview</g-link>
+              </template>
+            </div>
+            <template v-for="(group, i1) in links">
+              <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
+              <g-link v-else :key="i1" :to="group.link" class="menu-link">{{ group.title }}</g-link>
             </template>
-          </template> -->
+          </nav>
         </template>
       </div>
       <Section class="doc-content">
@@ -131,21 +116,6 @@ export default {
       }
     },
     pagesPerCategory () {
-      // let Object = {
-      //   prologue: 0,
-      //   gettingStarted: 0,
-      //   guides: {
-      //     total: 0,
-      //     runAsYouCode: 0,
-      //     CIPipeline: 0,
-      //     runContinuously: 0,
-      //     metrics: 0,
-      //   },
-      //   reference: {
-      //     total: 0,
-      //     cli: 0
-      //   }
-      // };
       let categoriesObject = {};
       this.$static.pages.edges.forEach( p => {
         let categories = p.node.categories;
@@ -200,18 +170,164 @@ export default {
     display: inline-block;
     margin-bottom: 4em;
   }
+  .menu-item {
+    margin: 1.5rem 0 .7rem;
+    padding-top: 2rem;
+    
+    // border-top: 1px solid var(--border-color);
+    cursor: pointer;
 
-  &-nav {
-    &__header {
-      a {
-
+    font-size: 1em;
+    font-weight: 400;
+	  // text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    &.active {
+      font-weight: 700;
+      svg {
+        transform: rotate(90deg);
       }
     }
-    .menu-item {
-      // margin-bottom: .7rem;
-      // padding-left: 2rem;
 
+    &:first-child {
+      border-top: 0;
+    }
 
+    svg {
+      vertical-align: -.2rem;
+    }
+
+    .count {
+      display: inline-block;
+      margin-left: .5em;
+      padding: 0 .75em;
+
+      background-color: var(--body-color-lighter);
+      border-radius: 1rem;
+
+      color: var(--body-color-light);
+      font-size: .75em;
+      font-weight: 400;
+    }
+  }
+
+  .menu-link {
+    display: block;
+    margin: 0 0 0 .7rem;
+    padding: 1rem 0 1rem 1.5rem;
+
+    border-left: 1px solid currentColor;
+    opacity: 1;
+
+    color: currentColor;
+    // font-size: .95rem;
+    font-weight: 400;
+    text-decoration: none;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &.active--exact {
+      color: var(--primary-color)
+    }
+
+    &.active--exact {
+      position: relative;
+
+      // padding-left: 1.2rem;
+
+      outline-width: 1px;
+
+      font-weight: 700;
+    }
+  }
+
+  .menu-item {
+    &--sub {
+      position: relative;
+
+      margin: 0;
+
+      cursor: pointer;
+
+      font-weight: 400;
+
+      &:hover {
+        color: var(--primary-color)
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: .2em;
+        right: 0;
+
+        display: block;
+        height: 1em;
+        width: 1em;
+
+        background-color: currentColor;
+        mask-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z\"/></svg>");
+
+        transform: rotate(0);
+        transition: all .2s ease-in-out;
+      }
+
+      & + .menu-item--submenu {
+        display: none;
+        margin-left: 1em;
+      }
+      &.open {
+        &::after {
+          transform: rotate(90deg);
+        }
+        + .menu-item--submenu {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  .submenu {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    opacity: 1;
+
+    font-size: 1.4rem;
+
+    &__item-depth-2 {
+      margin-bottom: 0;
+      padding: .4em 0;
+
+      border-top: 1px dashed var(--border-color);
+
+      font-size: .95em;
+      
+      transition: border-color .3s;
+    }
+
+    &__item-depth-3 {
+      margin-top: -.4em;
+      margin-bottom: 0;
+      padding: .2em .4em;
+
+      opacity: .8;
+
+      font-size: .95em;
+    }
+
+    &__link {
+      color: currentColor;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary-color)
+      }
     }
   }
 }

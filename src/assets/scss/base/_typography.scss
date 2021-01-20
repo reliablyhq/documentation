@@ -16,15 +16,58 @@ strong {
   font-weight: 700;
 }
 
-h1 {
-  font-size: 3em;
-}
-
 .agrandir {
   font-family: 'Agrandir', sans-serif;
   font-weight: 700;
   letter-spacing: .02em;
   &--light {
     font-weight: 300;
+  }
+}
+
+.post {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--brown);
+  }
+  h1, h4, h5, h6 {
+    a {
+      display: none;
+    }
+  }
+  h1, h2, h3 {
+    a {
+      float: left;
+      position: relative;
+      top: .12em;
+
+      margin-left: -1.2em;
+      width: .8em;
+
+      background: none;
+      box-shadow: none;
+      opacity: 0;
+      
+      color: var(--primary-color);
+      font-size: .85em;
+      text-align: center;
+      text-decoration: none;
+      width: .8em;
+    }
+    &:hover {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    margin-top: 1em;
+    padding-top: .9em;
+
+    border-top: 1px solid var(--border-color);
   }
 }

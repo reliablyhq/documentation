@@ -45,10 +45,7 @@ export default {
       this.showSubElements = false;
       let path = this.$route.matched[0].path + '/';
       let link = this.group.items[0].link;
-      console.log(path);
-      console.log(link);
       if (path.startsWith(link)) {
-        console.log(true);
         this.showSubElements = true;
       }
     }
