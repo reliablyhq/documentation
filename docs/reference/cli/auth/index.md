@@ -1,8 +1,0 @@
----
-title: reliably auth
-excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "cli"]
-status: published
-type: doc
----
-# reliably auth

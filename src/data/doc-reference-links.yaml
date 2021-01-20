@@ -3,9 +3,24 @@
   items:
     - title: Overview
       link: /docs/reference/cli/
-    - title: reliably auth
+    - title: reliably
+      link: /docs/reference/cli/reliably/
+    - title: auth
+      maincommand: true
       link: /docs/reference/cli/reliably-auth/
-    - title: reliably-discover
+    - title: login
+      subcommand: true
+      link: /docs/reference/cli/reliably-auth-login/
+    - title: logout
+      subcommand: true
+      link: /docs/reference/cli/reliably-auth-logout/
+    - title: status
+      subcommand: true
+      link: /docs/reference/cli/reliably-auth-status/
+    - title: completion
+      subcommand: false
+      link: /docs/reference/cli/reliably-completion/
+    - title: discover
       link: /docs/reference/cli/reliably-discover/
 - title: REST API
   link: /docs/reference/rest-api/
