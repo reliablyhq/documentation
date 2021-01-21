@@ -65,8 +65,19 @@
 </template>
 
 <static-query>
-query Pages {
-  pages: allDocPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+query {
+  docpages: allDocPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+		edges {
+    	node {
+      	id
+      	title
+        path
+        type
+        categories
+    	}
+    }
+  },
+  clipages: allCliPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
 		edges {
     	node {
       	id
@@ -117,7 +128,8 @@ export default {
     },
     pagesPerCategory () {
       let categoriesObject = {};
-      this.$static.pages.edges.forEach( p => {
+      let allPages = this.$static.docpages.edges.concat(this.$static.clipages.edges);
+      allPages.forEach( p => {
         let categories = p.node.categories;
         categories.forEach( c => {
           if (categoriesObject[c]) {
