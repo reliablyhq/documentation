@@ -49,3 +49,7 @@
       link: /docs/reference/cli/
     - title: REST API
       link: /docs/reference/rest-api/
+    - title: How it works
+      items:
+        - title: Concepts
+          link: /docs/reference/howitworks/concepts/

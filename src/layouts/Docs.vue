@@ -129,6 +129,7 @@ export default {
     pagesPerCategory () {
       let categoriesObject = {};
       let allPages = this.$static.docpages.edges.concat(this.$static.clipages.edges);
+      console.log("***********:", allPages);
       allPages.forEach( p => {
         let categories = p.node.categories;
         categories.forEach( c => {
@@ -142,7 +143,7 @@ export default {
       return categoriesObject;
     },
     items () {
-      // const flat = []; 
+      // const flat = [];
       // this.links.forEach(group => {
       //   group.items.forEach(item => {
       //     if (item.link) {
@@ -185,7 +186,7 @@ export default {
   .menu-item {
     margin: 1.5rem 0 .7rem;
     padding-top: 2rem;
-    
+
     // border-top: 1px solid var(--border-color);
     cursor: pointer;
 
@@ -193,7 +194,7 @@ export default {
     font-weight: 400;
 	  // text-transform: uppercase;
     letter-spacing: 1px;
-    
+
     &.active {
       font-weight: 700;
       svg {
@@ -256,9 +257,9 @@ export default {
       color: var(--body-color-light);
       // + .item-link {
       //   margin-top: .8rem;
-      // } 
+      // }
     }
-    
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -326,7 +327,7 @@ export default {
       }
     }
   }
-  
+
   .submenu {
     margin: 0;
     padding: 0;
@@ -343,7 +344,7 @@ export default {
       border-top: 1px dashed var(--border-color);
 
       font-size: .95em;
-      
+
       transition: border-color .3s;
     }
 
