@@ -19,8 +19,8 @@
 
 - title: Guides
   items:
-    - title: Visual Studio Code Plugin
-      link: /docs/guides/vscode/
+    - title: Run as you code
+      link: /docs/guides/code/
     - title: GitHub Action
       link: /docs/guides/github-action/
     - title: GitLab Pipeline
@@ -38,9 +38,25 @@
   items:
     - title: CLI
       items:
-        - title: auth
-          link: /docs/reference/cli/auth/
-        - title: discover
-          link: /docs/reference/cli/discover/
+        - title: Reliably
+          link: /docs/reference/cli/reliably/
+        - title: Reliably Auth
+          link: /docs/reference/cli/reliably-auth-login/
+        - title: Reliably Discover
+          link: /docs/reference/cli/reliably-discover/
+        - title: Reliably Completion
+          link: /docs/reference/cli/reliably-completion/
     - title: REST API
       link: /docs/reference/rest-api/
+    - title: How it works
+      items:
+        - title: Concepts
+          link: /docs/reference/howitworks/concepts/
+        - title: Suggestions
+          link: /docs/reference/howitworks/suggestions/
+        - title: Services
+          link: /docs/reference/howitworks/services/
+        - title: Advice
+          link: /docs/reference/howitworks/advice/
+        - title: Architecture
+          link: /docs/reference/howitworks/architecture/
