@@ -7,11 +7,11 @@
     <div v-if="showSubElements" class="sidebar-section__content">
       <g-link
         v-for="(item, i2) in group.items"
+        :to="item.link"
         :exact="item.link == '/docs/'"
         class="menu-item menu-link"
-        :to="item.link"
+        :class="{'subcommand': item.subcommand, 'maincommand': item.maincommand}"
         :key="`link-${index}-${i2}`"
-        :count="counts[item.slug]"
       >
         {{ item.title }}
         <span v-if="counts[item.slug]" class="count">{{ counts[item.slug] }}</span>

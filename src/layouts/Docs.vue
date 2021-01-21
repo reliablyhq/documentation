@@ -65,8 +65,19 @@
 </template>
 
 <static-query>
-query Pages {
-  pages: allDocPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+query {
+  docpages: allDocPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+		edges {
+    	node {
+      	id
+      	title
+        path
+        type
+        categories
+    	}
+    }
+  },
+  clipages: allCliPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
 		edges {
     	node {
       	id
@@ -117,7 +128,8 @@ export default {
     },
     pagesPerCategory () {
       let categoriesObject = {};
-      this.$static.pages.edges.forEach( p => {
+      let allPages = this.$static.docpages.edges.concat(this.$static.clipages.edges);
+      allPages.forEach( p => {
         let categories = p.node.categories;
         categories.forEach( c => {
           if (categoriesObject[c]) {
@@ -216,13 +228,36 @@ export default {
     margin: 0 0 0 .7rem;
     padding: 1rem 0 1rem 1.5rem;
 
-    border-left: 1px solid currentColor;
+    border-left: 1px solid var(--body-color);
     opacity: 1;
 
     color: currentColor;
     // font-size: .95rem;
     font-weight: 400;
     text-decoration: none;
+
+    &.maincommand,
+    &.subcommand {
+      padding-top: .2rem;
+      padding-bottom: .2rem;
+    }
+
+    // &.maincommand {
+    //   // margin-top: .8rem;
+    // }
+
+    &.subcommand {
+      // margin-top: -2rem;
+      // padding-top: .2rem;
+      // padding-bottom: .2rem;
+
+      // opacity: .7;
+      // color: transparentize(var(--body-color), .3);
+      color: var(--body-color-light);
+      // + .item-link {
+      //   margin-top: .8rem;
+      // } 
+    }
     
     &:last-child {
       margin-bottom: 0;
@@ -230,7 +265,8 @@ export default {
 
     &:hover,
     &.active--exact {
-      color: var(--primary-color)
+      color: var(--primary-color);
+      border-left-color: var(--primary-color);
     }
 
     &.active--exact {
