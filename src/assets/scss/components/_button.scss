@@ -9,7 +9,7 @@
   
   background-color: transparent;
   border: 0;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 
   color: var(--primary-color-dark);
   font-weight: 500;
@@ -27,7 +27,7 @@
   }
 
   &:hover {
-    box-shadow: var(--glow);
+    // box-shadow: var(--glow);
     transform: translateY(-1px);
   }
 
@@ -41,7 +41,7 @@
     left: -1px;
     
     border: 1px solid;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     box-shadow: inset -1px -2px 0px 0px rgba(0,0,0,.05);
     opacity: .6;
 
