@@ -1,25 +1,61 @@
 ---
 title: Reliably Documentation
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Lorem ipsum dolor sit amet.
 categories: []
 status: published
 type: overview
 ---
-# Welcome to Reliably!
+import PageIntroduction from '~/components/PageIntroduction.vue'
+import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
+import Card from '~/components/Card.vue'
+import SectionList from '~/components/SectionList.vue'
 
-We're here to lend a helping hand. Reliably will automatically surface and respond to reliability issues while you code, build, and run your applications. It's that simple.
+import data from '~/data/docs-index-data.json'
 
-<img src="./images/how-reliably-works.png" alt="How Reliably Works"/>
+# Unleash a reliability superpower
 
-Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Continuous Integration and Delivery (CI/CD) workflows and pipelines. We also offer a handy CLI for local use.
+<PageIntroduction>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+</PageIntroduction>
 
-Choose your preferred tool below to get started for free:
+<MarkdownTwoColumns>
+  <Card
+    title="Better Kubernetes Manifests"
+    description="Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes."
+    color="blue"
+    :button="data['card-1'].button"
+    :svg="data['card-1'].svg"
+  />
+  <Card
+    title="Reliably in your CI pipeline"
+    description="Try Reliably wherever your code lives, or at build time in your favorite CI/CD platform."
+    color="yellow"
+    :links="data['card-2'].links"
+    :svg="data['card-2'].svg"
+  />
+</MarkdownTwoColumns>
 
-[Github][github-get-started] | [GitLab][gitlab-get-started] | [CLI][cli]
 
-Want to know more? [Check out how Reliably works under the hood...][how-reliably-works]
+<SectionList
+    title="Getting Started"
+    categoryName="getting-started"
+    description="Start using Reliably in minutes and make your Kubernetes deployments more reliable."
+    link="/docs/getting-started"
+    :list="data['getting-started'].links"
+/>
 
-[github-get-started]: start/github
-[gitlab-get-started]: start/gitlab
-[cli]: tools/cli/
-[how-reliably-works]: ./reference/howitworks/concepts/
+<SectionList
+    title="Guides"
+    categoryName="guides"
+    description="Practical guides show you how to get Reliably running in your favorite CI environment."
+    link="/docs/guides"
+    :list="data.guides.links"
+/>
+
+<SectionList
+    title="Reference"
+    categoryName="reference"
+    description="Technical description of how the Reliably API works, as well as a full documentation for the CLI."
+    link="/docs/reference"
+    :list="data.reference.links"
+/>
