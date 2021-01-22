@@ -28,3 +28,9 @@
   items:
     - title: Concepts
       link: /docs/reference/howitworks/concepts/
+    - title: Advice
+      link: /docs/reference/howitworks/advice/
+    - title: Services
+      link: /docs/reference/howitworks/services/
+    - title: Suggestions
+      link: /docs/reference/howitworks/suggestions/

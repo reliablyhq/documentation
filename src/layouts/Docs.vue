@@ -129,7 +129,6 @@ export default {
     pagesPerCategory () {
       let categoriesObject = {};
       let allPages = this.$static.docpages.edges.concat(this.$static.clipages.edges);
-      console.log("***********:", allPages);
       allPages.forEach( p => {
         let categories = p.node.categories;
         categories.forEach( c => {

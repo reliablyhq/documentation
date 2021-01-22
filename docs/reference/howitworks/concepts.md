@@ -1,3 +1,10 @@
+---
+title: How it works
+excerpt: Lorem Ipsum is simply dummy text.
+categories: ["reference", "howitworks"]
+status: published
+type: overview
+---
 # How Reliably works
 
 Reliably aims to seamlessly work alongside your existing DevOps toolchain, discovering and surfacing suggestions where you might be able to avoid reliability problems.
@@ -5,7 +12,7 @@ Reliably aims to seamlessly work alongside your existing DevOps toolchain, disco
 To do this, Reliably integrates with your existing GitHub and GitLab workflows through various [Reliably Tools][tools] and [Reliably Services][services].
 
 [tools]: ../tools/
-[services]: services.md
+[services]: ../services
 
 ## The Reliably Workflow
 
@@ -13,8 +20,8 @@ You interact with Reliably through commits to your own repositories on GitHub an
 
 Finally Reliably returns the [Reliably Advice][advice] to be applied and then surfaces any [Reliably Suggestions][suggestions] you should be aware of.
 
-[advice]: advice.md
-[suggestions]: suggestions.md
+[advice]: ../advice
+[suggestions]: ../suggestions
 
 ## How Reliably works with GitHub
 
@@ -123,3 +130,5 @@ Use "reliably [command] --help" for more information about a command.
 [Install and explore the features of the Reliably CLI...][tools-cli]
 
 [tools-cli]: ../tools/cli/
+
+
