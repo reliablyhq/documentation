@@ -49,3 +49,6 @@
       link: /docs/reference/cli/
     - title: REST API
       link: /docs/reference/rest-api/
+    - title: How it works
+      slug: how-it-works
+      link: /docs/reference/how-it-works/

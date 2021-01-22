@@ -24,3 +24,14 @@
       link: /docs/reference/cli/reliably-discover/
 - title: REST API
   link: /docs/reference/rest-api/
+- title: How it works
+  slug: how-it-works
+  items:
+    - title: Concepts
+      link: /docs/reference/how-it-works/
+    - title: Advice
+      link: /docs/reference/how-it-works/advice/
+    - title: Services
+      link: /docs/reference/how-it-works/services/
+    - title: Suggestions
+      link: /docs/reference/how-it-works/suggestions/

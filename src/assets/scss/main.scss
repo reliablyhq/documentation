@@ -12,16 +12,19 @@
 // 'base/helpers';
 
 @import
-  'layout/layout';
+  'layout/layout',
+  'layout/post';
 // 'layout/container';
 
 @import
-  'components/button';
+  'components/button',
+  'components/image',
+  'components/title-image';
 // 'components/form/input-wrapper',
 // 'components/form/text-input',
 // 'components/form/radio';
 
 @import 'pages/docs';
 
-// @import 'themes/theme';
-// @import 'themes/admin';
+@import
+  'themes/prism';

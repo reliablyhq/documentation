@@ -142,7 +142,7 @@ export default {
       return categoriesObject;
     },
     items () {
-      // const flat = []; 
+      // const flat = [];
       // this.links.forEach(group => {
       //   group.items.forEach(item => {
       //     if (item.link) {
@@ -185,7 +185,7 @@ export default {
   .menu-item {
     margin: 1.5rem 0 .7rem;
     padding-top: 2rem;
-    
+
     // border-top: 1px solid var(--border-color);
     cursor: pointer;
 
@@ -193,7 +193,7 @@ export default {
     font-weight: 400;
 	  // text-transform: uppercase;
     letter-spacing: 1px;
-    
+
     &.active {
       font-weight: 700;
       svg {
@@ -256,9 +256,9 @@ export default {
       color: var(--body-color-light);
       // + .item-link {
       //   margin-top: .8rem;
-      // } 
+      // }
     }
-    
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -326,7 +326,7 @@ export default {
       }
     }
   }
-  
+
   .submenu {
     margin: 0;
     padding: 0;
@@ -334,17 +334,17 @@ export default {
     list-style: none;
     opacity: 1;
 
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
 
     &__item-depth-2 {
       margin-bottom: 0;
       padding: .4em 0;
 
-      border-top: 1px dashed var(--border-color);
-
-      font-size: .95em;
-      
       transition: border-color .3s;
+
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
     }
 
     &__item-depth-3 {

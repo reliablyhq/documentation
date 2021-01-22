@@ -68,4 +68,13 @@ strong {
     margin-top: 1em;
     padding-top: .9em;
   }
+
+  a {
+    color: var(--red);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
