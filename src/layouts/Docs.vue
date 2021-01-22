@@ -6,21 +6,21 @@
           <g-link v-if="isSubSection" class="sidebar-backlink" to="/docs/">&larr; Docs</g-link>
           <nav class="sidebar-nav">
             <div class="sidebar-nav__header">
-              <template v-if="currentPath.startsWith('/docs/getting-started/')">
+              <template v-if="currentPath.startsWith('/docs/getting-started')">
                 <div class="menu-item">
                   Getting Started
                   <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
                 </div>
                 <g-link to="/docs/getting-started" class="menu-link">Overview</g-link>
               </template>
-              <template v-if="currentPath.startsWith('/docs/guides/')">
+              <template v-if="currentPath.startsWith('/docs/guides')">
                 <div class="menu-item">
                   Guides
                   <span class="count">{{ pagesPerCategory.guides }}</span>
                 </div>
                 <g-link to="/docs/guides" class="menu-link">Overview</g-link>
               </template>
-              <template v-if="currentPath.startsWith('/docs/reference/')">
+              <template v-if="currentPath.startsWith('/docs/reference')">
                 <div class="menu-item">
                   Reference
                   <span class="count">{{ pagesPerCategory.reference }}</span>
@@ -273,17 +273,20 @@ export default {
     &:hover,
     &.active--exact {
       color: var(--brown);
-      background-color: var(--blue);
 
       // color: var(--primary-color);
       // border-left-color: var(--primary-color);
+    }
+
+    &:hover {
+      background-color: var(--blue-light);
     }
 
     &.active--exact {
       position: relative;
 
       // padding-left: 1.2rem;
-
+      background-color: var(--blue);
       outline-width: 1px;
 
       font-weight: 700;
