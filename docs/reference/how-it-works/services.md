@@ -1,9 +1,9 @@
 ---
 title: services
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "howitworks"]
+categories: ["reference", "how-it-works"]
 status: published
-type: services
+type: doc
 ---
 # <img src="/images/icon-reliably-services.svg" alt="" role="decoration" />The Reliably Services
 

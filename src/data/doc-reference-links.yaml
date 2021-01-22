@@ -25,12 +25,13 @@
 - title: REST API
   link: /docs/reference/rest-api/
 - title: How it works
+  slug: how-it-works
   items:
     - title: Concepts
-      link: /docs/reference/howitworks/concepts/
+      link: /docs/reference/how-it-works/
     - title: Advice
-      link: /docs/reference/howitworks/advice/
+      link: /docs/reference/how-it-works/advice/
     - title: Services
-      link: /docs/reference/howitworks/services/
+      link: /docs/reference/how-it-works/services/
     - title: Suggestions
-      link: /docs/reference/howitworks/suggestions/
+      link: /docs/reference/how-it-works/suggestions/

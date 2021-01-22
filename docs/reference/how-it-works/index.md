@@ -1,7 +1,7 @@
 ---
 title: How it works
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "howitworks"]
+categories: ["reference", "how-it-works"]
 status: published
 type: overview
 ---

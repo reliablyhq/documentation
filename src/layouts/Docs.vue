@@ -334,17 +334,17 @@ export default {
     list-style: none;
     opacity: 1;
 
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
 
     &__item-depth-2 {
       margin-bottom: 0;
       padding: .4em 0;
 
-      border-top: 1px dashed var(--border-color);
-
-      font-size: .95em;
-
       transition: border-color .3s;
+
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
     }
 
     &__item-depth-3 {

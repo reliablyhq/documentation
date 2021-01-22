@@ -1,9 +1,9 @@
 ---
 title: Advice
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["reference", "howitworks"]
+categories: ["reference", "how-it-works"]
 status: published
-type: advice
+type: doc
 ---
 # <img src="/images/icon-reliably-advice.svg" alt="" role="decoration" />Reliably Advice
 

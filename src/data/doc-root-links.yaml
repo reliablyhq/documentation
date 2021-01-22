@@ -50,6 +50,5 @@
     - title: REST API
       link: /docs/reference/rest-api/
     - title: How it works
-      items:
-        - title: Concepts
-          link: /docs/reference/howitworks/concepts/
+      slug: how-it-works
+      link: /docs/reference/how-it-works/
