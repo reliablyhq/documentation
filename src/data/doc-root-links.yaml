@@ -1,9 +1,5 @@
-- title: Prologue
-  items:
-    - title: Introduction
-      link: /docs/
-    - title: Concepts
-      link: /docs/concepts
+- title: Reliably Docs
+  link: /docs/
 
 - title: Getting Started
   slug: getting-started
