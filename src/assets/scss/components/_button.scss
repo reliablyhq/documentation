@@ -27,8 +27,9 @@
   }
 
   &:hover {
-    // box-shadow: var(--glow);
     transform: translateY(-1px);
+
+    text-decoration: none !important;
   }
 
   &:after {
