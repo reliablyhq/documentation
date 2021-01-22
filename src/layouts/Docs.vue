@@ -181,6 +181,13 @@ export default {
   &-backlink {
     display: inline-block;
     margin-bottom: 4em;
+
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .menu-item {
     margin: 1.5rem 0 .7rem;
@@ -228,7 +235,7 @@ export default {
     margin: 0 0 0 .7rem;
     padding: 1rem 0 1rem 1.5rem;
 
-    border-left: 1px solid var(--body-color);
+    // border-left: 1px solid var(--body-color);
     opacity: 1;
 
     color: currentColor;
@@ -265,8 +272,11 @@ export default {
 
     &:hover,
     &.active--exact {
-      color: var(--primary-color);
-      border-left-color: var(--primary-color);
+      color: var(--brown);
+      background-color: var(--blue);
+
+      // color: var(--primary-color);
+      // border-left-color: var(--primary-color);
     }
 
     &.active--exact {
