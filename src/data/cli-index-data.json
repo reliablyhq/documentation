@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "label": "reliably",
+      "link": "/docs/reference/cli/reliably/"
+    },
+    {
+      "label": "reliably auth login",
+      "link": "/docs/reference/cli/reliably-auth-login/"
+    },
+    {
+      "label": "reliably auth logout",
+      "link": "/docs/reference/cli/reliably-auth-logout/"
+    },
+    {
+      "label": "reliably auth status",
+      "link": "/docs/reference/cli/reliably-auth-status/"
+    },
+    {
+      "label": "reliably completion",
+      "link": "/docs/reference/cli/reliably-completion/"
+    }
+  ]
+}

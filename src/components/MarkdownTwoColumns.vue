@@ -12,6 +12,6 @@ export default {}
 .markdown-two-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 8rem;
+  grid-gap: 4rem;
 }
 </style>

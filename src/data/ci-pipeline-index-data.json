@@ -1,0 +1,12 @@
+{
+  "links": [
+    {
+      "label": "Jenkins Build",
+      "link": "/docs/guides/ci-pipeline/jenkins/"
+    },
+    {
+      "label": "Circle CI",
+      "link": "/docs/guides/ci-pipeline/circle-ci/"
+    }
+  ]
+}

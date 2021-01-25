@@ -4,6 +4,8 @@
 - title: Getting Started
   slug: getting-started
   items:
+    - title: Overview
+      link: /docs/getting-started/
     - title: Install
       link: /docs/getting-started/install/
     - title: Login
