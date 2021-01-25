@@ -17,7 +17,7 @@ html {
 }
 
 .container-base {
-  max-width: 68rem;
+  max-width: 88rem;
 }
 
 .flex {
@@ -32,17 +32,18 @@ html {
 
   overflow: auto;
   padding: 1% 20px 0 5px;
+  width: 30rem;
 	z-index: 10;
 	-webkit-overflow-scrolling: touch;
 
-  @media screen and (min-width: 75rem) {
+  @media screen and (min-width: 1230px) {
     position: sticky;
     top: var(--header-height);
     order: 0;
 
     height: calc(100vh + var(--header-height)*-1 - 5px);
     padding-top: 8rem;
-    width: 30rem;
+    
 
     // border-right: 1px solid var(--border-color);
 
@@ -50,6 +51,9 @@ html {
   }
 
   &--right {
+    @media screen and (max-width: 1229px) {
+      display: none;
+    }
     border-right: 0;
     width: 220px;
     position: -webkit-sticky;
