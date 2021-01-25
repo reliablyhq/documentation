@@ -2,6 +2,10 @@
   "run-as-you-code": {
     "links": [
       {
+        "title": "Run Reliably CLI as you code",
+        "link": "/docs/guides/run-as-you-code/code/"
+      },
+      {
         "title": "Visual Studio Code Plugin",
         "link": "/docs/guides/run-as-you-code/vscode/"
       }
