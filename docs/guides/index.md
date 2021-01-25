@@ -13,7 +13,7 @@ import data from '~/data/guides-index-data.json'
 # Guides
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+  The Guides section of the documentation explores different ways of running Reliably. You can run  <a href="/docs/guides/run-as-you-code/">Reliably locally</a> on your machine or as part of a <a href="/docs/guides/ci-pipeline/">CI Pipeline</a>.
 </PageIntroduction>
 
 <SectionList

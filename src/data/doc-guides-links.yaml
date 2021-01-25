@@ -3,6 +3,8 @@
   items:
     - title: Overview
       link:  /docs/guides/run-as-you-code/
+    - title: Run Reliably CLI as you code
+      link: /docs/guides/run-as-you-code/code/
     - title: Visual Studio Code Plugin
       link: /docs/guides/run-as-you-code/vscode/
 - title: Run in your CI pipeline
