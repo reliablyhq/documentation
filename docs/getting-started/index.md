@@ -15,7 +15,7 @@ import data from '~/data/getting-started-index-data.json'
 # Get started with Reliably
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+  The easiest and quickest way of getting started with Reliably is to run the Reliably CLI on your machine with your local source code files.
 </PageIntroduction>
 
 ## Main articles

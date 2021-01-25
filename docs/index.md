@@ -12,10 +12,16 @@ import SectionList from '~/components/SectionList.vue'
 
 import data from '~/data/docs-index-data.json'
 
-# Unleash a reliability superpower
+# Welcome to Reliably!
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+
+We're here to lend a helping hand. Reliably will automatically surface and respond to reliability issues while you code, build, and run your applications. It's that simple.
+
+<img src="./images/how-reliably-works.png" alt="How Reliably Works"/>
+
+Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Continuous Integration and Delivery (CI/CD) workflows and pipelines. We also offer a handy CLI for local use.
+
 </PageIntroduction>
 
 <MarkdownTwoColumns>
