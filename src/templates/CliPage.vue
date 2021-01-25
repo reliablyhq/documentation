@@ -1,6 +1,6 @@
 <template>
   <DocsLayout :subtitles="subtitles" :allLinks="links">
-    <VueRemarkContent class="post mb"></VueRemarkContent>
+    <div class="post mb" v-html="$page.doc.content" />
   </DocsLayout>
 </template>
 
@@ -16,6 +16,7 @@ query ($id: ID!) {
       value
       anchor
     }
+    content
   }
 }
 </page-query>

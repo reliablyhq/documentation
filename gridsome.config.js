@@ -20,21 +20,19 @@ module.exports = {
 
   plugins: [
     {
-      use: '@gridsome/vue-remark',
+      use: '@gridsome/source-filesystem',
       options: {
-        index: ['index'],
-        baseDir: './docs',
-        pathPrefix: '/docs',
-        typeName: 'DocPage',
-        template: './src/templates/DocPage.vue',
-        plugins: [
-          '@gridsome/remark-prismjs',
-          // [
-          //   'remark-behead',
-          //   {depth: -1},
-          // ],
-        ],
+        baseDir: './cobra-md/',
+        path: '**/*.md',
+        typeName: 'CliPage',
+        pathPrefix: '/docs/reference/cli',
         remark: {
+          plugins: [
+            [
+              'remark-behead',
+              {depth: -1},
+            ],
+          ],
           autolinkHeadings: {
             content: {
               type: 'text',
@@ -48,16 +46,12 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         index: ['index'],
-        baseDir: './cobra-md',
-        pathPrefix: '/docs/reference/cli',
-        typeName: 'CliPage',
-        template: './src/templates/CliPage.vue',
+        baseDir: './docs',
+        pathPrefix: '/docs',
+        typeName: 'DocPage',
+        template: './src/templates/DocPage.vue',
         plugins: [
           '@gridsome/remark-prismjs',
-          [
-            'remark-behead',
-            {depth: -1},
-          ],
         ],
         remark: {
           autolinkHeadings: {
@@ -73,10 +67,10 @@ module.exports = {
     //   use: '@gridsome/vue-remark',
     //   options: {
     //     index: ['index'],
-    //     baseDir: './cobra-markdown',
+    //     baseDir: './cobra-md',
     //     pathPrefix: '/docs/reference/cli',
-    //     typeName: 'DocPage',
-    //     template: './src/templates/DocPage.vue',
+    //     typeName: 'CliPage',
+    //     template: './src/templates/CliPage.vue',
     //     plugins: [
     //       '@gridsome/remark-prismjs',
     //       [
@@ -91,28 +85,6 @@ module.exports = {
     //           value: '#'
     //         }
     //       }
-    //     }
-    //   }
-    // },
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     path: './cobra-md/**/*.md',
-    //     typeName: 'DocPage',
-    //     pathPrefix: './docs/reference/cli',
-    //     remark: {
-    //       plugins: [
-    //         [
-    //           'remark-behead',
-    //           {depth: -1},
-    //         ],
-    //       ],
-    //       // autolinkHeadings: {
-    //       //   content: {
-    //       //     type: 'text',
-    //       //     value: '#'
-    //       //   }
-    //       // }
     //     }
     //   }
     // },
