@@ -14,7 +14,8 @@ import data from '~/data/reference-index-data.json'
 
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+  The reference part of Reliably Documentation is a detailed guide to all the aspects of Reliable. Links to the
+  sections follow:
 </PageIntroduction>
 
 <SectionList
