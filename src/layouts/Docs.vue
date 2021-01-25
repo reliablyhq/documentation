@@ -189,6 +189,7 @@ export default {
       text-decoration: underline;
     }
   }
+
   .menu-item {
     margin: 1.5rem 0 .7rem;
     padding-top: 2rem;
@@ -208,10 +209,6 @@ export default {
       }
     }
 
-    &:first-child {
-      border-top: 0;
-    }
-
     svg {
       vertical-align: -.2rem;
     }
@@ -227,6 +224,16 @@ export default {
       color: var(--body-color-light);
       font-size: .75em;
       font-weight: 400;
+    }
+  }
+
+  &-nav {
+    &__header {
+      .menu-item {
+        margin-left: 2rem;
+
+        text-transform: uppercase;
+      }
     }
   }
 

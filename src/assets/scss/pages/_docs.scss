@@ -1,4 +1,7 @@
 section.doc-content {
+  @media screen and (max-width: 1229px) {
+    width: 100%;
+  }
   padding-top: 1.2%;
 
   .docs-nav {

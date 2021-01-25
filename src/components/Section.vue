@@ -1,6 +1,6 @@
 <template>
   <section class="section" :class="sectionClass">
-    <div class="section--inner container container-base" :class="sectionClassInner">
+    <div class="section--inner container" :class="sectionClassInner">
       <slot></slot>
     </div>
     <div v-if="dots" class="section__dots-bg dots-bg" />
