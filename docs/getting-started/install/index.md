@@ -39,10 +39,11 @@ Reliably CLI v0.2.0
 
 You now have `reliably` installed locally.
 
-!!! note
-    The Quick Install section above is to get the Reliably CLI installed and
-    running quickly. If you need further information on installing the Reliably
-    CLI for specific Operating Systems, see the [Installation Details section](#installation-details).
+:::note Note
+  The Quick Install section above is to get the Reliably CLI installed and
+  running quickly. If you need further information on installing the Reliably
+  CLI for specific Operating Systems, see the [Installation Details section](#installation-details).
+:::
 
 ## Installation Details
 

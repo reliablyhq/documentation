@@ -10,13 +10,13 @@ type: doc
 To use Reliably, you will need to authenticate the Reliably CLI
 with [Reliably.com](https://reliably.com/).
 
-!!! info
-    You can authenticate with third party OAuth providers. Reliably
-    currently supports GitHub and GitLab.
+:::tip Tip
+  You can authenticate with third party OAuth providers. Reliably
+  currently supports GitHub and GitLab.
 
-    Reliably requires only access to the minimal set of information to create
-    your profile. Usually your username and email address.
-
+  Reliably requires only access to the minimal set of information to create
+  your profile. Usually your username and email address.
+:::
 
 ## Login
 

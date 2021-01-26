@@ -29,10 +29,11 @@ Navigate to your Jenkins server home page:
 
 ![Jenkins Homepage](./images/jenkins-homepage.png)
 
-!!! note
-    The above screenshot is for a newly installed Jenkins server. A server that
-    has previously run jobs would show the jobs dashboard on the Jenkins home
-    page.
+:::note Note
+  The above screenshot is for a newly installed Jenkins server. A server that
+  has previously run jobs would show the jobs dashboard on the Jenkins home
+  page.
+:::
 
 Selected *New Item* from the menu on the left of the page.
 
