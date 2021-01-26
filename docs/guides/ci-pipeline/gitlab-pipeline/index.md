@@ -10,9 +10,10 @@ type: doc
 Adding Reliably to your GitHub repositories is as simple as adding GitLab CI/CD
 to your repository.
 
-!!! note
-    The sources used in this walkthrough are available in this
-    [demo repository][demo-repo].
+:::note Note
+  The sources used in this walkthrough are available in this
+  [demo repository][demo-repo].
+:::
 
 [demo-repo]: https://gitlab.com/reliably/reliably-discovery-demo
 
@@ -268,9 +269,10 @@ Reliably's Advice and Suggestions. If you add the manifest by making a merge
 
 ![Merge Request](./images/merge-review.png)
 
-!!!note
-    You often need to do a page refresh on the merge request page to see the
-    code quality section
+:::note Note
+  You often need to do a page refresh on the merge request page to see the
+  code quality section.
+:::
 
 If you select the `Expand` button in the Code Quality section, you will see the
 additional Advice from Reliably for the merge request:

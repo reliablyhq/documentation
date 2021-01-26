@@ -11,6 +11,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/vue-remark": "^0.2.6",
     "gridsome": "^0.7.0",
+    "remark-admonitions": "^1.2.1",
     "remark-behead": "^2.3.3",
     "svg-to-vue-component": "^0.3.8"
   },

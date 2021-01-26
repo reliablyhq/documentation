@@ -18,7 +18,7 @@ import data from '~/data/docs-index-data.json'
 
 We're here to lend a helping hand. Reliably will automatically surface and respond to reliability issues while you code, build, and run your applications. It's that simple.
 
-<img src="./images/how-reliably-works.png" alt="How Reliably Works"/>
+![How Reliably Works](./shared/images/how-reliably-works.png)
 
 Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Continuous Integration and Delivery (CI/CD) workflows and pipelines. We also offer a handy CLI for local use.
 

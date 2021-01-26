@@ -60,7 +60,7 @@ Make sure that you new workflow has been committed and pushed to GitHub. One
 you've pushed the changes, navigate to the `Actions` tab on your repository on
 GitHub and you should see that your new workflow has been added:
 
-<img src="/images/gh-reliably-workflow-added.png" alt="New Reliably GitHub workflow added"/>
+![New Reliably GitHub workflow added](../../shared/images/gh-reliably-workflow-added.png)
 
 ## Enable Code Scanning Alerts
 
@@ -138,12 +138,13 @@ branch. When you have pushed your changes, head on over again to the `Actions`
 tab on your repository in GitHub and you should see that an action has been
 triggered, or even completed:
 
-<img src="/images/reliably-gh-action-triggered.png" alt="Reliably GitHub workflow triggered"/>
+![Reliably GitHub workflow triggered](../../shared/images/reliably-gh-action-triggered.png)
+
 
 Click on the result for the one execution of the workflow and you will see that
 it is the `Reliably` action that has failed the workflow:
 
-<img src="/images/failed-gh-workflow.png" alt="Reliably GitHub workflow triggered"/>
+![Reliably GitHub workflow failed](../../shared/images/failed-gh-workflow.png)
 
 If you enabled Code Scanning Alerts and Reliably surfaces some
 [Reliably Suggestions](/howitworks/suggestions), then the Security tab in your
@@ -153,19 +154,21 @@ Clicking on the `Security` tab will display the Security page for your
 repository. The lefthand menu will allow you to display the Code scanning
 alerts.
 
-<img src="/images/security-page.png" alt="The lefthand menu allows you to display your code scanning alerts"/>
+![The lefthand menu allows you to display your code scanning alerts](../../shared/images/security-page.png)
 
 All your Code Scanning alerts will be listed there. Here, we have six alerts
 prompted by Reliably Suggestions.
 
-<img src="/images/code-scanning-alerts-list.png" alt="A list of open code scanning alerts"/>
+![A list of open code scanning alerts](../../shared/images/code-scanning-alerts-list.png)
 
 Each alert is displayed in the context in which it was triggered. In this
 example, the `manifests/deployment.yaml` file. The Reliably Suggestion is
 also displayed.
 
-<img src="/images/alert-detail.png" alt="Screenshot of a Code Scanning Alert details"/>
+![Screenshot of a Code Scanning Alert details](../../shared/images/alert-detail.png)
 
-!!! note
-    Currently the highlighted line is the beginning of the resource, but it's
-    intended to soon be the precise line of the suggestion in the source code.
+
+:::note Note
+  Currently the highlighted line is the beginning of the resource, but it's
+  intended to soon be the precise line of the suggestion in the source code.
+:::

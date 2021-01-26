@@ -52,6 +52,7 @@ module.exports = {
         template: './src/templates/DocPage.vue',
         plugins: [
           '@gridsome/remark-prismjs',
+          'remark-admonitions',
         ],
         remark: {
           autolinkHeadings: {
