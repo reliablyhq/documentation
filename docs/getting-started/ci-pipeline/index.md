@@ -60,7 +60,7 @@ Make sure that you new workflow has been committed and pushed to GitHub. One
 you've pushed the changes, navigate to the `Actions` tab on your repository on
 GitHub and you should see that your new workflow has been added:
 
-![New Reliably GitHub workflow added](../../shared/images/gh-reliably-workflow-added.png)
+![New Reliably GitHub workflow added](/images/gh-reliably-workflow-added.png)
 
 ## Enable Code Scanning Alerts
 
@@ -138,13 +138,13 @@ branch. When you have pushed your changes, head on over again to the `Actions`
 tab on your repository in GitHub and you should see that an action has been
 triggered, or even completed:
 
-![Reliably GitHub workflow triggered](../../shared/images/reliably-gh-action-triggered.png)
+![Reliably GitHub workflow triggered](/images/reliably-gh-action-triggered.png)
 
 
 Click on the result for the one execution of the workflow and you will see that
 it is the `Reliably` action that has failed the workflow:
 
-![Reliably GitHub workflow failed](../../shared/images/failed-gh-workflow.png)
+![Reliably GitHub workflow failed](/images/failed-gh-workflow.png)
 
 If you enabled Code Scanning Alerts and Reliably surfaces some
 [Reliably Suggestions](/howitworks/suggestions), then the Security tab in your
@@ -154,18 +154,18 @@ Clicking on the `Security` tab will display the Security page for your
 repository. The lefthand menu will allow you to display the Code scanning
 alerts.
 
-![The lefthand menu allows you to display your code scanning alerts](../../shared/images/security-page.png)
+![The lefthand menu allows you to display your code scanning alerts](/images/security-page.png)
 
 All your Code Scanning alerts will be listed there. Here, we have six alerts
 prompted by Reliably Suggestions.
 
-![A list of open code scanning alerts](../../shared/images/code-scanning-alerts-list.png)
+![A list of open code scanning alerts](/images/code-scanning-alerts-list.png)
 
 Each alert is displayed in the context in which it was triggered. In this
 example, the `manifests/deployment.yaml` file. The Reliably Suggestion is
 also displayed.
 
-![Screenshot of a Code Scanning Alert details](../../shared/images/alert-detail.png)
+![Screenshot of a Code Scanning Alert details](/images/alert-detail.png)
 
 
 :::note Note
