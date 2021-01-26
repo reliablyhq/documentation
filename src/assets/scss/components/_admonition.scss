@@ -1,0 +1,54 @@
+.admonition {
+  margin-bottom: 2em;
+
+  border: none;
+  border-radius: var(--border-radius);
+  // box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .32);
+
+  .admonition-icon {
+    svg {
+      fill: var(--brown);
+      stroke: var(--brown);
+    }
+  }
+
+  &-important {
+    background-color: var(--blue);
+  }
+
+  &-tip {
+    background-color: rgb(204, 235, 204);
+  }
+
+  &-note {
+    background-color: var(--yellow);
+  }
+
+  &-warning,
+  &-danger {
+    color: white;
+
+    .admonition-icon {
+      svg {
+        fill: white;
+        stroke: white;
+      }
+    }
+
+    .admonition-heading {
+      h5 {
+        color: white;
+      }
+    }
+  }
+
+  &-warning {
+    background-color: var(--red);
+  }
+
+  &-danger {
+    background-color: #960af5;
+
+    color: white;
+  }
+}
