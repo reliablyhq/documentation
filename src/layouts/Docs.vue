@@ -230,6 +230,7 @@ export default {
   &-nav {
     &__header {
       .menu-item {
+        margin-bottom: 3em;
         margin-left: 2rem;
 
         text-transform: uppercase;
