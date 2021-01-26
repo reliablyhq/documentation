@@ -172,3 +172,23 @@ also displayed.
   Currently the highlighted line is the beginning of the resource, but it's
   intended to soon be the precise line of the suggestion in the source code.
 :::
+
+:::important Important Admonition
+Hipster ipsum, etc.
+:::
+
+:::tip Tip Admonition
+Hipster ipsum, etc.
+:::
+
+:::note Note Admonition
+Hipster ipsum, etc.
+:::
+
+:::warning Warning Admonition
+Hipster ipsum, etc.
+:::
+
+:::danger Danger Admonition
+Hipster ipsum, etc.
+:::

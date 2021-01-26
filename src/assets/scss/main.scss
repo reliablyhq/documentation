@@ -5,6 +5,9 @@
 // 'abstracts/mixins';
 
 @import
+  'vendors/admonitions';
+
+@import
   'base/normalize',
   'base/helpers',
   'base/typography';
@@ -16,6 +19,7 @@
 // 'layout/container';
 
 @import
+  'components/admonition',
   'components/button',
   'components/image',
   'components/title-image';
