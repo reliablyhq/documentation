@@ -2,36 +2,36 @@
   slug: cli
   items:
     - title: Overview
-      link: /docs/reference/cli/
+      link: /reference/cli/
     - title: reliably
-      link: /docs/reference/cli/reliably/
+      link: /reference/cli/reliably/
     - title: auth
       maincommand: true
-      link: /docs/reference/cli/reliably-auth/
+      link: /reference/cli/reliably-auth/
     - title: login
       subcommand: true
-      link: /docs/reference/cli/reliably-auth-login/
+      link: /reference/cli/reliably-auth-login/
     - title: logout
       subcommand: true
-      link: /docs/reference/cli/reliably-auth-logout/
+      link: /reference/cli/reliably-auth-logout/
     - title: status
       subcommand: true
-      link: /docs/reference/cli/reliably-auth-status/
+      link: /reference/cli/reliably-auth-status/
     - title: completion
       subcommand: false
-      link: /docs/reference/cli/reliably-completion/
+      link: /reference/cli/reliably-completion/
     - title: discover
-      link: /docs/reference/cli/reliably-discover/
+      link: /reference/cli/reliably-discover/
 - title: REST API
-  link: /docs/reference/rest-api/
+  link: /reference/rest-api/
 - title: How it works
   slug: how-it-works
   items:
     - title: Concepts
-      link: /docs/reference/how-it-works/
+      link: /reference/how-it-works/
     - title: Advice
-      link: /docs/reference/how-it-works/advice/
+      link: /reference/how-it-works/advice/
     - title: Services
-      link: /docs/reference/how-it-works/services/
+      link: /reference/how-it-works/services/
     - title: Suggestions
-      link: /docs/reference/how-it-works/suggestions/
+      link: /reference/how-it-works/suggestions/

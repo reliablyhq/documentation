@@ -2,37 +2,37 @@
   slug: run-as-you-code
   items:
     - title: Overview
-      link:  /docs/guides/run-as-you-code/
+      link:  /guides/run-as-you-code/
     - title: Run Reliably CLI as you code
-      link: /docs/guides/run-as-you-code/code/
+      link: /guides/run-as-you-code/code/
     - title: Visual Studio Code Plugin
-      link: /docs/guides/run-as-you-code/vscode/
+      link: /guides/run-as-you-code/vscode/
 - title: Run in your CI pipeline
   slug: ci-pipeline
   items:
     - title: Overview
-      link: /docs/guides/ci-pipeline/
+      link: /guides/ci-pipeline/
     - title: GitHub Action
-      link: /docs/guides/ci-pipeline/github-action/
+      link: /guides/ci-pipeline/github-action/
     - title: GitLab Pipeline
-      link: /docs/guides/ci-pipeline/gitlab-pipeline/
+      link: /guides/ci-pipeline/gitlab-pipeline/
     - title: Jenkins Build
-      link: /docs/guides/ci-pipeline/jenkins/
+      link: /guides/ci-pipeline/jenkins/
     - title: Circle CI
-      link: /docs/guides/ci-pipeline/circle-ci/
+      link: /guides/ci-pipeline/circle-ci/
 - title: Run Continuously
   slug: run-continuously
   items:
     - title: Overview
-      link: /docs/guides/run-continuously/
+      link: /guides/run-continuously/
     - title: Kubernetes Operator
-      link: /docs/guides/run-continuously/kubernetes-operator/
+      link: /guides/run-continuously/kubernetes-operator/
     - title: CRON Job
-      link: /docs/guides/run-continuously/cron-job/
+      link: /guides/run-continuously/cron-job/
 - title: Metrics
   slug: metrics
   items:
     - title: Overview
-      link: /docs/guides/metrics/
+      link: /guides/metrics/
     - title: Prometheus
-      link: /docs/guides/metrics/prometheus/
+      link: /guides/metrics/prometheus/

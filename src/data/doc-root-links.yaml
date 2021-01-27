@@ -1,52 +1,52 @@
 - title: Reliably Docs
-  link: /docs/
+  link: /
 
 - title: Getting Started
   slug: getting-started
   items:
     - title: Overview
-      link: /docs/getting-started/
+      link: /getting-started/
     - title: Install
-      link: /docs/getting-started/install/
+      link: /getting-started/install/
     - title: Login
-      link: /docs/getting-started/login/
+      link: /getting-started/login/
     - title: Scan your first project
-      link: /docs/getting-started/scan-your-first-project/
+      link: /getting-started/scan-your-first-project/
     - title: Review past scans
-      link: /docs/getting-started/review-past-scans/
+      link: /getting-started/review-past-scans/
     - title: Configure
-      link: /docs/getting-started/Configure/
+      link: /getting-started/Configure/
     - title: Run as part of your CI pipeline
-      link: /docs/getting-started/ci-pipeline/
+      link: /getting-started/ci-pipeline/
 
 - title: Guides
   slug: guides
   items:
     - title: Overview
-      link: /docs/guides/
+      link: /guides/
     - title: Run as you code
       slug: run-as-you-code
-      link:  /docs/guides/run-as-you-code/
+      link:  /guides/run-as-you-code/
     - title: Run in your CI pipeline
       slug: ci-pipeline
-      link: /docs/guides/ci-pipeline/
+      link: /guides/ci-pipeline/
     - title: Run Continuously
       slug: run-continuously
-      link: /docs/guides/run-continuously/
+      link: /guides/run-continuously/
     - title: Metrics
       slug: metrics
-      link: /docs/guides/metrics/
+      link: /guides/metrics/
 
 - title: Reference
   slug: reference
   items:
     - title: Overview
-      link: /docs/reference/
+      link: /reference/
     - title: CLI
       slug: cli
-      link: /docs/reference/cli/
+      link: /reference/cli/
     - title: REST API
-      link: /docs/reference/rest-api/
+      link: /reference/rest-api/
     - title: How it works
       slug: how-it-works
-      link: /docs/reference/how-it-works/
+      link: /reference/how-it-works/

@@ -2,15 +2,15 @@
   "links": [
     {
       "label": "Review past scans",
-      "link": "/docs/getting-started/review-past-scans/"
+      "link": "/getting-started/review-past-scans/"
     },
     {
       "label": "Configure Reliably",
-      "link": "/docs/getting-started/configure/"
+      "link": "/getting-started/configure/"
     },
     {
       "label": "Run as part of your CI pipeline",
-      "link": "/docs/getting-started/ci-pipeline/"
+      "link": "/getting-started/ci-pipeline/"
     }
   ]
 }

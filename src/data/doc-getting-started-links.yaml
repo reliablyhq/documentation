@@ -1,12 +1,12 @@
 - title: Install
-  link: /docs/getting-started/install/
+  link: /getting-started/install/
 - title: Login
-  link: /docs/getting-started/login/
+  link: /getting-started/login/
 - title: Scan your first project
-  link: /docs/getting-started/scan-your-first-project/
+  link: /getting-started/scan-your-first-project/
 - title: Review past scans
-  link: /docs/getting-started/review-past-scans/
+  link: /getting-started/review-past-scans/
 - title: Configure
-  link: /docs/getting-started/configure/
+  link: /getting-started/configure/
 - title: Run as part of your CI pipeline
-  link: /docs/getting-started/ci-pipeline/
+  link: /getting-started/ci-pipeline/
