@@ -3,11 +3,11 @@
     "links": [
       {
         "title": "Run Reliably CLI as you code",
-        "link": "/docs/guides/run-as-you-code/code/"
+        "link": "/guides/run-as-you-code/code/"
       },
       {
         "title": "Visual Studio Code Plugin",
-        "link": "/docs/guides/run-as-you-code/vscode/"
+        "link": "/guides/run-as-you-code/vscode/"
       }
     ]
   },
@@ -15,15 +15,15 @@
     "links": [
       {
         "title": "GitHub Action",
-        "link": "/docs/guides/ci-pipeline/github-action"
+        "link": "/guides/ci-pipeline/github-action"
       },
       {
         "title": "GitLab pipeline",
-        "link": "/docs/guides/ci-pipeline/gitlab-pipeline"
+        "link": "/guides/ci-pipeline/gitlab-pipeline"
       },
       {
         "title": "Jenkins build",
-        "link": "/docs/guides/ci-pipeline/jenkins/"
+        "link": "/guides/ci-pipeline/jenkins/"
       }
     ]
   },
@@ -31,11 +31,11 @@
     "links": [
       {
         "title": "Kubernetes Operator",
-        "link": "/docs/guides/run-continuously/kubernetes-operator/"
+        "link": "/guides/run-continuously/kubernetes-operator/"
       },
       {
         "title": "CRON Job",
-        "link": "/docs/guides/run-continuously/cron-job/"
+        "link": "/guides/run-continuously/cron-job/"
       }
     ]
   },
@@ -43,7 +43,7 @@
     "links": [
       {
         "title": "Prometheus",
-        "link": "/docs/guides/metrics/prometheus/"
+        "link": "/guides/metrics/prometheus/"
       }
     ]
   }

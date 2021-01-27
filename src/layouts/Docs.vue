@@ -3,7 +3,7 @@
     <div class="container flex flex-align-top">
       <div class="sidebar">
         <template v-if="links">
-          <g-link v-if="isSubSection" class="sidebar-backlink" to="/docs/">&larr; Docs</g-link>
+          <g-link v-if="isSubSection" class="sidebar-backlink" to="/">&larr; Docs</g-link>
           <nav class="sidebar-nav">
             <div class="sidebar-nav__header">
               <template v-if="currentPath.startsWith('/docs/getting-started')">
@@ -109,7 +109,7 @@ export default {
       return this.$route.matched[0].path;
     },
     isSubSection () {
-      if (this.$route.path === '/docs/') {
+      if (this.$route.path === '/') {
         return false;
       } else {
         return true;

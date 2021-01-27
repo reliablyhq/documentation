@@ -11,7 +11,7 @@ export default {}
 <style lang="scss">
 .markdown-two-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, calc(50% - 2rem)));
   grid-gap: 4rem;
 }
 </style>

@@ -7,9 +7,9 @@
       </g-link>
       <g-link class="header-docs-home" to="/docs">docs</g-link>
       <nav class="nav">
-        <g-link class="nav__link" to="/docs/getting-started/">Getting Started</g-link>
-        <g-link class="nav__link" to="/docs/guides/">Guides</g-link>
-        <g-link class="nav__link" to="/docs/reference">Reference</g-link>
+        <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
+        <g-link class="nav__link" to="/guides/">Guides</g-link>
+        <g-link class="nav__link" to="/reference">Reference</g-link>
       </nav>
     </div>
   </header>
@@ -24,7 +24,7 @@ query {
 </static-query>
 
 <script>
-import ReliablyLogo from '@/assets/images/reliably-logo.svg'
+import ReliablyLogo from '@/assets/images/reliably-logo.svg';
 
 export default {
   components: {

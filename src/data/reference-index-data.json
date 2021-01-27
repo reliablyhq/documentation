@@ -3,15 +3,15 @@
     "links": [
       {
         "title": "reliably",
-        "link": "/docs/reference/cli/reliably/"
+        "link": "/reference/cli/reliably/"
       },
       {
         "title": "reliably auth",
-        "link": "/docs/reference/cli/reliably-auth/"
+        "link": "/reference/cli/reliably-auth/"
       },
       {
         "title": "reliably discover",
-        "link": "/docs/reference/cli/reliably-discover/"
+        "link": "/reference/cli/reliably-discover/"
       }
     ]
   },
@@ -19,7 +19,7 @@
     "links": [
       {
         "title": "REST API",
-        "link": "/docs/reference/rest-api/"
+        "link": "/reference/rest-api/"
       }
     ]
   },
@@ -27,11 +27,11 @@
     "links": [
       {
         "title": "Concepts",
-        "link": "/docs/reference/how-it-works/"
+        "link": "/reference/how-it-works/"
       },
       {
         "title": "Suggestions",
-        "link": "/docs/reference/how-it-works/suggestions/"
+        "link": "/reference/how-it-works/suggestions/"
       }
     ]
   }

@@ -5,7 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Reliably',
+  siteName: 'Reliably Documentation',
+  siteUrl: 'http://perrien.fr',
+  pathPrefix: '/docs',
 
   chainWebpack(config, { isServer }) {
     config.module.rules.delete('svg')
@@ -25,7 +27,7 @@ module.exports = {
         baseDir: './cobra-md/',
         path: '**/*.md',
         typeName: 'CliPage',
-        pathPrefix: '/docs/reference/cli',
+        pathPrefix: '/reference/cli',
         remark: {
           plugins: [
             [
@@ -47,7 +49,7 @@ module.exports = {
       options: {
         index: ['index'],
         baseDir: './docs',
-        pathPrefix: '/docs',
+        pathPrefix: '/',
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         plugins: [
