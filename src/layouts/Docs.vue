@@ -109,7 +109,7 @@ export default {
       return this.$route.matched[0].path;
     },
     isSubSection () {
-      if (this.$route.path === '/docs/') {
+      if (this.$route.path === '/') {
         return false;
       } else {
         return true;

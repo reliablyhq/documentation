@@ -24,7 +24,7 @@ query {
 </static-query>
 
 <script>
-import ReliablyLogo from '@/assets/images/reliably-logo.svg'
+import ReliablyLogo from '@/assets/images/reliably-logo.svg';
 
 export default {
   components: {
