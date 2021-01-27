@@ -26,7 +26,7 @@ module.exports = {
         baseDir: './cobra-md/',
         path: '**/*.md',
         typeName: 'CliPage',
-        pathPrefix: '/docs/reference/cli',
+        pathPrefix: '/reference/cli',
         remark: {
           plugins: [
             [
@@ -48,7 +48,7 @@ module.exports = {
       options: {
         index: ['index'],
         baseDir: './docs',
-        pathPrefix: '/docs',
+        pathPrefix: '/',
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         plugins: [
