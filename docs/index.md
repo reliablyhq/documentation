@@ -15,13 +15,9 @@ import data from '~/data/docs-index-data.json'
 # Welcome to Reliably!
 
 <PageIntroduction>
-
 We're here to lend a helping hand. Reliably will automatically surface and respond to reliability issues while you code, build, and run your applications. It's that simple.
 
-![How Reliably Works](/docs/images/how-reliably-works.png)
-
 Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Continuous Integration and Delivery (CI/CD) workflows and pipelines. We also offer a handy CLI for local use.
-
 </PageIntroduction>
 
 <MarkdownTwoColumns>
@@ -46,7 +42,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Getting Started"
     categoryName="getting-started"
     description="Start using Reliably in minutes and make your Kubernetes deployments more reliable."
-    link="/docs/getting-started"
+    link="/getting-started"
     :list="data['getting-started'].links"
 />
 
@@ -54,7 +50,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Guides"
     categoryName="guides"
     description="Practical guides show you how to get Reliably running in your favorite CI environment."
-    link="/docs/guides"
+    link="/guides"
     :list="data.guides.links"
 />
 
@@ -62,6 +58,6 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Reference"
     categoryName="reference"
     description="Technical description of how the Reliably API works, as well as a full documentation for the CLI."
-    link="/docs/reference"
+    link="/reference"
     :list="data.reference.links"
 />

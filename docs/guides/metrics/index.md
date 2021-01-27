@@ -22,6 +22,6 @@ import data from '~/data/metrics-index-data.json'
   <ArticleCard
     title="Prometheus"
     description="Import your Reliably metrics to Prometheus."
-    link="/docs/guides/metrics/prometheus/"
+    link="/guides/metrics/prometheus/"
   />
 </MarkdownTwoColumns>

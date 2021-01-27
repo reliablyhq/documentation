@@ -24,17 +24,17 @@ import data from '~/data/getting-started-index-data.json'
   <ArticleCard
     title="Install Reliably"
     description="Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes."
-    link="/docs/getting-started/install/"
+    link="/getting-started/install/"
   />
   <ArticleCard
     title="Login to Reliably"
     description="Authenticate the Reliably CLI with Reliably.com"
-    link="/docs/getting-started/login/"
+    link="/getting-started/login/"
   />
   <ArticleCard
     title="Scan your first project"
     description="Reliably helps you discover reliability concerns you may want to pay attention to."
-    link="/docs/getting-started/scan-your-first-project/"
+    link="/getting-started/scan-your-first-project/"
   />
 </MarkdownTwoColumns>
 

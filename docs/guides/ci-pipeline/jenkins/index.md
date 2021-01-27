@@ -86,9 +86,9 @@ Congratulations you have successfully run Reliably as part of a Jenkins build!
 
 You may also like reading:
 
-* [How Reliably works][reliably-howitworks].
+* [How Reliably works][reliably-howitworks]
 * [The Reliably CLi][reliably-cli]
 
-[reliably-howitworks]: /docs/reference/how-it-works
-[reliably-cli]: /docs/reference/cli/
+[reliably-howitworks]: /reference/how-it-works
+[reliably-cli]: /reference/cli/
 

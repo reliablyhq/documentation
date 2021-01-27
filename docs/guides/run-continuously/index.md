@@ -22,11 +22,11 @@ import data from '~/data/run-continuously-index-data.json'
   <ArticleCard
     title="Kubernetes Operator"
     description="Use the Reliably as a Kubernetes Operator to continuously check your manifests for reliability suggestions."
-    link="/docs/guides/run-continuously/kubernetes-operator/"
+    link="/guides/run-continuously/kubernetes-operator/"
   />
   <ArticleCard
     title="CRON Jon"
     description="Learnn how to use Reliably as a CRON Job to automate Reliably scanning of your manifests."
-    link="/docs/guides/run-continuously/kubernetes-operator/"
+    link="/guides/run-continuously/kubernetes-operator/"
   />
 </MarkdownTwoColumns>

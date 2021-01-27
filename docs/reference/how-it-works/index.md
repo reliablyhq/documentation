@@ -9,10 +9,9 @@ type: overview
 
 Reliably aims to seamlessly work alongside your existing DevOps toolchain, discovering and surfacing suggestions where you might be able to avoid reliability problems.
 
-To do this, Reliably integrates with your existing GitHub and GitLab workflows through various [Reliably Tools][tools] and [Reliably Services][services].
+To do this, Reliably integrates with your existing GitHub and GitLab workflows through various tools and services.
 
-[tools]: ../tools/
-[services]: ../services
+[services]: ./services
 
 ## The Reliably Workflow
 
@@ -20,14 +19,12 @@ You interact with Reliably through commits to your own repositories on GitHub an
 
 Finally Reliably returns the [Reliably Advice][advice] to be applied and then surfaces any [Reliably Suggestions][suggestions] you should be aware of.
 
-[advice]: ../advice
-[suggestions]: ../suggestions
+[advice]: ./advice
+[suggestions]: ./suggestions
 
 ## How Reliably works with GitHub
 
-Reliably integrates with GitHub best as its own [GitHub Action][gh-action] that you can add to your own GitHub CI/CD workflows.
-
-[gh-action]: https://github.com/features/actions
+Reliably integrates with GitHub best as its own [GitHub Action](https://github.com/features/actions) that you can add to your own GitHub CI/CD workflows.
 
 You use the Reliably GitHub Action by including it in any of your GitHub workflow
 YAML files:
@@ -47,15 +44,11 @@ jobs:
 
 The code above adds a new job called `reliably` that checks out the code from your repository and then uses the [Reliably GitHub Action][gh-action] to obtain any [Reliably Advice][advice] and [Suggestions][suggestions] based on the code in the checked out repository.
 
-[More detail on how you can customize how the Reliably GitHub Action works...][gh-action]
-
-[gh-action]: ../tools/github/action.md
+[More detail on how you can customize how the Reliably GitHub Action works...][(/guides/ci-pipeline/github-action)
 
 ## How Reliably works with GitLab
 
-Reliably integrates with GitLab by being added to your own [GitLab CI pipeline configuration][pipeline-ref].
-
-[pipeline-ref]: https://docs.gitlab.com/ee/ci/yaml/
+Reliably integrates with GitLab by being added to your own [GitLab CI pipeline configuration](https://docs.gitlab.com/ee/ci/yaml/).
 
 You add Reliably to your GitLab CI pipeline with an entry in your repository's`.gitlab-ci.yml` `code_quality` section:
 
@@ -96,13 +89,11 @@ code for code quality issues.
 This `code_quality:` job is triggered by any change to a `.yaml` in the
 `manifests` folder in the repository. This will trigger GitLab Pipeline
 and the `reliably discover` command in the script. The `reliably discover` step
-retrieves any appropriate [Reliably Advice][advice] from the
-[Reliably Services][services], and produces [Reliably Suggestions][suggestions]
+retrieves any appropriate [Reliably Advice](./advice) from the
+[Reliably Services](./services), and produces [Reliably Suggestions](/suggestions)
 on the Pipeline's output when it has completed.
 
-[More detail on how you can customize how the Reliably GitLab CI/CD pipeline works...][gl-cicd]
-
-[gl-cicd]: ../tools/gitlab/cicd.md
+[More detail on how you can customize how the Reliably GitLab CI/CD pipeline works...](/guides/ci-pipeline/gitlab-pipeline)
 
 ## Using the Reliably CLI locally
 
@@ -126,9 +117,3 @@ Flags:
 
 Use "reliably [command] --help" for more information about a command.
 ```
-
-[Install and explore the features of the Reliably CLI...][tools-cli]
-
-[tools-cli]: ../tools/cli/
-
-
