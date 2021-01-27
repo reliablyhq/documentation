@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Reliably Documentation',
-  siteUrl: 'http://perrien.fr',
+  siteUrl: 'https://reliably.com',
   pathPrefix: '/docs',
 
   chainWebpack(config, { isServer }) {
