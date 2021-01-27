@@ -15,7 +15,13 @@ import data from '~/data/ci-pipeline-index-data.json'
 # Run Reliably in your CI pipeline
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+  Reliably follows the principles that the sooner you learn about reliability
+  potential risks, the better you can address them. For this reason, it makes
+  sense to run Reliably during your CI pipelines and get notified of potential
+  issues as soon as possible.
+
+  The articles in this section will show you how to integrate Reliably with
+  your CI solution.
 </PageIntroduction>
 
 ## Main articles

@@ -15,8 +15,18 @@ import data from '~/data/cli-index-data.json'
 # CLI Reference
 
 <PageIntroduction>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur velit eget malesuada. Proin tempor odio in justo tempor, vel venenatis eros faucibus. Cras imperdiet arcu aliquet tellus rutrum, at facilisis lectus fringilla. Pellentesque accumsan tempus ex. Suspendisse quis consectetur felis. Vestibulum pellentesque pharetra ante eget tincidunt.
+  The Reliably CLI is the Reliability toolbox for developers from the command
+  line.
+section. The articles in this section are the reference pages for the CLI, containing
+the details of each CLI command.
+
+Installation for the CLI is covered in the [Getting Started][cli-install]
+
+
+
 </PageIntroduction>
+
+[cli-install]: /docs/getting-started/install/
 
 ## Main articles
 
