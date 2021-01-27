@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Reliably',
+  pathPrefix: '/docs',
 
   chainWebpack(config, { isServer }) {
     config.module.rules.delete('svg')
