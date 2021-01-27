@@ -14,15 +14,14 @@ import data from '~/data/reference-index-data.json'
 
 
 <PageIntroduction>
-  The reference part of Reliably Documentation is a detailed guide to all the aspects of Reliable. Links to the
-  sections follow:
+  The reference part of Reliably Documentation is a detailed guide to all the aspects of Reliably.
 </PageIntroduction>
 
 <SectionList
     title="CLI"
     categoryName="cli"
     description="Complete reference guide for the Reliably CLI"
-    link="/docs/reference/cli/"
+    link="/reference/cli/"
     :list="data.cli.links"
 />
 
@@ -30,7 +29,7 @@ import data from '~/data/reference-index-data.json'
     title="REST API"
     categoryName="rest-api"
     description="Reference for the Reliably REST API"
-    link="/docs/reference/rest-api"
+    link="/reference/rest-api"
     :list="data['rest-api'].links"
 />
 
@@ -38,6 +37,6 @@ import data from '~/data/reference-index-data.json'
     title="How it works"
     categoryName="how-it-works"
     description="Discover how Reliably helps you surface potential reliability weaknesses in your Kubernetes manifests."
-    link="/docs/reference/how-it-works"
+    link="/reference/how-it-works"
     :list="data['how-it-works'].links"
 />

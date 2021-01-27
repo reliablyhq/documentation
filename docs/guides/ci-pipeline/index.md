@@ -30,12 +30,12 @@ import data from '~/data/ci-pipeline-index-data.json'
   <ArticleCard
     title="GitHub Action"
     description="The Reliably GitHub Action allows you to get suggestions for each PR."
-    link="/docs/guides/ci-pipeline/github-action/"
+    link="/guides/ci-pipeline/github-action/"
   />
   <ArticleCard
     title="GitLab Job"
     description="Get Reliably suggestions as part of your GitLab pipeline."
-    link="/docs/ci-pipeline/gitlab-pipeline/"
+    link="/ci-pipeline/gitlab-pipeline/"
   />
 </MarkdownTwoColumns>
 

@@ -15,18 +15,17 @@ import data from '~/data/cli-index-data.json'
 # CLI Reference
 
 <PageIntroduction>
-  The Reliably CLI is the Reliability toolbox for developers from the command
-  line.
-section. The articles in this section are the reference pages for the CLI, containing
-the details of each CLI command.
+
+The Reliably CLI is the reliability toolbox for developers from the command
+line. The articles in this section are the reference pages for the CLI,
+containing the details of each CLI command.
 
 Installation for the CLI is covered in the [Getting Started][cli-install]
-
-
+section.
 
 </PageIntroduction>
 
-[cli-install]: /docs/getting-started/install/
+[cli-install]: /getting-started/install/
 
 ## Main articles
 
@@ -34,12 +33,12 @@ Installation for the CLI is covered in the [Getting Started][cli-install]
   <ArticleCard
     title="reliably auth"
     description="Log in, log out, and verify your authentication with Reliably."
-    link="/docs/reference/cli/reliably-auth/"
+    link="/reference/cli/reliably-auth/"
   />
   <ArticleCard
     title="reliably discover"
     description="Scan your Kubernetes manifests for Reliably Suggestions."
-    link="/docs/reference/cli/reliably-discover/"
+    link="/reference/cli/reliably-discover/"
   />
 </MarkdownTwoColumns>
 

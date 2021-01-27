@@ -11,6 +11,6 @@ All the Reliably tools, including the [Reliably Services][services] and [CLI][cl
 
 Reliably Suggestions help you make good reliability decisions. Reliably Suggestions represent insights into areas of your code and runtime systems where you might be able to explore and improve reliability.
 
-[services]: ../services
-[advice]: ../advice
-[cli]: /docs/guides/code/#the-reliably-cli
+[services]: ./services
+[advice]: ./advice
+[cli]: /guides/code/#the-reliably-cli

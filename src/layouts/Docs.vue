@@ -6,26 +6,26 @@
           <g-link v-if="isSubSection" class="sidebar-backlink" to="/">&larr; Docs</g-link>
           <nav class="sidebar-nav">
             <div class="sidebar-nav__header">
-              <template v-if="currentPath.startsWith('/docs/getting-started')">
+              <template v-if="currentPath.startsWith('/getting-started')">
                 <div class="menu-item">
                   Getting Started
                   <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
                 </div>
-                <g-link to="/docs/getting-started" class="menu-link">Overview</g-link>
+                <g-link to="/getting-started" class="menu-link">Overview</g-link>
               </template>
-              <template v-if="currentPath.startsWith('/docs/guides')">
+              <template v-if="currentPath.startsWith('/guides')">
                 <div class="menu-item">
                   Guides
                   <span class="count">{{ pagesPerCategory.guides }}</span>
                 </div>
-                <g-link to="/docs/guides" class="menu-link">Overview</g-link>
+                <g-link to="/guides" class="menu-link">Overview</g-link>
               </template>
-              <template v-if="currentPath.startsWith('/docs/reference')">
+              <template v-if="currentPath.startsWith('/reference')">
                 <div class="menu-item">
                   Reference
                   <span class="count">{{ pagesPerCategory.reference }}</span>
                 </div>
-                <g-link to="/docs/reference" class="menu-link">Overview</g-link>
+                <g-link to="/reference" class="menu-link">Overview</g-link>
               </template>
             </div>
             <template v-for="(group, i1) in links">
@@ -50,7 +50,7 @@
           </div>
         </nav> -->
       </Section>
-      <div v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/docs'" class="sidebar sidebar--right hide-for-small">
+      <div v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/'" class="sidebar sidebar--right hide-for-small">
         <h3>On this page</h3>
         <ul v-if="subtitles.length" class="menu-item submenu">
           <li class="submenu__item" :class="'submenu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
@@ -116,11 +116,11 @@ export default {
       }
     },
     links () {
-      if (this.$route.path.startsWith('/docs/guides')) {
+      if (this.$route.path.startsWith('/guides')) {
         return this.allLinks.guideLinks;
-      } else if (this.$route.path.startsWith('/docs/getting-started')) {
+      } else if (this.$route.path.startsWith('/getting-started')) {
         return this.allLinks.gettingStartedLinks;
-      } else if (this.$route.path.startsWith('/docs/reference')) {
+      } else if (this.$route.path.startsWith('/reference')) {
         return this.allLinks.referenceLinks;
       }else {
         return this.allLinks.rootLinks;

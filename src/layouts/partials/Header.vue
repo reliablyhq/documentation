@@ -5,7 +5,7 @@
         <ReliablyLogo />
         <span class="screen-reader-text">Reliably</span>
       </g-link>
-      <g-link class="header-docs-home" to="/docs">docs</g-link>
+      <g-link class="header-docs-home" to="/">docs</g-link>
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
         <g-link class="nav__link" to="/guides/">Guides</g-link>

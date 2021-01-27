@@ -12,10 +12,8 @@ to your repository.
 
 :::note Note
   The sources used in this walkthrough are available in this
-  [demo repository][demo-repo].
+  [demo repository](https://gitlab.com/reliably/reliably-discovery-demo).
 :::
-
-[demo-repo]: https://gitlab.com/reliably/reliably-discovery-demo
 
 ## Add GitLab CI/CD to your repository
 
@@ -24,19 +22,17 @@ repository. If you have an existing GitLab repository with CI/CD setup you
 can jump ahead to
 where we [Add Reliably to GitLab CI/CD](#add-reliably-to-gitlab)
 
-Reliably integrates with GitLab through [GitLab CI/CD][gl-cicd]. CI/CD is
+Reliably integrates with GitLab through
+[GitLab CI/CD](https://docs.gitlab.com/ee/ci/README.html). CI/CD is
 configured by creating a file called `.gitlab-ci.yml`
 at the root of your GitLab repository.
 
-You can read more about the [GitLab Pipeline Architecture][gl_pipeline_arch]
+You can read more about the
+[GitLab Pipeline Architecture](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html)
 in the GitLab Reference documentation. The first section describes a
-[basic pipeline][gl_basic_pl], with a useful diagram to visualise the concept.
+[basic pipeline](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html#basic-pipelines), with a useful diagram to visualise the concept.
 A basic GitLab CI/CD Pipeline will run everything on one stage in parallel,
 then it will do the same for the subsequent stage.
-
-[gl-cicd]: https://docs.gitlab.com/ee/ci/README.html
-[gl_pipeline_arch]:https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html
-[gl_basic_pl]:https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html#basic-pipelines
 
 In the repository that you want Reliably to work with, add new Git Lab CI/CD
 configuration file ` .gitlab-ci.yml`. You can start with this minimal GitLab
@@ -64,8 +60,8 @@ code_quality:
 This is a basic GitLab CI/CD Pipeline, this has one stage `test` and a
 `code_quality` job that will run in that `test` stage.
 
-You can [include other YAML][gl_yaml_include] files in the GitLab Pipeline
-configuration. Here we have included a [template file][gl_included_templates]
+You can [include other YAML](https://docs.gitlab.com/ee/ci/yaml/README.html#include) files in the GitLab Pipeline
+configuration. Here we have included a [template file](https://gitlab.com/gitlab-org/gitlab/tree/master/lib/gitlab/ci/templates)
 (`Code-Quality.gitlab-ci.yml`) that is distributed with GitLab. This will
 create a `code_quality` job in your CI/CD pipeline that will scan your source
  code for code quality issues.
@@ -73,14 +69,10 @@ create a `code_quality` job in your CI/CD pipeline that will scan your source
 In this case the `script:` section just writes an empty code quality report to
 the `gl-code-quality-report.json` file.
 
-[Artifacts][gl_artifacts] are used to specify a list of files and directories
+[Artifacts](https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts) are used to specify a list of files and directories
 that are attached to a GitLab Pipeline job when it completes. The `code_quality`
 job above is configured to create an artifact (`gl-code-quality-report.json`),
 which will allow the user to download the artifact from the pipeline if required.
-
-[gl_yaml_include]:       https://docs.gitlab.com/ee/ci/yaml/README.html#include
-[gl_included_templates]: https://gitlab.com/gitlab-org/gitlab/tree/master/lib/gitlab/ci/templates
-[gl_artifacts]:           https://docs.gitlab.com/ee/ci/yaml/README.html#artifacts
 
 ### Viewing the GitLab CI/CD Pipeline
 
@@ -106,16 +98,14 @@ show no issues:
 In GitLab CI/CD, `runners` run the code defined in .gitlab-ci.yml. A `runner`
 is a lightweight, agent that picks up a CI job, runs the job, and sends the
 result back to the GitLab instance. If you want to know more about GitLab
-runners the [GitLab CI/CD documentation][gl_runners] is very comprehensive.
+runners the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/runners/README.html) is very comprehensive.
 
-In your GitLab CI/CD Job you can add the `image:` [keyword][gl_image], this
- allows you to specify a docker image use for the runner. We are going to add a
-  custom docker image to the `code_quality` job, that will run the Reliably CLI.
-   We will also specify an [entrypoint][gl-settings-image] for that image.
-
-[gl_runners]: https://docs.gitlab.com/ee/ci/runners/README.html
-[gl_image]: https://docs.gitlab.com/ee/ci/yaml/README.html#image
-[gl-settings-image]: https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#available-settings-for-image
+In your GitLab CI/CD Job you can add the `image:`
+[keyword](https://docs.gitlab.com/ee/ci/yaml/README.html#image), this allows you
+to specify a docker image use for the runner. We are going to add a custom
+docker image to the `code_quality` job, that will run the Reliably CLI. We will
+also specify an [entrypoint](https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#available-settings-for-image)
+for that image.
 
 ```yaml
 image:
@@ -145,9 +135,9 @@ script:
 
 ### Rules to conditionally include the job in the Pipeline
 
-The ['rules:` key word][gl_rules] is used to conditionally include or exclude a
- job from the GitLab Pipeline. We are going to define rule that will determine
-  when the Reliably job will be included.
+The ['rules:` key word](https://docs.gitlab.com/ee/ci/yaml/README.html#rules) is
+used to conditionally include or exclude a job from the GitLab Pipeline. We are
+going to define rule that will determine when the Reliably job will be included.
 
 ```yaml
   rules:
@@ -164,21 +154,19 @@ The rules in this case are:
 
 Then the job will be included.
 
-The [rules section][gl_rules_clauses] in the GitLab CI/CD documentation will
-give you a more detailed description of rules and how to use them
-
-[gl_rules_clauses]: https://docs.gitlab.com/ee/ci/yaml/#rules-clauses
-[gl_rules]: https://docs.gitlab.com/ee/ci/yaml/README.html#rules
+The [rules section](https://docs.gitlab.com/ee/ci/yaml/#rules-clauses) in the
+GitLab CI/CD documentation will give you a more detailed description of rules
+and how to use them.
 
 ### Using a directory
 
 It maybe easier to organise the repository by putting all the manifests into a
- folder. We will update the `.gitlab-ci.yml`  to use the `manifests` folder as
-  the source code to be scanned.
+folder. We will update the `.gitlab-ci.yml`  to use the `manifests` folder as
+the source code to be scanned.
 
 We are using a Code Quality job as a review stage in the Pipeline, there are
-some predefined [environment variables][gl_cq_env] you use in the
- `.gitlab-ci.yml`.
+some predefined [environment variables](https://gitlab.com/gitlab-org/ci-cd/codequality#environment-variables)
+you use in the `.gitlab-ci.yml`.
 
 We will add the `SOURCE_CODE` environment varaible to point to the manifests
 folder. Add this to the top of the `.gitlab-ci.yml`:
@@ -196,13 +184,8 @@ We will also modify the call to the Reliably CLI to make use of the
       - reliably discover ./$SOURCE_CODE
 ```
 
-[gl_cq_env]: https://gitlab.com/gitlab-org/ci-cd/codequality#environment-variables
-
-
 Now we have made all the modifications to  the Pipeline in `.gitlab-ci.yml`,
 it should look like:
-
-
 
 ```yaml
 variables:
