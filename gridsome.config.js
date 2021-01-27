@@ -5,7 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Reliably',
+  siteName: 'Reliably Documentation',
+  siteUrl: 'http://perrien.fr',
   pathPrefix: '/docs',
 
   chainWebpack(config, { isServer }) {
