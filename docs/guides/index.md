@@ -31,11 +31,3 @@ import data from '~/data/guides-index-data.json'
     link="/guides/ci-pipeline"
     :list="data['ci-pipeline'].links"
 />
-
-<SectionList
-    title="Metrics"
-    categoryName="metrics"
-    description="Import Reliably metrics in your monitoring platform."
-    link="/guides/metrics"
-    :list="data.metrics.links"
-/>

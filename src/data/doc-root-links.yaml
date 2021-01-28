@@ -28,12 +28,7 @@
     - title: Run in your CI pipeline
       slug: ci-pipeline
       link: /guides/ci-pipeline/
-    - title: Run Continuously
-      slug: run-continuously
-      link: /guides/run-continuously/
-    - title: Metrics
-      slug: metrics
-      link: /guides/metrics/
+
 
 - title: Reference
   slug: reference

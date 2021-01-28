@@ -18,10 +18,4 @@
       link: /guides/ci-pipeline/gitlab-pipeline/
     - title: Jenkins Build
       link: /guides/ci-pipeline/jenkins/
-- title: Metrics
-  slug: metrics
-  items:
-    - title: Overview
-      link: /guides/metrics/
-    - title: Prometheus
-      link: /guides/metrics/prometheus/
+
