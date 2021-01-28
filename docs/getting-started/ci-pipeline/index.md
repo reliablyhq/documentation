@@ -2,7 +2,7 @@
 title: Run as part of your CI pipeline
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["getting-started"]
-status: published
+status: not-published
 type: doc
 ---
 # Execute Reliably during your CI/CD pipeline
