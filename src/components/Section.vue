@@ -1,6 +1,6 @@
 <template>
   <section class="section" :class="sectionClass">
-    <div class="section--inner container" :class="sectionClassInner">
+    <div class="section--inner" :class="sectionClassInner">
       <slot></slot>
     </div>
     <div v-if="dots" class="section__dots-bg dots-bg" />
@@ -68,6 +68,8 @@ export default {
   &--inner {
     position: relative;
     z-index: 2;
+
+    max-width: calc(100vwq - 30rem - 25px - 220px);
   }
 
   &--dark {

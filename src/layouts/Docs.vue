@@ -1,6 +1,6 @@
 <template>
   <Layout class="has-sidebar docs-page" :footer="false">
-    <div class="container flex flex-align-top">
+    <div class="main-grid container">
       <div class="sidebar">
         <template v-if="links">
           <g-link v-if="isSubSection" class="sidebar-backlink" to="/">&larr; Docs</g-link>
@@ -177,7 +177,48 @@ export default {
 </script>
 
 <style lang="scss">
+.main-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2rem;
+  max-width: 100vw;
+
+  @media screen and (min-width: 57rem) {
+    grid-template-columns: 25rem minmax(0, 1fr);
+  }
+
+  @media screen and (min-width: 80rem) {
+    grid-template-columns: 30rem minmax(0, 1fr) 22rem;
+  }
+}
+
+
 .sidebar {
+  @media screen and (max-width: 57rem) {
+    display: none;
+  }
+
+  position: sticky;
+  order: 0;
+  top: var(--header-height); 
+  z-index: 10;
+
+  height: calc(100vh + var(--header-height)*-1 - 5px);
+  overflow: auto;
+  padding: 9.5rem 0 0;
+
+  transition: border-color .3s;
+
+  -webkit-overflow-scrolling: touch;
+
+  &--right {
+    display: none;
+    
+    @media screen and (min-width: 80rem) {
+      display: block;
+    }
+  }
+  
   &-backlink {
     display: inline-block;
     margin-bottom: 4em;
