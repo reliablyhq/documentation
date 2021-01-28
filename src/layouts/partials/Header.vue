@@ -65,6 +65,8 @@ export default {
   }
 
   &-docs-home {
+    position: relative;
+
     display: inline-block;
     margin-right: 2em;
     margin-left: .4em;
@@ -85,6 +87,26 @@ export default {
       margin-right: .4em;
 
       transform: translateY(-.1em);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: calc(100% - .55em);
+      left: 1.2em;
+
+      display: block;
+      height: .3rem;
+      width: calc(100% - 1.4em);
+
+      background-color: transparent;
+    }
+
+    &:hover {
+      &::after {
+        background-color: var(--red);
+      }
     }
   }
 
