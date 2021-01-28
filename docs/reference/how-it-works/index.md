@@ -90,10 +90,10 @@ This `code_quality:` job is triggered by any change to a `.yaml` in the
 `manifests` folder in the repository. This will trigger GitLab Pipeline
 and the `reliably discover` command in the script. The `reliably discover` step
 retrieves any appropriate [Reliably Advice](./advice) from the
-[Reliably Services](./services), and produces [Reliably Suggestions](/suggestions)
+[Reliably Services](./services), and produces [Reliably Suggestions](./suggestions)
 on the Pipeline's output when it has completed.
 
-[More detail on how you can customize how the Reliably GitLab CI/CD pipeline works...](/guides/ci-pipeline/gitlab-pipeline)
+[More detail on how you can customize how the Reliably GitLab CI/CD pipeline works...](../../guides/ci-pipeline/gitlab-pipeline)
 
 ## Using the Reliably CLI locally
 

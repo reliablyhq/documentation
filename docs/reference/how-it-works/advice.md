@@ -11,4 +11,4 @@ The [Reliability Services][services] contain a wealth of different reliability p
 
 [services]: ../services
 [suggestions]: ../suggestions
-[cli]: ../../tools/cli
+[cli]: ../../cli
