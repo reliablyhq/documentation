@@ -1,8 +1,5 @@
 {
   "links": [
-    {
-      "label": "Run as part of your CI pipeline",
-      "link": "/getting-started/ci-pipeline/"
-    }
+
   ]
 }

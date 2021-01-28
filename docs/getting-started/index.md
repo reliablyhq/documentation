@@ -38,6 +38,4 @@ import data from '~/data/getting-started-index-data.json'
   />
 </MarkdownTwoColumns>
 
-## Other articles
 
-<OtherArticles :links="data.links" />

@@ -14,8 +14,6 @@
       link: /getting-started/scan-your-first-project/
     - title: Configure
       link: /getting-started/configure/
-    - title: Run as part of your CI pipeline
-      link: /getting-started/ci-pipeline/
 
 - title: Guides
   slug: guides
