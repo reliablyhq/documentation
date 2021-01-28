@@ -2,7 +2,7 @@
 title: Review past scans
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["getting-started"]
-status: published
+status: not-published
 type: doc
 ---
 # Review past scans

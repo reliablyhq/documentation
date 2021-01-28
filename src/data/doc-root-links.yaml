@@ -12,8 +12,6 @@
       link: /getting-started/login/
     - title: Scan your first project
       link: /getting-started/scan-your-first-project/
-    - title: Review past scans
-      link: /getting-started/review-past-scans/
     - title: Configure
       link: /getting-started/configure/
     - title: Run as part of your CI pipeline
