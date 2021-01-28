@@ -1,4 +1,44 @@
 .post img {
+  position: relative;
+
   display: block;
   max-width: 100%;
+
+  text-align: center;
+
+  // Styling broken images
+  &::before { 
+    content: " ";
+
+    top: -10px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    padding: 1em;
+
+    width: 100%;
+    
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted var(--red);
+    border-radius: 5px;
+  }
+  
+  &::after { 
+    content: "(This image seems to be missing)";
+
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+
+    color: rgb(100, 100, 100);
+    font-size: .8em;
+    font-style: normal;
+    text-align: center;
+  }
 }
