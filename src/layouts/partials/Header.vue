@@ -41,13 +41,20 @@ export default {
 
   display: flex;
   align-items: center;
-  height: var(--header-height);
+  height: auto;
+  padding: .5em 0;
 
   background-color: var(--bg-transparent);
   border-bottom: 1px solid var(--border-color);
 
+  @media screen and (min-width: 60rem) {
+    height: var(--header-height);
+    padding: 0;
+  }
+
   .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -59,6 +66,7 @@ export default {
 
   &-docs-home {
     display: inline-block;
+    margin-right: 2em;
     margin-left: .4em;
     padding: .4em .3em;
 
@@ -67,6 +75,8 @@ export default {
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+
+    transform: translateY(.2rem);
 
     &::before {
       content: '/';
@@ -79,16 +89,22 @@ export default {
   }
 
   nav {
-    margin-left: 1em;
-
     a {
       position: relative;
 
-      margin: 0 1em;
+      margin: 0 .5em;
 
       color: var(--brown);
       font-weight: 700;
       text-decoration: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       &:hover,
       &.active {
