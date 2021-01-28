@@ -26,13 +26,5 @@
         "link": "/guides/ci-pipeline/jenkins/"
       }
     ]
-  },
-  "metrics": {
-    "links": [
-      {
-        "title": "Prometheus",
-        "link": "/guides/metrics/prometheus/"
-      }
-    ]
   }
 }
