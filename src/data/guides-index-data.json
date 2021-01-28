@@ -27,18 +27,6 @@
       }
     ]
   },
-  "run-continuously": {
-    "links": [
-      {
-        "title": "Kubernetes Operator",
-        "link": "/guides/run-continuously/kubernetes-operator/"
-      },
-      {
-        "title": "CRON Job",
-        "link": "/guides/run-continuously/cron-job/"
-      }
-    ]
-  },
   "metrics": {
     "links": [
       {

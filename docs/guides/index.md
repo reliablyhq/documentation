@@ -33,14 +33,6 @@ import data from '~/data/guides-index-data.json'
 />
 
 <SectionList
-    title="Run Continuously"
-    categoryName="run-continuously"
-    description="Let Reliably continuously check your Kubernetes manifests for potential reliability weaknesses."
-    link="/guides/run-continuously"
-    :list="data['run-continuously'].links"
-/>
-
-<SectionList
     title="Metrics"
     categoryName="metrics"
     description="Import Reliably metrics in your monitoring platform."

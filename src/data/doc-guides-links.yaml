@@ -18,15 +18,6 @@
       link: /guides/ci-pipeline/gitlab-pipeline/
     - title: Jenkins Build
       link: /guides/ci-pipeline/jenkins/
-- title: Run Continuously
-  slug: run-continuously
-  items:
-    - title: Overview
-      link: /guides/run-continuously/
-    - title: Kubernetes Operator
-      link: /guides/run-continuously/kubernetes-operator/
-    - title: CRON Job
-      link: /guides/run-continuously/cron-job/
 - title: Metrics
   slug: metrics
   items:

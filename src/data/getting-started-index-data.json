@@ -1,14 +1,6 @@
 {
   "links": [
     {
-      "label": "Review past scans",
-      "link": "/getting-started/review-past-scans/"
-    },
-    {
-      "label": "Configure Reliably",
-      "link": "/getting-started/configure/"
-    },
-    {
       "label": "Run as part of your CI pipeline",
       "link": "/getting-started/ci-pipeline/"
     }
