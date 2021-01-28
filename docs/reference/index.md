@@ -12,7 +12,6 @@ import data from '~/data/reference-index-data.json'
 
 # Reference
 
-
 <PageIntroduction>
   The reference part of Reliably Documentation is a detailed guide to all the aspects of Reliably.
 </PageIntroduction>
@@ -23,14 +22,6 @@ import data from '~/data/reference-index-data.json'
     description="Complete reference guide for the Reliably CLI"
     link="/reference/cli/"
     :list="data.cli.links"
-/>
-
-<SectionList
-    title="REST API"
-    categoryName="rest-api"
-    description="Reference for the Reliably REST API"
-    link="/reference/rest-api"
-    :list="data['rest-api'].links"
 />
 
 <SectionList

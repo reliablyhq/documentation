@@ -15,14 +15,6 @@
       }
     ]
   },
-  "rest-api": {
-    "links": [
-      {
-        "title": "REST API",
-        "link": "/reference/rest-api/"
-      }
-    ]
-  },
   "how-it-works": {
     "links": [
       {

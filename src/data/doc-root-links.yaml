@@ -36,8 +36,6 @@
     - title: CLI
       slug: cli
       link: /reference/cli/
-    - title: REST API
-      link: /reference/rest-api/
     - title: How it works
       slug: how-it-works
       link: /reference/how-it-works/

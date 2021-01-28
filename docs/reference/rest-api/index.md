@@ -2,7 +2,7 @@
 title: REST API Reference
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["reference", "rest-api"]
-status: published
+status: not-published
 type: doc
 ---
 # REST API
