@@ -68,11 +68,13 @@ export default {
     padding-top: 1em;
     ul {
       display: flex;
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
 
       list-style-type: none;
       li {
+        margin-top: .5em;
         &:not(:last-child) {
           margin-right: 1em;
         }
