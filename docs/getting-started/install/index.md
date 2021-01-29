@@ -15,7 +15,7 @@ system from [Reliably CLI releases][releases].
 
 [releases]: https://github.com/reliablyhq/cli/releases
 
-Once downloaded he appropriate binary, rename it to `reliably`:
+Once you have downloaded the appropriate binary, rename it to `reliably`:
 
 ```console
 $ mv reliably-darwin-amd64 reliably
@@ -28,7 +28,7 @@ $ chmod u+x reliably
 ```
 
 To make Reliably convenient to run, move the executable to a directory that
-is on your e.g. `/usr/local/bin`.
+is on your PATH e.g. `/usr/local/bin`.
 
 Then in a terminal window, execute:
 
