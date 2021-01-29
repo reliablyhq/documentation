@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-gridsome:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,19 +19,6 @@ jobs:
         run: npm ci
       - name: Build Gridsome
         run: npm run-script build
-      - name: Persist dist
-        uses: actions/upload-artifact@v2
-        with:
-          name: gridsome-dist
-          path: dist
-  deploy:
-    needs: build-gridsome
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download dist
-        uses: actions/download-artifact@v2
-        with:
-          name: gridsome-dist
       - name: Authenticate with Gcloud
         uses: google-github-actions/setup-gcloud@master
         with:
@@ -39,7 +26,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: Rsync dist to reliably_docs bucket
-        run: gsutil -m rsync -r -d gridsome-docs/ gs://reliably_docs
+        run: gsutil -m rsync -r -d dist/ gs://reliably_docs
       - name: Invalidate CDN cache to serve latest policies
         run: |
           gcloud --project ${{ secrets.GCP_PROJECT }} compute url-maps invalidate-cdn-cache staging-lb --host reliably.dev --path "/docs/*" --async
