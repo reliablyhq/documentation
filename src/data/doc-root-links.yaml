@@ -18,9 +18,6 @@
   items:
     - title: Overview
       link: /guides/
-    - title: Run as you code
-      slug: run-as-you-code
-      link:  /guides/run-as-you-code/
     - title: Run in your CI pipeline
       slug: ci-pipeline
       link: /guides/ci-pipeline/

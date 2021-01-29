@@ -13,16 +13,8 @@ import data from '~/data/guides-index-data.json'
 # Guides
 
 <PageIntroduction>
-  The Guides section of the documentation explores different ways of running Reliably. You can run  <g-link to="/guides/run-as-you-code/">Reliably locally</g-link> on your machine or as part of a <g-link to="/guides/ci-pipeline/">CI Pipeline</g-link>.
+  Practical and actionable guides to get the best out of Reliably.
 </PageIntroduction>
-
-<SectionList
-    title="Run As You Code"
-    categoryName="run-as-you-code"
-    description="Get Reliably suggestions as you write your Kubernetes manifests."
-    link="/guides/run-as-you-code"
-    :list="data['run-as-you-code'].links"
-/>
 
 <SectionList
     title="CI Pipeline"
