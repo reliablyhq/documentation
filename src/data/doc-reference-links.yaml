@@ -22,14 +22,3 @@
       link: /reference/cli/reliably-completion/
     - title: discover
       link: /reference/cli/reliably-discover/
-- title: How it works
-  slug: how-it-works
-  items:
-    - title: Concepts
-      link: /reference/how-it-works/
-    - title: Advice
-      link: /reference/how-it-works/advice/
-    - title: Services
-      link: /reference/how-it-works/services/
-    - title: Suggestions
-      link: /reference/how-it-works/suggestions/
