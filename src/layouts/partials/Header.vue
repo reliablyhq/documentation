@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <div class="container">
-      <g-link class="header-logo" to="/">
+      <a href="/" class="header-logo">
         <ReliablyLogo />
         <span class="screen-reader-text">Reliably</span>
-      </g-link>
+      </a>
       <g-link class="header-docs-home" to="/">docs</g-link>
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
