@@ -35,11 +35,11 @@ jobs:
       - name: Authenticate with Gcloud
         uses: google-github-actions/setup-gcloud@master
         with:
-          project: ${{ secrets.GCP_PROJECT }}
+          project_id: ${{ secrets.GCP_PROJECT }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: Rsync dist to reliably_docs bucket
-        run: gsutil -m rsync -r -d dist gs://reliably_docs
+        run: gsutil -m rsync -r -d dist/ gs://reliably_docs
       - name: Invalidate CDN cache to serve latest policies
         run: |
           gcloud --project ${{ secrets.GCP_PROJECT }} compute url-maps invalidate-cdn-cache staging-lb --host reliably.dev --path "/docs/*" --async
