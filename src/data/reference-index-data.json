@@ -14,17 +14,5 @@
         "link": "/reference/cli/reliably-discover/"
       }
     ]
-  },
-  "how-it-works": {
-    "links": [
-      {
-        "title": "Concepts",
-        "link": "/reference/how-it-works/"
-      },
-      {
-        "title": "Suggestions",
-        "link": "/reference/how-it-works/suggestions/"
-      }
-    ]
   }
 }
