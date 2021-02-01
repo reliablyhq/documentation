@@ -24,8 +24,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-gtm',
       options: {
-        // id: ['G-QV6Z0L29VY', 'UA-181164851-1'],
-        id: ['G-QV6Z0L29VY'],
+        id: 'GTM-TCWX6CW',
         enabled: true,
         debug: false
       }
