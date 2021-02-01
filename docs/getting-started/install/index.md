@@ -38,9 +38,12 @@ $ reliably --version
 Reliably CLI v0.2.0
 ```
 
-You can find the full list of Reliably CLI releases [here][releases], and more
-detailed installation instructions, including instructions for Windows users,
-just below.
+More detailed installation instructions, including instructions for Windows
+users, are provided just below.
+
+## Previous versions
+
+You can find the full list of Reliably CLI releases [here][releases].
 
 [releases]: https://github.com/reliablyhq/cli/releases
 
@@ -116,7 +119,8 @@ MD5                 1234556789
 ```
 
 Compare the md5 checksum displayed with the md5 checksum in the
-[MD5 checksum file][windows10-release-md5], they should match.
+[MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-windows-amd64.md5),
+they should match.
 
 To execute ```reliably CLI``` you will need to rename the file and add a
 ```.exe``` file extension. In the terminal window type:
