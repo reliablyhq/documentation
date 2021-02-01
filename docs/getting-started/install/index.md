@@ -54,13 +54,8 @@ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darw
 ```
 
 You can also [download the latest macOS Release][https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64]
-from your browser.
-
-Make the file executable:
-
-```bash
-chmod u+x reliably-darwin-amd64
-```
+from your browser. To make Reliably convenient to run move the
+executable to a directory that is on your path for example ```/usr/local/bin```.
 
 If you downloaded the file from your browser (ie, not with `curl`), you might
 want to rename it:
@@ -68,6 +63,22 @@ want to rename it:
 mv reliably-darwin-amd64 reliably
 ```
 
+Make the file executable. If needed, change the path to reliably to match the
+location you chose.
+
+```bash
+chmod +x /usr/local/bin/reliably
+```
+
+Then in a terminal window execute:
+
+```bash
+reliably --version
+```
+
+You should see the current ```reliably``` cli version displayed.
+
+:::tip
 When you first run the `reliably` command, macOS might display a prompt. It
 might look different from this one, if you're running macOS Big Sur or newer.
 
@@ -79,16 +90,7 @@ Select ```Open``` and a terminal window will pop-up showing:
 
 The app will be saved as an exception to your security settings and now you
 will be able to run it from the command line.
-
-At this point to make Reliably convenient to run move the executable to a
-directory that is on your path for example ```/usr/local/bin``` and rename the
-file to ```reliably```. Then in a terminal window execute:
-
-```bash
-reliably --version
-```
-
-You should see the current ```reliably``` cli version disaplyed.
+:::
 
 ### Installing Reliably on Windows 10
 
