@@ -48,7 +48,8 @@ just below.
 
 ### Installing on MacOS
 
-Get the latest release and copy it to a directory in your PATH.
+Get the latest release and copy it to a directory in your PATH, for example
+/usr/local/bin.
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
