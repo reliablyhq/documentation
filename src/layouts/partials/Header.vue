@@ -9,7 +9,7 @@
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
         <g-link class="nav__link" to="/guides/">Guides</g-link>
-        <g-link class="nav__link" to="/reference">Reference</g-link>
+        <g-link class="nav__link" to="/reference/">Reference</g-link>
       </nav>
     </div>
   </header>

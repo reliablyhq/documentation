@@ -42,7 +42,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Getting Started"
     categoryName="getting-started"
     description="Start using Reliably in minutes and make your Kubernetes deployments more reliable."
-    link="/getting-started"
+    link="/getting-started/"
     :list="data['getting-started'].links"
 />
 
@@ -50,7 +50,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Guides"
     categoryName="guides"
     description="Practical guides show you how to get Reliably running in your favorite CI environment."
-    link="/guides"
+    link="/guides/"
     :list="data.guides.links"
 />
 
@@ -58,6 +58,6 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     title="Reference"
     categoryName="reference"
     description="Technical description of how the Reliably API works, as well as a full documentation for the CLI."
-    link="/reference"
+    link="/reference/"
     :list="data.reference.links"
 />

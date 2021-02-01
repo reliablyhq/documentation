@@ -31,7 +31,7 @@ chmod +x /usr/local/bin/reliably
 You're good to go!
 
 You can check everything is working with the `reliably --version` and you're
-ready to [login](../login).
+ready to [login](../login/).
 
 ```console
 $ reliably --version
@@ -45,7 +45,7 @@ users, are provided just below.
 
 You can find the full list of Reliably CLI releases [here][releases].
 
-[releases]: https://github.com/reliablyhq/cli/releases
+[releases]: https://github.com/reliablyhq/cli/releases/
 
 ## Installation Details
 
@@ -57,7 +57,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 
-You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64)
+You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64/)
 from your browser. To make Reliably convenient to run move the
 executable to a directory that is on your path, for example ```/usr/local/bin```.
 
@@ -98,7 +98,7 @@ will be able to run it from the command line.
 
 ### Installing Reliably on Windows 10
 
-* Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
+* Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64/) to a working directory.
 
 When you select the download button you may see a browser warning:
 
@@ -119,7 +119,7 @@ MD5                 1234556789
 ```
 
 Compare the md5 checksum displayed with the md5 checksum in the
-[MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-windows-amd64.md5),
+[MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-windows-amd64.md5/),
 they should match.
 
 To execute ```reliably CLI``` you will need to rename the file and add a
@@ -163,7 +163,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnnunx-amd64 -o /usr/local/bin/reliably
 ```
 
-You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnux-amd64)
+You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnux-amd64/)
 from your browser. To make Reliably convenient to run move the
 executable to a directory that is on your path, for example ```/usr/local/bin```.
 
@@ -182,7 +182,7 @@ md5sum reliably-linux-amd64
 cab791d7d4b4e5a0dcf00392b4ce672c  reliably-linux-amd64
 ```
 
-Compare the md5 checksum displayed with the [MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-linux-amd64.md5), they should match.
+Compare the md5 checksum displayed with the [MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-linux-amd64.md5/), they should match.
 
 Make the file executable. If needed, change the path to reliably to match the
 location you chose.

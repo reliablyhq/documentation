@@ -15,11 +15,11 @@
     "links": [
       {
         "title": "GitHub Action",
-        "link": "/guides/ci-pipeline/github-action"
+        "link": "/guides/ci-pipeline/github-action/"
       },
       {
         "title": "GitLab pipeline",
-        "link": "/guides/ci-pipeline/gitlab-pipeline"
+        "link": "/guides/ci-pipeline/gitlab-pipeline/"
       },
       {
         "title": "Jenkins build",
