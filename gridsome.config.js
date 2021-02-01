@@ -22,6 +22,15 @@ module.exports = {
 
   plugins: [
     {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        // id: ['G-QV6Z0L29VY', 'UA-181164851-1'],
+        id: ['G-QV6Z0L29VY'],
+        enabled: true,
+        debug: false
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         baseDir: './cobra-md/',
