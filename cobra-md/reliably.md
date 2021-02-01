@@ -1,6 +1,6 @@
 ---
 title: reliably
-excerpt: Documentation for the reliably.md command in the Reliably CLI
+excerpt: Documentation for the cobra-md/reliably.md command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc

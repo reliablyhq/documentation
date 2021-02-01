@@ -1,6 +1,6 @@
 ---
 title: reliably auth status
-excerpt: Documentation for the reliably_auth_status.md command in the Reliably CLI
+excerpt: Documentation for the cobra-md/reliably_auth_status.md command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
