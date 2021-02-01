@@ -1,9 +1,10 @@
 name: Generate Reliably CLI Documentation
 
 on:
+  repository_dispatch:
+    types: [gen-cli-doc]
   workflow_dispatch:
-  - repository_dispatch:
-    - types: [gen-cli-doc]
+
 
 jobs:
   gen-cli-doc:
