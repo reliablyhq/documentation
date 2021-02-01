@@ -9,7 +9,6 @@ jobs:
   gen-cli-doc:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ github.event.action }}
     - name: 'Checkout source code'
       uses: actions/checkout@v2
     - name: Setup Reliably CLI latest version
