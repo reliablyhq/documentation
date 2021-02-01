@@ -6,6 +6,14 @@ a:not([href$="/"]) {
   &:not([href*="#"]) {
     background-color: #bd9ad4 !important;
     border: 3px solid #960af5 !important;
+
+    &::after {
+      content: "This link is missing a trailing slash";
+      
+      border-left: 3px solid #960af5 !important;
+      
+      color: #960af5 !important;
+    }
   }
 
 }
