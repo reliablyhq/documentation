@@ -2,8 +2,8 @@
 
 // Styling internal links without a trailing slash
 a:not([href$="/"]) {
-  // But not links to an anchor internal to the page
-  &:not([href^="#"]) {
+  // But not links to an anchor in to the page
+  &:not([href*="#"]) {
     background-color: #bd9ad4 !important;
     border: 3px solid #960af5 !important;
   }
