@@ -53,7 +53,7 @@ Get the latest release and copy it to a directory in your PATH.
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 
-You can also [download the latest macOS Release][https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64]
+You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64)
 from your browser. To make Reliably convenient to run move the
 executable to a directory that is on your path for example ```/usr/local/bin```.
 
@@ -94,7 +94,7 @@ will be able to run it from the command line.
 
 ### Installing Reliably on Windows 10
 
-* Download [Windows 10 Release][windows10-release] to a working directory.
+* Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
 
 When you select the download button you may see a browser warning:
 
@@ -102,7 +102,9 @@ When you select the download button you may see a browser warning:
 
 Select the menu option and keep. You can then navigate to the file location
 using your prefered terminal window (in these docs we are using Powershell).
-Check the md5 checksum to confirm the downloaded file has not been corrupted:
+
+If you want, you can check the md5 checksum to confirm the downloaded file has
+not been corrupted:
 
 ```powershell
 PS D:\progams\reliably Get-FileHash .\reliably.exe -algorithm md5
@@ -112,28 +114,27 @@ Algorithm           Hash
 MD5                 1234556789
 ```
 
-
 Compare the md5 checksum displayed with the md5 checksum in the
 [MD5 checksum file][windows10-release-md5], they should match.
 
-To execute ```reliably CLI``` you will need to rename the file and add a ```.exe```
-file extension. In the terminal window type:
+To execute ```reliably CLI``` you will need to rename the file and add a
+```.exe``` file extension. In the terminal window type:
 
 ```powershell
-move .\reliably-windows-amd64 .\relliably.exe
+move .\reliably-windows-amd64 .\reliably.exe
 ```
 
 Then execute:
 
 ```powershell
-.\relliably.exe --version
+.\reliably.exe --version
 ```
 
 You should see the current ```reliably CLI``` version displayed.
 
-At this point, to make Reliably convenient, to run add the folder to the
-executable path. From the Windows start menu right click and select ```System``` from
-the sub-menu. Scroll down in the About section and select Advanced Systems
+At this point, to make Reliably convenient to run, add the folder to the
+executable path. From the Windows start menu right click and select ```System```
+from the sub-menu. Scroll down in the About section and select Advanced Systems
 Settings. In the pop-up window select:
 
 * Environment Variables
@@ -150,7 +151,6 @@ Reliably CLI will now be available in you Powershell sessions.
 
 
 ### Installing Reliably on Linux (Ubuntu)
-
 
 * Download  [Reliably Linux Image][reliably-linux] to a working directory.
 
