@@ -56,7 +56,7 @@ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darw
 
 You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64)
 from your browser. To make Reliably convenient to run move the
-executable to a directory that is on your path for example ```/usr/local/bin```.
+executable to a directory that is on your path, for example ```/usr/local/bin```.
 
 If you downloaded the file from your browser (ie, not with `curl`), you might
 want to rename it:
@@ -153,11 +153,24 @@ Reliably CLI will now be available in you Powershell sessions.
 
 ### Installing Reliably on Linux (Ubuntu)
 
-* Download  [Reliably Linux Image][reliably-linux] to a working directory.
+Get the latest release and copy it to a directory in your PATH, for example
+/usr/local/bin.
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnnunx-amd64 -o /usr/local/bin/reliably
+```
 
-Open a terminal window and navigate to the directory where you downloaded the Reliably image.
+You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnux-amd64)
+from your browser. To make Reliably convenient to run move the
+executable to a directory that is on your path, for example ```/usr/local/bin```.
 
-Check the md5 checksum to confirm the downloaded file has not been corrupted:
+If you downloaded the file from your browser (ie, not with `curl`), you might
+want to rename it:
+```console
+mv reliably-darwin-amd64 reliably
+```
+
+If you want to check the file has not been corrupted, navigate to the directory
+where you downloaded the Reliably and check the md5 checksum.
 
 ```bash
 md5sum reliably-linux-amd64
@@ -165,32 +178,16 @@ md5sum reliably-linux-amd64
 cab791d7d4b4e5a0dcf00392b4ce672c  reliably-linux-amd64
 ```
 
-Compare the md5 checksum displayed with the [MD5 checksum file][reliably-linux-md5], they should match.
+Compare the md5 checksum displayed with the [MD5 checksum file](https://github.com/reliablyhq/cli/releases/download/v0.3.0/reliably-linux-amd64.md5), they should match.
 
-Make the file and executable by executing:
-
-```bash
-chmod u+x reliably-darwin-amd64
-```
-
-To confirm the file can be execute run:
+Make the file executable. If needed, change the path to reliably to match the
+location you chose.
 
 ```bash
-./reliably-linux-amd64 --version
-
+chmod +x /usr/local/bin/reliably
 ```
 
-The Reliably CLI version should be displayed.
-
-At this point, to make Reliably convenient, to run move the executable to a
-directory that is on your path, for example ```/usr/local/bin```, and rename the
-file to ```reliably```.
-
-```bash
-sudo mv reliably-linux-amd64 /usr/local/bin/reliably
-```
-
-Then open a new terminal window execute:
+Then in a terminal window execute:
 
 ```bash
 reliably --version
