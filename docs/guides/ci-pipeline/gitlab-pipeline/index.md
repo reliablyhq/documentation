@@ -23,12 +23,12 @@ can jump ahead to
 where we [Add Reliably to GitLab CI/CD](#add-reliably-to-gitlab)
 
 Reliably integrates with GitLab through
-[GitLab CI/CD](https://docs.gitlab.com/ee/ci/README.html). CI/CD is
+[GitLab CI/CD](https://docs.gitlab.com/ee/ci/README/). CI/CD is
 configured by creating a file called `.gitlab-ci.yml`
 at the root of your GitLab repository.
 
 You can read more about the
-[GitLab Pipeline Architecture](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html)
+[GitLab Pipeline Architecture](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures/)
 in the GitLab Reference documentation. The first section describes a
 [basic pipeline](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html#basic-pipelines), with a useful diagram to visualise the concept.
 A basic GitLab CI/CD Pipeline will run everything on one stage in parallel,
@@ -60,7 +60,7 @@ code_quality:
 This is a basic GitLab CI/CD Pipeline, this has one stage `test` and a
 `code_quality` job that will run in that `test` stage.
 
-You can [include other YAML](https://docs.gitlab.com/ee/ci/yaml/README.html#include) files in the GitLab Pipeline
+You can [include other YAML](https://docs.gitlab.com/ee/ci/yaml/README#include) files in the GitLab Pipeline
 configuration. Here we have included a [template file](https://gitlab.com/gitlab-org/gitlab/tree/master/lib/gitlab/ci/templates)
 (`Code-Quality.gitlab-ci.yml`) that is distributed with GitLab. This will
 create a `code_quality` job in your CI/CD pipeline that will scan your source
