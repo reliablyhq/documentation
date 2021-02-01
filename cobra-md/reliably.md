@@ -33,3 +33,4 @@ $ reliably discover
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
 * [reliably discover](/docs/reference/cli/reliably-discover/)	 - Check for Reliably Suggestions
 
+
