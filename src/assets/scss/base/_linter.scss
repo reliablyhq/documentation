@@ -1,9 +1,13 @@
 // This styles are made for linting and should trigger when something is wrong.
 
-// Styling links without a trailing slash
+// Styling internal links without a trailing slash
 a:not([href$="/"]) {
-  background-color: #bd9ad4 !important;
-  border: 3px solid #960af5 !important;
+  // But not links to an anchor in to the page
+  &:not([href*="#"]) {
+    background-color: #bd9ad4 !important;
+    border: 3px solid #960af5 !important;
+  }
+
 }
 
 // Styling broken images
