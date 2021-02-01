@@ -19,7 +19,7 @@ jobs:
         git config user.email "74009226+reliably-ci@users.noreply.github.com"
         git config user.name "CI at Reliably"
 
-        git add cobra-md
-        git commit -s -m "Generate documentation for ${{ steps.reliably.outputs.version }}"
-        git push
+        git add cobra-md/* && \
+        git commit -s -m "Generate documentation for ${{ steps.reliably.outputs.version }}" && \
+        git push || echo "No changes in generated doc"
 
