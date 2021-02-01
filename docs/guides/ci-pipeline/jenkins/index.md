@@ -21,7 +21,6 @@ To run Reliably as a Jenkins Job you will need acess to a
 * [Jenkins installation instructions][jenkins-install]
 
 [jenkins-install]: https://www.jenkins.io/doc/book/installing/
-[reliably-cli-install]: ../../tools/cli/#installing-the-reliably-cli
 
 ## Create a Reliably Build Step in Jenkins
 
@@ -66,9 +65,7 @@ The commands above:
   file for any issues.
 
 The discover command will discover and surface suggestions where you might be
-able to avoid reliability problems. For further details see how
-[Reliably works][reliably-howitworks].
-
+able to avoid reliability problems.
 
 ![Jenkins Execute Shell](./images/jenkins-execute-shell.png)
 
@@ -83,12 +80,3 @@ In the menu for the project:
 ![Jenkins Console Output](./images/jenkins-console-output.png)
 
 Congratulations you have successfully run Reliably as part of a Jenkins build!
-
-You may also like reading:
-
-* [How Reliably works][reliably-howitworks]
-* [The Reliably CLi][reliably-cli]
-
-[reliably-howitworks]: /reference/how-it-works
-[reliably-cli]: /reference/cli/
-
