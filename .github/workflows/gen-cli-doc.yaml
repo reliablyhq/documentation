@@ -20,6 +20,6 @@ jobs:
         git config user.name "CI at Reliably"
 
         git add cobra-md
-        git commit -s -m "Generate documentation for Reliably CLI version ${{ steps.reliably.outputs.version }}"
+        git commit -s -m "Generate documentation for ${{ steps.reliably.outputs.version }}"
         git push
 
