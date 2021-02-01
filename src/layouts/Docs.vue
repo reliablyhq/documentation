@@ -11,21 +11,21 @@
                   Getting Started
                   <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
                 </div>
-                <g-link to="/getting-started" class="menu-link">Overview</g-link>
+                <g-link to="/getting-started/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/guides')">
                 <div class="menu-item">
                   Guides
                   <span class="count">{{ pagesPerCategory.guides }}</span>
                 </div>
-                <g-link to="/guides" class="menu-link">Overview</g-link>
+                <g-link to="/guides/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/reference')">
                 <div class="menu-item">
                   Reference
                   <span class="count">{{ pagesPerCategory.reference }}</span>
                 </div>
-                <g-link to="/reference" class="menu-link">Overview</g-link>
+                <g-link to="/reference/" class="menu-link">Overview</g-link>
               </template>
             </div>
             <template v-for="(group, i1) in links">

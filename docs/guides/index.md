@@ -20,6 +20,6 @@ import data from '~/data/guides-index-data.json'
     title="CI Pipeline"
     categoryName="ci-pipeline"
     description="Run Reliably as part of your CI pipeline"
-    link="/guides/ci-pipeline"
+    link="/guides/ci-pipeline/"
     :list="data['ci-pipeline'].links"
 />

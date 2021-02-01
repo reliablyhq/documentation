@@ -12,7 +12,7 @@ to your repository.
 
 :::note Note
   The sources used in this walkthrough are available in this
-  [demo repository](https://gitlab.com/reliably/reliably-discovery-demo).
+  [demo repository](https://gitlab.com/reliably/reliably-discovery-demo/).
 :::
 
 ## Add GitLab CI/CD to your repository
@@ -23,12 +23,12 @@ can jump ahead to
 where we [Add Reliably to GitLab CI/CD](#add-reliably-to-gitlab)
 
 Reliably integrates with GitLab through
-[GitLab CI/CD](https://docs.gitlab.com/ee/ci/README.html). CI/CD is
+[GitLab CI/CD](https://docs.gitlab.com/ee/ci/README/). CI/CD is
 configured by creating a file called `.gitlab-ci.yml`
 at the root of your GitLab repository.
 
 You can read more about the
-[GitLab Pipeline Architecture](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html)
+[GitLab Pipeline Architecture](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures/)
 in the GitLab Reference documentation. The first section describes a
 [basic pipeline](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html#basic-pipelines), with a useful diagram to visualise the concept.
 A basic GitLab CI/CD Pipeline will run everything on one stage in parallel,
@@ -60,8 +60,8 @@ code_quality:
 This is a basic GitLab CI/CD Pipeline, this has one stage `test` and a
 `code_quality` job that will run in that `test` stage.
 
-You can [include other YAML](https://docs.gitlab.com/ee/ci/yaml/README.html#include) files in the GitLab Pipeline
-configuration. Here we have included a [template file](https://gitlab.com/gitlab-org/gitlab/tree/master/lib/gitlab/ci/templates)
+You can [include other YAML](https://docs.gitlab.com/ee/ci/yaml/README#include) files in the GitLab Pipeline
+configuration. Here we have included a [template file](https://gitlab.com/gitlab-org/gitlab/tree/master/lib/gitlab/ci/templates/)
 (`Code-Quality.gitlab-ci.yml`) that is distributed with GitLab. This will
 create a `code_quality` job in your CI/CD pipeline that will scan your source
  code for code quality issues.
@@ -98,13 +98,13 @@ show no issues:
 In GitLab CI/CD, `runners` run the code defined in .gitlab-ci.yml. A `runner`
 is a lightweight, agent that picks up a CI job, runs the job, and sends the
 result back to the GitLab instance. If you want to know more about GitLab
-runners the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/runners/README.html) is very comprehensive.
+runners the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/runners/README/) is very comprehensive.
 
 In your GitLab CI/CD Job you can add the `image:`
-[keyword](https://docs.gitlab.com/ee/ci/yaml/README.html#image), this allows you
+[keyword](https://docs.gitlab.com/ee/ci/yaml/README#image), this allows you
 to specify a docker image use for the runner. We are going to add a custom
 docker image to the `code_quality` job, that will run the Reliably CLI. We will
-also specify an [entrypoint](https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#available-settings-for-image)
+also specify an [entrypoint](https://docs.gitlab.com/ee/ci/docker/using_docker_images#available-settings-for-image)
 for that image.
 
 ```yaml
@@ -135,7 +135,7 @@ script:
 
 ### Rules to conditionally include the job in the Pipeline
 
-The ['rules:` key word](https://docs.gitlab.com/ee/ci/yaml/README.html#rules) is
+The ['rules:` key word](https://docs.gitlab.com/ee/ci/yaml/README#rules) is
 used to conditionally include or exclude a job from the GitLab Pipeline. We are
 going to define rule that will determine when the Reliably job will be included.
 

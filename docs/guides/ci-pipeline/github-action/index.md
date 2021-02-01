@@ -10,7 +10,7 @@ type: doc
 Adding Reliably to your GitHub repositories is as simple as adding a GitHub Workflow with a GitHub Action].
 
 :::note Note
-  The sources used in this walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo).
+  The sources used in this walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
 :::
 
 ## Add a new workflow to your repository
@@ -59,7 +59,7 @@ to the `Actions` tab on your repository on GitHub and you should see that your n
 
 
 ## Enable Code Scanning Alerts
-<a href="https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors" target="_blank" rel="noopener noreferer">Code Scanning</a> is a GitHub feature which groups potential vulnerabilities in the Security tab of your repository. To enable Code Scanning Alerts, you need to:
+<a href="https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/automatically-scanning-your-code-for-vulnerabilities-and-errors/" target="_blank" rel="noopener noreferer">Code Scanning</a> is a GitHub feature which groups potential vulnerabilities in the Security tab of your repository. To enable Code Scanning Alerts, you need to:
 
 * tell the action to continue on error
 * output the errors to a SARIF report file
@@ -116,7 +116,8 @@ spec:
     image: chaostoolkit:latest
 ```
 
-This `manifest.yaml` file has been specifically written to trigger some of Reliably's [Advice](/reference/how-it-works/advice) and [Suggestions](/reference/how-it-works/suggestions). You should now have the following in your repository:
+This `manifest.yaml` file has been specifically written to trigger some of
+Reliably's Suggestions. You should now have the following in your repository:
 
 ```
 manifest.yaml
@@ -152,7 +153,9 @@ Reliably has surfaced three Suggestions:
 
 All of these Reliably Suggestions *could* lead to reliability problems if you were to apply this manifest to your system.
 
-If you enabled Code Scanning Alerts and Reliably surfaces some [Reliably Suggestions](/reference/how-it-works/suggestions), then the Security tab in your repository will now display the number of suggestions.
+If you enabled Code Scanning Alerts and Reliably surfaces some Reliably
+Suggestions, then the Security tab in your repository will now display the
+number of suggestions.
 
 ![GitHub Security tab displays shows there are two Suggestions](./images/github-security-tab.png)
 
