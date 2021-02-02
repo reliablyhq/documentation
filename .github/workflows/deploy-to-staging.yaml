@@ -1,0 +1,61 @@
+name: Reliably Staging Docs Build/Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '**'
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Gridsome
+        run: npm run-script build
+
+      - name: Authenticate with Gcloud
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ secrets.GCP_PROJECT }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure Docker
+        run: gcloud --project ${{secrets.GCP_PROJECT}} auth configure-docker
+
+      - name: Build container image
+        run: docker build --no-cache -t $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA .
+        env:
+          GCP_CLOUD_RUN_SERVICE_NAME: staging-docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
+
+      - name: Push container image
+        run: docker push $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA
+        env:
+          GCP_CLOUD_RUN_SERVICE_NAME: staging-docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
+    
+      - name: Deploy cloud run service
+        run: gcloud run services update $GCP_CLOUD_RUN_SERVICE_NAME --quiet --project ${{secrets.GCP_PROJECT}} --platform=managed --image=$GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA --labels=commit-sha=$GITHUB_SHA,gc-action-name=$GITHUB_ACTION,gc-action-id=$GITHUB_RUN_ID --region=$GCP_DEPLOY_REGION
+        env:
+          GCP_CLOUD_RUN_SERVICE_NAME: staging-docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
+          GCP_DEPLOY_REGION: europe-west1
+
+      - name: Invalidate CDN cache to serve latest policies
+        if: ${{ !env.ACT }}
+        run: |
+          gcloud --project ${{ secrets.GCP_PROJECT }} compute url-maps invalidate-cdn-cache staging-lb --host reliably.dev --path "/docs/*" --async
