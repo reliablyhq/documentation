@@ -2,14 +2,13 @@ name: Reliably Prod Docs Build/Deploy
 
 on:
   push:
-    branches:
-      - main
     tags:
       - '**'
 
 
 jobs:
   build-and-deploy:
+    if: github.event.base_ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,21 +33,25 @@ jobs:
           export_default_credentials: true
 
       - name: Configure Docker
+        if: ${{ !env.ACT }}
         run: gcloud --project ${{secrets.GCP_PROJECT}} auth configure-docker eu.gcr.io --quiet
 
       - name: Build container image
+        if: ${{ !env.ACT }}
         run: docker build --no-cache -t $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA .
         env:
           GCP_CLOUD_RUN_SERVICE_NAME: docs
           GCP_REGISTRY_HOSTNAME: eu.gcr.io
 
       - name: Push container image
+        if: ${{ !env.ACT }}
         run: docker push $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA
         env:
           GCP_CLOUD_RUN_SERVICE_NAME: docs
           GCP_REGISTRY_HOSTNAME: eu.gcr.io
     
       - name: Deploy cloud run service
+        if: ${{ !env.ACT }}
         run: gcloud run services update $GCP_CLOUD_RUN_SERVICE_NAME --quiet --project ${{secrets.GCP_PROJECT}} --platform=managed --image=$GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA --labels=commit-sha=$GITHUB_SHA,gc-action-name=$GITHUB_ACTION,gc-action-id=$GITHUB_RUN_ID --region=$GCP_DEPLOY_REGION
         env:
           GCP_CLOUD_RUN_SERVICE_NAME: docs
