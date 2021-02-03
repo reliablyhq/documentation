@@ -42,7 +42,7 @@ Enter an item name (e.g. Run Reliably). Select the *Freestyle project* option, t
 
 In the new job display that appears next select the Build tab, then select *Execute Shell* from the *Add Build Step* dropdown menu
 
-Ensure you have working directory for jenkins to work in e.g ~/.reliably-demo.
+Ensure you have a working directory for Jenkins to work in, e.g ~/.reliably-demo.
 In the command window enter these commands:
 
 ```bash
@@ -55,13 +55,14 @@ reliably discover
 ```
 
 
-The commands above:
+What does this do?
 
-* Set's the current directory to the working directory `reliably-demo`
-* It then downloads Reliably from the releases repository on Github. The
-  Reliably image is then renamed and is given execute permissions.
+* The current directory is set to the working directory `reliably-demo`
+* Reliably is downloaded from the releases repository on Github.
+* The Reliably image is renamed.
+* And given execute permissions.
 * A manifest file is downloaded from a Github repository.
-* Finally, the 'reliably discover' command is run, which will scan the manifest
+* Finally, the `reliably discover` command is run, which will scan the manifest
   file for any issues.
 
 The discover command will discover and surface suggestions where you might be
