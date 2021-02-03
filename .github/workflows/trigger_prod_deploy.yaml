@@ -14,4 +14,4 @@ jobs:
         if: ${{ !env.ACT }}
         run: |
           git tag $(date +%Y%m%dT%H%M%S)
-          git push --tags
+          git push --tags origin main
