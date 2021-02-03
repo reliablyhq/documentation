@@ -1,0 +1,17 @@
+name: Trigger Prod Workflow via Main Tag 
+on:
+  workflow_dispatch:
+
+jobs:
+  tag-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: 'main'
+      - name: Tag and push
+        if: ${{ !env.ACT }}
+      - run: |
+          git tag $(date +%Y%m%dT%H%M%S)
+          git push --tags
