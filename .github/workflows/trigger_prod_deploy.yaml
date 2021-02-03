@@ -12,6 +12,6 @@ jobs:
           ref: 'main'
       - name: Tag and push
         if: ${{ !env.ACT }}
-      - run: |
+        run: |
           git tag $(date +%Y%m%dT%H%M%S)
           git push --tags
