@@ -25,7 +25,7 @@ module.exports = {
       use: 'gridsome-plugin-gtm',
       options: {
         id: 'GTM-TCWX6CW',
-        cookie_flags: 'max-age=7200;secure;samesite=none',
+        cookie_flags: 'Max-Age=7200;Secure;SameSite=None',
         enabled: true,
         debug: false
       }
