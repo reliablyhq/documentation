@@ -56,6 +56,5 @@ jobs:
           GCP_DEPLOY_REGION: europe-west1
 
       - name: Invalidate CDN cache to serve latest policies
-        if: ${{ !env.ACT }}
         run: |
           gcloud --project ${{ secrets.GCP_PROJECT }} compute url-maps invalidate-cdn-cache staging-lb --host reliably.dev --path "/docs/*" --async
