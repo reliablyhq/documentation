@@ -1,4 +1,4 @@
-name: Trigger Prod Workflow via Main Tag 
+name: Release Docs
 on:
   workflow_dispatch:
 
