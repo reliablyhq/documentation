@@ -163,7 +163,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnnunx-amd64 -o /usr/local/bin/reliably
 ```
 
-You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnux-amd64/)
+You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64/)
 from your browser. To make Reliably convenient to run move the
 executable to a directory that is on your path, for example ```/usr/local/bin```.
 
