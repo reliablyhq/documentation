@@ -128,7 +128,11 @@ Cloud, where you can now click the **Use Existing Config** button.
 
 In the modal window that opens next, click **Start Building**.
 
+<div style="max-width: 470px">
+
 ![](./images/circle-ci-start-building.png)
+
+</div>
 
 CircleCI will then redirect you to your builds page where you can see the
 results of your workflow.

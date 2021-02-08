@@ -75,31 +75,6 @@ module.exports = {
         }
       }
     },
-    // {
-    //   use: '@gridsome/vue-remark',
-    //   options: {
-    //     index: ['index'],
-    //     baseDir: './cobra-md',
-    //     pathPrefix: '/docs/reference/cli',
-    //     typeName: 'CliPage',
-    //     template: './src/templates/CliPage.vue',
-    //     plugins: [
-    //       '@gridsome/remark-prismjs',
-    //       [
-    //         'remark-behead',
-    //         {depth: -1},
-    //       ],
-    //     ],
-    //     remark: {
-    //       autolinkHeadings: {
-    //         content: {
-    //           type: 'text',
-    //           value: '#'
-    //         }
-    //       }
-    //     }
-    //   }
-    // },
   ],
   transformers: {
     remark: {
