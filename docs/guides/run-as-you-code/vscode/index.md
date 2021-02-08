@@ -2,7 +2,7 @@
 title: Visual Studio Code Plugin
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["guides", "run-as-you-code"]
-status: published
+status: not-published
 type: doc
 ---
 # Visual Studio Code Plugin
