@@ -3,6 +3,10 @@
     {
       "label": "Jenkins Build",
       "link": "/guides/ci-pipeline/jenkins/"
+    },
+    {
+      "label": "CircleCI",
+      "link": "/guides/ci-pipeline/circle-ci/"
     }
   ]
 }
