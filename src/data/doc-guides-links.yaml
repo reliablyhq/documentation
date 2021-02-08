@@ -9,4 +9,6 @@
       link: /guides/ci-pipeline/gitlab-pipeline/
     - title: Jenkins Build
       link: /guides/ci-pipeline/jenkins/
+    - title: CircleCI
+      link: /guides/ci-pipeline/circle-ci/
 

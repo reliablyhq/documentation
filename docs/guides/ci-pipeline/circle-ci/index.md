@@ -8,8 +8,7 @@ type: doc
 # Add Reliably to your CircleCI Build
 
 :::note
-This guide uses the CircleCI Cloud version and requires a basic knowledge of
-CircleCI principles.
+This guide uses the CircleCI Cloud version.
 :::
 
 This guide will show you how you can add Reliably to your
