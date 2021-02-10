@@ -198,7 +198,8 @@ export default {
   @media screen and (min-width: 80rem) {
     grid-template-columns: calc(50vw - 80rem) 
                            30rem 
-                           minmax(0, 1fr) 22rem
+                           minmax(0, 1fr)
+                           30rem
                            calc(50vw - 80rem) ;
   }
 }
@@ -408,21 +409,26 @@ export default {
 
   .submenu {
     margin: 0;
-    padding: 0;
+    padding: 1em;
 
+    background-color: var(--grey-900);
     list-style: none;
     opacity: 1;
+
+    > li.submenu__item-depth-2 + li.submenu__item-depth-2 {
+      border-top: 1px solid var(--grey-700);
+    }
 
     // font-size: 1.4rem;
 
     &__item-depth-2 {
       margin-bottom: 0;
-      padding: .4em 0;
+      padding: .7em 0 0;
 
       transition: border-color .3s;
 
       &:not(:first-child) {
-        margin-top: 1em;
+        margin-top: .7em;
       }
     }
 
