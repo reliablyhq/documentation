@@ -1,7 +1,7 @@
 <template>
   <Layout class="has-sidebar docs-page" :footer="false">
-    <div class="main-grid container">
-      <div class="sidebar">
+    <div class="main-grid">
+      <div class="sidebar sidebar--left">
         <template v-if="links">
           <g-link v-if="isSubSection" class="sidebar-backlink" to="/">&larr; Docs</g-link>
           <nav class="sidebar-nav">
@@ -180,17 +180,28 @@ export default {
 .main-grid {
   display: grid;
   grid-template-columns: 100%;
-  gap: 4rem;
 
   @media screen and (min-width: 57rem) {
-    grid-template-columns: 25rem minmax(0, 1fr);
+    grid-template-columns: calc(50vw - 80rem)
+                           25rem
+                           minmax(0, 1fr)
+                           calc(50vw - 80rem);
+ 
+    &::before {
+      content: '';
+      grid-column-start: 1;
+
+      background-color: var(--blue-light);
+    }
   }
 
   @media screen and (min-width: 80rem) {
-    grid-template-columns: 30rem minmax(0, 1fr) 22rem;
+    grid-template-columns: calc(50vw - 80rem) 
+                           30rem 
+                           minmax(0, 1fr) 22rem
+                           calc(50vw - 80rem) ;
   }
 }
-
 
 .sidebar {
   @media screen and (max-width: 57rem) {
@@ -198,11 +209,11 @@ export default {
   }
 
   position: sticky;
+  top: 4.8rem;
   order: 0;
-  top: var(--header-height); 
   z-index: 10;
 
-  height: calc(100vh + var(--header-height)*-1 - 5px);
+  height: calc(100vh - 4.8rem);
   overflow: auto;
   padding: 9.5rem 0 0;
 
@@ -210,10 +221,17 @@ export default {
 
   -webkit-overflow-scrolling: touch;
 
+  &--left {
+    grid-column-start: 2;
+
+    background-color: var(--blue-light);
+  }
+
   &--right {
     display: none;
     
     @media screen and (min-width: 80rem) {
+      grid-column-start: 4;
       display: block;
     }
   }
