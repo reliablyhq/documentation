@@ -180,7 +180,7 @@ export default {
 .main-grid {
   display: grid;
   grid-template-columns: 100%;
-  gap: 2rem;
+  gap: 4rem;
 
   @media screen and (min-width: 57rem) {
     grid-template-columns: 25rem minmax(0, 1fr);
