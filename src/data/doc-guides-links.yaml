@@ -1,3 +1,5 @@
+- title: Run as a kubectl Plugin
+  link: /guides/kubectl-plugin/
 - title: Run in your CI pipeline
   slug: ci-pipeline
   items:

@@ -18,6 +18,9 @@
   items:
     - title: Overview
       link: /guides/
+    - title: Run as a kubectl Plugin
+      slug: kubectl-plugin
+      link: /guides/kubectl-plugin/
     - title: Run in your CI pipeline
       slug: ci-pipeline
       link: /guides/ci-pipeline/
