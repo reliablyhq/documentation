@@ -14,6 +14,13 @@ This guide uses the CircleCI Cloud version.
 This guide will show you how you can add Reliably to your
 [CircleCI](https://circleci.com) build as a CircleCI job.
 
+:::note Note
+  You can automatically generate the workflow file using our CLI:
+  ```
+  $ reliably workflow --platform circleci
+  ```
+:::
+
 ## Set up a project in CircleCI
 
 Once your logged into CircleCI, set up a new project or select a project

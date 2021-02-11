@@ -15,6 +15,13 @@ to your repository.
   [demo repository](https://gitlab.com/reliably/reliably-discovery-demo/).
 :::
 
+:::note Note
+  You can automatically generate the workflow file using our CLI:
+  ```
+  $ reliably workflow --platform gitlab
+  ```
+:::
+
 ## Setup your Reliably access token as Variable
 
 The CLI must be run with a valid access token to make authenticated calls

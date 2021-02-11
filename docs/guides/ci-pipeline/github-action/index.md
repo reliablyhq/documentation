@@ -13,6 +13,13 @@ Adding Reliably to your GitHub repositories is as simple as adding a GitHub Work
   The sources used in this walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
 :::
 
+:::note Note
+  You can automatically generate the workflow file using our CLI:
+  ```
+  $ reliably workflow --platform github
+  ```
+:::
+
 ## Setup your Reliably access token as Secret
 
 As a pre-requisite, we advice to set up your Reliably access token as a GitHub secret,
