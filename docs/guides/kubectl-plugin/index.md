@@ -56,4 +56,4 @@ kubectl reliably
 Congratulations, you have successfully installed the `kubectl-reliably` plugin.
 For the next steps, see the [Reliably CLI reference][cli-ref] section.
 
-[cli-ref]: /reference/cli/
+[cli-ref]: /docs/reference/cli/
