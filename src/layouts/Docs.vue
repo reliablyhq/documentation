@@ -276,7 +276,8 @@ export default {
     }
 
     svg {
-      vertical-align: -.2rem;
+      margin-right: .2em;
+      vertical-align: -.2em;
     }
 
     .count-wrapper {

@@ -59,11 +59,32 @@ export default {
 </script>
 
 <style lang="scss">
-.sidebar-section {
-  // margin-bottom: 2em;
-  // padding: .5em 0;
-  padding: 1rem 0;
+.sidebar {
+  .sidebar-section {
+    // margin-bottom: 2em;
+    // padding: .5em 0;
+    padding: 1rem 0;
 
-  border-bottom: .1rem solid transparentize(#371722, .8);
+    // border-bottom: .1rem solid transparentize(#371722, .7);
+
+    &__content {
+      margin-left: 1em;
+
+      border-left: 1px solid var(--grey-700);
+      > .menu-item {
+        margin-left: .5em;
+        padding-left: .5em;
+
+        &::before {
+          content: "•";
+
+          margin-right: .25em;
+
+          transform: translateY(-.1em);
+        }
+      }
+    }
+  }
 }
+
 </style>
