@@ -314,6 +314,10 @@ export default {
 
         text-transform: uppercase;
 
+        &:hover {
+          background-color: var(--yellow);
+        }
+
         .count {
           background-color: var(--yellow-light);
           border-color: var(--yellow-dark);
