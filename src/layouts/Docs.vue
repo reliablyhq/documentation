@@ -9,21 +9,27 @@
               <template v-if="currentPath.startsWith('/getting-started')">
                 <div class="menu-item">
                   Getting Started
-                  <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
+                  </div>
                 </div>
                 <g-link to="/getting-started/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/guides')">
                 <div class="menu-item">
                   Guides
-                  <span class="count">{{ pagesPerCategory.guides }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory.guides }}</span>
+                  </div>
                 </div>
                 <g-link to="/guides/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/reference')">
                 <div class="menu-item">
                   Reference
-                  <span class="count">{{ pagesPerCategory.reference }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory.reference }}</span>
+                  </div>
                 </div>
                 <g-link to="/reference/" class="menu-link">Overview</g-link>
               </template>
@@ -245,7 +251,7 @@ export default {
       &.active {
         font-weight: 700;
         svg {
-          transform: rotate(90deg);
+          transform: translateY(.2em) rotate(90deg);
         }
       }
 
@@ -254,8 +260,9 @@ export default {
       }
 
       svg {
+        align-self:  flex-start;
         margin-right: .2em;
-        vertical-align: -.2em;
+        transform: translateY(.2em);
       }
 
       .count-wrapper {
@@ -291,6 +298,7 @@ export default {
   &-backlink {
     display: inline-block;
     margin-bottom: 4em;
+    margin-left: 3rem;
 
     color: currentColor;
     text-decoration: none;
@@ -300,16 +308,23 @@ export default {
     }
   }
 
-  
-
   &-nav {
     padding: 0 2rem;
     &__header {
       .menu-item {
         margin-bottom: 3em;
-        margin-left: 2rem;
+        margin-left: 1rem;
+
+        background-color: var(--yellow);
+        border-radius: var(--border-radius);
+        cursor: default;
 
         text-transform: uppercase;
+
+        .count {
+          background-color: var(--yellow-light);
+          border-color: var(--yellow-dark);
+        }
       }
     }
   }
