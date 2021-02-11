@@ -226,10 +226,61 @@ export default {
     grid-column-start: 2;
 
     background-color: var(--blue-light);
+
+    .menu-item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      // margin: 1rem 0 1rem;
+      padding: 1rem;
+
+      // border-top: 1px solid var(--border-color);
+      cursor: pointer;
+
+      font-size: 1em;
+      font-weight: 400;
+      // text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &.active {
+        font-weight: 700;
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+
+      &:hover {
+        background-color: transparentize(#b5d1cc, .6);
+      }
+
+      svg {
+        margin-right: .2em;
+        vertical-align: -.2em;
+      }
+
+      .count-wrapper {
+        margin-left: auto;
+      }
+
+      .count {
+        display: inline-block;
+        
+        padding: 0 .75em;
+
+        background-color: white;
+        border: .1rem solid var(--blue);
+        border-radius: 1rem;
+
+        color: var(--brown);
+        font-size: .75em;
+        font-weight: 400;
+      }
+    }
   }
 
   &--right {
     display: none;
+    padding-right: 2rem;
     
     @media screen and (min-width: 80rem) {
       grid-column-start: 4;
@@ -249,55 +300,7 @@ export default {
     }
   }
 
-  .menu-item {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    // margin: 1rem 0 1rem;
-    padding: 1rem;
-
-    // border-top: 1px solid var(--border-color);
-    cursor: pointer;
-
-    font-size: 1em;
-    font-weight: 400;
-	  // text-transform: uppercase;
-    letter-spacing: 1px;
-
-    &.active {
-      font-weight: 700;
-      svg {
-        transform: rotate(90deg);
-      }
-    }
-
-    &:hover {
-      background-color: transparentize(#b5d1cc, .6);
-    }
-
-    svg {
-      margin-right: .2em;
-      vertical-align: -.2em;
-    }
-
-    .count-wrapper {
-      margin-left: auto;
-    }
-
-    .count {
-      display: inline-block;
-      
-      padding: 0 .75em;
-
-      background-color: white;
-      border: .1rem solid var(--blue);
-      border-radius: 1rem;
-
-      color: var(--brown);
-      font-size: .75em;
-      font-weight: 400;
-    }
-  }
+  
 
   &-nav {
     padding: 0 2rem;
