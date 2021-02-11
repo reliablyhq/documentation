@@ -479,7 +479,7 @@ export default {
     list-style: none;
     opacity: 1;
 
-    > li.submenu__item-depth-2 + li.submenu__item-depth-2 {
+    > li.submenu__item-depth-2:not(:first-child) {
       border-top: 1px solid var(--grey-700);
     }
 
