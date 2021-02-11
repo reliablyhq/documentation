@@ -351,7 +351,12 @@ export default {
 
       // opacity: .7;
       // color: transparentize(var(--body-color), .3);
+      margin-left: 1.25em;
       color: var(--body-color-light);
+      
+      &::before {
+        display: none;
+      }
       // + .item-link {
       //   margin-top: .8rem;
       // }
