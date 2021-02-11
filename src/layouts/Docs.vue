@@ -36,7 +36,7 @@
             </div>
             <template v-for="(group, i1) in links">
               <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
-              <g-link v-else :key="i1" :to="group.link" class="menu-link">{{ group.title }}</g-link>
+              <g-link v-else :key="i1" :to="group.link" class="menu-item menu-link">{{ group.title }}</g-link>
             </template>
           </nav>
         </template>
@@ -323,6 +323,37 @@ export default {
           border-color: var(--yellow-dark);
         }
       }
+
+      .menu-link {
+        display: flex;
+        margin-left: .5em;
+        padding-left: .5em;
+
+        &:hover {
+          background-color: transparentize(#b5d1cc, .6);
+        }
+
+        &::before {
+          content: "•";
+
+          margin-right: .25em;
+
+          transform: translateY(-.1em);
+        }
+      }
+    }
+
+    > .menu-item {
+      margin-left: .5em;
+      padding-left: .5em;
+
+      &::before {
+        content: "•";
+
+        margin-right: .25em;
+
+        transform: translateY(-.1em);
+      }
     }
   }
 
@@ -378,9 +409,7 @@ export default {
       // border-left-color: var(--primary-color);
     }
 
-    &:hover {
-      // background-color: var(--blue-light);
-    }
+    
 
     &.active--exact {
       position: relative;
