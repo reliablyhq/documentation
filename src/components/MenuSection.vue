@@ -67,6 +67,15 @@ export default {
 
     // border-bottom: .1rem solid transparentize(#371722, .7);
 
+    > .menu-item {
+      &.active {
+        font-weight: 700;
+        svg {
+          transform: translateY(.2em) rotate(90deg);
+        }
+      }
+    }
+
     &__content {
       margin-left: 1em;
 

@@ -248,13 +248,6 @@ export default {
       // text-transform: uppercase;
       letter-spacing: 1px;
 
-      &.active {
-        font-weight: 700;
-        svg {
-          transform: translateY(.2em) rotate(90deg);
-        }
-      }
-
       &:hover {
         background-color: transparentize(#b5d1cc, .6);
       }
@@ -388,7 +381,7 @@ export default {
       outline-width: 1px;
 
       color: var(--red);
-      font-weight: 700;
+      // font-weight: 700;
     }
   }
 
