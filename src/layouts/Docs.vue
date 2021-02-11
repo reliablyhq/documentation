@@ -188,10 +188,10 @@ export default {
   grid-template-columns: 100%;
 
   @media screen and (min-width: 57rem) {
-    grid-template-columns: calc(50vw - 80rem)
+    grid-template-columns: calc(50vw - 75rem)
                            25rem
                            minmax(0, 1fr)
-                           calc(50vw - 80rem);
+                           calc(50vw - 75rem);
  
     &::before {
       content: '';
@@ -202,11 +202,11 @@ export default {
   }
 
   @media screen and (min-width: 80rem) {
-    grid-template-columns: calc(50vw - 80rem) 
+    grid-template-columns: calc(50vw - 75rem) 
                            30rem 
                            minmax(0, 1fr)
                            30rem
-                           calc(50vw - 80rem) ;
+                           calc(50vw - 75rem) ;
   }
 }
 
