@@ -259,6 +259,7 @@ export default {
       }
 
       .count-wrapper {
+        align-self: flex-start;
         margin-left: auto;
       }
 

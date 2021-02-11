@@ -87,6 +87,7 @@ export default {
         &::before {
           content: "•";
 
+          align-self: flex-start;
           margin-right: .25em;
 
           transform: translateY(-.1em);
