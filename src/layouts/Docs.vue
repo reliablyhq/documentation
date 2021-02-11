@@ -250,8 +250,11 @@ export default {
   }
 
   .menu-item {
-    margin: 1.5rem 0 .7rem;
-    padding-top: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    // margin: 1rem 0 1rem;
+    padding: 1rem;
 
     // border-top: 1px solid var(--border-color);
     cursor: pointer;
@@ -268,25 +271,35 @@ export default {
       }
     }
 
+    &:hover {
+      background-color: transparentize(#b5d1cc, .6);
+    }
+
     svg {
       vertical-align: -.2rem;
     }
 
+    .count-wrapper {
+      margin-left: auto;
+    }
+
     .count {
       display: inline-block;
-      margin-left: .5em;
+      
       padding: 0 .75em;
 
-      background-color: var(--body-color-lighter);
+      background-color: white;
+      border: .1rem solid var(--blue);
       border-radius: 1rem;
 
-      color: var(--body-color-light);
+      color: var(--brown);
       font-size: .75em;
       font-weight: 400;
     }
   }
 
   &-nav {
+    padding: 0 2rem;
     &__header {
       .menu-item {
         margin-bottom: 3em;
@@ -298,9 +311,8 @@ export default {
   }
 
   .menu-link {
-    display: block;
-    margin: 0 0 0 .7rem;
-    padding: 1rem 0 1rem 1.5rem;
+    margin: 0;
+    padding: 1rem 1rem 1rem 2rem;
 
     // border-left: 1px solid var(--body-color);
     opacity: 1;
@@ -346,16 +358,17 @@ export default {
     }
 
     &:hover {
-      background-color: var(--blue-light);
+      // background-color: var(--blue-light);
     }
 
     &.active--exact {
       position: relative;
 
       // padding-left: 1.2rem;
-      background-color: var(--blue);
+      // background-color: var(--blue);
       outline-width: 1px;
 
+      color: var(--red);
       font-weight: 700;
     }
   }
