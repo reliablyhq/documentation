@@ -282,6 +282,10 @@ export default {
   &--right {
     display: none;
     padding-right: 2rem;
+
+    h3 {
+      margin-top: 0;
+    }
     
     @media screen and (min-width: 80rem) {
       grid-column-start: 4;
