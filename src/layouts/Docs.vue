@@ -9,28 +9,34 @@
               <template v-if="currentPath.startsWith('/getting-started')">
                 <div class="menu-item">
                   Getting Started
-                  <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
+                  </div>
                 </div>
                 <g-link to="/getting-started/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/guides')">
                 <div class="menu-item">
                   Guides
-                  <span class="count">{{ pagesPerCategory.guides }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory.guides }}</span>
+                  </div>
                 </div>
                 <g-link to="/guides/" class="menu-link">Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/reference')">
                 <div class="menu-item">
                   Reference
-                  <span class="count">{{ pagesPerCategory.reference }}</span>
+                  <div class="count-wrapper">
+                    <span class="count">{{ pagesPerCategory.reference }}</span>
+                  </div>
                 </div>
                 <g-link to="/reference/" class="menu-link">Overview</g-link>
               </template>
             </div>
             <template v-for="(group, i1) in links">
               <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
-              <g-link v-else :key="i1" :to="group.link" class="menu-link">{{ group.title }}</g-link>
+              <g-link v-else :key="i1" :to="group.link" class="menu-item menu-link">{{ group.title }}</g-link>
             </template>
           </nav>
         </template>
@@ -226,10 +232,56 @@ export default {
     grid-column-start: 2;
 
     background-color: var(--blue-light);
+
+    .menu-item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      // margin: 1rem 0 1rem;
+      padding: 1rem;
+
+      // border-top: 1px solid var(--border-color);
+      cursor: pointer;
+
+      font-size: 1em;
+      font-weight: 400;
+      // text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        background-color: transparentize(#b5d1cc, .6);
+      }
+
+      svg {
+        align-self:  flex-start;
+        margin-right: .2em;
+        transform: translateY(.2em);
+      }
+
+      .count-wrapper {
+        align-self: flex-start;
+        margin-left: auto;
+      }
+
+      .count {
+        display: inline-block;
+        
+        padding: 0 .75em;
+
+        background-color: white;
+        border: .1rem solid var(--blue);
+        border-radius: 1rem;
+
+        color: var(--brown);
+        font-size: .75em;
+        font-weight: 400;
+      }
+    }
   }
 
   &--right {
     display: none;
+    padding-right: 2rem;
     
     @media screen and (min-width: 80rem) {
       grid-column-start: 4;
@@ -240,6 +292,7 @@ export default {
   &-backlink {
     display: inline-block;
     margin-bottom: 4em;
+    margin-left: 3rem;
 
     color: currentColor;
     text-decoration: none;
@@ -249,58 +302,65 @@ export default {
     }
   }
 
-  .menu-item {
-    margin: 1.5rem 0 .7rem;
-    padding-top: 2rem;
-
-    // border-top: 1px solid var(--border-color);
-    cursor: pointer;
-
-    font-size: 1em;
-    font-weight: 400;
-	  // text-transform: uppercase;
-    letter-spacing: 1px;
-
-    &.active {
-      font-weight: 700;
-      svg {
-        transform: rotate(90deg);
-      }
-    }
-
-    svg {
-      vertical-align: -.2rem;
-    }
-
-    .count {
-      display: inline-block;
-      margin-left: .5em;
-      padding: 0 .75em;
-
-      background-color: var(--body-color-lighter);
-      border-radius: 1rem;
-
-      color: var(--body-color-light);
-      font-size: .75em;
-      font-weight: 400;
-    }
-  }
-
   &-nav {
+    padding: 0 2rem;
     &__header {
       .menu-item {
         margin-bottom: 3em;
-        margin-left: 2rem;
+        margin-left: 1rem;
+
+        background-color: var(--yellow);
+        border-radius: var(--border-radius);
+        cursor: default;
 
         text-transform: uppercase;
+
+        &:hover {
+          background-color: var(--yellow);
+        }
+
+        .count {
+          background-color: var(--yellow-light);
+          border-color: var(--yellow-dark);
+        }
+      }
+
+      .menu-link {
+        display: flex;
+        margin-left: .5em;
+        padding-left: .5em;
+
+        &:hover {
+          background-color: transparentize(#b5d1cc, .6);
+        }
+
+        &::before {
+          content: "•";
+
+          margin-right: .25em;
+
+          transform: translateY(-.1em);
+        }
+      }
+    }
+
+    > .menu-item {
+      margin-left: .5em;
+      padding-left: .5em;
+
+      &::before {
+        content: "•";
+
+        margin-right: .25em;
+
+        transform: translateY(-.1em);
       }
     }
   }
 
   .menu-link {
-    display: block;
-    margin: 0 0 0 .7rem;
-    padding: 1rem 0 1rem 1.5rem;
+    margin: 0;
+    padding: 1rem 1rem 1rem 2rem;
 
     // border-left: 1px solid var(--body-color);
     opacity: 1;
@@ -327,7 +387,12 @@ export default {
 
       // opacity: .7;
       // color: transparentize(var(--body-color), .3);
+      margin-left: 1.25em;
       color: var(--body-color-light);
+      
+      &::before {
+        display: none;
+      }
       // + .item-link {
       //   margin-top: .8rem;
       // }
@@ -345,18 +410,17 @@ export default {
       // border-left-color: var(--primary-color);
     }
 
-    &:hover {
-      background-color: var(--blue-light);
-    }
+    
 
     &.active--exact {
       position: relative;
 
       // padding-left: 1.2rem;
-      background-color: var(--blue);
+      // background-color: var(--blue);
       outline-width: 1px;
 
-      font-weight: 700;
+      color: var(--red);
+      // font-weight: 700;
     }
   }
 
@@ -415,7 +479,7 @@ export default {
     list-style: none;
     opacity: 1;
 
-    > li.submenu__item-depth-2 + li.submenu__item-depth-2 {
+    > li.submenu__item-depth-2:not(:first-child) {
       border-top: 1px solid var(--grey-700);
     }
 
