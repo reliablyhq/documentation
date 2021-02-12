@@ -23,3 +23,11 @@ import data from '~/data/guides-index-data.json'
     link="/guides/ci-pipeline/"
     :list="data['ci-pipeline'].links"
 />
+
+<SectionList
+    title="kubectl plugin"
+    categoryName="kubectl-plugin"
+    description="Run Reliably as a kubectl plugin"
+    link="/guides/kubectl-plugin/"
+    :list="data['kubectl-plugin'].links"
+/>

@@ -45,11 +45,10 @@ export default {
   padding: .5em 0;
 
   background-color: var(--bg-transparent);
-  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 .1rem .6rem rgba(0, 0, 0, .16);
 
-  @media screen and (min-width: 60rem) {
-    height: var(--header-height);
-    padding: 0;
+  @media screen and (min-width: 39.5rem) {
+    padding-bottom: 0;
   }
 
   .container {
@@ -111,6 +110,9 @@ export default {
   }
 
   nav {
+    @media screen and (min-width: 40rem) {
+      margin-left: auto;
+    }
     a {
       position: relative;
 
@@ -134,11 +136,11 @@ export default {
           content: '';
 
           position: absolute;
-          bottom: -.3rem;
+          bottom: -.9rem;
           left: 0;
 
           display: block;
-          height: .3rem;
+          height: .2rem;
           width: 100%;
 
           background-color: var(--red);

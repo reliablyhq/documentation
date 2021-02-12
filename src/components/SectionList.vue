@@ -1,16 +1,16 @@
 <template>
   <div class="section-list">
-    <h2>{{ title }}</h2>
     <div class="section-list__content">
+      <h2>{{ title }}</h2>
       <p v-html="description"></p>
-      <div class="section-list__list">
+    </div>
+    <div class="section-list__list">
       <ul v-if="list.length > 0">
         <li v-for="(item, index) in list" :key="index">
           <g-link :to="item.link">{{ item.title }}</g-link>
         </li>
       </ul>
       <g-link :to="link">All {{ pagesPerCategory[categoryName] }} articles</g-link>
-    </div>
     </div>
   </div>
 </template>
@@ -73,22 +73,31 @@ export default {
 
 <style lang="scss">
 .section-list {
-  margin-bottom: 4em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 8rem;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  padding-bottom: 3em;
 
-  h2 {
-    margin-bottom: 0;
-  }
+  border-bottom: 1px solid var(--grey-200);
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 8rem;
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__list {
-    ul {
-      padding-left: 0;
+    padding: 1em;
 
+    background-color: var(--grey-100);
+    border-radius: 5px;
+    ul {
+      margin-top: 0;
+      padding-left: 0;
+      
       list-style-type: none;
 
       li {

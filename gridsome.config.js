@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Reliably Documentation',
+  siteName: 'Reliably',
   siteUrl: 'https://reliably.com',
   pathPrefix: '/docs',
 
@@ -43,6 +43,7 @@ module.exports = {
               'remark-behead',
               {depth: -1},
             ],
+            '@gridsome/remark-prismjs',
           ],
           autolinkHeadings: {
             content: {

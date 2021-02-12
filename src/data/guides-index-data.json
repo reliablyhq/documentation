@@ -1,4 +1,15 @@
+
+
+
 {
+  "kubectl-plugin": {
+    "links": [
+      {
+        "title": "Run Reliably as a kubectl Plugin",
+        "link": "/guides/kubectl-plugin/"
+      }
+    ]
+  },
   "run-as-you-code": {
     "links": [
       {

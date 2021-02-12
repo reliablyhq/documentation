@@ -15,7 +15,7 @@ Authenticate with Reliably.
 
 The default authentication mode is interactive and asking for a token.
 
-Alternatively, pass in a token on standard input by using %[1]s--with-token%[1]s.
+Alternatively, pass in a token on standard input by using '--with-token'.
 
 ```
 reliably auth login [flags]

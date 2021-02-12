@@ -60,13 +60,19 @@ strong {
     }
   }
 
-  h1 {
-    font-size: 3em;
+  h1 {    
+    font-size: 2em;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h2 {
     margin-top: 1em;
     padding-top: .9em;
+
+    font-size: 1.375em;
   }
 
   a {
@@ -75,6 +81,12 @@ strong {
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  > p {
+    > code {
+      background-color: var(--blue-100);
     }
   }
 }

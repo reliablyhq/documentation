@@ -11,8 +11,5 @@ export default {}
 <style lang="scss">
 .page-introduction {
   margin-bottom: 3em;
-  max-width: 40em;
-
-  font-size: 1.25em;
 }
 </style>
