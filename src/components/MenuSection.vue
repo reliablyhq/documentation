@@ -79,7 +79,7 @@ export default {
     &__content {
       margin-left: 1em;
 
-      border-left: 1px solid var(--grey-700);
+      border-left: 1px solid var(--grey-300);
       > .menu-item {
         margin-left: .5em;
         padding-left: .5em;

@@ -83,4 +83,10 @@ strong {
       text-decoration: underline;
     }
   }
+
+  > p {
+    > code {
+      background-color: var(--blue-100);
+    }
+  }
 }
