@@ -197,7 +197,7 @@ export default {
       content: '';
       grid-column-start: 1;
 
-      background-color: var(--blue-light);
+      background-color: var(--blue-200);
     }
   }
 
@@ -231,7 +231,7 @@ export default {
   &--left {
     grid-column-start: 2;
 
-    background-color: var(--blue-light);
+    background-color: var(--blue-200);
 
     .menu-item {
       display: flex;
