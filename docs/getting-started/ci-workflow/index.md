@@ -16,11 +16,11 @@ for you in your current repository.
 $ reliably workflow
 ```
 
-You will then be prompted for choosing one of the targeted platform,
+You will then be prompted to choose one of the targeted platforms,
 for which we can generate a default workflow template.
 
 ```console
-? Select your CI/CD platform to create the Reliably workflow ?  [Use arrows to move, type to filter]
+? Select your CI/CD platform to create the Reliably workflow  [Use arrows to move, type to filter]
 > GitHub
   GitLab
   CircleCI

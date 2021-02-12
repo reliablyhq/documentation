@@ -38,9 +38,8 @@ import data from '~/data/getting-started-index-data.json'
   />
   <ArticleCard
     title="Setup Reliably workflow"
-    description="Generate the workflow for using Reliably in your CI/CD platform."
+    description="Generate Reliably workflow for your CI/CD platform."
     link="/getting-started/ci-workflow/"
   />
 </MarkdownTwoColumns>
-
 
