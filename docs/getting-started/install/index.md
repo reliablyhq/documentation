@@ -33,11 +33,6 @@ You're good to go!
 You can check everything is working with the `reliably --version` and you're
 ready to [login](../login/).
 
-```console
-$ reliably --version
-Reliably CLI v0.2.0
-```
-
 More detailed installation instructions, including instructions for Windows
 users, are provided just below.
 
