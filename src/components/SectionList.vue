@@ -80,7 +80,7 @@ export default {
   margin-bottom: 1em;
   padding-bottom: 3em;
 
-  border-bottom: 1px solid var(--grey-800);
+  border-bottom: 1px solid var(--grey-200);
 
   &__content {
     h2 {
@@ -92,7 +92,7 @@ export default {
   &__list {
     padding: 1em;
 
-    background-color: var(--grey-900);
+    background-color: var(--grey-100);
     border-radius: 5px;
     ul {
       margin-top: 0;

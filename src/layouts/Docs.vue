@@ -479,12 +479,12 @@ export default {
     margin: 0;
     padding: 1em;
 
-    background-color: var(--grey-900);
+    background-color: var(--grey-100);
     list-style: none;
     opacity: 1;
 
     > li.submenu__item-depth-2:not(:first-child) {
-      border-top: 1px solid var(--grey-700);
+      border-top: 1px solid var(--grey-300);
     }
 
     // font-size: 1.4rem;
