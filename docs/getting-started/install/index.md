@@ -14,18 +14,18 @@ your PATH.
 
 On macOS
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 
 On Linux
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
 
 Make it executable.
 
 ```console
-chmod +x /usr/local/bin/reliably
+$ chmod +x /usr/local/bin/reliably
 ```
 
 You're good to go!
@@ -49,7 +49,7 @@ You can find the full list of Reliably CLI releases [here][releases].
 Get the latest release and copy it to a directory in your PATH, for example
 /usr/local/bin.
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 
 You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64/)
@@ -59,20 +59,20 @@ executable to a directory that is on your path, for example ```/usr/local/bin```
 If you downloaded the file from your browser (ie, not with `curl`), you might
 want to rename it:
 ```console
-mv reliably-darwin-amd64 reliably
+$ mv reliably-darwin-amd64 reliably
 ```
 
 Make the file executable. If needed, change the path to reliably to match the
 location you chose.
 
 ```bash
-chmod +x /usr/local/bin/reliably
+$ chmod +x /usr/local/bin/reliably
 ```
 
 Then in a terminal window execute:
 
 ```bash
-reliably --version
+$ reliably --version
 ```
 
 You should see the current ```reliably``` cli version displayed.
@@ -121,13 +121,13 @@ To execute ```reliably CLI``` you will need to rename the file and add a
 ```.exe``` file extension. In the terminal window type:
 
 ```powershell
-move .\reliably-windows-amd64 .\reliably.exe
+$ move .\reliably-windows-amd64 .\reliably.exe
 ```
 
 Then execute:
 
 ```powershell
-.\reliably.exe --version
+$ .\reliably.exe --version
 ```
 
 You should see the current ```reliably CLI``` version displayed.
@@ -155,7 +155,7 @@ Reliably CLI will now be available in you Powershell sessions.
 Get the latest release and copy it to a directory in your PATH, for example
 /usr/local/bin.
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnnunx-amd64 -o /usr/local/bin/reliably
 ```
 
 You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64)
@@ -165,15 +165,14 @@ executable to a directory that is on your path, for example ```/usr/local/bin```
 If you downloaded the file from your browser (ie, not with `curl`), you might
 want to rename it:
 ```console
-mv reliably-darwin-amd64 reliably
+$ mv reliably-darwin-amd64 reliably
 ```
 
 If you want to check the file has not been corrupted, navigate to the directory
 where you downloaded the Reliably and check the md5 checksum.
 
 ```bash
-md5sum reliably-linux-amd64
-
+$ md5sum reliably-linux-amd64
 cab791d7d4b4e5a0dcf00392b4ce672c  reliably-linux-amd64
 ```
 
@@ -183,13 +182,13 @@ Make the file executable. If needed, change the path to reliably to match the
 location you chose.
 
 ```bash
-chmod +x /usr/local/bin/reliably
+$ chmod +x /usr/local/bin/reliably
 ```
 
 Then in a terminal window execute:
 
 ```bash
-reliably --version
+$ reliably --version
 ```
 
 You should see the current ```reliably``` cli version displayed.
