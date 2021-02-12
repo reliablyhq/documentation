@@ -43,6 +43,7 @@ module.exports = {
               'remark-behead',
               {depth: -1},
             ],
+            '@gridsome/remark-prismjs',
           ],
           autolinkHeadings: {
             content: {
