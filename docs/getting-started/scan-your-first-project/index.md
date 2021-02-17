@@ -47,13 +47,13 @@ offers:
 
 ```console
 $ reliably discover .
-deployment.yaml:1:1 You should specify a number of replicas
-deployment.yaml:1:1 Setting a high cpu request may render pod scheduling difficult or starve other pods
-deployment.yaml:1:1 Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
-deployment.yaml:1:1 Image pull policy should usually not be set to 'Always'
-deployment.yaml:1:1 A rollout strategy can reduce the risk of downtime
-deployment.yaml:1:1 Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
-6 suggestion(s) found
+tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [info] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [warning] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [warning] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
+6 suggestions found
 ```
 
 Reliably goes through all resources it recognises and issue a suggestion
