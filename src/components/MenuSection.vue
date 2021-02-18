@@ -11,7 +11,7 @@
       <g-link
         v-for="(item, i2) in group.items"
         :to="item.link"
-        :exact="item.link == '/'"
+        exact
         class="menu-item menu-link"
         :class="{'subcommand': item.subcommand, 'maincommand': item.maincommand}"
         :key="`link-${index}-${i2}`"
