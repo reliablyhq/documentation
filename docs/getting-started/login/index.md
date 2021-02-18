@@ -47,6 +47,28 @@ window and the CLI will acknowledge you are now logged in.
 You have successfully logged in to Reliably and are now ready to use the
 `reliably` commands.
 
+## Check your authentication status
+
+You can check your authentication status with the `reliably auth status` command:
+
+```console
+$ reliably auth status
+reliably.com
+  ✓ Logged in to reliably.com as user (~/.config/reliably/config.yaml)
+  ✓ Token: *******************
+```
+
+## Retrieve your access token
+
+You can retrieve your access token (aka API key) with the `reliably auth status --show-token` command:
+
+```console
+$ reliably auth status --show-token
+reliably.com
+  ✓ Logged in to reliably.com as user (~/.config/reliably/config.yaml)
+  ✓ Token: 6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
 ## Logout
 
 You can logout with the `reliably auth logout` command:
