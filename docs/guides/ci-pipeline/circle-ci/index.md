@@ -33,7 +33,7 @@ from CircleCI, or download it.
 You can also choose to use an existing configuration file and commit it to your
 repository.
 
-If you chose a project that already builds on CircleCI, it already has a 
+If you chose a project that already builds on CircleCI, it already has a
 `.circleci/config.yml` file.
 
 ## CircleCI jobs and workflows
@@ -48,6 +48,20 @@ workflows with jobs.
 
 While you don't need to know more about jobs and workflow to add Reliably to your
 CircleCI build, you will find [more detailed information in the CircleCI documentation](https://circleci.com/docs/2.0/jobs-steps/).
+
+## Setup your Reliably access token as environment variable
+
+The CLI must be run with a valid access token to make authenticated calls
+to Reliably.
+
+As a pre-requesite, the `RELIABLY_TOKEN` must be defined as a secret
+environment variable in your project's settings;
+See how to [set an environment variable in a project]
+(https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project).
+
+![Define Reliably token as CircleCI env variable](./images/circle-ci-project-env-vars.png)
+
+You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
 
 ## Create the Reliably job
 
@@ -78,6 +92,8 @@ Here is our completed job:
 discover:
   docker:
     - image: ghcr.io/reliablyhq/cli/cli:latest
+      environment:
+        RELIABLY_TOKEN: $RELIABLY_TOKEN
   working_directory: /home
   steps:
     - checkout # check out the code in the project directory
@@ -110,6 +126,8 @@ jobs:
   discover:
     docker:
       - image: ghcr.io/reliablyhq/cli/cli:latest
+        environment:
+          RELIABLY_TOKEN: $RELIABLY_TOKEN
     working_directory: /home
     steps:
       - checkout # check out the code in the project directory
@@ -139,7 +157,7 @@ results of your workflow.
 
 ![](./images/circle-ci-pipeline.png)
 
-Here you can see that the pipeline failed because of the `reliably discover .` 
+Here you can see that the pipeline failed because of the `reliably discover .`
 step. Reliably surfaced possible reliability issues and returned an error that
 caused the pipeline to fail. The Reliably CLI outputs the list of issues in the
 pipeline steps output.
@@ -150,5 +168,5 @@ pipeline steps output.
 
 You can also schecule workflow by adding a `triggers` key and specify a
 `schedule`. This would allow you, for example, to run Reliably on a daily basis.
-Read the CircleCI documentation about [scheduling workflows](https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow) 
+Read the CircleCI documentation about [scheduling workflows](https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow)
 for more details.
