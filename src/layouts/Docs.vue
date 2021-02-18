@@ -13,7 +13,7 @@
                     <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
                   </div>
                 </div>
-                <g-link to="/getting-started/" class="menu-link">Overview</g-link>
+                <g-link to="/getting-started/" class="menu-link" exact>Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/guides')">
                 <div class="menu-item">
@@ -22,7 +22,7 @@
                     <span class="count">{{ pagesPerCategory.guides }}</span>
                   </div>
                 </div>
-                <g-link to="/guides/" class="menu-link">Overview</g-link>
+                <g-link to="/guides/" class="menu-link" exact>Overview</g-link>
               </template>
               <template v-if="currentPath.startsWith('/reference')">
                 <div class="menu-item">
@@ -31,12 +31,12 @@
                     <span class="count">{{ pagesPerCategory.reference }}</span>
                   </div>
                 </div>
-                <g-link to="/reference/" class="menu-link">Overview</g-link>
+                <g-link to="/reference/" class="menu-link" exact>Overview</g-link>
               </template>
             </div>
             <template v-for="(group, i1) in links">
               <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
-              <g-link v-else :key="i1" :to="group.link" class="menu-item menu-link">{{ group.title }}</g-link>
+              <g-link v-else :key="i1" :to="group.link" class="menu-item menu-link" exact>{{ group.title }}</g-link>
             </template>
           </nav>
         </template>
@@ -374,6 +374,10 @@ export default {
     font-weight: 400;
     text-decoration: none;
 
+    &.active {
+      color: var(--red);
+    }
+
     &.maincommand,
     &.subcommand {
       padding-top: .2rem;
@@ -423,7 +427,7 @@ export default {
       // background-color: var(--blue);
       outline-width: 1px;
 
-      color: var(--red);
+      // color: var(--red);
       // font-weight: 700;
     }
   }
