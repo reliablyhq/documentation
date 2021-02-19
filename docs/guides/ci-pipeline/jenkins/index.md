@@ -42,25 +42,20 @@ Enter an item name (e.g. Run Reliably). Select the *Freestyle project* option, t
 
 In the new job display that appears next select the Build tab, then select *Execute Shell* from the *Add Build Step* dropdown menu
 
-Ensure you have a working directory for Jenkins to work in, e.g ~/.reliably-demo.
 In the command window enter these commands:
 
 ```bash
-cd ~/reliably-demo
-curl -O https://github.com/reliablyhq/cli/releases/download/v0.2.0/reliably-darwin-amd64
-mv reliably-darwin-amd64 reliably
+curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o reliably
 chmod u+x reliably
-curl -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
-reliably discover
-```
 
+curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
+./reliably discover manifest.yaml
+```
 
 What does this do?
 
-* The current directory is set to the working directory `reliably-demo`
-* Reliably is downloaded from the releases repository on Github.
-* The Reliably image is renamed.
-* And given execute permissions.
+* The Reliably latest release is downloaded from Github.
+* The binary is given execute permissions.
 * A manifest file is downloaded from a Github repository.
 * Finally, the `reliably discover` command is run, which will scan the manifest
   file for any issues.
