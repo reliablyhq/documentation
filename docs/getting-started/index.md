@@ -36,6 +36,10 @@ import data from '~/data/getting-started-index-data.json'
     description="Reliably helps you discover reliability concerns you may want to pay attention to."
     link="/getting-started/scan-your-first-project/"
   />
+  <ArticleCard
+    title="Setup Reliably workflow"
+    description="Generate Reliably workflow for your CI/CD platform."
+    link="/getting-started/ci-workflow/"
+  />
 </MarkdownTwoColumns>
-
 
