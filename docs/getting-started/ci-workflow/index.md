@@ -35,6 +35,12 @@ Your workflow has been generated to .github/workflows/reliably.yaml
 You can now add and commit the workflow to your repository:
 $ git add .github/workflows/reliably.yaml
 $ git commit -m "Add Reliably workflow"
+
+You must define RELIABLY_TOKEN as a Secret in your repository settings:
+https://github.com/OWNER/REPO/settings/secrets/actions/new
+
+You can retrieve your access token by running:
+$ reliably auth status --show-token
 ```
 
 ## Specify the platform
