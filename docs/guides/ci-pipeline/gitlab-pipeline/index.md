@@ -15,6 +15,19 @@ to your repository.
   [demo repository](https://gitlab.com/reliably/reliably-discovery-demo/).
 :::
 
+## Setup your Reliably access token as Variable
+
+The CLI must be run with a valid access token to make authenticated calls
+to Reliably.
+
+As a pre-requesite, the `RELIABLY_TOKEN` must be defined as a masked variable
+in your project's settings; See how to [create a custom variable in the UI]
+(https://docs.gitlab.com/ee/ci/variables/#create-a-custom-variable-in-the-ui).
+
+![Define Reliably token as GitLab variable](./images/gitlab-cicd-variables.png)
+
+You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+
 ## Add GitLab CI/CD to your repository
 
 For this walkthrough, we're going to add a CI/CD Pipeline to a new GitLab
@@ -141,7 +154,7 @@ going to define rule that will determine when the Reliably job will be included.
 
 ```yaml
   rules:
-    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN
       changes:
         - "manifests/*.{yaml}"
 ```
@@ -151,6 +164,7 @@ The rules in this case are:
 * If changes are pushed to any branch
 * If those changes are to `.yaml` files
 * In the `manifests` folder in the repository
+* If the `RELIABLY_TOKEN` variable is defined
 
 Then the job will be included.
 
@@ -211,7 +225,7 @@ code_quality:
     expose_as: 'Code Quality Report'
     paths: [gl-code-quality-report.json]
   rules:
-    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN
       changes:
         - "manifests/*.{yaml}"
 ```

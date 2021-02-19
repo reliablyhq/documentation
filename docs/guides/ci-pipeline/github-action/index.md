@@ -13,6 +13,21 @@ Adding Reliably to your GitHub repositories is as simple as adding a GitHub Work
   The sources used in this walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
 :::
 
+## Setup your Reliably access token as Secret
+
+As a pre-requisite, we advice to set up your Reliably access token as a GitHub secret,
+to avoid exposing secure information within your workflow file.
+
+You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+
+To add a secret to your GitHub repository, go to Settings > Secrets > New repository secret
+or follow the [documentation](https://docs.github.com/en/actions/reference/encrypted-secrets):
+
+![GitHub secrets](./images/github-secrets.png)
+
+We'll name our secret `RELIABLY_HOST`, as used in the workflow example.
+You can choose another one of your liking but remember to change it in the workflow accordingly.
+
 ## Add a new workflow to your repository
 
 For this walkthrough we're going to add a fresh workflow to a repository, however
@@ -27,6 +42,10 @@ name: A Reliably GitHub workflow
 
 on:
   push:
+
+env:
+  RELIABLY_TOKEN: ${{ secrets.RELIABLY_TOKEN }}
+
 jobs:
   reliably:
     runs-on: ubuntu-latest
@@ -72,6 +91,10 @@ name: Reliably GitHub workflow with SARIF report
 
 on:
   push:
+
+env:
+  RELIABLY_TOKEN: ${{ secrets.RELIABLY_TOKEN }}
+
 jobs:
   reliably:
     runs-on: ubuntu-latest
