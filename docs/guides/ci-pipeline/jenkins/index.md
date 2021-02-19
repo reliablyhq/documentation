@@ -22,7 +22,7 @@ To run Reliably as a Jenkins Job you will need acess to a
 
 [jenkins-install]: https://www.jenkins.io/doc/book/installing/
 
-## Create a Reliably Build Step in Jenkins
+## Create a Reliably Project in Jenkins
 
 Navigate to your Jenkins server home page:
 
@@ -39,6 +39,26 @@ Selected *New Item* from the menu on the left of the page.
 ![Jenkins New Build](./images/jenkins-new-build.png)
 
 Enter an item name (e.g. Run Reliably). Select the *Freestyle project* option, then select OK.
+
+### Setup Reliably access token
+
+The CLI must be run with a valid access token to make authenticated calls
+to Reliably.
+
+As a pre-requesite, the `RELIABLY_TOKEN` must be defined as an environment variable.
+
+:::note Note
+  It requires the [Environment Injector](https://plugins.jenkins.io/envinject/) plugin to be installed.
+:::
+
+In the new job display that appears next select the Build Environment tab, then select *Inject passwords to the build as environment variables*,
+and click *Add* under *Job passwords*. Type `RELIABLY_TOKEN` in the *name* field and paste your access token in the *password* field.
+
+You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+
+![Inject Reliably token as env var](./images/jenkins-inject-password.png)
+
+### Add Reliably discover as a Build step
 
 In the new job display that appears next select the Build tab, then select *Execute Shell* from the *Add Build Step* dropdown menu
 
