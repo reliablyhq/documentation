@@ -25,9 +25,9 @@ import data from '~/data/guides-index-data.json'
 />
 
 <SectionList
-    title="kubectl plugin"
+    title="Running with Kubernetes"
     categoryName="kubectl-plugin"
-    description="Run Reliably as a kubectl plugin"
-    link="/guides/kubectl-plugin/"
-    :list="data['kubectl-plugin'].links"
+    description="Run Reliably with Kunernetes"
+    link="/guides/"
+    :list="data['kubernetes-links'].links"
 />
