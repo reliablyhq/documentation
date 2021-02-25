@@ -25,7 +25,7 @@ run:
 $ reliably discover --live
 ```
 
-The command will generate output that will offer advice about Reliability concerns from your live cluster. An example for the generated output could be:
+The command will generate an output that offers advice about reliability concerns from your live cluster. An example for the generated output could be:
 
 ```
 Pod:chaostoolkit:0:0 [warning] You shall not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image.
@@ -62,4 +62,3 @@ Congratulations, you have successfully run 'reliably discover' with a live
 [cli-ref]: /docs/reference/cli/reliably-discover/
 
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
-
