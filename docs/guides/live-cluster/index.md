@@ -47,7 +47,7 @@ The `reliably --live` command will connect and talk to your cluster using a
 $ reliably --live --kubeconfig=/reliably/kube-config
 ```
 You can also use an Environment Variable to locate your kubeconfig file by
-setting the `KUBECONFIG` Environemt Variable:
+setting the `KUBECONFIG` Environment Variable:
 
 ```
 $ KUBECONFIG=/reliably/kube-config reliably --live --kubeconfig
