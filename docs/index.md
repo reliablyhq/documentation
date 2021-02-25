@@ -49,7 +49,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 <SectionList
     title="Guides"
     categoryName="guides"
-    description="Practical guides show you how to get Reliably running in your favorite CI environment."
+    description="Practical guides show you how to get Reliably running in your favorite environments."
     link="/guides/"
     :list="data.guides.links"
 />
