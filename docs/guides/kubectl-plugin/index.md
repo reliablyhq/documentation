@@ -28,7 +28,7 @@ The easiest way to install and use this plugin is with
 
 ### Installation as a Krew Plugin
 
-If you dont already have the Krew installed, please install it from the [Krew install guide][krew-install].
+If you don't already have Krew installed, please install it from the [Krew install guide][krew-install].
 
 [krew-install]: https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 
