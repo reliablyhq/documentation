@@ -23,6 +23,20 @@ allowing for new  and custom features not included with the main distribution
 
 ## Installation
 
+The easiest way to install and use this plugin is with
+[Krew](https://krew.sigs.k8s.io/docs/user-guide/quickstart/).
+
+### Installation as a Krew Plugin
+
+If you don't already have Krew installed, please install it from the [Krew install guide][krew-install].
+
+[krew-install]: https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+
+Once Krew is installed you can install Reliably plugin with:
+
+```bash
+krew install reliably
+```
 
 ### Installation from Github
 
@@ -50,6 +64,8 @@ Github, you can run the plugin with:
 ```bash
 kubectl reliably
 ```
+
+You should see the Reliably CLI help page.
 
 ## Next?
 
