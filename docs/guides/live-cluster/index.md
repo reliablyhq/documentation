@@ -1,11 +1,11 @@
 ---
-title: Run with a live kubernetes cluster
+title: Run gainst a Kubernetes cluster
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["guides"]
 status: published
 type: overview
 ---
-# Run Reliably with a live Kubernetes Cluster
+# Run Reliably against a Kubernetes Cluster
 
 You can use the [Reliably CLI][reliablyCLI] to discover the state of resources
 on a live [Kubernetes](https://kubernetes.io/docs/home/) Cluster.
@@ -16,7 +16,7 @@ installed and configured to authenticate to your cluster.
 
 [reliablyCLI]: https://github.com/reliablyhq/cli/
 
-## Discover Reliability concerns from live Kubernetes Cluster
+## Discover Reliability concerns from Kubernetes Cluster
 
 To use Reliably to discover reliability concerns from your live cluster, you can
 run:
