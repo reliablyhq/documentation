@@ -1,6 +1,6 @@
 - title: Run as a kubectl Plugin
   link: /guides/kubectl-plugin/
-- title: Run with a live Kubernetes Cluster
+- title: Run against a Kubernetes cluster
   link: /guides/live-cluster/
 - title: Run in your CI pipeline
   slug: ci-pipeline
