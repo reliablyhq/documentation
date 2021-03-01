@@ -46,9 +46,14 @@ $ reliably discover --format json --output report.json
 ### Options
 
 ```
-  -f, --format string   Specify the output format: [simple json yaml sarif codeclimate]
-  -h, --help            help for discover
-  -o, --output string   Write results to a file instead of standard output
+  -c, --context string      Specifies the Kubernetes context to evaluate when scanning live cluster
+  -f, --format string       Specify the output format: [simple json yaml sarif codeclimate]
+  -h, --help                help for discover
+  -k, --kubeconfig string   Specifies the path and file to use for kubeconfig for live discovery (default "/home/runner/.kube/config")
+  -l, --level string        Display suggestions only for level and higher
+      --live                Look for weaknesses in a live Kubernetes cluster
+  -n, --namespace string    The namespace to use when using a live cluster
+  -o, --output string       Write results to a file instead of standard output
 ```
 
 ### Options inherited from parent commands

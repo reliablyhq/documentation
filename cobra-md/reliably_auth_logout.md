@@ -24,6 +24,7 @@ reliably auth logout [flags]
 ```
   -h, --help              help for logout
       --hostname string   The hostname of Reliably to log out of
+  -y, --yes               Don't ask for logout confirmation
 ```
 
 ### Options inherited from parent commands
