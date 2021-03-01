@@ -35,7 +35,7 @@ If you don't already have Krew installed, please install it from the [Krew insta
 Once Krew is installed you can install Reliably plugin with:
 
 ```bash
-$ krew install reliably
+$ kubectl krew install reliably
 ```
 
 ### From Github
