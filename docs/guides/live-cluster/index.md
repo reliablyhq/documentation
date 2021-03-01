@@ -9,12 +9,20 @@ type: overview
 
 You can use the [Reliably CLI][reliablyCLI] to discover the state of resources
 on a live [Kubernetes](https://kubernetes.io/docs/home/) Cluster.
+The Reliably CLI will use a configuration file to connect to your Cluster. This
+configuration file is usually referred to as `kubeconfig` (see Note)
 
-The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
-command-line tool lets you control Kubernetes clusters. You will need `kubectl`
-installed and configured to authenticate to your cluster.
+:::note Note
+  The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
+  command-line tool lets you control Kubernetes clusters.
+  The `kubeconfig` file is usually provisioned by `kubectl`. The Kubernetes
+  [documentation][kubeconfig] provides more details.
+
+:::
+
 
 [reliablyCLI]: https://github.com/reliablyhq/cli/
+[kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 
 ## Discover Reliability concerns from Kubernetes Cluster
 
