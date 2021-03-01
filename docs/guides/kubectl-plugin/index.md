@@ -35,7 +35,7 @@ If you don't already have Krew installed, please install it from the [Krew insta
 Once Krew is installed you can install Reliably plugin with:
 
 ```bash
-krew install reliably
+$ krew install reliably
 ```
 
 ### From Github
@@ -46,7 +46,7 @@ The Reliably CLI plugin can be installed from the [kubectl-reliably]
 into a directory on your system path.
 
 ```bash
-curl -L https://raw.githubusercontent.com/reliablyhq/kubectl-reliably/main/reliably.sh -o $HOME/bin/kubectl-reliably -s
+$ curl -L https://raw.githubusercontent.com/reliablyhq/kubectl-reliably/main/reliably.sh -o $HOME/bin/kubectl-reliably -s
 chmod +x ~/bin/kubectl-reliably
 ```
 
@@ -62,7 +62,7 @@ If you have installed the `kubectl-reliably` either as a Krew plugin or from
 Github, you can run the plugin with:
 
 ```bash
-kubectl reliably
+$ kubectl reliably
 ```
 
 You should see the Reliably CLI help page.
