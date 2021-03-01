@@ -23,7 +23,7 @@
     - title: Run as a kubectl Plugin
       slug: kubectl-plugin
       link: /guides/kubectl-plugin/
-    - title: Run with a live Cluster
+    - title: Run against a Kubernetes cluster
       slug: live-cluster
       link: /guides/live-cluster/
     - title: Run in your CI pipeline

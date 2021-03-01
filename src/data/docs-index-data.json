@@ -56,12 +56,7 @@
       {
         "title": "CLI",
         "link": "/reference/cli/"
-      },
-      {
-        "title": "How it works",
-        "link": "/reference/how-it-works/"
       }
-
     ]
   }
 }
