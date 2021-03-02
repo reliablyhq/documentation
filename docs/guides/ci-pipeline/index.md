@@ -35,7 +35,7 @@ import data from '~/data/ci-pipeline-index-data.json'
   <ArticleCard
     title="GitLab Job"
     description="Get Reliably suggestions as part of your GitLab pipeline."
-    link="/ci-pipeline/gitlab-pipeline/"
+    link="/guides/ci-pipeline/gitlab-pipeline/"
   />
 </MarkdownTwoColumns>
 
