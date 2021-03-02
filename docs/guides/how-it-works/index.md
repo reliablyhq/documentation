@@ -12,10 +12,10 @@ import OtherArticles from '~/components/OtherArticles.vue'
 
 import data from '~/data/how-it-works-index-data.json'
 
-# Run Reliably in your CI pipeline
+# How Reliably Works
 
 <PageIntroduction>
-  This guides will help you understand what the various bits and pieces of
+  This guides will help you understand what the various parts of
   Reliably do and how they work together.
 </PageIntroduction>
 
