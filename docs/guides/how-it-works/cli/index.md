@@ -11,7 +11,8 @@ type: doc
 
 The Reliably CLI will use the Reliably API to gather suggestions and store scan
  histories. In order to use the Reliably API, **you need to authenticate with
- Reliably**.
+ Reliably**. Authentication is done using GitHub or GitLab authentication
+ providers, meaning Reliably doesn't store your personal data.
 
  You can authenticate with:
 
@@ -53,19 +54,24 @@ you can run:
 $ reliably scan --live
 ```
 
-Full details for 'reliably scan' are covered in the [scan][reliably-scan] section in the reference documentation.
+Full details for 'reliably scan' are covered in the [scan][reliably-scan]
+section in the reference documentation.
 
 [reliably-scan]: /reference/cli/reliably-discover/
 
 ### Platform/kind organization
 
-The Reliably CLI will use its internal repository of reliability concerns and advice. The store is organized around the Platform and the Kind of resource. An example for the `Kubernetes` Platform could be a `Deployment` kind of resource.
+The Reliably CLI will use its internal repository of reliability concerns and
+ advice. The store is organized around the Platform and the Kind of resource.
+ An example for the `Kubernetes` Platform could be a `Deployment` kind of
+ resource.
 
 <span style="color:red"><i>Do we need to describe this?</i></span>.
 
 ### Kubernetes
 
-Currently the Reliably CLI is focussed on supporting the Kubernetes Platform. Future versions of the CLI will extend to other platforms.
+Currently the Reliably CLI is focussed on supporting the Kubernetes Platform.
+Future versions of the CLI will extend to other platforms.
 
 <span style="color:red"><i>Not sure what else goes here?</i></span>.
 
@@ -100,4 +106,6 @@ CI/CD solutions can be seen in the [guides][ci-pipeline].
 
 ## Pass Results history to the Reliably API
 
-Whenever you run a scan with the Reliably CLI, it will pass the results from the scan to the Reliably API. The API will maintain that history so you can see what advice has been offered and when.
+Whenever you run a scan with the Reliably CLI, it will pass the results from
+the scan to the Reliably API. The API will maintain that history so you can
+see what advice has been offered and when.

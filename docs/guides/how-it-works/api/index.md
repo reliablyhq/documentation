@@ -15,13 +15,13 @@ you access to your past executions and suggestions.
 In order to use the CLI, **you need to authenticate with Reliably**. This is
 done with the CLI through the API.
 
-Authentication is done using GitHub or GitLab authentication providers, meaning 
+Authentication is done using GitHub or GitLab authentication providers, meaning
 **Reliably doesn't store your personal data**.
 
 ## Execution History
 
 Each time you use the Reliably CLI, we store the suggestions related to this
-executions. This allows you access your history of executions and suggestions,
+execution. This allows you access your history of executions and suggestions,
 to view progress of your reliability effort.
 
 Only surfaced suggestions and file or resource metadata are stored. Your code
