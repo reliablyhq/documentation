@@ -59,32 +59,21 @@ section in the reference documentation.
 
 [reliably-scan]: /reference/cli/reliably-discover/
 
-### Platform/Kind organization
-
-The Reliably CLI will use its internal repository of reliability concerns and
- advice. The store is organized organized in sets of rules, sorted by platform
- and kind of resources. An example for the `Kubernetes` Platform could be a
- `Deployment` kind of resource.
-
-<span style="color:red"><i>Do we need to describe this?</i></span>.
-
 ### Kubernetes
 
 Currently the Reliably CLI is focussed on supporting the Kubernetes Platform.
 Future versions of the CLI will extend to other platforms.
 
-<span style="color:red"><i>Not sure what else goes here?</i></span>.
-
 ## Fetch rules
 
-The Reliably CLI will Fetch the rules that will be applied to your `scan` from
-the Reliably API.
+The Reliably CLI will Fetch the rules that will be applied to your `discover`
+from the Reliably API.
 
 ## Display Results
 
 As a result of running a scan, the Reliably CLI will offer advice for any resource issues.
 
-### Running in your Terminal
+### In your Terminal
 
 If you are running the CLI in your terminal by default, it will display the advice directly in your terminal session:
 
@@ -96,7 +85,7 @@ tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the
 tests/manifests/deployment.yaml:1:1 [info] Image pull policy should usually not be set to 'Always'
 ```
 
-### Running in your CI/CD
+### In your CI/CD
 
 If you are running the Reliably CLI as part of your adopted CI/CD, then the
 output will be displayed within the CI/CD tools. Examples of using different
@@ -114,6 +103,12 @@ itself never leaves your own premises and is thereby not stored by Reliably.
 
 The API will maintain that history so you can to view progress of your
 reliability effort.
+
+## More on that subject
+
+[How the Reliably API works](/guides/how-it-works/api/)
+
+[How the Reliably Rules work](/guides/how-it-works/rules/)
 
 ## Not using Reliaby yet?
 

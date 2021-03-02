@@ -19,6 +19,8 @@ import data from '~/data/how-it-works-index-data.json'
   Reliably do and how they work together.
 </PageIntroduction>
 
+<p style="color: red">An image will go here, probably</p>
+
 ## Main articles
 
 <MarkdownTwoColumns>
