@@ -59,12 +59,12 @@ section in the reference documentation.
 
 [reliably-scan]: /reference/cli/reliably-discover/
 
-### Platform/kind organization
+### Platform/Kind organization
 
 The Reliably CLI will use its internal repository of reliability concerns and
- advice. The store is organized around the Platform and the Kind of resource.
- An example for the `Kubernetes` Platform could be a `Deployment` kind of
- resource.
+ advice. The store is organized organized in sets of rules, sorted by platform
+ and kind of resources. An example for the `Kubernetes` Platform could be a
+ `Deployment` kind of resource.
 
 <span style="color:red"><i>Do we need to describe this?</i></span>.
 
@@ -104,8 +104,17 @@ CI/CD solutions can be seen in the [guides][ci-pipeline].
 
 [ci-pipeline]: /guides/ci-pipeline/
 
-## Pass Results history to the Reliably API
+## Results History
 
-Whenever you run a scan with the Reliably CLI, it will pass the results from
-the scan to the Reliably API. The API will maintain that history so you can
-see what advice has been offered and when.
+Whenever you run a scan with the Reliably CLI, it will store the results from
+the scan with the Reliably API.
+
+Only surfaced suggestions and file or resource metadata are stored. Your code
+itself never leaves your own premises and is thereby not stored by Reliably.
+
+The API will maintain that history so you can to view progress of your
+reliability effort.
+
+## Not using Reliaby yet?
+
+[Getting started with Reliably](/getting-started/)
