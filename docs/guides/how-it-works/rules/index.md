@@ -41,3 +41,14 @@ what you're doing!
 We're working on a way to allow users to prevent some rules to be
 triggered, on a file or line-basis, so that suggestions you know you will
 overlook won't appear. As all workarounds, you will want to use it with caution.
+
+## More on that subject
+
+[How the Reliably CLI works](/guides/how-it-works/cli/)
+
+[How the Reliably API works](/guides/how-it-works/api/)
+
+## Not using Reliaby yet?
+
+[Getting started with Reliably](/getting-started/)
+
