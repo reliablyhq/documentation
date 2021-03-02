@@ -7,10 +7,13 @@ type: doc
 ---
 # How Reliably CLI works
 
-## Authenticates you with API
+## Authenticate with the Reliably API
 
-The Reliably CLI will use the Reliably API to gather suggestions and store scan histories. To use the Reliably API, you will need to Authenticate the CLI with
-the API services. You can authenticate with:
+The Reliably CLI will use the Reliably API to gather suggestions and store scan
+ histories. In order to use the Reliably API, **you need to authenticate with
+ Reliably**.
+
+ You can authenticate with:
 
 ```bash
 $ reliably auth login
@@ -19,11 +22,15 @@ $ reliably auth login
 You will be prompted for your preferred authentication method, select the way
  you want to authenticate with the arrow keys, and then select enter.
 
-For full details, see the [authentication][reliably-auth] section in the reference documentation.
+For further reading see:
+
+* [Authentication section][reliably-auth] page in the Reference section.
+* [Login][getting-started-login] page in Getting Started.
 
 Once you have authenticated, the CLI will interact with the Reliably API.
 
 [reliably-auth]: /docs/reference/cli/reliably-auth/
+[getting-started-login]: getting-started/login/
 
 ## Scan Resources
 
