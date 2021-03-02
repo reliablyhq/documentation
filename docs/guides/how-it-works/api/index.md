@@ -38,5 +38,3 @@ All stored suggestions and related metadata are encrypted on Reliably's side.
 ## Not using Reliaby yet?
 
 [Getting started with Reliably](/getting-started/)
-
-
