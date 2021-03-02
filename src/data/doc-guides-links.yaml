@@ -15,4 +15,15 @@
       link: /guides/ci-pipeline/jenkins/
     - title: CircleCI
       link: /guides/ci-pipeline/circle-ci/
+- title: How it works
+  slug: how-it-works
+  items:
+    - title: Overview
+      link: /guides/how-it-works/
+    - title: CLI
+      link: /guides/how-it-works/cli/
+    - title: API
+      link: /guides/how-it-works/api/
+    - title: Rules
+      link: /guides/how-it-works/rules/
 

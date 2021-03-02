@@ -29,6 +29,9 @@
     - title: Run in your CI pipeline
       slug: ci-pipeline
       link: /guides/ci-pipeline/
+    - title: How it works
+      slug: how-it-works
+      link: /guides/how-it-works/
 
 
 - title: Reference
