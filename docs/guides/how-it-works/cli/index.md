@@ -57,7 +57,7 @@ $ reliably scan --live
 Full details for 'reliably scan' are covered in the [scan][reliably-scan]
 section in the reference documentation.
 
-[reliably-scan]: /reference/cli/reliably-discover/
+[reliably-scan]: /reference/cli/reliably-scan/
 
 ### Kubernetes
 
@@ -66,7 +66,7 @@ Future versions of the CLI will extend to other platforms.
 
 ## Fetch rules
 
-The Reliably CLI will Fetch the rules that will be applied to your `discover`
+The Reliably CLI will Fetch the rules that will be applied to your `scan`
 from the Reliably API.
 
 ## Display Results
@@ -78,7 +78,7 @@ As a result of running a scan, the Reliably CLI will offer advice for any resour
 If you are running the CLI in your terminal by default, it will display the advice directly in your terminal session:
 
 ```bash
-$ reliably discover
+$ reliably scan .
 tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
 tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
 tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)

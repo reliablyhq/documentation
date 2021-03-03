@@ -36,9 +36,9 @@ section.
     link="/reference/cli/reliably-auth/"
   />
   <ArticleCard
-    title="reliably discover"
+    title="reliably scan"
     description="Scan your Kubernetes manifests for Reliably Suggestions."
-    link="/reference/cli/reliably-discover/"
+    link="/reference/cli/reliably-scan/"
   />
 </MarkdownTwoColumns>
 

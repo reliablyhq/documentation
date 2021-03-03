@@ -82,7 +82,7 @@ This is how CircleCI defines a job, in YAML:
   <steps>
 ```
 
-We will name our job `discover`, as we want to run the `reliably discover`
+We will name our job `scan`, as we want to run the `reliably scan`
 command.
 
 The executor will be a Docker image of Reliably, which we want to run in the
@@ -90,13 +90,13 @@ The executor will be a Docker image of Reliably, which we want to run in the
 
 Our job will be made of two steps:
 * The first step will checkout the code in the repository
-* The second step will run the `reliably discover` command to find Kubernetes
+* The second step will run the `reliably scan .` command to find Kubernetes
 manifests and surface potential reliability issues
 
 Here is our completed job:
 
 ```yml
-discover:
+scan:
   docker:
     - image: ghcr.io/reliablyhq/cli/cli:latest
       environment:
@@ -104,7 +104,7 @@ discover:
   working_directory: /home
   steps:
     - checkout # check out the code in the project directory
-    - run: reliably discover .
+    - run: reliably scan .
 ```
 
 ## Add the job to a workflow
@@ -117,11 +117,11 @@ This is how CircleCI defines a workflow, in YAML:
     <job name>
 ```
 
-We will create a `reliably` workflow, with a single job, `discover`.
+We will create a `reliably` workflow, with a single job, `scan`.
 ```yml
 reliably:
   jobs:
-    - discover
+    - scan
 ```
 
 ## Final config.yml file
@@ -130,7 +130,7 @@ The most simple file CircleCI configuration file will then look like this:
 ```yml
 version: 2.1
 jobs:
-  discover:
+  scan:
     docker:
       - image: ghcr.io/reliablyhq/cli/cli:latest
         environment:
@@ -138,12 +138,12 @@ jobs:
     working_directory: /home
     steps:
       - checkout # check out the code in the project directory
-      - run: reliably discover .
+      - run: reliably scan .
 
 workflows:
   reliably:
     jobs:
-      - discover
+      - scan
 ```
 
 Commit this file to your repository and go back to your project in CircleCI
@@ -164,7 +164,7 @@ results of your workflow.
 
 ![](./images/circle-ci-pipeline.png)
 
-Here you can see that the pipeline failed because of the `reliably discover .`
+Here you can see that the pipeline failed because of the `reliably scan .`
 step. Reliably surfaced possible reliability issues and returned an error that
 caused the pipeline to fail. The Reliably CLI outputs the list of issues in the
 pipeline steps output.
