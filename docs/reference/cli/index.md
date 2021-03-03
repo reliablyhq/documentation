@@ -36,8 +36,18 @@ section.
     link="/reference/cli/reliably-auth/"
   />
   <ArticleCard
+    title="reliably workflow"
+    description="Setup Reliably in your CI/CD workflow."
+    link="/reference/cli/reliably-workflow/"
+  />
+  <ArticleCard
     title="reliably scan"
-    description="Scan your Kubernetes manifests for Reliably Suggestions."
+    description="Scan your Kubernetes manifests or cluster for Reliably Suggestions."
+    link="/reference/cli/reliably-scan/"
+  />
+  <ArticleCard
+    title="reliably history"
+    description="View your history of executions and suggestions."
     link="/reference/cli/reliably-scan/"
   />
 </MarkdownTwoColumns>

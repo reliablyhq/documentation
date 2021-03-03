@@ -5,24 +5,8 @@
       "link": "/reference/cli/reliably/"
     },
     {
-      "label": "reliably auth login",
-      "link": "/reference/cli/reliably-auth-login/"
-    },
-    {
-      "label": "reliably auth logout",
-      "link": "/reference/cli/reliably-auth-logout/"
-    },
-    {
-      "label": "reliably auth status",
-      "link": "/reference/cli/reliably-auth-status/"
-    },
-    {
       "label": "reliably completion",
       "link": "/reference/cli/reliably-completion/"
-    },
-    {
-      "label": "reliably history",
-      "link": "/reference/cli/reliably-history/"
     }
   ]
 }
