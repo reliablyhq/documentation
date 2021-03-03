@@ -20,5 +20,9 @@
     - title: completion
       subcommand: false
       link: /reference/cli/reliably-completion/
-    - title: discover
-      link: /reference/cli/reliably-discover/
+    - title: history
+      link: /reference/cli/reliably-history/
+    - title: scan
+      link: /reference/cli/reliably-scan/
+    - title: workflow
+      link: /reference/cli/reliably-workflow/
