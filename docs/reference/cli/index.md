@@ -48,7 +48,7 @@ section.
   <ArticleCard
     title="reliably history"
     description="View your history of executions and suggestions."
-    link="/reference/cli/reliably-scan/"
+    link="/reference/cli/reliably-history/"
   />
 </MarkdownTwoColumns>
 
