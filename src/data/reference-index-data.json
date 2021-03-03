@@ -10,8 +10,12 @@
         "link": "/reference/cli/reliably-auth/"
       },
       {
-        "title": "reliably discover",
-        "link": "/reference/cli/reliably-discover/"
+        "title": "reliably scan",
+        "link": "/reference/cli/reliably-scan/"
+      },
+      {
+        "title": "reliably history",
+        "link": "/reference/cli/reliably-history/"
       }
     ]
   }
