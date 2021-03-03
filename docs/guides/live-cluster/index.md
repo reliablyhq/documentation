@@ -24,13 +24,13 @@ configuration file is usually referred to as `kubeconfig` (see Note)
 [reliablyCLI]: https://github.com/reliablyhq/cli/
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 
-## Discover Reliability concerns from Kubernetes Cluster
+## Scan for Reliability concerns from a Kubernetes Cluster
 
-To use Reliably to discover reliability concerns from your live cluster, you can
+To use Reliably to scan for reliability concerns from your live cluster, you can
 run:
 
 ```
-$ reliably discover --live
+$ reliably scan --live
 ```
 
 The command will generate an output that offers advice about reliability concerns from your live cluster. An example for the generated output could be:
@@ -63,10 +63,10 @@ $ KUBECONFIG=/reliably/kube-config reliably --live --kubeconfig
 
 ## Next?
 
-Congratulations, you have successfully run 'reliably discover' with a live
- Kubernetes Cluster. For the next steps, see the [Reliably CLI discover]
+Congratulations, you have successfully run 'reliably scan' with a live
+ Kubernetes Cluster. For the next steps, see the [Reliably CLI scan]
  [cli-ref] reference section.
 
-[cli-ref]: /docs/reference/cli/reliably-discover/
+[cli-ref]: /docs/reference/cli/reliably-scan/
 
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/

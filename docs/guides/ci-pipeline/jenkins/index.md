@@ -58,7 +58,7 @@ You can see how to [retrieve your access token](/getting-started/login/#retrieve
 
 ![Inject Reliably token as env var](./images/jenkins-inject-password.png)
 
-### Add Reliably discover as a Build step
+### Add Reliably as a Build step
 
 In the new job display that appears next select the Build tab, then select *Execute Shell* from the *Add Build Step* dropdown menu
 
@@ -69,7 +69,7 @@ curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-l
 chmod u+x reliably
 
 curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
-./reliably discover manifest.yaml
+./reliably scan manifest.yaml
 ```
 
 What does this do?
@@ -77,10 +77,10 @@ What does this do?
 * The Reliably latest release is downloaded from Github.
 * The binary is given execute permissions.
 * A manifest file is downloaded from a Github repository.
-* Finally, the `reliably discover` command is run, which will scan the manifest
+* Finally, the `reliably scan` command is run, which will scan the manifest
   file for any issues.
 
-The discover command will discover and surface suggestions where you might be
+The scan command will discover and surface suggestions where you might be
 able to avoid reliability problems.
 
 ![Jenkins Execute Shell](./images/jenkins-execute-shell.png)

@@ -12,7 +12,7 @@ to.
 
 ## Scan
 
-You ask Reliably to scan your code via the `reliably discover` command. This
+You ask Reliably to scan your code via the `reliably scan` command. This
 command scans the current directory by default.
 
 :::info Info
@@ -42,11 +42,11 @@ command scans the current directory by default.
   ```
 :::
 
-Run `reliably discover` to find out what reliability suggestions Reliably
+Run `reliably scan` to find out what reliability suggestions Reliably
 offers:
 
 ```console
-$ reliably discover .
+$ reliably scan .
 tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
 tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
 tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
@@ -60,7 +60,7 @@ Reliably goes through all resources it recognises and issue a suggestion
 statement for each potential reliability concern for you to review.
 
 :::info info
-  The default format is a plain text list of suggestions, the `discover`
+  The default format is a plain text list of suggestions, the `scan`
   command supports other formats: yaml, json, sarif, etc.
 :::
 
