@@ -19,6 +19,10 @@
     {
       "label": "reliably completion",
       "link": "/reference/cli/reliably-completion/"
-    }
+    },
+    {
+      "label": "reliably history",
+      "link": "/reference/cli/reliably-history/"
+    },
   ]
 }
