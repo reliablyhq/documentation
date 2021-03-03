@@ -7,7 +7,7 @@ type: doc
 ---
 ## reliably history
 
-Show your discovery history
+Show your scan history
 
 ### Synopsis
 

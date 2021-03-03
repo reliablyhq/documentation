@@ -13,12 +13,6 @@ Reliably CLI
 
 The Reliably Command Line Interface (CLI).
 
-### Examples
-
-```
-$ reliably discover
-```
-
 ### Options
 
 ```
@@ -31,7 +25,7 @@ $ reliably discover
 
 * [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
-* [reliably discover](/docs/reference/cli/reliably-discover/)	 - Check for Reliably Suggestions
-* [reliably history](/docs/reference/cli/reliably-history/)	 - Show your discovery history
+* [reliably history](/docs/reference/cli/reliably-history/)	 - Show your scan history
+* [reliably scan](/docs/reference/cli/reliably-scan/)	 - Check for Reliably Suggestions
 * [reliably workflow](/docs/reference/cli/reliably-workflow/)	 - Setup your Reliably workflow
 

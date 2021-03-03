@@ -1,11 +1,11 @@
 ---
-title: reliably discover
-excerpt: Documentation for the doc/cobra-md/reliably_discover.md command in the Reliably CLI
+title: reliably scan
+excerpt: Documentation for the doc/cobra-md/reliably_scan.md command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably discover
+## reliably scan
 
 Check for Reliably Suggestions
 
@@ -18,37 +18,43 @@ Manifest(s) can be provided in several ways:
 - path to a single manifest file
 - path to a folder that will be scanned recursively for manifests files
 
-By default, the discover command, run without arguments, is scanning
+By default, the scan command, run without arguments, is scanning
 manifests file from the current working directory.
 
+Reliably can also scan for your live kubernetes cluster.
+
 ```
-reliably discover [path] [flags]
+reliably scan [path] [flags]
 ```
 
 ### Examples
 
 ```
-# Discover with a single file:
-$ reliably discover manifest.yaml
+# Scan a single file:
+$ reliably scan manifest.yaml
 
-# Discover with a folder:
-$ reliably discover
-$ reliably discover .
-$ reliably discover ./manifests
+# Scan a folder:
+$ reliably scan
+$ reliably scan .
+$ reliably scan ./manifests
 
-# Discover with reading manifest from stdin:
-$ cat manifest.yaml | reliably discover -
+# Scan with reading manifest from stdin:
+$ cat manifest.yaml | reliably scan -
 
-# Discover with custom format & output to local file
-$ reliably discover --format json --output report.json
+# Scan with custom format & output to local file
+$ reliably scan --format json --output report.json
+
+# Scan a live Kubernetes cluster
+$ reliably scan --live
+$ reliably scan --live [--namespace n] [--kubecontext c] [--kubeconfig c]
 ```
 
 ### Options
 
 ```
   -f, --format string        Specify the output format: [simple json yaml sarif codeclimate]
-  -h, --help                 help for discover
-  -k, --kubeconfig string    Specifies the path and file to use for kubeconfig for live discovery (default "/home/runner/.kube/config")
+  -h, --help                 help for scan
+  -k, --kubeconfig string    Specifies the path and file to use for kubeconfig for live scan (default "/home/runner/.kube/config")
   -c, --kubecontext string   Specifies the Kubernetes context to evaluate when scanning live cluster
   -l, --level string         Display suggestions only for level and higher
       --live                 Look for weaknesses in a live Kubernetes cluster
