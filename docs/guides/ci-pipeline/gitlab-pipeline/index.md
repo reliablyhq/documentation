@@ -12,7 +12,7 @@ to your repository.
 
 :::note Note
   The sources used in this walkthrough are available in this
-  [demo repository](https://gitlab.com/reliably/reliably-discovery-demo/).
+  [demo repository](https://gitlab.com/reliably/reliably-demo/).
 :::
 
 :::note Note
