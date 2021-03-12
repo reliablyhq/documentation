@@ -35,6 +35,11 @@ in your project's settings; See how to [create a custom variable in the UI]
 
 You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
 
+:::warning Warning
+  Make sure to un-tick 'Protect variable' when creating your variable,
+  or the CLI will not be able to work with merge requests from branches.
+:::
+
 ## Add GitLab CI/CD to your repository
 
 For this walkthrough, we're going to add a CI/CD Pipeline to a new GitLab
