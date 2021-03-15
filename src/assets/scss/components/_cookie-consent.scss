@@ -1,0 +1,50 @@
+// CSS for vue-cookie-accpet-decline
+// https://github.com/promosis/vue-cookie-accept-decline/
+@import '../../../node_modules/vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
+
+// Overrides
+.cookie {
+  &__floating {
+    max-width: 25em;
+
+    border: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    font-size: 1.6rem;
+
+    &__content {
+      margin-bottom: 0;
+
+      font-size: 0.95em;
+    }
+
+    &__buttons {
+      &__button {
+        border: none;
+
+        color: var(--brown);
+        font-size: .9em;
+
+        &--decline {  
+          font-weight: 400;
+
+          &:hover {
+            background-color: #ddd;
+
+            color: var(--brown);
+          }
+        }
+
+        &--accept {
+          background-color: var(--blue);
+          border-bottom-color: var(--blue);
+
+          &:hover {
+            background-color: #52bba8;
+          }
+        }
+      }
+    }
+  }
+
+}
