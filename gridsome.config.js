@@ -26,7 +26,7 @@ module.exports = {
       options: {
         id: 'GTM-TCWX6CW',
         cookie_flags: 'Max-Age=7200;Secure;SameSite=None',
-        enabled: true,
+        enabled: false,
         debug: false
       }
     },
