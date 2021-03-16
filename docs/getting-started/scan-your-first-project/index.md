@@ -76,3 +76,35 @@ resource containing the concerning line.
   contained another resource, say a service, before this deployment the
   line number would be different.
 :::
+
+
+### Show suggestion with example
+
+When running a CLI scan, the resulting suggestions can be displayed
+with an optional example of a best practice to be applied. To do so, you'll
+need to run the `scan` command with the specific `extended` format:
+
+```console
+$ reliably scan . -f extended
+```
+
+The CLI will output the list of suggestions with examples, as well as a
+recap summary:
+```
+Results:
+> tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
+Rule: K8S-DPL-0001, Platform: Kubernetes, Kind: Deployment
+
+# Example:
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  replicas: 3
+
+> tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
+...
+
+Summary:
+        8 suggestions found
+        1 info - 5 warning - 2 error
+```
