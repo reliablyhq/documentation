@@ -78,17 +78,17 @@ resource containing the concerning line.
 :::
 
 
-### Show suggestion with best practice example
+### Show suggestion with example
 
-When running the CLI scanning, the resulting suggestions can be displayed
-with an optional example of best practice to be applied. To do so, you'll
+When running a CLI scan, the resulting suggestions can be displayed
+with an optional example of a best practice to be applied. To do so, you'll
 need to run the `scan` command with the specific `extended` format:
 
 ```console
 $ reliably scan . -f extended
 ```
 
-You will get as output the list of suggestions with examples, as well as a
+The CLI will output the list of suggestions with examples, as well as a
 recap summary:
 ```
 Results:
