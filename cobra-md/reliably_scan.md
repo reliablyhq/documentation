@@ -52,7 +52,7 @@ $ reliably scan --live [--namespace n] [--kubecontext c] [--kubeconfig c]
 ### Options
 
 ```
-  -f, --format string        Specify the output format: [simple json yaml sarif codeclimate]
+  -f, --format string        Specify the output format: [simple json yaml sarif codeclimate extended tabbed]
   -h, --help                 help for scan
   -k, --kubeconfig string    Specifies the path and file to use for kubeconfig for live scan (default "/home/runner/.kube/config")
   -c, --kubecontext string   Specifies the Kubernetes context to evaluate when scanning live cluster
