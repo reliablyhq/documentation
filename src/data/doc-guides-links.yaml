@@ -1,7 +1,18 @@
-- title: Run as a kubectl Plugin
-  link: /guides/kubectl-plugin/
-- title: Run against a Kubernetes cluster
-  link: /guides/live-cluster/
+- title: Scan your Infrastructure
+  slug: scan-infrastructure
+  items:
+    - title: Overview
+      link: /guides/scan-infrastructure/
+    - title: Scan a Kubernetes Manifest
+      link: /guides/scan-infrastructure/kubernetes-manifest/
+    - title: Scan a Kubernetes Cluster
+      link: /guides/scan-infrastructure/kubernetes-cluster/
+    - title: Run with the Kubectl Plugin
+      link: /guides/scan-infrastructure/kubectl-plugin/
+    - title: Output Formats
+      link: /guides/scan-infrastructure/output-formats/
+- title: Service Level Objectives
+  link: /guides/slo/
 - title: Run in your CI pipeline
   slug: ci-pipeline
   items:

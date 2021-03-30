@@ -2,7 +2,7 @@
 title: Generate your Reliably CI/CD workflow
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["getting-started"]
-status: published
+status: not-published
 type: doc
 ---
 # Generate your CI/CD workflow

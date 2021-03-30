@@ -5,7 +5,8 @@ categories: ["guides"]
 status: published
 type: overview
 ---
-# Run Reliably against a Kubernetes Cluster
+# Scan a Kubernetes Cluster with Reliably scan
+
 
 You can use the [Reliably CLI][reliablyCLI] to discover the state of resources
 on a live [Kubernetes](https://kubernetes.io/docs/home/) Cluster.

@@ -14,16 +14,21 @@
       }
     ]
   },
-  "run-as-you-code": {
+  "scan-infrastructure": {
     "links": [
       {
-        "title": "Run Reliably CLI as you code",
-        "link": "/guides/run-as-you-code/code/"
+        "title": "Scan a Kubernetes Manifest",
+        "link": "/guides/scan-infrastructure/kubernetes-manifest/"
       },
       {
-        "title": "Visual Studio Code Plugin",
-        "link": "/guides/run-as-you-code/vscode/"
+        "title": "Scan a  Kubernetes Cluster",
+        "link": "/guides/scan-infrastructure/kubernetes-cluster/"
+      },
+      {
+        "title": "Run Reliably as a kubectl Plugin",
+        "link": "/guides/scan-infrastructure/kubectl-plugin/"
       }
+
     ]
   },
   "ci-pipeline": {

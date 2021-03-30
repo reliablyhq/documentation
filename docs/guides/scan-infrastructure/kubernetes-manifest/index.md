@@ -1,11 +1,11 @@
 ---
 title: Scan your first project
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["getting-started"]
+categories: ["guides", "reliably-scan"]
 status: published
 type: doc
 ---
-# Running your first Reliably scan
+# Scan a Kubernetes Manifest with Reliably scan
 
 Reliably helps you discover reliability concerns you may want to pay attention
 to.
