@@ -22,7 +22,7 @@ export default {
   overflow: hidden;
   padding: 1.5em;
 
-  background-color: white;
+  background-color: var(--blue-200);
   border-radius: var(--border-radius);
   box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .32);
 
