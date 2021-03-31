@@ -91,9 +91,14 @@ strong {
     }
   }
 
-  p {
+  :not(pre) {
     > code {
+      display: inline-block;
+      padding: 0 .05em;
+
       background-color: var(--blue-100);
+      border: 1px solid var(--blue);
+      border-radius: .1em;
     }
   }
 }
