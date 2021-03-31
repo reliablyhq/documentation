@@ -1,7 +1,7 @@
 ---
 title: Scan your infrastructure
 excerpt: Lorem Ipsum is simply dummy text.
-categories:  ["guides", "ci-pipeline"]
+categories: ["guides", "scan-infrastructure"]
 status: published
 type: overview
 ---

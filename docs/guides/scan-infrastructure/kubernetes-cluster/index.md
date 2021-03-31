@@ -1,9 +1,9 @@
 ---
 title: Run gainst a Kubernetes cluster
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["guides"]
+categories: ["guides", "scan-infrastructure"]
 status: published
-type: overview
+type: doc
 ---
 # Scan a Kubernetes Cluster with Reliably scan
 

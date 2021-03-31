@@ -1,7 +1,7 @@
 ---
 title: Service Leevel Objective
 excerpt: Lorem Ipsum is simply dummy text.
-categories:  ["guides", "service-levle-objective"]
+categories:  ["guides", "slo"]
 status: published
 type: overview
 ---

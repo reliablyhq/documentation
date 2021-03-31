@@ -1,7 +1,7 @@
 ---
 title: Scan your first project
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["guides", "reliably-scan"]
+categories: ["guides", "scan-infrastructure"]
 status: published
 type: doc
 ---

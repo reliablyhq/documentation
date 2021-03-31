@@ -1,9 +1,9 @@
 ---
 title: Run as a kubectl Plugin
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["guides"]
+categories: ["guides", "scan-infrastructure"]
 status: published
-type: overview
+type: doc
 ---
 # Run Reliably as a `kubectl` Plugin
 

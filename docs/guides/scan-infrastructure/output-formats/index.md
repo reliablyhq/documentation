@@ -1,9 +1,9 @@
 ---
 title: Guides
 excerpt: Lorem Ipsum is simply dummy text.
-categories: ["guides", "output-formats"]
+categories: ["guides", "scan-infrastructure"]
 status: published
-type: overview
+type: doc
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import SectionList from '~/components/SectionList.vue'

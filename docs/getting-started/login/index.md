@@ -47,7 +47,7 @@ window and the CLI will acknowledge you are now logged in.
 You have successfully logged in to Reliably and are now ready to use the
 `reliably` commands.
 
-## Check your authentication status
+## Authentication status
 
 You can check your authentication status with the `reliably auth status` command:
 
@@ -58,7 +58,7 @@ reliably.com
   ✓ Token: *******************
 ```
 
-## Retrieve your access token
+## Access token
 
 You can retrieve your access token (aka API key) with the `reliably auth status --show-token` command:
 
