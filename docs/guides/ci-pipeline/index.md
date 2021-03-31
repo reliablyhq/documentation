@@ -33,8 +33,8 @@ import data from '~/data/ci-pipeline-index-data.json'
     link="/guides/ci-pipeline/github-action/"
   />
   <ArticleCard
-    title="GitLab Job"
-    description="Get Reliably suggestions as part of your GitLab pipeline."
+    title="CI Workflow Generation"
+    description="Use the CLI to generate YAML workflow template files for GitHub, GitLab, and Circle CI."
     link="/guides/ci-pipeline/gitlab-pipeline/"
   />
 </MarkdownTwoColumns>

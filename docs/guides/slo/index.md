@@ -6,56 +6,39 @@ status: published
 type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
-import SectionList from '~/components/SectionList.vue'
+import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
+import ArticleCard from '~/components/ArticleCard.vue'
+import OtherArticles from '~/components/OtherArticles.vue'
 
-import data from '~/data/guides-index-data.json'
+import data from '~/data/slo-index-data.json'
 
-# Guide to Scanning your Infrastructure
+# Service Level Objectives with Reliably
 
 <PageIntroduction>
-  Service Level Objectives
+  
+  Service Level Objectives are a core element of your reliability effort.
+  They're a signal of your services health, allowing you to make decisions about
+  what you should focus on next.
+
+  Discover how the Reliably CLI allows to define and measure SLOs.
+
 </PageIntroduction>
 
-## Overview
+## Main articles
 
+<MarkdownTwoColumns>
+  <ArticleCard
+    title="Define your Service Level Objectives"
+    description="Learn how to define and measure your SLOs."
+    link="/guides/slo/define-slos/"
+  />
+  <ArticleCard
+    title="Generate SLO reports"
+    description="Fetch data from your cloud provider and generate comprehensive SLO reports."
+    link="/guides/slo/slo-reports/"
+  />
+</MarkdownTwoColumns>
 
-## Define SLO
-
-Reliably uses a file to define Service Level Objectives and their related Service Lvels Indicators.
-
-```YAML
-app:
-  name: my-app
-  owner: me
-  repo: /Users/mickroper/repos/github.com/reliablyhq/cli
-service:
-  objective:
-    name: name-here-?
-    indicators:
-      - latency: 100ms
-      - error_budget_percent: 90
-    resources:
-      - provider: aws
-        id: arn:317464599277:apigateway:eu-west-2::/apis/trj7cyiqib
-      - provider: gcp
-        id: alpha1-e3d83fa0/Google Cloud Load Balancers/reliablyadvicealpha1
-```
-
-NB: above YAML content is TBC
-
-## Service Service Indicator
-
-## Providers
-
-### AWS provider
-
-### GCP Provider
-
-## Measure and Report
-
-The provider will show a score against each SLI ...
-
-Each SLI included
 
 
 

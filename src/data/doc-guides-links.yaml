@@ -7,12 +7,21 @@
       link: /guides/scan-infrastructure/kubernetes-manifest/
     - title: Scan a Kubernetes Cluster
       link: /guides/scan-infrastructure/kubernetes-cluster/
-    - title: Run with the Kubectl Plugin
+    - title: Run as a Kubectl Plugin
       link: /guides/scan-infrastructure/kubectl-plugin/
     - title: Output Formats
       link: /guides/scan-infrastructure/output-formats/
+    - title: Scan History
+      link: /guides/scan-infrastructure/scan-history/
 - title: Service Level Objectives
-  link: /guides/slo/
+  slug: slo
+  items:
+    - title: Overview
+      link: /guides/slo/
+    - title: Define SLOs
+      link: /guides/slo/define-slos/
+    - title: Generate SLO reports
+      link: /guides/slo/slo-reports/
 - title: Run in your CI pipeline
   slug: ci-pipeline
   items:

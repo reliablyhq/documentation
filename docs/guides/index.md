@@ -36,24 +36,31 @@ import data from '~/data/guides-index-data.json'
 <SectionList
     title="Scan your Infrastructure"
     categoryName="scan-infrastructure"
-    description="The Reliably CLI scans your manifests and clusters."
+    description="Scans your manifests and clusters with the Reliably CLI."
     link="/guides/scan-infrastructure/"
     :list="data['scan-infrastructure'].links"
 />
 
 <SectionList
+    title="Service Level Objectives"
+    categoryName="slo"
+    description="Declare and measure SLOs in the CLI."
+    link="/guides/slo/"
+    :list="data['slo-links'].links"
+/>
+
+<SectionList
     title="CI Pipeline"
     categoryName="ci-pipeline"
-    description="Run Reliably as part of your CI pipeline"
+    description="Run Reliably as part of your CI pipeline."
     link="/guides/ci-pipeline/"
     :list="data['ci-pipeline'].links"
 />
 
 <SectionList
-    title="Running with Kubernetes"
-    categoryName="kubectl-plugin"
-    description="Run Reliably with Kunernetes"
-    link="/guides/"
-    :list="data['kubernetes-links'].links"
+    title="How It Works"
+    categoryName="how-it-works"
+    description="Discover how Reliably works under the hood."
+    link="/guides/how-it-works/"
+    :list="data['how-it-works'].links"
 />
-

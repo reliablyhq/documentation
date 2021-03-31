@@ -1,10 +1,6 @@
 {
   "links": [
     {
-      "label": "GitLab Job",
-      "link": "/guides/ci-pipeline/gitlab-job/"
-    },
-    {
       "label": "Jenkins Build",
       "link": "/guides/ci-pipeline/jenkins/"
     },

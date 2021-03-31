@@ -1,23 +1,46 @@
 ---
 title: Scan your infrastructure
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Scan your infrastructure with the Reliably CLI to surface potential reliability issues and suggestions.
 categories: ["guides", "scan-infrastructure"]
 status: published
 type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
-import SectionList from '~/components/SectionList.vue'
+import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
+import ArticleCard from '~/components/ArticleCard.vue'
+import OtherArticles from '~/components/OtherArticles.vue'
 
-import data from '~/data/guides-index-data.json'
+import data from '~/data/scan-infrastructure-index-data.json'
 
-# Guide to Scanning your Infrastructure
+# Scan your infrastructure with Reliably
 
 <PageIntroduction>
-  Scanning your Infrastructure
+
+  What if you could have an SRE coworker at your side all the time, giving you
+  best practice suggestions about your Kubernetes manifests even before they're
+  applied? This is exactly what <code>reliably scan kubernetes</code> is for.
+  
+  And what
+  about those clusters that are already running? Well, we have you covered too,
+  with <code>reliably scan kubernetes --live</code>!
+
 </PageIntroduction>
 
-* [Scan a Kubernetes Manifest](/guides/scan-your-infrastructure/scan-kubernetes-manifest/)
-* [Scan a Kubernetes Cluster](/guides/scan-your-infrastructure/live-cluster/)
-* [Run as a Kubectl plugin](/guides/scan-your-infrastructure/kubectl-plugin/)
-* [Output Formats](/guides/scan-your-infrastructure/output-formats/)
+## Main articles
 
+<MarkdownTwoColumns>
+  <ArticleCard
+    title="Scan a Kubernetes Manifest"
+    description="Surface potential reliability issues in your Kubernetes manifests."
+    link="/guides/scan-your-infrastructure/scan-kubernetes-manifest/"
+  />
+  <ArticleCard
+    title="Scan a Kubernetes Cluster"
+    description="Get reliability suggestions for your running Kubernetes clusters."
+    link="/guides/scan-your-infrastructure/live-cluster/"
+  />
+</MarkdownTwoColumns>
+
+## Other articles
+
+<OtherArticles :links="data.links" />

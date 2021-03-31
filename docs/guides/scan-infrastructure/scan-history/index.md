@@ -1,5 +1,5 @@
 ---
-title: Scan Output Formats
+title: Scan history
 excerpt: Lorem Ipsum is simply dummy text.
 categories: ["guides", "scan-infrastructure"]
 status: published
