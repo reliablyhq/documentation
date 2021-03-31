@@ -26,6 +26,8 @@
       link: /guides/ci-pipeline/jenkins/
     - title: CircleCI
       link: /guides/ci-pipeline/circle-ci/
+    - title: Automatic Workflow Generation
+      link: /guides/ci-pipeline/ci-workflow/
 - title: How it works
   slug: how-it-works
   items:

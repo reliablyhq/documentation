@@ -1,8 +1,8 @@
 ---
 title: Generate your Reliably CI/CD workflow
-excerpt: Lorem Ipsum is simply dummy text.
-categories: ["getting-started"]
-status: not-published
+excerpt: The Reliably CLI can help you set up the CI/CD workflow for GitHub, GitLab and CircleCI
+categories: ["guides", "ci-pipeline"]
+status: published
 type: doc
 ---
 # Generate your CI/CD workflow
