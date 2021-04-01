@@ -1,49 +1,40 @@
 ---
 title: Scan your first project
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Scan Kubernetes manifests with Reliably and discover potential reliability issues before deploying your infrastructure.
 categories: ["guides", "scan-infrastructure"]
 status: published
 type: doc
 ---
-# Scan a Kubernetes Manifest with Reliably scan
+
+import Spacer from '~/components/Spacer.vue'
+
+# Scan Kubernetes Manifests
 
 Reliably helps you discover reliability concerns you may want to pay attention
-to.
+to in your Kubernetes manifests.
 
-## Scan
-
-You ask Reliably to scan your code via the `reliably scan` command. This
+Scan your code via the `reliably scan <directory>` command. This
 command scans the current directory by default.
 
-:::info Info
-  Reliably only scans for Kubernetes resources at the moment but will grow
-  its capabilities to other assets in the near future.
-:::
+This page will assume the following Kubernetes manifest deployment in your
+current directory:
 
-:::info Example
-  This page will assume the following Kubernetes manifest deployment in your
-  current directory:
-
-  ```yaml
-  kind: Deployment
-  apiVersion: apps/v1
-  metadata:
-    name: myapp
-  spec:
-    template:
-      spec:
-        containers:
-        - image: nginx
-          name: myapp
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 8000
-            protocol: TCP
-  ```
-:::
-
-Run `reliably scan` to find out what reliability suggestions Reliably
-offers:
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: myapp
+spec:
+  template:
+    spec:
+      containers:
+      - image: nginx
+        name: myapp
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+```
 
 ```console
 $ reliably scan .
@@ -56,13 +47,8 @@ tests/manifests/deployment.yaml:1:1 [warning] Without the 'minReadySeconds' prop
 6 suggestions found
 ```
 
-Reliably goes through all resources it recognises and issue a suggestion
-statement for each potential reliability concern for you to review.
-
-:::info info
-  The default format is a plain text list of suggestions, the `scan`
-  command supports other formats: yaml, json, sarif, etc.
-:::
+Reliably goes through all resources it recognises and issues a suggestion
+statement for each potential reliability concern.
 
 In this case, Reliably made six suggestions about this Kubernetes deployment.
 
@@ -75,4 +61,11 @@ resource containing the concerning line.
   the deployment is at the top of the file. If that Kubernetes file had
   contained another resource, say a service, before this deployment the
   line number would be different.
+:::
+
+:::info info
+  The default format is a plain text list of suggestions, the `scan`
+  command supports other formats: yaml, json, sarif, etc.
+
+  Learn more about output formats [here](/guides/scan-infrastructure/output-formats/).
 :::

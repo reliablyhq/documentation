@@ -3,9 +3,9 @@
   items:
     - title: Overview
       link: /guides/scan-infrastructure/
-    - title: Scan a Kubernetes Manifest
+    - title: Kubernetes Manifests
       link: /guides/scan-infrastructure/kubernetes-manifest/
-    - title: Scan a Kubernetes Cluster
+    - title: Kubernetes Clusters
       link: /guides/scan-infrastructure/kubernetes-cluster/
     - title: Run as a Kubectl Plugin
       link: /guides/scan-infrastructure/kubectl-plugin/

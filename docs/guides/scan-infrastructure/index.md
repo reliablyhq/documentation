@@ -16,13 +16,12 @@ import data from '~/data/scan-infrastructure-index-data.json'
 
 <PageIntroduction>
 
-  What if you could have an SRE coworker at your side all the time, giving you
-  best practice suggestions about your Kubernetes manifests even before they're
-  applied? This is exactly what <code>reliably scan kubernetes</code> is for.
-  
-  And what
-  about those clusters that are already running? Well, we have you covered too,
-  with <code>reliably scan kubernetes --live</code>!
+What if you could have an SRE coworker at your side all the time, giving you
+best practice suggestions about your Kubernetes manifests even before they're
+applied? This is exactly what <code>reliably scan</code> is for.
+
+And what about those clusters that are already running? Well, we have you
+covered too, with <code>reliably scan --live</code>!
 
 </PageIntroduction>
 

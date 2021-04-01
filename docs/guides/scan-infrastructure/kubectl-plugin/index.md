@@ -1,21 +1,22 @@
 ---
 title: Run as a kubectl Plugin
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Use the Reliably CLI as a kubectl plugin, to surface and fix potential reliability issues.
 categories: ["guides", "scan-infrastructure"]
 status: published
 type: doc
 ---
 # Run Reliably as a `kubectl` Plugin
 
-The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-
-line tool lets you control [Kubernetes](https://kubernetes.io/docs/home/)
-clusters. `kubectl` commands are the essential building blocks for interacting
-with a Kubernetes cluster. Plugins extend `kubectl` with new sub-commands,
-allowing for new  and custom features not included with the main distribution
- of `kubectl`. The [Reliably CLI][reliablyCLI] can be run as a `kubectl` plugin. The
- Reliably CLI plugin is implemented as a
- Krew plugin. [Krew][krew] is an open-source plugin manager maintained
- by the [Kubernetes SIG CLI][sigcli] community.
+The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) 
+command-line tool lets you control
+[Kubernetes](https://kubernetes.io/docs/home/) clusters. `kubectl` commands are 
+the essential building blocks for interacting with a Kubernetes cluster. 
+Plugins extend `kubectl` with new sub-commands, allowing for new  and custom 
+features not included with the main distribution of `kubectl`.
+
+The [Reliably CLI][reliablyCLI] can be run as a `kubectl` plugin and installed 
+as a Krew plugin. [Krew][krew] is an open-source plugin manager maintained by 
+the [Kubernetes SIG CLI][sigcli] community.
 
 [reliablyCLI]: https://github.com/reliablyhq/cli
 [krew]: https://krew.sigs.k8s.io/
@@ -28,7 +29,8 @@ The easiest way to install and use this plugin is with
 
 ### As a Krew Plugin
 
-If you don't already have Krew installed, please install it from the [Krew install guide][krew-install].
+If you don't already have Krew installed, please install it from the 
+[Krew install guide][krew-install].
 
 [krew-install]: https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 
@@ -38,25 +40,22 @@ Once Krew is installed you can install Reliably plugin with:
 $ kubectl krew install reliably
 ```
 
-### From Github
+### From the GitHub
 
-The Reliably CLI plugin can be installed from the [kubectl-reliably]
-[kubectl-reliably-gh] Github repository. To ensure the plugin can be run, the
-`reliably.sh` shell script should be download from `kubectl-reliably` Github
-into a directory on your system path.
+If you don't want to use Krew, [download the Reliably CLI from the Releases page](https://github.com/reliablyhq/cli/releases/)
+or [clone it and build it from the GitHub repository](https://github.com/reliablyhq/cli/). 
+Then, rename it (or make a copy) as `kubectl-reliably` anywhere in your `PATH`, 
+ensuring it is executable.
+
+For example, here is how to install it for macOS, considering `$HOME/bin` is a 
+directory in your `PATH`:
 
 ```bash
-$ curl -L https://raw.githubusercontent.com/reliablyhq/kubectl-reliably/main/reliably.sh -o $HOME/bin/kubectl-reliably -s
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o $HOME/bin/kubectl-reliably -s
 chmod +x ~/bin/kubectl-reliably
 ```
 
-:::note Note
-The steps above assume `$HOME/bin` is a directory on your system PATH.
-:::
-
-[kubectl-reliably-gh]: https://github.com/reliablyhq/kubectl-reliably
-
-## Run the `kubectl-reliably` Plugin
+## Usage
 
 If you have installed the `kubectl-reliably` either as a Krew plugin or from
 Github, you can run the plugin with:
@@ -67,9 +66,6 @@ $ kubectl reliably
 
 You should see the Reliably CLI help page.
 
-## Next?
-
-Congratulations, you have successfully installed the `kubectl-reliably` plugin.
-For the next steps, see the [Reliably CLI reference][cli-ref] section.
+You can now use [all the commands from the CLI][cli-ref] in kubectl.
 
 [cli-ref]: /docs/reference/cli/

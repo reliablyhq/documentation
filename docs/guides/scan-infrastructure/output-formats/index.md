@@ -1,11 +1,12 @@
 ---
 title: Scan Output Formats
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Learn how to scan your Kubernetes infrastructure with Reliably, to surface and fix potential reliability issues.
 categories: ["guides", "scan-infrastructure"]
 status: published
 type: doc
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
+import Spacer from '~/components/Spacer.vue'
 
 # Output Formats
 
@@ -40,7 +41,7 @@ The `-f simple` flag is the standard output. It is equivalent to not using the
 format flag at all.
 
 ```bash
-$ reliably scan kubernetes . -f simple
+$ reliably scan . -f simple
 ```
 
 ![Screenshot of the standard output of the reliably scan command](./images/cli-scan-simple.png)
@@ -48,7 +49,7 @@ $ reliably scan kubernetes . -f simple
 If you want to remove the colors, you can use the global `--no-color` flag.
 
 ```bash
-$ reliably scan kubernetes . -f simple --no-color
+$ reliably scan . -f simple --no-color
 ```
 
 ![Screenshot of colorless output of the reliably scan command](./images/cli-scan-simple-no-color.png)
@@ -60,7 +61,7 @@ understand. It's output is sorted in a decreasing **Error**, **Warning**,
 **Info** order. Lines might be truncated to prevent wrapping.
 
 ```bash
-$ reliably scan kubernetes . -f tabbed
+$ reliably scan . -f tabbed
 ```
 
 ![Screenshot of the tabbed output of a reliably scan command](./images/cli-scan-tabbed.png)
@@ -80,24 +81,8 @@ $ reliably scan . -f extended
 
 The CLI will output the list of suggestions with examples, as well as a
 recap summary:
-```
-Results:
-> tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
-Rule: K8S-DPL-0001, Platform: Kubernetes, Kind: Deployment
 
-# Example:
-apiVersion: apps/v1
-kind: Deployment
-spec:
-  replicas: 3
-
-> tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
-...
-
-Summary:
-        8 suggestions found
-        1 info - 5 warning - 2 error
-```
+![Screenshot of the extended output of a reliably scan command](./images/cli-scan-extended.png)
 
 ## Structured data with `json` and `yaml`
 
@@ -107,7 +92,7 @@ can output JSON or YAML.
 Following is a (truncated) JSON output example:
 
 ```bash
-$ reliably scan kubernetes . -f json
+$ reliably scan . -f json
 ```
 
 ```json
@@ -134,11 +119,12 @@ $ reliably scan kubernetes . -f json
   }
 }
 ```
+<Spacer />
 
 And here is a (equally truncated) YAML output example:
 
 ```bash
-$ reliably scan kubernetes . -f yaml
+$ reliably scan . -f yaml
 ```
 
 ```yaml
@@ -167,7 +153,7 @@ those formats to display suggestions in GitHub and GitLab, respectively. You can
 use them to pass your suggestions to any other compatible application.
 
 ```bash
-$ reliably scan kubernetes . -f sarif
+$ reliably scan . -f sarif
 ```
 
 Here is an example of a suggestion displayed in GitHub Code Scanning alerts,
@@ -177,8 +163,10 @@ using the SARIF format.
 
 [Read more about running Reliably in your GitHub Actions](/guides/ci-pipeline/github-action/)
 
+<Spacer />
+
 ```bash
-$ reliably scan kubernetes . -f codeclimate
+$ reliably scan . -f codeclimate
 ```
 
 Here is an example of a suggestion displayed in GitLab Code Quality, which uses 
