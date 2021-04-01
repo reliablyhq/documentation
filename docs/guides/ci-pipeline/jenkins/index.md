@@ -1,6 +1,6 @@
 ---
 title: Jenkins Build
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Learn how to run the Reliably CLI as part of your CI/CD pipeline with Jenkins.
 categories: ["guides", "ci-pipeline"]
 status: published
 type: doc

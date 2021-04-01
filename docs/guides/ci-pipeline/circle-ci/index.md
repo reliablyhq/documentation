@@ -1,6 +1,6 @@
 ---
 title: CircleCI
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Learn how to run the Reliably CLI as part of your CI/CD pipeline with CircleCI.
 categories: ["guides", "ci-pipeline"]
 status: published
 type: doc

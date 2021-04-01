@@ -1,6 +1,6 @@
 ---
 title: Run Reliably in your CI pipeline
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Automation is at the core of DevOps and SRE practices. Learn how to automate Reliably CLI executions in your CI/CD pipelines.
 categories: ["guides", "ci-pipeline"]
 status: published
 type: overview

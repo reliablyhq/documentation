@@ -1,6 +1,6 @@
 ---
 title: How the Reliably API works
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Discover how the Reliably API works and how we handle your data.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

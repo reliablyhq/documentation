@@ -1,6 +1,6 @@
 ---
 title: Generate your Reliably CI/CD workflow
-excerpt: The Reliably CLI can help you set up the CI/CD workflow for GitHub, GitLab and CircleCI
+excerpt: The Reliably CLI can help you set up the CI/CD workflow for GitHub, GitLab and CircleCI.
 categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
