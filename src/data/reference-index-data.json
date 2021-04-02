@@ -16,6 +16,10 @@
       {
         "title": "reliably history",
         "link": "/reference/cli/reliably-history/"
+      },
+      {
+        "title": "reliably slo",
+        "link": "/reference/cli/reliably-slo/"
       }
     ]
   }

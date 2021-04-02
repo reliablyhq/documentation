@@ -24,5 +24,14 @@
       link: /reference/cli/reliably-history/
     - title: scan
       link: /reference/cli/reliably-scan/
+    - title: slo
+      maincommand: true
+      link: /reference/cli/reliably-slo/
+    - title: init
+      subcommand: true
+      link: /reference/cli/reliably-slo-init/
+    - title: report
+      subcommand: true
+      link: /reference/cli/reliably-slo-report/
     - title: workflow
       link: /reference/cli/reliably-workflow/
