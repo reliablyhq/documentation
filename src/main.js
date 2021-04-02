@@ -4,7 +4,6 @@
 // Import global styles
 import '~/assets/scss/main.scss'
 
-
 import DefaultLayout from '~/layouts/Default.vue'
 import DocsLayout from '~/layouts/Docs.vue'
 import Section from '~/components/Section.vue'
