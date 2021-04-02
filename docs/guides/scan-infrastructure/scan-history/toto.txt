@@ -1,0 +1,190 @@
+[33mExecution 3e7e6083-ee91-4aa8-b5b2-3c96b341a57a[0m
+Date: Thu, 01 Apr 2021 12:29:23 +0000
+
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+[33mExecution 00283e9a-f8a9-4aab-a015-37c870deaeb8[0m
+Date: Wed, 31 Mar 2021 17:29:14 +0000
+
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+[33mExecution 71e0f33e-72b3-4655-97e7-455ff35087c3[0m
+Date: Wed, 31 Mar 2021 17:27:16 +0000
+
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+[33mExecution 77dd5633-be58-44a8-bdb6-6e10d72fe4b0[0m
+Date: Wed, 31 Mar 2021 16:35:48 +0000
+
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+[33mExecution c8fd0dd8-3518-46e8-9ab7-0ad7f5de8c11[0m
+Date: Wed, 31 Mar 2021 16:35:04 +0000
+
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+[33mExecution 325affd0-d336-4dd7-9c3c-a9e2fe59753a[0m
+Date: Wed, 31 Mar 2021 16:31:48 +0000
+
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+[33mExecution 3833d5e3-a44b-4ec6-89fd-8b34ab57384e[0m
+Date: Wed, 31 Mar 2021 16:25:59 +0000
+
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+[33mExecution a9d26b42-17bc-4cff-9a4f-2f63e82808b7[0m
+Date: Wed, 31 Mar 2021 16:20:24 +0000
+
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+[33mExecution cf194b96-f83b-40aa-b540-36d7d0aad696[0m
+Date: Wed, 31 Mar 2021 16:09:32 +0000
+
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+[33mExecution 974a1d98-ac6f-4543-819e-e259042c463e[0m
+Date: Wed, 31 Mar 2021 16:08:05 +0000
+
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+[33mExecution c321c6df-211d-4732-90f4-9402f6e11a83[0m
+Date: Tue, 30 Mar 2021 15:47:25 +0000
+
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] You should specify a number of replicas
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
+tests/manifests/deployment.yaml:1:1 [[33minfo[0m] Image pull policy should usually not be set to 'Always'
+tests/manifests/pod.yaml:1:1 [[35mwarning[0m] Only images from an approved registry can be run
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+tests/manifests/deployment.yaml:1:1 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+[33mExecution abd83f86-5c11-478e-b0e4-e1e45d98b228[0m
+Date: Wed, 10 Mar 2021 15:05:13 +0000
+
+Deployment:nginx-deployment:0:0 [[33minfo[0m] Not setting the image pull policy means it be set to 'Always' which is not recommended
+ClusterRoleBinding:example-clusterrolebinding:0:0 [[33minfo[0m] Giving cluster role permissions to all service accounts is discouraged
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+PodSecurityPolicy:example:0:0 [[33minfo[0m] Enabling privileged can lead to unwanted escalation from the container's process
+Pod:nginx-deployment-5d59d67564-hr2tv:0:0 [[35mwarning[0m] Only images from an approved registry can be run
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+Deployment:nginx-deployment:0:0 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+Deployment:nginx-deployment:0:0 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+PodSecurityPolicy:example:0:0 [[33minfo[0m] To reduce risk of accessing files outside of an allowed paths, it's best to make them read only
+Pod:nginx-deployment-5d59d67564-9mnzm:0:0 [[35mwarning[0m] Only images from an approved registry can be run
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long the pod should be ready for before being considered available
+Pod:nginx-deployment-5d59d67564-xp87m:0:0 [[35mwarning[0m] Only images from an approved registry can be run
+[33mExecution 5f912d64-485c-481b-9e5b-885383f3b1fd[0m
+Date: Wed, 10 Mar 2021 15:03:20 +0000
+
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+[33mExecution 7144d34e-43ec-4306-ad1c-279e1edd9e88[0m
+Date: Mon, 08 Mar 2021 10:52:35 +0000
+
+Pod:nginx-deployment-5d59d67564-hr2tv:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+Deployment:nginx-deployment:0:0 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+Deployment:nginx-deployment:0:0 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+Deployment:nginx-deployment:0:0 [[33minfo[0m] Not setting the image pull policy means it be set to 'Always' which is not recommended
+Pod:nginx-deployment-5d59d67564-9mnzm:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+ClusterRoleBinding:example-clusterrolebinding:0:0 [[33minfo[0m] Giving cluster role permissions to all service accounts is discouraged
+Pod:nginx-deployment-5d59d67564-xp87m:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+PodSecurityPolicy:example:0:0 [[33minfo[0m] Enabling privileged can lead to unwanted escalation from the container's process
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+PodSecurityPolicy:example:0:0 [[33minfo[0m] To reduce risk of accessing files outside of an allowed paths, it's best to make them read only
+[33mExecution bf4a80f3-5f21-4140-8b9c-cd5c787687d6[0m
+Date: Mon, 08 Mar 2021 09:36:29 +0000
+
+ClusterRoleBinding:example-clusterrolebinding:0:0 [[33minfo[0m] Giving cluster role permissions to all service accounts is discouraged
+Pod:nginx-deployment-5d59d67564-xp87m:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+PodSecurityPolicy:example:0:0 [[33minfo[0m] To reduce risk of accessing files outside of an allowed paths, it's best to make them read only
+Pod:nginx-deployment-5d59d67564-9mnzm:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+Deployment:nginx-deployment:0:0 [[33minfo[0m] Not setting the image pull policy means it be set to 'Always' which is not recommended
+Pod:nginx-deployment-5d59d67564-hr2tv:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+Deployment:nginx-deployment:0:0 [[31merror[0m] Setting a high cpu request may render pod scheduling difficult or starve other pods
+Deployment:nginx-deployment:0:0 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+PodSecurityPolicy:example:0:0 [[33minfo[0m] Enabling privileged can lead to unwanted escalation from the container's process
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[0;36m[0m
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] A rollout strategy can reduce the risk of downtime
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
+[33mExecution 2f3019fb-ff5e-4f6d-92cd-3a1c7fe8928e[0m
+Date: Mon, 08 Mar 2021 09:03:09 +0000
+
+ClusterRoleBinding:example-clusterrolebinding:0:0 [[33minfo[0m] Giving cluster role permissions to all service accounts is discouraged
+PodSecurityPolicy:example:0:0 [[33minfo[0m] Enabling privileged can lead to unwanted escalation from the container's process
+Pod:nginx-deployment-5d59d67564-xp87m:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+PodSecurityPolicy:example:0:0 [[33minfo[0m] To reduce risk of accessing files outside of an allowed paths, it's best to make them read only
+Pod:nginx-deployment-5d59d67564-hr2tv:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+Pod:nginx-deployment-5d59d67564-9mnzm:0:0 [[35mwarning[0m] Only images from approved registry can be run.
+Deployment:nginx-deployment:0:0 [[31merror[0m] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+Deployment:nginx-deployment:0:0 [[35mwarning[0m] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
+[0G[2K[0;32m> [0m[0;1;99mpress ENTER to load more entries or Ctrl+C to exit... [0m[?25l[?25h

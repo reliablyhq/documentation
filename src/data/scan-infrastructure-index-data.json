@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "label": "Run as a kubectl plugin",
+      "link": "/guides/scan-infrastructure/kubectl-plugin/"
+    },
+    {
+      "label": "Output formats",
+      "link": "/guides/scan-infrastructure/output-formats/"
+    },
+    {
+      "label": "Scan history",
+      "link": "/guides/scan-infrastructure/scan-history/"
+    }
+  ]
+}

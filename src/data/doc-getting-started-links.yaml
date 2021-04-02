@@ -2,7 +2,3 @@
   link: /getting-started/install/
 - title: Login
   link: /getting-started/login/
-- title: Scan your first project
-  link: /getting-started/scan-your-first-project/
-- title: Generate a CI/CD workflow
-  link: /getting-started/ci-workflow/

@@ -1,6 +1,6 @@
 ---
 title: How Reliably CLI works
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Everything you can do with the Reliably CLI, and how we do it.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

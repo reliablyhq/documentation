@@ -1,6 +1,6 @@
 ---
 title: Reliably Documentation
-excerpt: Lorem ipsum dolor sit amet.
+excerpt: Reliably is a set of tools helping teams improve the reliability of the products they deliver.
 categories: []
 status: published
 type: overview
@@ -22,15 +22,15 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 
 <MarkdownTwoColumns>
   <Card
-    title="Better Kubernetes Manifests"
-    description="Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes."
+    title="Reliable Kubernetes Clusters"
+    description="Install the Reliably CLI to scan your Kubernetes manifests and clusters, and make them more reliable in minutes."
     color="blue"
     :button="data['card-1'].button"
     :svg="data['card-1'].svg"
   />
   <Card
-    title="Reliably in your CI pipeline"
-    description="Try Reliably wherever your code lives, or at build time in your favorite CI/CD platform."
+    title="Introducing SLOs"
+    description="We're adding SLO support to the Reliably CLI. Declare your SLOs and dependencies and start monitoring what you care about."
     color="yellow"
     :links="data['card-2'].links"
     :svg="data['card-2'].svg"

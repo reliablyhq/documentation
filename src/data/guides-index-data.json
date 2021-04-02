@@ -1,28 +1,30 @@
-
-
-
 {
-  "kubernetes-links": {
+  "scan-infrastructure": {
     "links": [
+      {
+        "title": "Scan a Kubernetes Manifest",
+        "link": "/guides/scan-infrastructure/kubernetes-manifest/"
+      },
+      {
+        "title": "Scan a  Kubernetes Cluster",
+        "link": "/guides/scan-infrastructure/kubernetes-cluster/"
+      },
       {
         "title": "Run Reliably as a kubectl Plugin",
-        "link": "/guides/kubectl-plugin/"
-      },
-      {
-        "title": "Run Reliably with a live cluster",
-        "link": "/guides/live-cluster/"
+        "link": "/guides/scan-infrastructure/kubectl-plugin/"
       }
+
     ]
   },
-  "run-as-you-code": {
+  "slo-links": {
     "links": [
       {
-        "title": "Run Reliably CLI as you code",
-        "link": "/guides/run-as-you-code/code/"
+        "title": "Define SLOs",
+        "link": "/guides/slo/define-slos/"
       },
       {
-        "title": "Visual Studio Code Plugin",
-        "link": "/guides/run-as-you-code/vscode/"
+        "title": "Generate SLO reports",
+        "link": "/guides/slo/slo-reports/"
       }
     ]
   },
@@ -39,6 +41,18 @@
       {
         "title": "Jenkins build",
         "link": "/guides/ci-pipeline/jenkins/"
+      }
+    ]
+  },
+  "how-it-works": {
+    "links": [
+      {
+        "title": "CLI",
+        "link": "/guides/how-it-works/cli/"
+      },
+      {
+        "title": "API",
+        "link": "/guides/how-it-works/api/"
       }
     ]
   }

@@ -1,7 +1,27 @@
-- title: Run as a kubectl Plugin
-  link: /guides/kubectl-plugin/
-- title: Run against a Kubernetes cluster
-  link: /guides/live-cluster/
+- title: Scan your Infrastructure
+  slug: scan-infrastructure
+  items:
+    - title: Overview
+      link: /guides/scan-infrastructure/
+    - title: Kubernetes Manifests
+      link: /guides/scan-infrastructure/kubernetes-manifest/
+    - title: Kubernetes Clusters
+      link: /guides/scan-infrastructure/kubernetes-cluster/
+    - title: Run as a Kubectl Plugin
+      link: /guides/scan-infrastructure/kubectl-plugin/
+    - title: Output Formats
+      link: /guides/scan-infrastructure/output-formats/
+    - title: Scan History
+      link: /guides/scan-infrastructure/scan-history/
+- title: Service Level Objectives
+  slug: slo
+  items:
+    - title: Overview
+      link: /guides/slo/
+    - title: Define SLOs
+      link: /guides/slo/define-slos/
+    - title: Generate SLO reports
+      link: /guides/slo/slo-reports/
 - title: Run in your CI pipeline
   slug: ci-pipeline
   items:
@@ -15,6 +35,8 @@
       link: /guides/ci-pipeline/jenkins/
     - title: CircleCI
       link: /guides/ci-pipeline/circle-ci/
+    - title: Automatic Workflow Generation
+      link: /guides/ci-pipeline/ci-workflow/
 - title: How it works
   slug: how-it-works
   items:

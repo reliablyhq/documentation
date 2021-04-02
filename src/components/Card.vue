@@ -53,8 +53,11 @@ export default {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 70%;
     padding: 1.5em;
+
+    > :not(h2) {
+      width: 70%;
+    }
   }
 
   h2 {

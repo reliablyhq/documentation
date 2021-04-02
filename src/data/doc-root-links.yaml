@@ -10,22 +10,18 @@
       link: /getting-started/install/
     - title: Login
       link: /getting-started/login/
-    - title: Scan your first project
-      link: /getting-started/scan-your-first-project/
-    - title: Setup Reliably workflow
-      link: /getting-started/ci-workflow/
 
 - title: Guides
   slug: guides
   items:
     - title: Overview
       link: /guides/
-    - title: Run as a kubectl Plugin
-      slug: kubectl-plugin
-      link: /guides/kubectl-plugin/
-    - title: Run against a Kubernetes cluster
-      slug: live-cluster
-      link: /guides/live-cluster/
+    - title: Scan your Infrastructure
+      slug: scan-infrastructure
+      link: /guides/scan-infrastructure/
+    - title: Service Level Objectives
+      slug: slo
+      link: /guides/slo/
     - title: Run in your CI pipeline
       slug: ci-pipeline
       link: /guides/ci-pipeline/

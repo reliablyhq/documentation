@@ -31,15 +31,6 @@ import data from '~/data/getting-started-index-data.json'
     description="Authenticate the Reliably CLI with Reliably.com"
     link="/getting-started/login/"
   />
-  <ArticleCard
-    title="Scan your first project"
-    description="Reliably helps you discover reliability concerns you may want to pay attention to."
-    link="/getting-started/scan-your-first-project/"
-  />
-  <ArticleCard
-    title="Setup Reliably workflow"
-    description="Generate Reliably workflow for your CI/CD platform."
-    link="/getting-started/ci-workflow/"
-  />
+
 </MarkdownTwoColumns>
 

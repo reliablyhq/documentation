@@ -1,6 +1,6 @@
 ---
 title: How Reliably works
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Discover how the Reliably CLI, API and other tools work together to help you make your systems and application more resilient.
 categories: ["guides", "how-it-works"]
 status: published
 type: overview
