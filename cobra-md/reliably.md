@@ -27,5 +27,6 @@ The Reliably Command Line Interface (CLI).
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
 * [reliably history](/docs/reference/cli/reliably-history/)	 - Show your scan history
 * [reliably scan](/docs/reference/cli/reliably-scan/)	 - Check for Reliably Suggestions
+* [reliably slo](/docs/reference/cli/reliably-slo/)	 - service level objective commands
 * [reliably workflow](/docs/reference/cli/reliably-workflow/)	 - Setup your Reliably workflow
 
