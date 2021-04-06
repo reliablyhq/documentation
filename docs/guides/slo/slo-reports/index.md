@@ -15,7 +15,7 @@ This is done with the `reliably slo report` command.
 
 :::note
 In order for the Reliably CLI to be able to query your service provider, you 
-will need to be authentified.
+will need to be authenticated.
 
 * [Authentifying with AWS](#aws)
 * [Authentifying with GCP](#google-cloud-platform)
