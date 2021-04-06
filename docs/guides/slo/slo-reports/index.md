@@ -8,7 +8,7 @@ type: doc
 
 # Generate Service Level Objectives reports
 
-Now that you have [defined your SLOs](/guides/slo/define-slos/), you can use the
+Now that you have [defined your SLOs](/docs/guides/slo/define-slos/), you can use the
 Reliably CLI to query your resources for SLIs and generate SLO reports.
 
 This is done with the `reliably slo report` command.
@@ -118,4 +118,4 @@ To fetch the required data, your service account will need a specific permission
 
 ## Reference
 
-Read the [Reliably CLI SLO Reports command](/reference/cli/reliably-slo-report/) reference for a complete list of options.
+Read the [Reliably CLI SLO Reports command](/docs/reference/cli/reliably-slo-report/) reference for a complete list of options.

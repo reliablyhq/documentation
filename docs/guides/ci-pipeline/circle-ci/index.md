@@ -68,7 +68,7 @@ See how to [set an environment variable in a project]
 
 ![Define Reliably token as CircleCI env variable](./images/circle-ci-project-env-vars.png)
 
-You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+You can see how to [retrieve your access token](/docs/getting-started/login/#retrieve-your-access-token/).
 
 ## Create the Reliably job
 

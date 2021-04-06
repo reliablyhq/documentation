@@ -67,5 +67,5 @@ resource containing the concerning line.
   The default format is a plain text list of suggestions, the `scan`
   command supports other formats: yaml, json, sarif, etc.
 
-  Learn more about output formats [here](/guides/scan-infrastructure/output-formats/).
+  Learn more about output formats [here](/docs/guides/scan-infrastructure/output-formats/).
 :::

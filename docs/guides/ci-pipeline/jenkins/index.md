@@ -54,7 +54,7 @@ As a pre-requesite, the `RELIABLY_TOKEN` must be defined as an environment varia
 In the new job display that appears next select the Build Environment tab, then select *Inject passwords to the build as environment variables*,
 and click *Add* under *Job passwords*. Type `RELIABLY_TOKEN` in the *name* field and paste your access token in the *password* field.
 
-You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+You can see how to [retrieve your access token](/docs/getting-started/login/#retrieve-your-access-token/).
 
 ![Inject Reliably token as env var](./images/jenkins-inject-password.png)
 

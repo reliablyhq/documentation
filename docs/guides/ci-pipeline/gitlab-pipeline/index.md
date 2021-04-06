@@ -33,7 +33,7 @@ in your project's settings; See how to [create a custom variable in the UI]
 
 ![Define Reliably token as GitLab variable](./images/gitlab-cicd-variables.png)
 
-You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+You can see how to [retrieve your access token](/docs/getting-started/login/#retrieve-your-access-token/).
 
 :::warning Warning
   Make sure to un-tick 'Protect variable' when creating your variable,
