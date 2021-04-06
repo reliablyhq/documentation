@@ -74,7 +74,7 @@ slo:
     latency: 500ms
     error_budget_percent: 1
   resources:
-  - id: project-id/Google Cloud Load Balancers/resource-id
+  - id: project-id/google-cloud-load-balancers/resource-id
     provider: gcp
   - id: arn:partition:service:region:account-id:resource-id
     provider: aws
@@ -94,7 +94,37 @@ Cloud Load Balancers" are currently supported), and the resource name.
 Resources on AWS are identified with their Amazon Resource Name. Learn more 
 about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
 
-### GCP Provider
+If **manually creating** the `reliably.yaml` configuration file, you will want to provide these informations in the following format:
+
+```yaml
+resources:
+  - id: arn:partition:service:region:account-id:resource-id
+    provider: aws
+```
+
+Note the `'arn:` prefix.
+
+### Google Cloud Platform
+
+The Reliably CLI can currently fetch Service Level Indicators for **services that are attached to a Google Cloud Load Balancer**. You will thus need a load balancer set up to define and report SLOs for GCP.
+
+When defining a service with GCP as provider, you will be prompted with three questions.
+
+![Screenshot of the questions asked by the CLI](./images/reliably-gcp-resource-id.png)
+
+The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
+
+![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
+
+The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
+
+If **manually creating** the `reliably.yaml` configuration file, you will want to provide these informations in the following format:
+
+```yaml
+resources:
+  - id: project-XXXXXX/google-cloud-load-balancers/resource-name
+    provider: gcp
+```
 
 ## Measure and Report
 
