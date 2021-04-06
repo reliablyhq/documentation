@@ -41,7 +41,7 @@ The `-f simple` flag is the standard output. It is equivalent to not using the
 format flag at all.
 
 ```bash
-$ reliably scan . -f simple
+$ reliably scan kubernetes . -f simple
 ```
 
 ![Screenshot of the standard output of the reliably scan command](./images/cli-scan-simple.png)
@@ -49,7 +49,7 @@ $ reliably scan . -f simple
 If you want to remove the colors, you can use the global `--no-color` flag.
 
 ```bash
-$ reliably scan . -f simple --no-color
+$ reliably scan kubernetes . -f simple --no-color
 ```
 
 ![Screenshot of colorless output of the reliably scan command](./images/cli-scan-simple-no-color.png)
@@ -61,7 +61,7 @@ understand. It's output is sorted in a decreasing **Error**, **Warning**,
 **Info** order. Lines might be truncated to prevent wrapping.
 
 ```bash
-$ reliably scan . -f tabbed
+$ reliably scan kubernetes . -f tabbed
 ```
 
 ![Screenshot of the tabbed output of a reliably scan command](./images/cli-scan-tabbed.png)
@@ -76,7 +76,7 @@ with an optional example of a best practice to be applied. To do so, you'll
 need to run the `scan` command with the specific `extended` format:
 
 ```console
-$ reliably scan . -f extended
+$ reliably scan kubernetes . -f extended
 ```
 
 The CLI will output the list of suggestions with examples, as well as a
@@ -92,7 +92,7 @@ can output JSON or YAML.
 Following is a (truncated) JSON output example:
 
 ```bash
-$ reliably scan . -f json
+$ reliably scan kubernetes . -f json
 ```
 
 ```json
@@ -124,7 +124,7 @@ $ reliably scan . -f json
 And here is a (equally truncated) YAML output example:
 
 ```bash
-$ reliably scan . -f yaml
+$ reliably scan kubernetes . -f yaml
 ```
 
 ```yaml
@@ -153,7 +153,7 @@ those formats to display suggestions in GitHub and GitLab, respectively. You can
 use them to pass your suggestions to any other compatible application.
 
 ```bash
-$ reliably scan . -f sarif
+$ reliably scan kubernetes . -f sarif
 ```
 
 Here is an example of a suggestion displayed in GitHub Code Scanning alerts,
@@ -166,10 +166,10 @@ using the SARIF format.
 <Spacer />
 
 ```bash
-$ reliably scan . -f codeclimate
+$ reliably scan kubernetes . -f codeclimate
 ```
 
-Here is an example of a suggestion displayed in GitLab Code Quality, which uses 
+Here is an example of a suggestion displayed in GitLab Code Quality, which uses
 CodeClimate.
 
 ![Screenshot of a suggestions list in GitLab](./images/gitlab-codeclimate.png)
