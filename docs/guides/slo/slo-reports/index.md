@@ -104,9 +104,17 @@ aws_secret_access_key = <your secret access key>
 
 ### Google Cloud Platform
 
-Authentication in Google Cloud Platform is made with the `gcloud` cli.
+You can authenticate be using the  `GOOGLE_APPLICATION_CREDENTIALS` environment variable. It is set to the file path of the JSON files that contains your service account key.
 
-<a href="https://cloud.google.com/sdk/gcloud" target="_blank" rel="noopener noreferer">Read more about the gcloud cli.</a>
+```bash
+$ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
+```
+
+<a href="https://cloud.google.com/docs/authentication/getting-started" target="_blank" rel="noopener noreferer">Read more about authentication methods</a> in the Google Cloud documentation.
+
+:::note
+To fetch the required data, your service account will need a specific permission: "Monitoring Viewer"
+:::
 
 ## Reference
 
