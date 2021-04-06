@@ -94,7 +94,7 @@ Cloud Load Balancers" are currently supported), and the resource name.
 Resources on AWS are identified with their Amazon Resource Name. Learn more 
 about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
 
-If **manually creating** the `reliably.yaml` configuration file, you will want to provide these informations in the following format:
+If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
 
 ```yaml
 resources:
@@ -118,7 +118,7 @@ The **project ID** can be found in the "Project info" card of your <a href="http
 
 The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
 
-If **manually creating** the `reliably.yaml` configuration file, you will want to provide these informations in the following format:
+If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
 
 ```yaml
 resources:
