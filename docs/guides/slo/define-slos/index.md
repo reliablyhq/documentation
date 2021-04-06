@@ -29,11 +29,6 @@ Example SLOs:
 - 99% of successful requests on a service
 - 98% of requests on a service fulfilled in less than 100 ms
 
-### Service Level Agreement
-
-An SLA is a contract with your users (whether they are another team in your
-company or end users of your product) about the consequences of missing an SLO.
-
 :::tip
 If you want to read more about the SRE terminology, the Google Cloud Blog 
 article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos" target="_blank" rel="noopener noreferer">SRE fundamentals: SLIs, SLAs and SLOs</a> is a good starting point.
