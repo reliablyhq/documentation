@@ -31,7 +31,7 @@ Tell Reliably to scan for reliability concerns from a cluster, instead of
 manifest files, with the `--live` flag:
 
 ```
-$ reliably scan --live
+$ reliably scan kubernetes --live
 ```
 
 The command will generate an output that offers advice about reliability
@@ -47,23 +47,23 @@ Deployment:nginx-deployment:0:0 [error] Setting a high cpu request may render po
 Deployment:nginx-deployment:0:0 [warning] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
 ```
 
-The `reliably scan --live` command will connect and talk to your
+The `reliably scan kubernetes --live` command will connect and talk to your
 cluster using a [kubeconfig][kubeconfig] file. This file typically lives at
-`$HOME/.kube/config`. By default, `reliably scan --live` will use
+`$HOME/.kube/config`. By default, `reliably scan kubernetes --live` will use
 the kubeconfig from the home location.
 
 You can also use the `KUBECONFIG` environment variable to locate your kubeconfig
 file:
 
 ```bash
-$ KUBECONFIG=/reliably/kube-config reliably scan --live
+$ KUBECONFIG=/reliably/kube-config reliably scan kubernetes --live
 ```
 
 You can also override the path for the kubeconfig by adding the `--kubeconfig`
 or `-k` flag and providing a path:
 
 ```
-$ reliably scan --live --kubeconfig=/reliably/kube-config
+$ reliably scan kubernetes --live --kubeconfig=/reliably/kube-config
 ```
 
 <Spacer />
@@ -75,9 +75,9 @@ the CLI will use the path from the `--kubeconfig` flag.
 
 ## Reference
 
-Read the [Reliably CLI scan][cli-ref] reference section for a complete list of
+Read the [Reliably CLI scan kubernetes][cli-ref] reference section for a complete list of
 options.
 
-[cli-ref]: /docs/reference/cli/reliably-scan/
+[cli-ref]: /docs/reference/cli/reliably-scan-kubernetes/
 
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/

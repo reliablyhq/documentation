@@ -13,7 +13,7 @@ import Spacer from '~/components/Spacer.vue'
 Reliably helps you discover reliability concerns you may want to pay attention
 to in your Kubernetes manifests.
 
-Scan your code via the `reliably scan <directory>` command. This
+Scan your code via the `reliably scan kubernetes <directory>` command. This
 command scans the current directory by default.
 
 This page will assume the following Kubernetes manifest deployment in your
@@ -37,7 +37,7 @@ spec:
 ```
 
 ```console
-$ reliably scan .
+$ reliably scan kubernetes .
 tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
 tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
 tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)

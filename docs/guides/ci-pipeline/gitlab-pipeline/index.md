@@ -154,7 +154,7 @@ with the call to Reliably:
 
 ```yaml
 script:
-  - reliably scan $SOURCE_CODE --format codeclimate --output gl-code-quality-report.json
+  - reliably scan kubernetes $SOURCE_CODE --format codeclimate --output gl-code-quality-report.json
 ```
 
 
@@ -207,7 +207,7 @@ We will also modify the call to the Reliably CLI to make use of the
 
 ```yaml
  script:
-      - reliably scan ./$SOURCE_CODE
+      - reliably scan kubernetes ./$SOURCE_CODE
 ```
 
 Now we have made all the modifications to  the Pipeline in `.gitlab-ci.yml`,
@@ -229,7 +229,7 @@ code_quality:
     entrypoint: ["/bin/sh", "-c"]
 
   script:
-    - reliably scan $SOURCE_CODE --format codeclimate --output gl-code-quality-report.json
+    - reliably scan kubernetes $SOURCE_CODE --format codeclimate --output gl-code-quality-report.json
   stage: test
   allow_failure: true
   artifacts:

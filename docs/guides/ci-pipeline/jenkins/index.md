@@ -69,7 +69,7 @@ curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-l
 chmod u+x reliably
 
 curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
-./reliably scan manifest.yaml
+./reliably scan kubernetes manifest.yaml
 ```
 
 What does this do?
@@ -77,7 +77,7 @@ What does this do?
 * The Reliably latest release is downloaded from Github.
 * The binary is given execute permissions.
 * A manifest file is downloaded from a Github repository.
-* Finally, the `reliably scan` command is run, which will scan the manifest
+* Finally, the `reliably scan kubernetes` command is run, which will scan the manifest
   file for any issues.
 
 The scan command will discover and surface suggestions where you might be

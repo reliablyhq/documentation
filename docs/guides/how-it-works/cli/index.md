@@ -44,20 +44,20 @@ For example, to scan for issues in any files in the current working directory
 you can run:
 
 ```bash
-$ reliably scan
+$ reliably scan kubernetes .
 ```
 
 If you want to scan a Cluster using your default Kubernetes configuration file,
 you can run:
 
 ```bash
-$ reliably scan --live
+$ reliably scan kubernetes --live
 ```
 
-Full details for 'reliably scan' are covered in the [scan][reliably-scan]
-section in the reference documentation.
+Full details for 'reliably scan kubernetes' are covered in the
+[kubernetes scan][reliably-scan-kubernetes] section in the reference documentation.
 
-[reliably-scan]: /reference/cli/reliably-scan/
+[reliably-scan-kubernetes]: /reference/cli/reliably-scan-kubernetes/
 
 ### Kubernetes
 
@@ -78,7 +78,7 @@ As a result of running a scan, the Reliably CLI will offer advice for any resour
 If you are running the CLI in your terminal by default, it will display the advice directly in your terminal session:
 
 ```bash
-$ reliably scan .
+$ reliably scan kubernetes .
 tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
 tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
 tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)

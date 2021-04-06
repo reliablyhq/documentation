@@ -90,7 +90,7 @@ The executor will be a Docker image of Reliably, which we want to run in the
 
 Our job will be made of two steps:
 * The first step will checkout the code in the repository
-* The second step will run the `reliably scan .` command to find Kubernetes
+* The second step will run the `reliably scan kubernetes .` command to find Kubernetes
 manifests and surface potential reliability issues
 
 Here is our completed job:
@@ -104,7 +104,7 @@ scan:
   working_directory: /home
   steps:
     - checkout # check out the code in the project directory
-    - run: reliably scan .
+    - run: reliably scan kubernetes .
 ```
 
 ## Add the job to a workflow
@@ -138,7 +138,7 @@ jobs:
     working_directory: /home
     steps:
       - checkout # check out the code in the project directory
-      - run: reliably scan .
+      - run: reliably scan kubernetes .
 
 workflows:
   reliably:
@@ -164,7 +164,7 @@ results of your workflow.
 
 ![](./images/circle-ci-pipeline.png)
 
-Here you can see that the pipeline failed because of the `reliably scan .`
+Here you can see that the pipeline failed because of the `reliably scan kubernetes .`
 step. Reliably surfaced possible reliability issues and returned an error that
 caused the pipeline to fail. The Reliably CLI outputs the list of issues in the
 pipeline steps output.
