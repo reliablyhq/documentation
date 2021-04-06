@@ -57,7 +57,7 @@ define an SLO.
 
 The Reliably CLI will then create a `reliably.yaml` configuration file in your 
 working directory. This file will be used to 
-[generate your SLO report](/guides/slo/slo-reports/).
+[generate your SLO report](/docs/guides/slo/slo-reports/).
 
 You could also create this configuration file yourself, as explained in the next
 section.
@@ -129,8 +129,8 @@ resources:
 ## Measure and Report
 
 Now that your SLOs are defined, the Reliably CLI will be able to 
-[query the resources for SLIs and generate SLO reports](/guides/slo/slo-reports/).
+[query the resources for SLIs and generate SLO reports](/docs/guides/slo/slo-reports/).
 
 ## Reference
 
-Read the [Reliably CLI SLO Init command](/reference/cli/reliably-slo-init/) reference for a complete list of options.
+Read the [Reliably CLI SLO Init command](/docs/reference/cli/reliably-slo-init/) reference for a complete list of options.

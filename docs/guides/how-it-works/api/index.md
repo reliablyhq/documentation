@@ -31,10 +31,10 @@ All stored suggestions and related metadata are encrypted on Reliably's side.
 
 ## More on that subject
 
-[How the Reliably CLI works](/guides/how-it-works/cli/)
+[How the Reliably CLI works](/docs/guides/how-it-works/cli/)
 
-[How the Reliably Rules work](/guides/how-it-works/rules/)
+[How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
 ## Not using Reliaby yet?
 
-[Getting started with Reliably](/getting-started/)
+[Getting started with Reliably](/docs/getting-started/)

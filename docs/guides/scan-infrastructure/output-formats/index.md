@@ -161,7 +161,7 @@ using the SARIF format.
 
 ![Screenshot of a suggestion in GitHub](./images/github-sarif.png)
 
-[Read more about running Reliably in your GitHub Actions](/guides/ci-pipeline/github-action/)
+[Read more about running Reliably in your GitHub Actions](/docs/guides/ci-pipeline/github-action/)
 
 <Spacer />
 
@@ -174,4 +174,4 @@ CodeClimate.
 
 ![Screenshot of a suggestions list in GitLab](./images/gitlab-codeclimate.png)
 
-[Read more about running Reliably in GitLab CI](/guides/ci-pipeline/gitlab-pipeline/)
+[Read more about running Reliably in GitLab CI](/docs/guides/ci-pipeline/gitlab-pipeline/)

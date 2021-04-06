@@ -25,7 +25,7 @@ Adding Reliably to your GitHub repositories is as simple as adding a GitHub Work
 As a pre-requisite, we advice to set up your Reliably access token as a GitHub secret,
 to avoid exposing secure information within your workflow file.
 
-You can see how to [retrieve your access token](/getting-started/login/#retrieve-your-access-token/).
+You can see how to [retrieve your access token](/docs/getting-started/login/#retrieve-your-access-token/).
 
 To add a secret to your GitHub repository, go to Settings > Secrets > New repository secret
 or follow the [documentation](https://docs.github.com/en/actions/reference/encrypted-secrets):

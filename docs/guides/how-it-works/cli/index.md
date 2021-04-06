@@ -106,10 +106,10 @@ reliability effort.
 
 ## More on that subject
 
-[How the Reliably API works](/guides/how-it-works/api/)
+[How the Reliably API works](/docs/guides/how-it-works/api/)
 
-[How the Reliably Rules work](/guides/how-it-works/rules/)
+[How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
 ## Not using Reliaby yet?
 
-[Getting started with Reliably](/getting-started/)
+[Getting started with Reliably](/docs/getting-started/)
