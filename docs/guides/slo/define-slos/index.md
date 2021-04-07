@@ -97,7 +97,7 @@ resources:
     provider: aws
 ```
 
-Note the `'arn:` prefix.
+Note the `arn:` prefix.
 
 ### Google Cloud Platform
 
