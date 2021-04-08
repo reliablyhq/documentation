@@ -107,11 +107,24 @@ When defining a service with GCP as provider, you will be prompted with three qu
 
 ![Screenshot of the questions asked by the CLI](./images/reliably-gcp-resource-id.png)
 
-The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
+The project ID can be found by running:
 
-![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
+```console
+$ gcloud config get-value project
+```
 
-The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
+If you want to use a different project than the current one configured on your
+machine, list all of them with:
+
+```console
+$ gcloud projects list
+```
+
+The **resource name** can be found with:
+
+```console
+$ gcloud compute url-maps list
+```
 
 If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
 
