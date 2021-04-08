@@ -1,5 +1,5 @@
 <template>
-  <DocsLayout :subtitles="subtitles" :allLinks="links">
+  <DocsLayout :subtitles="subtitles">
     <VueRemarkContent class="post mb"></VueRemarkContent>
   </DocsLayout>
 </template>
@@ -21,11 +21,6 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import rootLinks from '@/data/doc-root-links.yaml';
-import gettingStartedLinks from '@/data/doc-getting-started-links.yaml';
-import guideLinks from '@/data/doc-guides-links.yaml';
-import referenceLinks from '@/data/doc-reference-links.yaml';
-
 export default {
   computed: {
     links() {
