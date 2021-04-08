@@ -1,5 +1,5 @@
 <template>
-  <DocsLayout :subtitles="subtitles" :allLinks="links">
+  <DocsLayout :subtitles="subtitles">
     <div class="post mb" v-html="$page.doc.content" />
   </DocsLayout>
 </template>
@@ -22,21 +22,8 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import rootLinks from '@/data/doc-root-links.yaml';
-import gettingStartedLinks from '@/data/doc-getting-started-links.yaml';
-import guideLinks from '@/data/doc-guides-links.yaml';
-import referenceLinks from '@/data/doc-reference-links.yaml';
-
 export default {
   computed: {
-    links() {
-      return {
-        rootLinks: rootLinks,
-        guideLinks: guideLinks,
-        gettingStartedLinks: gettingStartedLinks,
-        referenceLinks: referenceLinks,
-      };
-    },
     subtitles() {
       // Remove h1, h4, h5, h6 titles
       let subtitles = this.$page.doc.subtitles.filter(function(value, index, arr){

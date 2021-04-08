@@ -13,4 +13,21 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
   Vue.component('DocsLayout', DocsLayout)
   Vue.component('Section', Section)
+
+  Vue.directive('click-outside', {
+    bind: (el, binding, vnode) => {
+      el.clickOutsideEvent = (event) => {
+        // here I check that click was outside the el and his childrens
+        if (!(el === event.target || el.contains(event.target))) {
+          // and if it did, call method provided in attribute value
+          vnode.context[binding.expression](event);
+          vnode.context[binding.arg] = false;
+        }
+      };
+      document.body.addEventListener('click', el.clickOutsideEvent);
+    },
+    unbind: (el) => {
+      document.body.removeEventListener('click', el.clickOutsideEvent);
+    },
+  });
 }

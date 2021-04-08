@@ -1,0 +1,60 @@
+- title: Scan your Infrastructure
+  link: /guides/scan-infrastructure/
+  sub: false
+- title: Kubernetes Manifests
+  link: /guides/scan-infrastructure/kubernetes-manifest/
+  sub: true
+- title: Kubernetes Clusters
+  link: /guides/scan-infrastructure/kubernetes-cluster/
+  sub: true
+- title: Run as a Kubectl Plugin
+  link: /guides/scan-infrastructure/kubectl-plugin/
+  sub: true
+- title: Output Formats
+  link: /guides/scan-infrastructure/output-formats/
+  sub: true
+- title: Scan History
+  link: /guides/scan-infrastructure/scan-history/
+  sub: true
+
+- title: Service Level Objectives
+  link: /guides/slo/
+  sub: false
+- title: Define SLOs
+  link: /guides/slo/define-slos/
+  sub: true
+- title: Generate SLO reports
+  link: /guides/slo/slo-reports/
+  sub: true
+
+- title: Run in your CI pipeline
+  link: /guides/ci-pipeline/
+  sub: false
+- title: GitHub Action
+  link: /guides/ci-pipeline/github-action/
+  sub: true
+- title: GitLab Pipeline
+  link: /guides/ci-pipeline/gitlab-pipeline/
+  sub: true
+- title: Jenkins Build
+  link: /guides/ci-pipeline/jenkins/
+  sub: true
+- title: CircleCI
+  link: /guides/ci-pipeline/circle-ci/
+  sub: true
+- title: Automatic Workflow Generation
+  link: /guides/ci-pipeline/ci-workflow/
+  sub: true
+
+- title: How it works
+  link: /guides/how-it-works/
+  sub: false
+- title: CLI
+  link: /guides/how-it-works/cli/
+  sub: true
+- title: API
+  link: /guides/how-it-works/api/
+  sub: true
+- title: Rules
+  link: /guides/how-it-works/rules/
+  sub: true

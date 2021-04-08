@@ -2,44 +2,7 @@
   <Layout class="has-sidebar docs-page" :footer="false">
     <div class="main-grid">
       <div class="sidebar sidebar--left">
-        <template v-if="links">
-          <g-link v-if="isSubSection" class="sidebar-backlink" to="/">&larr; Docs</g-link>
-          <nav class="sidebar-nav">
-            <div class="sidebar-nav__header">
-              <template v-if="currentPath.startsWith('/getting-started')">
-                <div class="menu-item">
-                  Getting Started
-                  <div class="count-wrapper">
-                    <span class="count">{{ pagesPerCategory["getting-started"] }}</span>
-                  </div>
-                </div>
-                <g-link to="/getting-started/" class="menu-link" exact>Overview</g-link>
-              </template>
-              <template v-if="currentPath.startsWith('/guides')">
-                <div class="menu-item">
-                  Guides
-                  <div class="count-wrapper">
-                    <span class="count">{{ pagesPerCategory.guides }}</span>
-                  </div>
-                </div>
-                <g-link to="/guides/" class="menu-link" exact>Overview</g-link>
-              </template>
-              <template v-if="currentPath.startsWith('/reference')">
-                <div class="menu-item">
-                  Reference
-                  <div class="count-wrapper">
-                    <span class="count">{{ pagesPerCategory.reference }}</span>
-                  </div>
-                </div>
-                <g-link to="/reference/" class="menu-link" exact>Overview</g-link>
-              </template>
-            </div>
-            <template v-for="(group, i1) in links">
-              <MenuSection v-if="group.items" :key="i1" :group="group" :index="i1" :counts="pagesPerCategory" />
-              <g-link v-else :key="i1" :to="group.link" class="menu-item menu-link" exact>{{ group.title }}</g-link>
-            </template>
-          </nav>
-        </template>
+        <Menu />
       </div>
       <Section class="doc-content">
         <slot></slot>
@@ -56,59 +19,21 @@
           </div>
         </nav> -->
       </Section>
-      <div v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/'" class="sidebar sidebar--right hide-for-small">
-        <h3>On this page</h3>
-        <ul v-if="subtitles.length" class="menu-item submenu">
-          <li class="submenu__item" :class="'submenu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
-            <a class="submenu__link" :href="subtitle.anchor">
-              {{ subtitle.value }}
-            </a>
-          </li>
-        </ul>
-      </div>
+      <PageNav v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/'" :links="subtitles" />
     </div>
   </Layout>
 </template>
-
-<static-query>
-query {
-  docpages: allDocPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
-		edges {
-    	node {
-      	id
-      	title
-        path
-        type
-        categories
-    	}
-    }
-  },
-  clipages: allCliPage(filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
-		edges {
-    	node {
-      	id
-      	title
-        path
-        type
-        categories
-    	}
-    }
-  }
-}
-</static-query>
-
 <script>
-import MenuSection from '@/components/MenuSection.vue';
+import Menu from '@/components/Menu.vue';
+import PageNav from '@/components/PageNav.vue';
 
 export default {
   components: {
-    MenuSection,
+    Menu,
+    PageNav,
   },
   props: {
     subtitles: { type: Array, default: () => [] },
-    allLinks: { type: Object },
-    // rootLinks: { type: Array, default: () => [] },
-    // guideLinks: { type: Array, default: () => [] }
   },
   computed: {
     currentPath () {
@@ -119,17 +44,6 @@ export default {
         return false;
       } else {
         return true;
-      }
-    },
-    links () {
-      if (this.$route.path.startsWith('/guides')) {
-        return this.allLinks.guideLinks;
-      } else if (this.$route.path.startsWith('/getting-started')) {
-        return this.allLinks.gettingStartedLinks;
-      } else if (this.$route.path.startsWith('/reference')) {
-        return this.allLinks.referenceLinks;
-      }else {
-        return this.allLinks.rootLinks;
       }
     },
     pagesPerCategory () {
@@ -146,24 +60,6 @@ export default {
         });
       });
       return categoriesObject;
-    },
-    items () {
-      // const flat = [];
-      // this.links.forEach(group => {
-      //   group.items.forEach(item => {
-      //     if (item.link) {
-      //       flat.push(item);
-      //     } else if (item.items) {
-      //       item.items.forEach(sub => {
-      //         if (sub.link) {
-      //           flat.push(sub);
-      //         }
-      //       })
-      //     }
-      //   });
-      // });
-      // return flat;
-
     },
     currentIndex () {
       return this.items.findIndex(item => {
@@ -197,7 +93,7 @@ export default {
       content: '';
       grid-column-start: 1;
 
-      background-color: var(--blue-200);
+      background-color: var(--blue-100);
     }
   }
 
@@ -231,7 +127,7 @@ export default {
   &--left {
     grid-column-start: 2;
 
-    background-color: var(--blue-200);
+    background-color: var(--blue-100);
 
     .menu-item {
       display: flex;
