@@ -19,25 +19,18 @@
           </div>
         </nav> -->
       </Section>
-      <div v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/'" class="sidebar sidebar--right hide-for-small">
-        <h3>On this page</h3>
-        <ul v-if="subtitles.length" class="menu-item submenu">
-          <li class="submenu__item" :class="'submenu__item-depth-' + subtitle.depth" v-for="subtitle in subtitles" :key="subtitle.value">
-            <a class="submenu__link" :href="subtitle.anchor">
-              {{ subtitle.value }}
-            </a>
-          </li>
-        </ul>
-      </div>
+      <PageNav v-if="subtitles.length > 0 && subtitles[0].depth !== 3 && currentPath !== '/'" :links="subtitles" />
     </div>
   </Layout>
 </template>
 <script>
 import Menu from '@/components/Menu.vue';
+import PageNav from '@/components/PageNav.vue';
 
 export default {
   components: {
     Menu,
+    PageNav,
   },
   props: {
     subtitles: { type: Array, default: () => [] },
