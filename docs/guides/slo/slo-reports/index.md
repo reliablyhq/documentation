@@ -14,11 +14,11 @@ Reliably CLI to query your resources for SLIs and generate SLO reports.
 This is done with the `reliably slo report` command.
 
 :::note
-In order for the Reliably CLI to be able to query your service provider, you 
+In order for the Reliably CLI to be able to query your service provider, you
 will need to be authenticated.
 
-* [Authentifying with AWS](#aws)
-* [Authentifying with GCP](#google-cloud-platform)
+* [Authenticating with AWS](#aws)
+* [Authenticating with GCP](#google-cloud-platform)
 :::
 
 ## Usage
@@ -38,7 +38,7 @@ the period.
 ### Specify YAML file
 
 Reliably will look for a file named `reliably.yaml` in your  working directory.
-You tell the CLI to use another file by specifying its path specified with the 
+You tell the CLI to use another file by specifying its path specified with the
 `--manifest` or `-m` flag.
 
 ```
@@ -77,7 +77,7 @@ $ reliably slo report --format simple --no-color
 
 ### JSON Output
 
-You can generate a JSON-formatted SLO report for consumption in third-party 
+You can generate a JSON-formatted SLO report for consumption in third-party
 tools.
 
 ```
@@ -91,7 +91,7 @@ to be authenticated.
 
 ### AWS
 
-Authentication with AWS is made through an `credentials` file in your 
+Authentication with AWS is made through an `credentials` file in your
 `$HOME/.aws` directory.
 
 ```
