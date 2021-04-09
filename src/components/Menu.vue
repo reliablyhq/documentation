@@ -95,6 +95,48 @@ export default {
     referenceLinks() {
       return referenceLinks;
     },
+    cliRefLinks() {
+      let edges = this.$static.clipages.edges;
+      // let tmp = [];
+      let links = [];
+      edges.forEach( l => {
+        let title = l.node.title;
+        if (title.startsWith("reliably ")) { // All except root command
+          title = title.substring("reliably ".length);
+          console.log(title);
+          if (title.indexOf(" ") === -1) {
+            console.log("parent");
+            // No space character in title. It is not a subcommand.
+            links.push({
+              "title": title,
+              "path": l.node.path,
+              "id": l.node.id,
+              "sub": false,
+            });
+          } else {
+            console.log("sub");
+            // It's a subcommand
+            // Remove the first word: it's the parent command
+            title = title.substring(title.indexOf(" ") + 1);
+            console.log(title);
+            links.push({
+              "title": title,
+              "path": l.node.path,
+              "id": l.node.id,
+              "sub": true,
+            });
+          }
+        } else {
+          links.push({
+            "title": title,
+            "path": l.node.path,
+            "id": l.node.id,
+            "sub": false,
+          });
+        }
+      });
+      return links;
+    },
   },
   methods:{
     close() {
