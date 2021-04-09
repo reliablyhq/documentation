@@ -1,5 +1,5 @@
 <template>
-  <div class="page-nav sidebar">
+  <div class="page-nav sidebar sidebar--right">
     <h3>On this page</h3>
     <nav>
       <a
@@ -46,9 +46,6 @@ export default {
       font-weight: 700;
       &:not(:first-child) {
         margin-top: 2em;
-        // padding-top: .75em;
-
-        // border-top: 1px solid var(--blue-200);
       }
     }
   }
