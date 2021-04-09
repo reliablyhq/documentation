@@ -108,7 +108,7 @@ export default {
 
 .sidebar {
   @media screen and (max-width: 57rem) {
-    display: none;
+    // display: none;
   }
 
   position: sticky;
@@ -125,9 +125,15 @@ export default {
   -webkit-overflow-scrolling: touch;
 
   &--left {
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
 
     background-color: var(--blue-100);
+
+    @media screen and (min-width: 57rem) {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
   }
 
   &--right {
