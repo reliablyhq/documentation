@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-menu">
-    <div class="sidebar-dropdown">
+    <div class="sidebar-dropdown" @keyup.esc.prevent="close">
       <button class="sidebar-dropdown__button" @click.stop="openMenu = !openMenu">
         {{ current }}
         <SelectIcon />
@@ -38,6 +38,7 @@
         </template>
       </template>
       <template v-if="current === 'Reference'">
+        <!-- YAML file links -->
         <template v-for="(l, index) in referenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
@@ -48,10 +49,37 @@
             </g-link>
           </h5>
         </template>
+        <!-- GraphQL links -->
+        <template v-for="l in cliRefLinks">
+          <g-link v-if="l.sub" :to="l.path" :key="l.id">
+            {{ l.title }}
+          </g-link>
+          <h5 v-else :key="l.id">
+            <g-link :to="l.path">
+              {{ l.title }}
+            </g-link>
+          </h5>
+        </template>
       </template>
     </nav>
   </div>
 </template>
+
+<static-query>
+query {
+  clipages: allCliPage(sortBy: "title", order: ASC, filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+		edges {
+    	node {
+      	id
+      	title
+        path
+        type
+        categories
+    	}
+    }
+  }
+}
+</static-query>
 
 <script>
 import gettingStartedLinks from '@/data/menu-getting-started.yaml';
@@ -94,6 +122,44 @@ export default {
     },
     referenceLinks() {
       return referenceLinks;
+    },
+    cliRefLinks() {
+      let edges = this.$static.clipages.edges;
+      // let tmp = [];
+      let links = [];
+      edges.forEach( l => {
+        let title = l.node.title;
+        if (title.startsWith("reliably ")) { // All except root command
+          title = title.substring("reliably ".length);
+          if (title.indexOf(" ") === -1) {
+            // No space character in title. It is not a subcommand.
+            links.push({
+              "title": title,
+              "path": l.node.path,
+              "id": l.node.id,
+              "sub": false,
+            });
+          } else {
+            // It's a subcommand
+            // Remove the first word: it's the parent command
+            title = title.substring(title.indexOf(" ") + 1);
+            links.push({
+              "title": title,
+              "path": l.node.path,
+              "id": l.node.id,
+              "sub": true,
+            });
+          }
+        } else {
+          links.push({
+            "title": title,
+            "path": l.node.path,
+            "id": l.node.id,
+            "sub": false,
+          });
+        }
+      });
+      return links;
     },
   },
   methods:{
@@ -216,7 +282,7 @@ export default {
       color: var(--brown);
       text-decoration: none;
 
-      &:hover, {
+      &:hover {
         background-color: var(--blue-200);
       }
 
