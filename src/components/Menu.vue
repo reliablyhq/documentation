@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-menu">
-    <div class="sidebar-dropdown">
+    <div class="sidebar-dropdown" @keyup.esc.prevent="close">
       <button class="sidebar-dropdown__button" @click.stop="openMenu = !openMenu">
         {{ current }}
         <SelectIcon />
