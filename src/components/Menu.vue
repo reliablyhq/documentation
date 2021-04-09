@@ -216,7 +216,7 @@ export default {
       color: var(--brown);
       text-decoration: none;
 
-      &:hover, {
+      &:hover {
         background-color: var(--blue-200);
       }
 

@@ -51,12 +51,6 @@ export default {
         // border-top: 1px solid var(--blue-200);
       }
     }
-
-    &--depth-3 {
-      // padding-left: 1rem;
-
-      // opacity: .7;
-    }
   }
 }
 </style>
