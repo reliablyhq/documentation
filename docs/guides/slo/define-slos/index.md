@@ -82,9 +82,7 @@ AWS resources are identified with their ARN.
 GCP resources are identified with a project ID, the resource type (only "Google
 Cloud Load Balancers" are currently supported), and the resource name.
 
-## Providers
-
-### AWS
+## AWS
 
 Resources on AWS are identified with their Amazon Resource Name. Learn more 
 about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
@@ -99,15 +97,17 @@ resources:
 
 Note the `arn:` prefix.
 
-### Google Cloud Platform
+## Google Cloud Platform
 
 The Reliably CLI can currently fetch Service Level Indicators for **services that are attached to a Google Cloud Load Balancer**. You will thus need a load balancer set up to define and report SLOs for GCP.
 
-When defining a service with GCP as provider, you will be prompted with three questions.
+When defining a service with GCP as provider, you will be prompted with three questions to identify the service you want to monitor. You can get the service ID using the gcloud CLI or the Google Cloud Console.
 
 ![Screenshot of the questions asked by the CLI](./images/reliably-gcp-resource-id.png)
 
-The project ID can be found by running:
+### gcloud CLI
+
+The **project ID** can be found by running:
 
 ```console
 $ gcloud config get-value project
@@ -125,6 +125,16 @@ The **resource name** can be found with:
 ```console
 $ gcloud compute url-maps list
 ```
+
+### Google Cloud Console
+
+The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
+
+![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
+
+The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
+
+### Manual file creation
 
 If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
 
