@@ -38,6 +38,7 @@
         </template>
       </template>
       <template v-if="current === 'Reference'">
+        <!-- YAML file links -->
         <template v-for="(l, index) in referenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
@@ -48,10 +49,37 @@
             </g-link>
           </h5>
         </template>
+        <!-- GraphQL links -->
+        <template v-for="l in cliRefLinks">
+          <g-link v-if="l.sub" :to="l.path" :key="l.id">
+            {{ l.title }}
+          </g-link>
+          <h5 v-else :key="l.id">
+            <g-link :to="l.path">
+              {{ l.title }}
+            </g-link>
+          </h5>
+        </template>
       </template>
     </nav>
   </div>
 </template>
+
+<static-query>
+query {
+  clipages: allCliPage(sortBy: "title", order: ASC, filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
+		edges {
+    	node {
+      	id
+      	title
+        path
+        type
+        categories
+    	}
+    }
+  }
+}
+</static-query>
 
 <script>
 import gettingStartedLinks from '@/data/menu-getting-started.yaml';
@@ -103,9 +131,7 @@ export default {
         let title = l.node.title;
         if (title.startsWith("reliably ")) { // All except root command
           title = title.substring("reliably ".length);
-          console.log(title);
           if (title.indexOf(" ") === -1) {
-            console.log("parent");
             // No space character in title. It is not a subcommand.
             links.push({
               "title": title,
@@ -114,11 +140,9 @@ export default {
               "sub": false,
             });
           } else {
-            console.log("sub");
             // It's a subcommand
             // Remove the first word: it's the parent command
             title = title.substring(title.indexOf(" ") + 1);
-            console.log(title);
             links.push({
               "title": title,
               "path": l.node.path,

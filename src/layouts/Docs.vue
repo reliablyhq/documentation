@@ -24,22 +24,6 @@
   </Layout>
 </template>
 
-<static-query>
-query {
-  clipages: allCliPage(sortBy: "title", order: ASC, filter: { type: { eq: "doc" }, status: { eq: "published" }}) {
-		edges {
-    	node {
-      	id
-      	title
-        path
-        type
-        categories
-    	}
-    }
-  }
-}
-</static-query>
-
 <script>
 import Menu from '@/components/Menu.vue';
 import PageNav from '@/components/PageNav.vue';
