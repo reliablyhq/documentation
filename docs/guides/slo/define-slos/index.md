@@ -41,9 +41,8 @@ article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundament
 Running the `reliably slo init` will prompt you with questions to help you 
 define an SLO.
 
-<AsciiPlayer id="wj157A62pH3FYByLfXb978HKj" />
+<AsciiPlayer id="JhYPkAYOKbUdbJ4FGG0CGmi3I" />
 
-* You must answer **Yes** to the question "Are you building something that will be provided to customers 'as a service'?"
 * Your "error budget" is expressed as a percentage. If you want a 99.99% SLO, you should answer 0.01.
 * You must answer **Yes** when asked if you want to add a service resource.
 * We currently support **AWS** and **Google Cloud Platform** as providers.
