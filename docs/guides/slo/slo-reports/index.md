@@ -5,6 +5,7 @@ categories: ["guides", "slo"]
 status: published
 type: doc
 ---
+import AsciiPlayer from '~/components/AsciiPlayer.vue'
 
 # Generate Service Level Objectives reports
 
@@ -26,8 +27,7 @@ will need to be authenticated.
 ```
 $ reliably slo report
 ```
-
-![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-tabbed.png)
+<AsciiPlayer id="PYkU2mtpYifgjQfDaetX6b0sT" />
 
 The `reliably slo report` command will look for a `reliably.yaml`. It will
 then fetch data from your service providers, agregate the data if you have

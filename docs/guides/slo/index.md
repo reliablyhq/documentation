@@ -1,5 +1,5 @@
 ---
-title: Service Leevel Objective
+title: Service Level Objective
 excerpt: Lorem Ipsum is simply dummy text.
 categories:  ["guides", "slo"]
 status: published
@@ -9,6 +9,7 @@ import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
 import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
+import AsciiPlayer from '~/components/AsciiPlayer.vue'
 
 import data from '~/data/slo-index-data.json'
 
@@ -24,6 +25,11 @@ import data from '~/data/slo-index-data.json'
 
 </PageIntroduction>
 
+Define your SLOs in the terminal with the Reliably CLI.
+<AsciiPlayer id="JhYPkAYOKbUdbJ4FGG0CGmi3I" />
+
+Generate actionable reports.
+<AsciiPlayer id="PYkU2mtpYifgjQfDaetX6b0sT" />
 ## Main articles
 
 <MarkdownTwoColumns>
