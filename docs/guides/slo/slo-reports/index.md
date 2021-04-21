@@ -89,6 +89,19 @@ $ reliably slo report --format json
 For the CLI to be able to connect to your provider and fetch data, you will need
 to be authenticated.
 
+## Watch
+
+An SLO report status can be monitored via the terminal using the `--watch / -w` flag. This flag
+will continuously fetch and update the report every 3 seconds.
+
+```
+$ reliably slo report --watch
+```
+
+![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-watch.png)
+
+
+
 ### AWS
 
 Authentication with AWS is made through an `credentials` file in your
