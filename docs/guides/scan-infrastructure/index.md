@@ -31,12 +31,12 @@ covered too, with <code>reliably scan kubernetes --live</code>!
   <ArticleCard
     title="Scan a Kubernetes Manifest"
     description="Surface potential reliability issues in your Kubernetes manifests."
-    link="/guides/scan-your-infrastructure/scan-kubernetes-manifest/"
+    link="/guides/scan-infrastructure/kubernetes-manifest/"
   />
   <ArticleCard
     title="Scan a Kubernetes Cluster"
     description="Get reliability suggestions for your running Kubernetes clusters."
-    link="/guides/scan-your-infrastructure/live-cluster/"
+    link="/guides/scan-infrastructure/kubernetes-cluster/"
   />
 </MarkdownTwoColumns>
 
