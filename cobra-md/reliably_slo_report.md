@@ -16,7 +16,7 @@ reliably slo report [flags]
 ### Options
 
 ```
-  -f, --format string     specify the report format. Allowed Values: [json, simple, tabbed] (default "tabbed")
+  -f, --format string     specify the report format. Allowed Values: [json, simple, tabbed, markdown] (default "tabbed")
   -h, --help              help for report
   -m, --manifest string   the location of the manifest file (default "reliably.yaml")
   -o, --output string     where the report should be written to
