@@ -84,11 +84,6 @@ tools.
 $ reliably slo report --format json
 ```
 
-## Provider Authentication
-
-For the CLI to be able to connect to your provider and fetch data, you will need
-to be authenticated.
-
 ## Watch
 
 An SLO report status can be monitored via the terminal using the `--watch / -w` flag. This flag
@@ -100,6 +95,11 @@ $ reliably slo report --watch
 
 ![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-watch.png)
 
+
+## Provider Authentication
+
+For the CLI to be able to connect to your provider and fetch data, you will need
+to be authenticated.
 
 
 ### AWS
