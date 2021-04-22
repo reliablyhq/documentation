@@ -48,7 +48,7 @@ define an SLO.
 * You must specify a **target** for your SLO. This is what good looks like for
  your SLO and is expressed as a percentage. For example, for an
  **Availability SLO**, a target of 98% would mean the service is available
-  98% of the tie.
+  98% of the time.
 * For the **Latency SLO**, you also need to specify a threshold in milliseconds.
  All reponses within this threshold contribute to your target.
 * You must answer **Yes** when asked if you want to add a service resource.
