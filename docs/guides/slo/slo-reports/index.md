@@ -97,7 +97,7 @@ $ reliably slo report --format markdown
 ![Screenshot of a Reliably SLO report in markdown](./images/slo-report-markdown.png)
 
 :::tip Tip
-  You can use a tool like [Pandoc](https://pandoc.org/) to convert the output generated from _reliably_
+  You can use a tool like <a href="https://pandoc.org/" target="_blank" rel="noopener noreferer">Pandoc</a> to convert the output generated from Reliably
   into many other formats such as _.html_ and _.pdf_. To [pipe](https://www.geeksforgeeks.org/piping-in-unix-or-linux/) the markdown output to pandoc:
 
   ```bash
