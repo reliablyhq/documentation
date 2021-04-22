@@ -98,7 +98,7 @@ $ reliably slo report --format markdown
 
 :::tip Tip
   You can use a tool like <a href="https://pandoc.org/" target="_blank" rel="noopener noreferer">Pandoc</a> to convert the output generated from Reliably
-  into many other formats such as _.html_ and _.pdf_. To [pipe](https://www.geeksforgeeks.org/piping-in-unix-or-linux/) the markdown output to pandoc:
+  into many other formats such as HTML and PDF. To <a href="https://www.geeksforgeeks.org/piping-in-unix-or-linux/" target="_blank" rel="noopener noreferer">pipe</a> the markdown output to pandoc:
 
   ```bash
     $ reliably slo report --format markdown | pandoc
