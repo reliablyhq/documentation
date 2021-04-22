@@ -27,7 +27,7 @@ will need to be authenticated.
 ```
 $ reliably slo report
 ```
-<AsciiPlayer id="PYkU2mtpYifgjQfDaetX6b0sT" />
+<AsciiPlayer id="409053" />
 
 The `reliably slo report` command will look for a `reliably.yaml`. It will
 then fetch data from your service providers, agregate the data if you have
@@ -53,9 +53,10 @@ You can select between output formats with the `--format` or `-f` flag.
 
 Tabbed output is the default format for SLO reports.
 
-```
+```bash
 $ reliably slo report --format tabbed
 ```
+
 ![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-tabbed.png)
 
 ### Simple Output
@@ -63,9 +64,10 @@ $ reliably slo report --format tabbed
 The simple output will remove the tabs, and use glyphs instead of emojis for
 your SLO status, and will not display SLO target and delta.
 
-```
+```bash
 $ reliably slo report --format simple
 ```
+
 ![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-simple.png)
 
 If you want to disable the glyph coloring, you can use the `--no-color` global
@@ -83,6 +85,27 @@ tools.
 ```
 $ reliably slo report --format json
 ```
+
+### Markdown Output
+
+You can generate a markdown-formatted SLO report.
+
+```
+$ reliably slo report --format markdown
+```
+
+![Screenshot of a Reliably SLO report in markdown](./images/slo-report-markdown.png)
+
+:::tip Tip
+  You can use a tool like <a href="https://pandoc.org/" target="_blank" rel="noopener noreferer">Pandoc</a> to convert the output generated from Reliably
+  into many other formats such as HTML and PDF. To <a href="https://www.geeksforgeeks.org/piping-in-unix-or-linux/" target="_blank" rel="noopener noreferer">pipe</a> the markdown output to pandoc:
+
+  ```bash
+    $ reliably slo report --format markdown | pandoc
+  ```
+
+  The command above will by default generate HTML output.
+:::
 
 ## Watch
 
