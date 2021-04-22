@@ -25,6 +25,10 @@
       {
         "title": "Generate SLO reports",
         "link": "/guides/slo/slo-reports/"
+      },
+      {
+        "title": "Live SLO reports",
+        "link": "/guides/slo/live-reporting/"
       }
     ]
   },
