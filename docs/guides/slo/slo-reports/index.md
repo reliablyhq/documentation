@@ -104,7 +104,7 @@ $ reliably slo report --format markdown
     $ reliably slo report --format markdown | pandoc
   ```
 
-  The command above will by default generate _.html_ output.
+  The command above will by default generate HTML output.
 :::
 
 ## Watch
