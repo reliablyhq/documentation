@@ -16,7 +16,7 @@ import data from '~/data/slo-index-data.json'
 # Service Level Objectives with Reliably
 
 <PageIntroduction>
-  
+
   Service Level Objectives are a core element of your reliability effort.
   They're a signal of your services health, allowing you to make decisions about
   what you should focus on next.
@@ -26,10 +26,10 @@ import data from '~/data/slo-index-data.json'
 </PageIntroduction>
 
 Define your SLOs in the terminal with the Reliably CLI.
-<AsciiPlayer id="JhYPkAYOKbUdbJ4FGG0CGmi3I" />
+<AsciiPlayer id="409008" />
 
 Generate actionable reports.
-<AsciiPlayer id="PYkU2mtpYifgjQfDaetX6b0sT" />
+<AsciiPlayer id="409053" />
 ## Main articles
 
 <MarkdownTwoColumns>
