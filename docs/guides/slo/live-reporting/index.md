@@ -7,7 +7,7 @@ type: doc
 ---
 # Live Reporting
 
-When you have [defined](./define-slos/) your Service Level Objectives (SLO's) monitoring
+When you have [defined](./define-slos/) your Service Level Objectives (SLOs) monitoring
  them should give you a great indication to the state of you system. You can
   also use the Reliably CLI for this.
 
@@ -17,10 +17,10 @@ The Reliably CLI has a watch flag that will continually fetch
 new metrics and update the displayed report on your terminal every 3 seconds.
 
 You can have this running while you make changes to your system. If your
-updates impact your SLO's, this will be reflected in the displayed report in
+updates impact your SLOs, this will be reflected in the displayed report in
 near real-time.
 
-To monitor your SLO's live via the terminal, add the `--watch / -w` flag.
+To monitor your SLOs live via the terminal, add the `--watch / -w` flag.
 
 ```
 $ reliably slo report --watch
