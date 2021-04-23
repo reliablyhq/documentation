@@ -43,6 +43,11 @@ Generate actionable reports.
     description="Fetch data from your cloud provider and generate comprehensive SLO reports."
     link="/guides/slo/slo-reports/"
   />
+  <ArticleCard
+    title="Live SLO reports"
+    description="Monitor your SLO's live and generate near realtime reports."
+    link="/guides/slo/live-reporting/"
+  />
 </MarkdownTwoColumns>
 
 
