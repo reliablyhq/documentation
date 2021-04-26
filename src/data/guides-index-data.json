@@ -51,8 +51,8 @@
   "how-it-works": {
     "links": [
       {
-        "title": "CLI",
-        "link": "/guides/how-it-works/cli/"
+        "title": "Scan Resources",
+        "link": "/guides/how-it-works/scan-resources/"
       },
       {
         "title": "API",
