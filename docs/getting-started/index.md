@@ -32,5 +32,11 @@ import data from '~/data/getting-started-index-data.json'
     link="/getting-started/login/"
   />
 
+ <ArticleCard
+    title="Upgrade the Reliably CLI"
+    description="If you already have the  Reliably CLI installed, you can easily
+    upgrade to the latest version of Reliably."
+    link="/getting-started/upgrade/"
+  />
 </MarkdownTwoColumns>
 

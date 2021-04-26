@@ -4,3 +4,6 @@
 - title: Login
   link: /getting-started/login/
   sub: false
+- title: Upgrade
+  link: /getting-started/upgrade/
+  sub: false
