@@ -25,7 +25,7 @@ section.
 
 </PageIntroduction>
 
-[cli-install]: /getting-started/install/
+[cli-install]: /docs/getting-started/install/
 
 ## Main articles
 

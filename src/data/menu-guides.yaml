@@ -52,6 +52,9 @@
 - title: CLI
   link: /guides/how-it-works/cli/
   sub: true
+- title: Authentication
+  link: /guides/how-it-works/authenticate/
+  sub: true
 - title: API
   link: /guides/how-it-works/api/
   sub: true

@@ -1,6 +1,6 @@
 ---
 title: Upgrade Reliably
-excerpt: Upgrade to the latest Reliably CLI.
+excerpt: Upgrade the Reliably CLI to the latest version.
 categories: ["getting-started"]
 status: published
 type: doc
