@@ -2,7 +2,7 @@
   "links": [
     {
       "label": "Run as a kubectl plugin",
-      "link": "/guides/scan-infrastructure/kubectl-plugin/"
+      "link": "/getting-started/kubectl-plugin/"
     },
     {
       "label": "Output formats",
