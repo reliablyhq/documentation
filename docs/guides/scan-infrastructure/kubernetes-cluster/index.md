@@ -20,6 +20,8 @@ configuration file is usually referred to as `kubeconfig`.
   command-line tool lets you control Kubernetes clusters.
   The `kubeconfig` file is usually provisioned by `kubectl`. The Kubernetes
   [documentation][kubeconfig] provides more details.
+
+  You can add the Reliably CLI as a [kubectl plugin](/docs/getting-started/kubectl-plugin/).
 :::
 
 [reliablyCLI]: https://github.com/reliablyhq/cli/

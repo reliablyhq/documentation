@@ -1,6 +1,9 @@
 - title: Install
   link: /getting-started/install/
   sub: false
+- title: Kubectl Plugin
+  link: /getting-started/kubectl-plugin/
+  sub: false
 - title: Login
   link: /getting-started/login/
   sub: false

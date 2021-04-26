@@ -7,9 +7,6 @@
 - title: Kubernetes Clusters
   link: /guides/scan-infrastructure/kubernetes-cluster/
   sub: true
-- title: Run as a Kubectl Plugin
-  link: /guides/scan-infrastructure/kubectl-plugin/
-  sub: true
 - title: Output Formats
   link: /guides/scan-infrastructure/output-formats/
   sub: true
