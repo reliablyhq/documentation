@@ -1,6 +1,6 @@
 ---
 title: Upgrade Reliably
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Upgrade the Reliably CLI to the latest version.
 categories: ["getting-started"]
 status: published
 type: doc
