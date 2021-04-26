@@ -1,6 +1,6 @@
 ---
-title: How Reliably CLI works
-excerpt: Everything you can do with the Reliably CLI, and how we do it.
+title: How Reliably CLI scans resources
+excerpt: How to scan resrouces with the Reliably CLI.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

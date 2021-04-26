@@ -27,9 +27,9 @@ import data from '~/data/how-it-works-index-data.json'
 
 <MarkdownTwoColumns>
   <ArticleCard
-    title="CLI"
-    description="How does the Reliably CLI works?"
-    link="/guides/how-it-works/cli/"
+    title="Scan Resources"
+    description="How does the Reliably CLI scan resources?"
+    link="/guides/how-it-works/scan-resources/"
   />
   <ArticleCard
     title="API"

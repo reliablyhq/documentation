@@ -49,8 +49,8 @@
 - title: How it works
   link: /guides/how-it-works/
   sub: false
-- title: CLI
-  link: /guides/how-it-works/cli/
+- title: Scan Resources
+  link: /guides/how-it-works/scan-resources/
   sub: true
 - title: Authentication
   link: /guides/how-it-works/authenticate/
