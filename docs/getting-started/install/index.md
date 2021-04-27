@@ -41,7 +41,7 @@ ready to [login](../login/).
 [kubectl-plugin]: /getting-started/kubectl-plugin/
 
 See the  [Installation Details][install-detail] section for more detailed
- installation instructions, including instructions for Windows users.
+ instructions, including guidance for Windows users.
 
 [install-detail]: #installation-details
 

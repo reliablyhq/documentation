@@ -27,16 +27,22 @@ import data from '~/data/getting-started-index-data.json'
     link="/getting-started/install/"
   />
   <ArticleCard
-    title="Login to Reliably"
-    description="Authenticate the Reliably CLI with Reliably.com"
-    link="/getting-started/login/"
-  />
-
- <ArticleCard
     title="Upgrade the Reliably CLI"
     description="If you already have the  Reliably CLI installed, you can easily
     upgrade to the latest version of Reliably."
     link="/getting-started/upgrade/"
   />
+  <ArticleCard
+    title="Login to Reliably"
+    description="Authenticate the Reliably CLI with Reliably.com"
+    link="/getting-started/login/"
+  />
+   <ArticleCard
+    title="Kubectl Plugin"
+    description="Run Reliably as a kubectl Plugin"
+    link="/getting-started/kubectl-plugin//"
+  />
+
+
 </MarkdownTwoColumns>
 
