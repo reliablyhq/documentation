@@ -33,8 +33,17 @@ You're good to go!
 You can check everything is working with the `reliably --version` and you're
 ready to [login](../login/).
 
-More detailed installation instructions, including instructions for Windows
-users, are provided just below.
+:::tip Tip
+  If you are a Kubernetes user you can also install Reliably as a [kubectl
+   plugin][kubectl-plugin], and run Reliably commands with `kubectl`.
+:::
+
+[kubectl-plugin]: /getting-started/kubectl-plugin/
+
+See the  [Installation Details][install-detail] section for more detailed
+ installation instructions, including instructions for Windows users.
+
+[install-detail]: #installation-details
 
 ## Previous versions
 
