@@ -38,7 +38,7 @@ ready to [login](../login/).
    plugin][kubectl-plugin], and run Reliably commands with `kubectl`.
 :::
 
-[kubectl-plugin]: /getting-started/kubectl-plugin/
+[kubectl-plugin]: ../kubectl-plugin/
 
 See the  [Installation Details][install-detail] section for more detailed
  instructions, including guidance for Windows users.
