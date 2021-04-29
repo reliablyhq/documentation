@@ -98,7 +98,7 @@ The period of the observation window must be less than 1 year.
 ### Availability SLO
 
 For availability, Reliably will calculate the percentage of error responses in
- the time window.
+ the time window. All 5xx status responses are counted as errors.
 
 ### Latency SLO
 
