@@ -32,9 +32,9 @@ import data from '~/data/how-it-works-index-data.json'
     link="/guides/how-it-works/scan-resources/"
   />
   <ArticleCard
-    title="API"
-    description="How the Reliably API works, and what we use it for."
-    link="/guides/how-it-works/api/"
+    title="SLO Reports"
+    description="How does the Reliably CLI generate SLO Reports?"
+    link="/guides/how-it-works/slo-reports/"
   />
 </MarkdownTwoColumns>
 

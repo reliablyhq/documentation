@@ -10,7 +10,7 @@ type: doc
 The Reliably CLI uses rules to surface potential reliability weaknesses in your
 resource declaration files or in running resources.
 
-## How Rules work 
+## How Rules work
 
 Reliably relies on sets of rules to identify patterns in your resources that
 might result in unreliable behaviour for your system. When scanning your
@@ -44,9 +44,11 @@ overlook won't appear. As all workarounds, you will want to use it with caution.
 
 ## More on that subject
 
-[How the Reliably CLI works](/docs/guides/how-it-works/cli/)
+[How Reliably Scans Resources](/docs/guides/how-it-works/scan-resources/)
 
 [How the Reliably API works](/docs/guides/how-it-works/api/)
+
+[How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
 ## Not using Reliaby yet?
 

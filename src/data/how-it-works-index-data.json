@@ -7,6 +7,11 @@
     {
       "label": "Authentication",
       "link": "/guides/how-it-works/authenticate/"
+    },
+    {
+      "label": "API",
+      "link": "/guides/how-it-works/api/"
     }
+
   ]
 }

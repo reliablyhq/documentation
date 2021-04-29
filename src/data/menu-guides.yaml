@@ -52,6 +52,9 @@
 - title: Scan Resources
   link: /guides/how-it-works/scan-resources/
   sub: true
+- title: SLO Reports
+  link: /guides/how-it-works/slo-reports/
+  sub: true
 - title: Authentication
   link: /guides/how-it-works/authenticate/
   sub: true

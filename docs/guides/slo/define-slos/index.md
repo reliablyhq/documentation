@@ -41,7 +41,8 @@ article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundament
 Running the `reliably slo init` will prompt you with questions to help you
 define an SLO.
 
-<AsciiPlayer id="409008" />
+<AsciiPlayer id="QogWMsBCW5Y3Zmgka5OdCKHDo" />
+
 
 * For the SLO type, you can currently choose between **Availability** and
  **Latency**.

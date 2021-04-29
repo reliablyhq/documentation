@@ -31,7 +31,9 @@ All stored suggestions and related metadata are encrypted on Reliably's side.
 
 ## More on that subject
 
-[How the Reliably CLI works](/docs/guides/how-it-works/cli/)
+[How Reliably Scans Resources](/docs/guides/how-it-works/scan-resources/)
+
+[How the Reliably API works](/docs/guides/how-it-works/api/)
 
 [How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
