@@ -55,6 +55,10 @@
         "link": "/guides/how-it-works/scan-resources/"
       },
       {
+        "title": "SLO Reports",
+        "link": "/guides/how-it-works/slo-reports/"
+      },
+      {
         "title": "API",
         "link": "/guides/how-it-works/api/"
       }

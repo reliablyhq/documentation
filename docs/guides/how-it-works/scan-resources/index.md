@@ -1,6 +1,6 @@
 ---
 title: How Reliably CLI scans resources
-excerpt: How to scan resrouces with the Reliably CLI.
+excerpt: How to scan resources with the Reliably CLI.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc
@@ -79,6 +79,8 @@ The API will maintain that history so you can to view progress of your
 reliability effort.
 
 ## More on that subject
+
+[How the Reliably Genereate SLO Reports](/docs/guides/how-it-works/slo-reports/)
 
 [How the Reliably API works](/docs/guides/how-it-works/api/)
 
