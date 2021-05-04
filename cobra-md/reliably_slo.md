@@ -29,6 +29,9 @@ A collection of functions to configure and use an SLO
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
+* [reliably slo apply](/docs/reference/cli/reliably-slo-apply/)	 - Apply a service manifest to organization by filename
+* [reliably slo edit](/docs/reference/cli/reliably-slo-edit/)	 - Edit slo manifest file on server
 * [reliably slo init](/docs/reference/cli/reliably-slo-init/)	 - initialise the slo portion of the manifest
+* [reliably slo pull](/docs/reference/cli/reliably-slo-pull/)	 - pull/download SLO manifest from reliably
 * [reliably slo report](/docs/reference/cli/reliably-slo-report/)	 - Report my slo metrics
 

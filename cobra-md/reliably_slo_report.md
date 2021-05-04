@@ -20,6 +20,7 @@ reliably slo report [flags]
   -h, --help              help for report
   -m, --manifest string   the location of the manifest file (default "reliably.yaml")
   -o, --output string     where the report should be written to
+      --service string    the name of the service
   -w, --watch             continuously watch for changes in report output
 ```
 

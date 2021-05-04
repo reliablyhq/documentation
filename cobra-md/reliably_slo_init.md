@@ -37,8 +37,8 @@ $ realibly init -f <path>:
 ### Options
 
 ```
-  -h, --help              help for init
-  -m, --manifest string   the location of the manifest file (default "reliably.yaml")
+  -h, --help            help for init
+  -o, --output string   store a local copy of the service manifest created (default "./reliably.yaml")
 ```
 
 ### Options inherited from parent commands
