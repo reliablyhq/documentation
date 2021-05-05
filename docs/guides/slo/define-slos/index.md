@@ -9,32 +9,9 @@ import AsciiPlayer from '~/components/AsciiPlayer.vue'
 
 # Define Service Level Objectives
 
-## What are SLOs again?
-
-SLOs are one of the three Service Level concepts that power the SRE practice,
-alongside Service Level Indicators and Service Level Agreements.
-
-### Service Level Indicator
-
-An SLI is a measurement of your service's behaviour.
-
-Error rate, latency, etc.
-are SLIs.
-
-### Service Level Objective
-
-With SLIs in mind, an SLO is a target for your SLIs.
-
-Example SLOs:
-- 99% of successful requests on a service
-- 98% of requests on a service fulfilled in less than 100 ms
-
-:::tip
-If you want to read more about SRE terminology, the Google Cloud Blog
-article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos" target="_blank" rel="noopener noreferer">SRE fundamentals: SLIs, SLAs and SLOs</a> is a good starting point.
-:::
-
 ## Defining SLOs in Reliably
+
+You can define SLOs interactively with the [Reliably CLI](#with-the-cli) or you can define them in a [`yaml`](#with-a-yaml-file) file.
 
 ### With the CLI
 
@@ -58,7 +35,7 @@ define an SLO.
 * Answer **Yes** when asked if you want to add another service.
 
 The Reliably CLI will then create a `reliably.yaml` configuration file in your
-working directory. This file will be used to
+working directory and it will also upload the generated file to the Reliably server. This file will be used to
 [generate your SLO report](/docs/guides/slo/slo-reports/).
 
 You could also create this configuration file yourself, as explained in the next

@@ -26,6 +26,9 @@
 - title: Live SLO reports
   link: /guides/slo/live-reporting/
   sub: true
+- title: SLO Commands
+  link: /guides/slo/slo-commands/
+  sub: true
 
 - title: Run in your CI pipeline
   link: /guides/ci-pipeline/

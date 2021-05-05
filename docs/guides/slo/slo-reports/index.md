@@ -29,11 +29,10 @@ $ reliably slo report
 ```
 <AsciiPlayer id="409053" />
 
-The `reliably slo report` command will look for a `reliably.yaml`. It will
-then fetch data from your service providers, agregate the data if you have
-several services defined as indicators for your SLO, and return error rates and
-latency numbers for the last 24 hours, alongside your target and the delta for
-the period.
+The `reliably slo report` command will by default use the `reliably.yaml` file in your current directory.  You can specify an alternative manifest file with the `-m` flag. If there is no local manifest file specified Relaibly will use the current manifest for your organisation on the Relaibly server.
+
+Once a manifest is identfied the Relaibly CLI will fetch data from your service providers, agregate the data if you have
+several services defined as indicators for your SLO, and return error rates and latency numbers for the duration window specified in your manifest. The report will show the details of how you service is performing against those objectives.
 
 ### Specify YAML file
 
@@ -118,12 +117,10 @@ $ reliably slo report --watch
 
 ![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-watch.png)
 
-
 ## Provider Authentication
 
 For the CLI to be able to connect to your provider and fetch data, you will need
 to be authenticated.
-
 
 ### AWS
 
