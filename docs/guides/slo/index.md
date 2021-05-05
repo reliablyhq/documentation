@@ -25,6 +25,42 @@ import data from '~/data/slo-index-data.json'
 
 </PageIntroduction>
 
+## What are SLOs again?
+
+SLOs are one of the three Service Level concepts that power the SRE practice,
+alongside Service Level Indicators and Service Level Agreements.
+
+### Service Level Indicator
+
+An SLI is a measurement of your service's behaviour.
+
+Error rate, latency, etc.
+are SLIs.
+
+### Service Level Objective
+
+With SLIs in mind, an SLO is a target for your SLIs.
+
+Example SLOs:
+
+- 99% of successful requests on a service
+- 98% of requests on a service fulfilled in less than 100 ms
+
+### Service Level Agreements
+
+Service Level Agreements are contracts with the client and so represent the minimum that can be provided, below which the customer will be more than unhappy.
+
+
+:::tip
+If you want to read more about SRE terminology, the Google Cloud Blog
+article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos" target="_blank" rel="noopener noreferer">SRE fundamentals: SLIs, SLAs and SLOs</a> is a good starting point.
+:::
+
+## Managing your SLOs with the Reliably CLI
+
+The Reliably CLI supports a number of [commands](./slo-commands/) to allow you to manage and define your SLOs.
+
+
 Define your SLOs in the terminal with the Reliably CLI.
 <AsciiPlayer id="409008" />
 
@@ -47,6 +83,12 @@ Generate actionable reports.
     title="Live SLO reports"
     description="Monitor your SLO's live and generate near realtime reports."
     link="/guides/slo/live-reporting/"
+  />
+
+  <ArticleCard
+    title="Reliably SLO commands"
+    description="Define and report on you Service Levels Objectives."
+    link="/guides/slo/slo-commands/"
   />
 </MarkdownTwoColumns>
 
