@@ -185,9 +185,8 @@ $ .\reliably.exe --version
 You should see the current ```reliably CLI``` version displayed.
 
 At this point, to make Reliably convenient to run, add the folder to the
-executable path. From the Windows start menu right click and select ```System```
-from the sub-menu. Scroll down in the About section and select Advanced Systems
-Settings. In the pop-up window select:
+executable path. Open the Windows Start Search, type in “env”, and choose “Edit the system environment variables”.
+In the pop-up window select:
 
 * Environment Variables
 * In the Enviroment Variables pop-up, select Path from the User environment variables
