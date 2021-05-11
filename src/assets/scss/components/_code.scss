@@ -20,3 +20,26 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   margin: 1em 0 0;
 }
+
+// Reliably CLI output specific styles
+:not(pre) > code[class*="language-reliably"],
+pre[class*="language-reliably"] {
+  .token {
+    &.green {
+      color: var(--reliably-cli-green);
+    }
+    &.purple {
+      color: var(--reliably-cli-purple);
+    }
+    &.red {
+      color: var(--reliably-cli-red);
+    }
+    &.bold {
+      font-weight: 700;
+    }
+    &.emoji {
+      font-size: 1.2em;
+      line-height: .9;
+    }
+  }
+}
