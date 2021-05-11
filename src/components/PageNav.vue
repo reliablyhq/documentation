@@ -39,13 +39,13 @@ export default {
     display: block;
     padding: 1rem;
 
-    color: var(--brown);
+    color: var(--body-color);
     text-decoration: none;
 
     &--depth-2 {
-      font-weight: 700;
+      font-weight: 600;
       &:not(:first-child) {
-        margin-top: 2em;
+        margin-top: 1em;
       }
     }
   }

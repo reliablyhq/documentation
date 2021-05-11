@@ -1,0 +1,22 @@
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: var(--code-block-bg);
+  scrollbar-color: rgba(255,255,255,.3) var(--code-block-bg);
+
+  &::-webkit-scrollbar {
+    height: .8em;
+    width: .8em;
+
+    background-color: var(--code-block-bg);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,.3);
+    border: 0  .2em .2em solid var(--code-block-bg);
+    border-radius: .3em;
+  }
+}
+
+pre[class*="language-"] {
+  margin: 1em 0 0;
+}

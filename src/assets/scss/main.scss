@@ -13,6 +13,10 @@
   'base/typography',
   'base/linter';
 
+
+@import
+  'themes/prism';
+
 @import
   'layout/layout';
 // 'layout/container';
@@ -20,6 +24,7 @@
 @import
   'components/admonition',
   'components/button',
+  'components/code',
   'components/cookie-consent',
   'components/image',
   'components/title-image';
@@ -28,6 +33,3 @@
 // 'components/form/radio';
 
 @import 'pages/docs';
-
-@import
-  'themes/prism';

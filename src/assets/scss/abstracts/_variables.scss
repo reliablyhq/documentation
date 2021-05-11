@@ -11,6 +11,21 @@
   --blue-500: var(--blue);
   --blue-600: #94b5af;
   --blue-700: #4f847a;
+  --blue-800: #1a3d37;
+  --blue-900: #0c1f1b;
+
+  --blue-700-rgb: 79, 132, 122;
+  --blue-900-rgb: 26, 61, 55;
+
+  --red-200: #ffd0d6;
+  --red-100: #f599a5;
+  --red-300: #e96778;
+  --red-400: #e04459;
+  --red-500: var(--red);
+  --red-600: #bb1027;
+  --red-700: #9b071b;
+  --red-800: #850516;
+  --red-900: #5a000c;
 
   --yellow-dark: #b9850a;
   --yellow-light: #f8e8c2;
@@ -19,7 +34,17 @@
   --grey-200: #e1e0e0;
   --grey-300: #d7d6d6;
 
-  --body-color: hsla(0, 0, 27, 1);
+  --body-color: var(--blue-900);
+  --body-link-color: var(--red-400);
+  --inline-code-bg: rgba(var(--blue-900-rgb),.1);
+  --code-block-bg: var(--blue-900);
+
+  --danger-color: #8f68a8;
+
+  --monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+  // --body-color: hsla(0, 0, 27, 1);
+  
   --body-color-light: #444;
   --body-color-lighter: hsla(0, 0%, 95%, 0.8);
   --primary-color: var(--red);
@@ -33,7 +58,7 @@
   --code-bg: #0e2233;
   --select-color: rgba(212, 53, 159, .2);
   --inline-code-text: #b32585;
-  --inline-code-bg: rgba(212, 53, 159, .03);
+  // --inline-code-bg: rgba(212, 53, 159, .03);
   --border-color: var(--blue);
   --border-color-darker: #cfe6e6;
   --mark-color: #fff8ec;
@@ -44,36 +69,4 @@
   --code-color: #fdf9f3;
   --glow: 2px 2px 15px 0 var(--border-color);
 
-  @media screen and (max-width: 550px) {
-    --space: 20px;
-    --space-x2: 20px;
-  }
-
-  [data-theme="dark"] {
-    --body-color: #ebf4f1;
-    --bg: #091a28;
-    --bg-secondary: #071521;
-    --bg-teritary: #0e2233;
-    --bg-transparent: #091a28E1;
-    --border-color: #0d2538;
-    --border-color-darker: #0d2538;
-    --inline-code-text: #e24cb2;
-    --inline-code-bg: rgba(212, 53, 159, .1);
-    --primary-color: #00835c;
-    --primary-color-dark: #00a672;
-    --glow: 2px 2px 15px 0 #071521;
-  }
-
-  [data-theme="sepia"] {
-    --body-color: #433422;
-    --bg: #f1e7d0;
-    --dark-bg: #111;
-    --code-bg: #222;
-    --bg-transparent: #f1e7d0E1;
-    --bg-secondary: #eae0c9;
-    --bg-teritary: #eadec2;
-    --border-color: #ded0bf;
-    --border-color-darker: #ccbca9;
-    --glow: 2px 2px 15px 0 #ccbca9;
-  }
 }
