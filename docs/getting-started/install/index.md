@@ -105,7 +105,7 @@ will be able to run it from the command line.
 Get the latest release and copy it to a directory in your PATH, for example
 /usr/local/bin.
 ```console
-$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linnnunx-amd64 -o /usr/local/bin/reliably
+$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
 
 You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64)
