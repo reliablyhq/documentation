@@ -191,7 +191,7 @@ export default {
       border-radius: var(--border-radius);
       cursor: pointer;
 
-      color: var(--brown);
+      color: var(--body-color);
       text-align: left;
 
       > svg {
@@ -222,7 +222,7 @@ export default {
         display: block;
         padding: 1rem;
 
-        color: var(--brown);
+        color: var(--body-color);
         text-decoration: none;
 
         &.active--exact,
@@ -238,7 +238,7 @@ export default {
             display: block;
             width: .2rem;
 
-            background-color: var(--brown);
+            background-color: var(--body-color);
           }
 
           &::before {
@@ -279,7 +279,7 @@ export default {
       display: block;
       padding: 1rem;
 
-      color: var(--brown);
+      color: var(--body-color);
       text-decoration: none;
 
       &:hover {

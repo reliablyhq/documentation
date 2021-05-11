@@ -1,20 +1,21 @@
 .admonition {
-  margin-top: 2em;
-  margin-bottom: 2em;
-
   border: none;
   border-radius: var(--border-radius);
   // box-shadow: 0 .3rem 1.2rem rgba(0, 0, 0, .32);
 
   .admonition-icon {
     svg {
-      fill: var(--brown);
-      stroke: var(--brown);
+      fill: var(--body-color);
+      stroke: var(--body-color);
     }
   }
 
+  h5 {
+    color: var(--body-color);
+  }
+
   &-important {
-    background-color: var(--blue);
+    background-color: var(--blue-500);
   }
 
   &-tip {
@@ -41,14 +42,18 @@
         color: white;
       }
     }
+
+    a {
+      color: var(--yellow);
+    }
   }
 
   &-warning {
-    background-color: var(--red);
+    background-color: var(--red-500);
   }
 
   &-danger {
-    background-color: #bd9ad4;
+    background-color: var(--danger-color);
 
     color: white;
   }

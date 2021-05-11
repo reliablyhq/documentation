@@ -31,9 +31,18 @@ h1, h2 {
 }
 
 .post {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--brown);
+  // h1, h2, h3, h4, h5, h6 {
+  //   color: var(--brown);
+  // }
+
+  > * {
+    margin-bottom: 0;
   }
+
+  > * + * {
+    margin-top: 1em;
+  }
+
   h1, h4, h5, h6 {
     a {
       display: none;
@@ -52,7 +61,7 @@ h1, h2 {
       box-shadow: none;
       opacity: 0;
       
-      color: var(--primary-color);
+      color: var(--red-400);
       font-size: .85em;
       text-align: center;
       text-decoration: none;
@@ -75,7 +84,7 @@ h1, h2 {
 
   h2 {
     // Account for header when scrolling to anchor links.
-    margin-top: -.3em;
+    margin-top: -1.9em;
     padding-top: 2.9em;
 
     font-size: 1.5em;
@@ -89,7 +98,7 @@ h1, h2 {
   }
 
   a {
-    color: var(--red);
+    color: var(--body-link-color);
     text-decoration: none;
 
     &:hover {
@@ -102,10 +111,10 @@ h1, h2 {
       display: inline-block;
       padding: 0 .2em;
 
-      background-color: rgba(var(--blue-900-rgb),.1);
+      background-color: var(--inline-code-bg);
       border-radius: .2em;
 
-      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-family: var(--monospace-font);
       font-size: .9em;
     }
   }

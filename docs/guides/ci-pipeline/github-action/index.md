@@ -7,10 +7,10 @@ type: doc
 ---
 # Add Reliably to your GitHub Workflow
 
-Adding Reliably to your GitHub repositories is as simple as adding a GitHub Workflow with a GitHub Action].
+Adding Reliably to your GitHub repositories is as simple as adding a GitHub Workflow with a GitHub Action.
 
 :::note Note
-  The sources used in this walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
+  The sources used in <code>this</code> walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
 :::
 
 :::note Note
