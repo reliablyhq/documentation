@@ -272,7 +272,7 @@ export default {
       margin-bottom: 0;
 
       font-size: 1em;
-      // font-weight: 400;
+      font-weight: 600;
     }
 
     a {

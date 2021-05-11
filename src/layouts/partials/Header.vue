@@ -111,7 +111,7 @@ export default {
 
   nav {
     @media screen and (min-width: 40rem) {
-      margin-left: auto;
+      margin-left: 0;
     }
     a {
       position: relative;
@@ -119,7 +119,7 @@ export default {
       margin: 0 .5em;
 
       color: var(--brown);
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
 
       &:first-child {
@@ -136,7 +136,7 @@ export default {
           content: '';
 
           position: absolute;
-          bottom: -.9rem;
+          bottom: -1.1rem;
           left: 0;
 
           display: block;
