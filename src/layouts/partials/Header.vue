@@ -111,7 +111,7 @@ export default {
 
   nav {
     @media screen and (min-width: 40rem) {
-      margin-left: auto;
+      margin-left: 0;
     }
     a {
       position: relative;
@@ -136,7 +136,7 @@ export default {
           content: '';
 
           position: absolute;
-          bottom: -.9rem;
+          bottom: -1.1rem;
           left: 0;
 
           display: block;
