@@ -34,6 +34,9 @@ pre[class*="language-reliably"] {
     &.red {
       color: var(--reliably-cli-red);
     }
+    &.yellow {
+      color: var(--reliably-cli-yellow);
+    }
     &.bold {
       font-weight: 700;
     }

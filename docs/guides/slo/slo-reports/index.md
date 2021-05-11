@@ -57,7 +57,7 @@ $ reliably slo report --format tabbed
 ```
 
 ```reliably
-<span class="token purple">❯</span> <span class="token green">reliably</span> slo report
+<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format tabbed
                                           <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
   Service #1: http-api                           
   <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
@@ -81,6 +81,19 @@ your SLO status, and will not display SLO target and delta.
 $ reliably slo report --format simple
 ```
 
+```reliably
+<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format simple
+<span class="token yellow">Service #1: http-api</span>
+<span class="token green">✓</span> 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
+<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
+<span class="token red">✕</span> 99% of requests under 300ms: 77.46% (last 1d) [objective: 99%, delta: -21.54%]
+<span class="token red">✕</span> 99.9% of requests under 1s: 98.59% (last 1d) [objective: 99.9%, delta: -1.31%]
+
+Service #2: products-api
+<span class="token green">✓</span> 99% availability over 1 day: 100.00% (last 1d) [objective: 99%, delta: 1.00%]
+<span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
+```
+
 ![Screenshot of a Reliably SLO report in the terminal](./images/slo-report-simple.png)
 
 If you want to disable the glyph coloring, you can use the `--no-color` global
@@ -88,6 +101,19 @@ flag.
 
 ```
 $ reliably slo report --format simple --no-color
+```
+
+```reliably
+<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format simple --no-color
+Service #1: http-api
+✓ 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
+✓ 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
+✕ 99% of requests under 300ms: 77.46% (last 1d) [objective: 99%, delta: -21.54%]
+✕ 99.9% of requests under 1s: 98.59% (last 1d) [objective: 99.9%, delta: -1.31%]
+
+Service #2: products-api
+✓ 99% availability over 1 day: 100.00% (last 1d) [objective: 99%, delta: 1.00%]
+✓ 99.5% of products API requests under 200ms: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
 ```
 
 ### JSON Output
