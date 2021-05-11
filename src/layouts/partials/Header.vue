@@ -119,7 +119,7 @@ export default {
       margin: 0 .5em;
 
       color: var(--brown);
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
 
       &:first-child {
