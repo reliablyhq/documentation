@@ -1,0 +1,29 @@
+table {
+  &:not([class]),
+  &[class=""] {
+    border-collapse: collapse;
+
+    thead { 
+      tr {
+        background-color: var(--blue-300);
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(2n) {
+          background-color: var(--blue-100);
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 0.5em;
+      
+      border: 1px solid var(--blue-500);
+      
+      text-align: left;
+    }
+  }
+}
