@@ -12,6 +12,7 @@ The Reliably CLI contains a full set of commands to allow you to define and repo
 The full set of commands are:
 
 * init  - this initialises an SLO, which can be run either interactively or a manifest file can be provided.
+* edit - edit the slo file from the server
 * apply - this allows you to apply a locally held manifest to your current
  organisation on the Reliably SAAS.
 * pull - this allows you to pull/download a manifest from the Reliably SAAS
@@ -34,6 +35,10 @@ As a starting point for managing your SLOs you would use  `slo init` command. SL
 ### Pull
 
 The `slo pull` command allows you to pull the current services from the Reliably SAAS to a local file. The name of the local file will default to `relaibly.yaml` in your current working directory, or you can specify a file name with the (-o/--output) flag. By default the output will list all the services you have defined, but you can name a specific service for the request with the (-s/--service) flag. Onse you have pulled the file locally you can edit the file to update your Services, SLOs and SLI details. You can then use the 'slo report' command to see the report output from the edited version of hte file. You can also use the Apply command to upload it to the Reliably SAAS.
+
+### Edit
+
+The `slo edit` command will pull the current manifest from the server and open it in your default editor (or it will use the editor specified by the -e / --editor flag). When you make changes to the manifest in the editor, they are saved back to the manifest on the Reliably SAAS.
 
 ### Apply
 
