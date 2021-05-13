@@ -21,6 +21,13 @@ pre[class*="language-"] {
   margin: 1em 0 0;
 }
 
+pre[class*="language-console"],
+pre[class*="language-bash"] {
+  &::before {
+    content: "$ ";
+  }
+}
+
 // Reliably CLI output specific styles
 :not(pre) > code[class*="language-reliably"],
 pre[class*="language-reliably"] {
@@ -49,6 +56,11 @@ pre[class*="language-reliably"] {
     &.emoji {
       font-size: 1.2em;
       line-height: .9;
+    }
+    &.dollar {
+      &::before {
+        content: "$ ";
+      }
     }
   }
 }

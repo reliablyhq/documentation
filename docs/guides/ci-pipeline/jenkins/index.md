@@ -64,7 +64,7 @@ In the new job display that appears next select the Build tab, then select *Exec
 
 In the command window enter these commands:
 
-```bash
+```console
 curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o reliably
 chmod u+x reliably
 

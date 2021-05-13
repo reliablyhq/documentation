@@ -52,7 +52,7 @@ You can select between output formats with the `--format` or `-f` flag.
 
 Tabbed output is the default format for SLO reports.
 
-```bash
+```console
 $ reliably slo report --format tabbed
 ```
 
@@ -75,7 +75,7 @@ $ reliably slo report --format tabbed
 The simple output will remove the tabs, and use glyphs instead of emojis for
 your SLO status, and will not display SLO target and delta.
 
-```bash
+```console
 $ reliably slo report --format simple
 ```
 
@@ -133,7 +133,7 @@ $ reliably slo report --format markdown
   You can use a tool like <a href="https://pandoc.org/" target="_blank" rel="noopener noreferer">Pandoc</a> to convert the output generated from Reliably
   into many other formats such as HTML and PDF. To <a href="https://www.geeksforgeeks.org/piping-in-unix-or-linux/" target="_blank" rel="noopener noreferer">pipe</a> the markdown output to pandoc:
 
-  ```bash
+  ```console
     $ reliably slo report --format markdown | pandoc
   ```
 
@@ -185,7 +185,7 @@ aws_secret_access_key = <your secret access key>
 
 You can authenticate be using the  `GOOGLE_APPLICATION_CREDENTIALS` environment variable. It is set to the file path of the JSON files that contains your service account key.
 
-```bash
+```console
 $ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
 ```
 

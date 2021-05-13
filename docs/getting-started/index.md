@@ -1,6 +1,6 @@
 ---
 title: Getting started
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Set up and start using the Reliably CLI.
 categories: ["getting-started"]
 status: published
 type: overview

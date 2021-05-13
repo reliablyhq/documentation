@@ -17,14 +17,14 @@ The Reliably CLI will work with files that define your resources, or scan your C
 For example, to scan for issues in any files in the current working directory
 you can run:
 
-```bash
+```console
 $ reliably scan kubernetes .
 ```
 
 If you want to scan a Cluster using your default Kubernetes configuration file,
 you can run:
 
-```bash
+```console
 $ reliably scan kubernetes --live
 ```
 
@@ -51,7 +51,7 @@ As a result of running a scan, the Reliably CLI will offer advice for any resour
 
 If you are running the CLI in your terminal by default, it will display the advice directly in your terminal session:
 
-```bash
+```console
 $ reliably scan kubernetes .
 tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
 tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
