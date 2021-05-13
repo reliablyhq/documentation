@@ -92,11 +92,11 @@ export default {
       content: '';
 
       position: absolute;
-      top: calc(100% - .55em);
+      top: calc(100% - .1em);
       left: 1.2em;
 
       display: block;
-      height: .3rem;
+      height: .2rem;
       width: calc(100% - 1.4em);
 
       background-color: transparent;
