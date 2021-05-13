@@ -20,8 +20,8 @@ near real-time.
 
 To monitor your SLOs live via the terminal, add the `--watch / -w` flag.
 
-```
-$ reliably slo report --watch
+```console
+reliably slo report --watch
 ```
 
 ```reliably
