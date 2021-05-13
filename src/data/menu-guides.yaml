@@ -1,3 +1,16 @@
+- title: Service Level Objectives
+  link: /guides/slo/
+  sub: false
+- title: Define SLOs
+  link: /guides/slo/define-slos/
+  sub: true
+- title: Generate SLO reports
+  link: /guides/slo/slo-reports/
+  sub: true
+- title: Live SLO reports
+  link: /guides/slo/live-reporting/
+  sub: true
+
 - title: Scan your Infrastructure
   link: /guides/scan-infrastructure/
   sub: false
@@ -12,22 +25,6 @@
   sub: true
 - title: Scan History
   link: /guides/scan-infrastructure/scan-history/
-  sub: true
-
-- title: Service Level Objectives
-  link: /guides/slo/
-  sub: false
-- title: Define SLOs
-  link: /guides/slo/define-slos/
-  sub: true
-- title: Generate SLO reports
-  link: /guides/slo/slo-reports/
-  sub: true
-- title: Live SLO reports
-  link: /guides/slo/live-reporting/
-  sub: true
-- title: SLO Commands
-  link: /guides/slo/slo-commands/
   sub: true
 
 - title: Run in your CI pipeline
