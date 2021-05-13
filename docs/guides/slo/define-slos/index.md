@@ -9,11 +9,119 @@ import AsciiPlayer from '~/components/AsciiPlayer.vue'
 
 # Define Service Level Objectives
 
-Service Levels Objectives in Reliably are defined in a `reliably.yaml` manifest file. The `reliably slo init` command can guide you through the creation of this file.
+## YAML manifest
+
+Service Levels Objectives in Reliably are defined in a `reliably.yaml` manifest file. Below is an example manifest defining two services, http-api and products-api, each with its own SLO.
+
+```yaml
+services:
+- name: http-api
+  service-levels:
+  - name: 99% availability over 1 hour
+    type: availability
+    slo: 99
+    sli:
+    - id: arn:partition:service:region:account-id:resource-id
+      provider: aws
+    window: PT1H
+- name: products-api
+  service-levels:
+  - name: 99.5% of products API requests under 200ms
+    type: latency
+    criteria:
+      threshold: 200ms
+    slo: 99.5
+    sli:
+    - id: project-id/google-cloud-load-balancers/resource-id
+      provider: gcp
+    window: PT24H
+```
+
+### Observation window
+
+SLOs are defined by the percentage of "good" events over a time window. You can use 1 hour, 1 day, 1 week, or 1 month preset observation windows, or define a custom one.
+
+Definition of custom observation windows follows the **ISO8601** standard. You can define a duration with one of the following two formats:
+
+* P[n]DT[n]H[n]M
+* P[n]W
+
+[n] are numbers, with D, H, M and W respectively representing **D**ays, **H**ours, **M**inutes and **W**eeks.
+
+Examples:
+
+| ISO8601 format | Human readable duration         |
+| -------------- | ------------------------------- |
+| P4W            | 4 weeks                         |
+| P2D            | 2 days                          |
+| PT24H          | 24 hours                        |
+| PT10M          | 10 minutes                      |
+| P3DT7H36M      | 3 days, 7 jours, and 36 minutes |
+
+### AWS resources
+
+Resources on AWS are identified with their Amazon Resource Name. Learn more
+about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
+
+You will want to provide this information in the following format:
+
+```yaml
+resources:
+  - id: arn:partition:service:region:account-id:resource-id
+    provider: aws
+```
+
+Note the `arn:` prefix.
+
+### Google Cloud Platform resources
+
+GCP resources are identified with a project ID, the resource type, and the resource name.
+
+```yaml
+resources:
+  - id: project-XXXXXX/google-cloud-load-balancers/resource-name
+    provider: gcp
+```
+
+:::note
+The Reliably CLI can currently fetch Service Level Indicators for **services that are attached to a Google Cloud Load Balancer**. You will thus need a load balancer set up to define and report SLOs for GCP.
+:::
+
+You can get the project ID and resource name from the gcloud CLI or the Google Cloud Console.
+#### gcloud CLI
+
+The **project ID** can be found by running:
+
+```console
+$ gcloud config get-value project
+```
+
+If you want to use a different project than the current one configured on your
+machine, list all of them with:
+
+```console
+$ gcloud projects list
+```
+
+The **resource name** can be found with:
+
+```console
+$ gcloud compute url-maps list
+```
+
+#### Google Cloud Console
+
+The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
+
+![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
+
+The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
 
 ## With the CLI
 
-Running the `reliably slo init` will prompt you with questions to help you
+The `reliably slo init` command can guide you through the creation of this file.
+
+Running `reliably slo init` will prompt you with questions to help you
 define an SLO.
 
 <AsciiPlayer id="QogWMsBCW5Y3Zmgka5OdCKHDo" />
@@ -63,29 +171,12 @@ If you select the latency SLO type, you will also be prompted to provide a **thr
   custom
 ```
 
-SLOs are defined by the percentage of "good" events over a time window. You can use 1 hour, 1 day, 1 week, or 1 month preset observation windows, or define a custom one.
-
 ```reliably
 <span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span> <span class="token blue">custom</span>
 <span class="token green">?</span> <span class="token bold">Define your custom observation window</span> <span class="token blue">[? for help]</span>
 ```
 
-Definition of custom observation windows follows the **ISO8601** standard. You can define a duration with one of the following two formats:
-
-* P[n]DT[n]H[n]M
-* P[n]W
-
-[n] are numbers, with D, H, M and W respectively representing **D**ays, **H**ours, **M**inutes and **W**eeks.
-
-Examples:
-
-| ISO8601 format | Human readable duration         |
-| -------------- | ------------------------------- |
-| P4W            | 4 weeks                         |
-| P2D            | 2 days                          |
-| PT24H          | 24 hours                        |
-| PT10M          | 10 minutes                      |
-| P3DT7H36M      | 3 days, 7 jours, and 36 minutes |
+Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows.
 
 ### Service Resource
 
@@ -99,6 +190,10 @@ If you want to measure your SLO and generate [SLO reports](../slo-reports/), you
 
 Once you've selected a cloud provider, you will be asked to paste an resource identifier, or you can type `i` to enter an interactive mode which will help you identify the service you want to get data from.
 
+:::important
+You will need to be authentified to Google Cloud or AWS for interactive mode to work.
+:::
+
 Here is what interactive mode looks like for AWS:
 
 ```reliably
@@ -110,7 +205,6 @@ Here is what interactive mode looks like for AWS:
   aws-us-gov
   aws-iso
   aws-iso-b
-
 ```
 
 ```reliably
@@ -172,106 +266,6 @@ When you're done, the CLI will confirm your manifest has been successfully creat
 The manifest file will also uploaded to the Reliably SaaS. The local `reliably.yaml`file will be used to
 [generate your SLO report](/docs/guides/slo/slo-reports/).
 :::
-
-You could also create this configuration file yourself, as explained in the next
-section.
-
-## With a YAML file
-
-Your SLOs are stored in a `reliably.yaml` configuration file, in your working
-directory. You could generate it with the `reliably slo init` command, as
-explained in the previous section, or create it yourself.
-
-```yaml
-services:
-- name: http-api
-  service-levels:
-  - name: 99% availability over 1 hour
-    type: availability
-    slo: 99
-    sli:
-    - id: arn:partition:service:region:account-id:resource-id
-      provider: aws
-    window: PT1H
-- name: products-api
-  service-levels:
-  - name: 99.5% of products API requests under 200ms
-    type: latency
-    criteria:
-      threshold: 200ms
-    slo: 99.5
-    sli:
-    - id: project-id/google-cloud-load-balancers/resource-id
-      provider: gcp
-    window: PT24H
-```
-
-AWS resources are identified with their ARN.
-
-GCP resources are identified with a project ID, the resource type (only "Google
-Cloud Load Balancers" are currently supported), and the resource name.
-
-## AWS
-
-Resources on AWS are identified with their Amazon Resource Name. Learn more
-about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
-
-If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
-
-```yaml
-resources:
-  - id: arn:partition:service:region:account-id:resource-id
-    provider: aws
-```
-
-Note the `arn:` prefix.
-
-## Google Cloud Platform
-
-The Reliably CLI can currently fetch Service Level Indicators for **services that are attached to a Google Cloud Load Balancer**. You will thus need a load balancer set up to define and report SLOs for GCP.
-
-When defining a service with GCP as provider, you will be prompted with three questions to identify the service you want to monitor. You can get the service ID using the gcloud CLI or the Google Cloud Console.
-
-![Screenshot of the questions asked by the CLI](./images/reliably-gcp-resource-id.png)
-
-### gcloud CLI
-
-The **project ID** can be found by running:
-
-```console
-$ gcloud config get-value project
-```
-
-If you want to use a different project than the current one configured on your
-machine, list all of them with:
-
-```console
-$ gcloud projects list
-```
-
-The **resource name** can be found with:
-
-```console
-$ gcloud compute url-maps list
-```
-
-### Google Cloud Console
-
-The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
-
-![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
-
-The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
-
-### Manual file creation
-
-If **manually creating** the `reliably.yaml` configuration file, you will want to provide this information in the following format:
-
-```yaml
-resources:
-  - id: project-XXXXXX/google-cloud-load-balancers/resource-name
-    provider: gcp
-```
 
 ## Measure and Report
 
