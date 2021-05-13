@@ -5,6 +5,9 @@ categories: ["getting-started"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Installing the Reliably CLI
 
 ## Quick Install Guide
@@ -14,9 +17,12 @@ your PATH.
 
 On macOS
 
+<CopyToClipboard />
+
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
+
 
 On Linux
 
