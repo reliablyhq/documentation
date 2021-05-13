@@ -1,6 +1,6 @@
 ---
 title: How Reliably CLI scans resources
-excerpt: How to scan resources with the Reliably CLI.
+excerpt: What happens when Reliably scans your manifests or clusters for reliability issues?
 categories: ["guides", "how-it-works"]
 status: published
 type: doc
@@ -12,23 +12,23 @@ type: doc
 The Reliably CLI will scan your resources to discover any reliability concerns.
 It will offer advice on how you can resolve those concerns.
 
-The Reliably CLI will work with files that define your resources, or scan your Cluster directly, to work with deployed resources.
+The Reliably CLI will work with files that define your resources, or scan your cluster directly, to work with deployed resources.
 
 For example, to scan for issues in any files in the current working directory
 you can run:
 
-```bash
-$ reliably scan kubernetes .
+```console
+reliably scan kubernetes .
 ```
 
-If you want to scan a Cluster using your default Kubernetes configuration file,
+If you want to scan a cluster using your default Kubernetes configuration file,
 you can run:
 
-```bash
-$ reliably scan kubernetes --live
+```console
+reliably scan kubernetes --live
 ```
 
-Full details for 'reliably scan kubernetes' are covered in the
+Full details for `reliably scan kubernetes` are covered in the
 [kubernetes scan][reliably-scan-kubernetes] section in the reference documentation.
 
 [reliably-scan-kubernetes]: /reference/cli/reliably-scan-kubernetes/
@@ -51,12 +51,15 @@ As a result of running a scan, the Reliably CLI will offer advice for any resour
 
 If you are running the CLI in your terminal by default, it will display the advice directly in your terminal session:
 
-```bash
-$ reliably scan kubernetes .
-tests/manifests/deployment.yaml:1:1 [warning] You should specify a number of replicas
-tests/manifests/deployment.yaml:1:1 [error] Setting a high cpu request may render pod scheduling difficult or starve other pods
-tests/manifests/deployment.yaml:1:1 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
-tests/manifests/deployment.yaml:1:1 [info] Image pull policy should usually not be set to 'Always'
+```reliably
+<span class="token dollar"></span>reliably scan kubernetes .
+tests/manifests/deployment.yaml:1:1 [<span class="token purple">warning</span>] You should specify a number of replicas
+tests/manifests/deployment.yaml:1:1 [<span class="token red">error</span>] Setting a high cpu request may render pod scheduling difficult or starve other pods
+tests/manifests/deployment.yaml:1:1 [<span class="token red">error</span>] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
+tests/manifests/deployment.yaml:1:1 [<span class="token yellow">info</span>] Image pull policy should usually not be set to 'Always'
+tests/manifests/deployment.yaml:1:1 [<span class="token purple">warning</span>] A rollout strategy can reduce the risk of downtime
+tests/manifests/deployment.yaml:1:1 [<span class="token red">warning</span>] Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
+6 suggestions found
 ```
 
 ### In your CI/CD

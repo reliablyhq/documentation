@@ -36,11 +36,11 @@ If you don't already have Krew installed, please install it from the
 
 Once Krew is installed you can install Reliably plugin with:
 
-```bash
-$ kubectl krew install reliably
+```console
+kubectl krew install reliably
 ```
 
-### From the GitHub
+### From GitHub
 
 If you don't want to use Krew, [download the Reliably CLI from the Releases page](https://github.com/reliablyhq/cli/releases/)
 or [clone it and build it from the GitHub repository](https://github.com/reliablyhq/cli/).
@@ -50,9 +50,9 @@ ensuring it is executable.
 For example, here is how to install it for macOS, considering `$HOME/bin` is a
 directory in your `PATH`:
 
-```bash
-$ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o $HOME/bin/kubectl-reliably -s
-chmod +x ~/bin/kubectl-reliably
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o $HOME/bin/kubectl-reliably -s
+$ chmod +x ~/bin/kubectl-reliably
 ```
 
 ## Usage
@@ -60,8 +60,8 @@ chmod +x ~/bin/kubectl-reliably
 If you have installed the `kubectl-reliably` either as a Krew plugin or from
 Github, you can run the plugin with:
 
-```bash
-$ kubectl reliably
+```console
+kubectl reliably
 ```
 
 You should see the Reliably CLI help page.

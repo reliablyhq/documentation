@@ -20,7 +20,7 @@ With Reliably, the manifest file is at the centre of how you manage and report a
 
 The Reliably manifest will identify one or more Services. Each service will have one or more SLOs. Each SLO will have a target, this is expressed as a percentage. Associated with each SLO, you can define one or more SLIs. The SLI is used to collect metrics to determine if the SLO is meeting its objective.
 
-To get you started with SLOs, you can use the Reliably `slo report init` command (link) to generate a reliably manifest.
+To get you started with SLOs, you can use the Reliably `slo report init` command to generate a reliably manifest.
 
 <AsciiPlayer id="QogWMsBCW5Y3Zmgka5OdCKHDo" />
 
@@ -81,19 +81,19 @@ When you define your SLI, you specify an Observation window that you want to mea
 When you select a custom observation window, you specify a custom period using
  the ISO-8601 period format.  Example ISO-8601 formats are:
 
-* PT1H   - a 1 hour time window
-* P1D    - a 1 day time window
-* P13DT3H27M -a 13 Day, 3 Hour & 27 Minute time window
+| ISO8601 format | Human readable duration         |
+| -------------- | ------------------------------- |
+| PT1H           | 1 hour                          |
+| P1D            | 1 day                           |
+| P13DT3H27M     | 13 days, 3 hours and 27 minutes |
 
-The wikipedia page has more details on [ISO-8601 durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
+More details on [the Wikipedia page about ISO-8601 durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 :::note Note
 The period of the observation window supports precision to 1 minute.
 
 The period of the observation window must be less than 1 year.
 :::
-
-
 
 ### Availability SLO
 
@@ -112,7 +112,20 @@ For all the SLOs defined in the manifest, Reliably will construct a report
  output formats for the SLO report (see link). The default tabbed output for a
  manifest would be:
 
-![slo-report](./images/reliably-slo-report-gcp.png)
+
+```reliably
+<span class="token dollar"></span>reliably slo report --format tabbed
+                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
+  Service #1: http-api                           
+  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
+  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day        
+  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day        
+  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day        
+                                                                           
+  Service #2: products-api                       
+  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day        
+  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day   
+```
 
 ## More on that subject
 

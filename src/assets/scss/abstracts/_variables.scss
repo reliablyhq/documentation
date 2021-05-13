@@ -14,11 +14,12 @@
   --blue-800: #1a3d37;
   --blue-900: #0c1f1b;
 
+  --blue-400-rgb: 196, 223, 218;
   --blue-700-rgb: 79, 132, 122;
   --blue-900-rgb: 26, 61, 55;
 
-  --red-200: #ffd0d6;
-  --red-100: #f599a5;
+  --red-100: #ffd0d6;
+  --red-200: #f599a5;
   --red-300: #e96778;
   --red-400: #e04459;
   --red-500: var(--red);
@@ -33,15 +34,28 @@
   --grey-100: #f4f4f4;
   --grey-200: #e1e0e0;
   --grey-300: #d7d6d6;
+  --grey-400: #acacac;
+  --grey-500: #838383;
+  --grey-600: #5f5f5f;
+  --grey-700: #3d3d3d;
+  --grey-800: #202020;
+  --grey-900: #141414;
+
 
   --body-color: var(--blue-900);
   --body-link-color: var(--red-400);
-  --inline-code-bg: rgba(var(--blue-900-rgb),.1);
+  --inline-code-bg: rgba(var(--blue-400-rgb),.5);
   --code-block-bg: var(--blue-900);
 
   --danger-color: #8f68a8;
 
   --monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+  --reliably-cli-blue: #44c4d1;
+  --reliably-cli-green: #42c731;
+  --reliably-cli-purple: #e34ce2;
+  --reliably-cli-red: #d5482f;
+  --reliably-cli-yellow :#b8b731;
 
   // --body-color: hsla(0, 0, 27, 1);
   

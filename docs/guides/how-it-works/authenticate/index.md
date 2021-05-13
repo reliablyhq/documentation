@@ -16,8 +16,8 @@ The Reliably CLI will use the Reliably API to gather suggestions and store scan
 
  You can authenticate with:
 
-```bash
-$ reliably auth login
+```console
+reliably auth login
 ```
 
 You will be prompted for your preferred authentication method, select the way

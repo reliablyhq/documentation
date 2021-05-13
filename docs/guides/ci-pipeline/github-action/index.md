@@ -10,7 +10,7 @@ type: doc
 Adding Reliably to your GitHub repositories is as simple as adding a GitHub Workflow with a GitHub Action.
 
 :::note Note
-  The sources used in <code>this</code> walkthrough are available in this [demo repository](https://github.com/reliablyhq/action-demo/).
+  The source code used in <code>this</code> walkthrough is available in this [demo repository](https://github.com/reliablyhq/action-demo/).
 :::
 
 :::note Note

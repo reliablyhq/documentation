@@ -20,3 +20,47 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   margin: 1em 0 0;
 }
+
+pre[class*="language-console"],
+pre[class*="language-bash"] {
+  &::before {
+    content: "$ ";
+  }
+}
+
+// Reliably CLI output specific styles
+:not(pre) > code[class*="language-reliably"],
+pre[class*="language-reliably"] {
+  .token {
+    &.blue {
+      color: var(--reliably-cli-blue);
+    }
+    &.green {
+      color: var(--reliably-cli-green);
+    }
+    &.purple {
+      color: var(--reliably-cli-purple);
+    }
+    &.red {
+      color: var(--reliably-cli-red);
+    }
+    &.yellow {
+      color: var(--reliably-cli-yellow);
+    }
+    &.bold {
+      font-weight: 700;
+    }
+    &.greyed {
+      opacity: .5;
+    }
+    &.emoji {
+      font-size: 1.2em;
+      line-height: .9;
+    }
+    &.dollar {
+      &::before {
+        content: "$ ";
+      }
+    }
+  }
+}

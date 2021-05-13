@@ -23,11 +23,11 @@ with [Reliably.com](https://reliably.com/).
 You can login with the `reliably auth login` command, when prompted for the
 type of login select a provider, with the arrow keys and select enter:
 
-```console
-$ reliably auth login
+```reliably
+<span class="token dollar"></span>reliably auth login
 Logging into reliably.com
-? How would you like to authenticate?  [Use arrows to move, type to filter]
-> Login with GitHub
+<span class="token green">?</span> <span class="token bold">How would you like to authenticate?</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
+<span class="token blue bold">&gt; Login with GitHub</span>
   Login with GitLab
   Paste an authentication token
 ```
@@ -40,8 +40,8 @@ the GitHub provider:
 When you accept the challenge, the browser will show a message to close its
 window and the CLI will acknowledge you are now logged in.
 
-```console
-✓ Logged in as user
+```reliably
+<span class="token green">✓</span> Logged in as user
 ```
 
 You have successfully logged in to Reliably and are now ready to use the
@@ -51,31 +51,31 @@ You have successfully logged in to Reliably and are now ready to use the
 
 You can check your authentication status with the `reliably auth status` command:
 
-```console
-$ reliably auth status
+```reliably
+<span class="token dollar"></span>reliably auth status
 reliably.com
-  ✓ Logged in to reliably.com as user (~/.config/reliably/config.yaml)
-  ✓ Token: *******************
+  <span class="token green">✓</span> Logged in to reliably.com as user (~/.config/reliably/config.yaml)
+  <span class="token green">✓</span> Token: *******************
 ```
 
 ## Access token
 
 You can retrieve your access token (aka API key) with the `reliably auth status --show-token` command:
 
-```console
-$ reliably auth status --show-token
+```reliably
+<span class="token dollar"></span>reliably auth status --show-token
 reliably.com
-  ✓ Logged in to reliably.com as user (~/.config/reliably/config.yaml)
-  ✓ Token: 6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  <span class="token green">✓</span> Logged in to reliably.com as user (~/.config/reliably/config.yaml)
+  <span class="token green">✓</span> Token: 6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Logout
 
 You can logout with the `reliably auth logout` command:
 
-```console
-$ reliably auth logout
-? Are you sure you want to log out of reliably.dev account 'user'? Yes
+```reliably
+<span class="token dollar"></span>reliably auth logout
+<span class="token green">?</span> <span class="token bold">Are you sure you want to log out of reliably.dev account 'user'?</span> <span class="token blue">Yes</span>
 Logged out of reliably.com account 'user'
 ```
 

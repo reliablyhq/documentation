@@ -64,10 +64,12 @@ In the new job display that appears next select the Build tab, then select *Exec
 
 In the command window enter these commands:
 
-```bash
+```console
 curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o reliably
 chmod u+x reliably
+```
 
+```console
 curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
 ./reliably scan kubernetes manifest.yaml
 ```

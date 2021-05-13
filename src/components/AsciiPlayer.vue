@@ -17,7 +17,6 @@
       let asciiscript = document.createElement('script');
       asciiscript.setAttribute('src', this.source);
       asciiscript.setAttribute('id', this.ascid);
-      console.log(this.id);
       document.getElementById(this.id).appendChild(asciiscript);
     }
   }

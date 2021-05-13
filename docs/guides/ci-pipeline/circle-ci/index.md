@@ -110,7 +110,8 @@ scan:
 ## Add the job to a workflow
 
 This is how CircleCI defines a workflow, in YAML:
-```yml
+
+```yaml
 <workflow name>
   jobs
     <optional triggers>
@@ -127,7 +128,8 @@ reliably:
 ## Final config.yml file
 
 The most simple file CircleCI configuration file will then look like this:
-```yml
+
+```yaml
 version: 2.1
 jobs:
   scan:
@@ -177,3 +179,5 @@ You can also schecule workflow by adding a `triggers` key and specify a
 `schedule`. This would allow you, for example, to run Reliably on a daily basis.
 Read the CircleCI documentation about [scheduling workflows](https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow)
 for more details.
+
+Congratulations, you now integrated Reliably into your CircleCI build!

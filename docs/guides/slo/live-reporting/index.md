@@ -7,9 +7,7 @@ type: doc
 ---
 # Live Reporting
 
-When you have [defined](./define-slos/) your Service Level Objectives (SLOs) monitoring
- them should give you a great indication to the state of you system. You can
-  also use the Reliably CLI for this.
+When you have [defined](./define-slos/) your Service Level Objectives (SLOs), monitoring them gives you a great indication to the state of you system. You can use the Reliably CLI for this.
 
 ## Watch
 
@@ -22,11 +20,23 @@ near real-time.
 
 To monitor your SLOs live via the terminal, add the `--watch / -w` flag.
 
-```
-$ reliably slo report --watch
+```console
+reliably slo report --watch
 ```
 
-![Screenshot of a Reliably SLO report in the terminal](../slo-reports/images/slo-report-watch.png)
+```reliably
+<span class="token purple">Refreshing SLO report every 3 seconds.</span> Press CTRL+C to quit.
+                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
+  Service #1: http-api                           
+  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
+  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day        
+  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day        
+  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day        
+                                                                           
+  Service #2: products-api                       
+  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day        
+  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
+```
 
 ## Reference
 
