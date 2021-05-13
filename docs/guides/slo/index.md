@@ -66,6 +66,7 @@ Define your SLOs in the terminal with the Reliably CLI.
 
 Generate actionable reports.
 <AsciiPlayer id="409053" />
+
 ## Main articles
 
 <MarkdownTwoColumns>
