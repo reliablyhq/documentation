@@ -56,7 +56,7 @@ Examples:
 | P2D            | 2 days                          |
 | PT24H          | 24 hours                        |
 | PT10M          | 10 minutes                      |
-| P3DT7H36M      | 3 days, 7 jours, and 36 minutes |
+| P3DT7H36M      | 3 days, 7 hours, and 36 minutes |
 
 ### AWS resources
 
