@@ -113,7 +113,7 @@ $ gcloud compute url-maps list
 
 The **project ID** can be found in the "Project info" card of your <a href="https://console.cloud.google.com/home/dashboard" target="_blank" rel="noopener noreferer">Google Cloud Console Dashboard</a>.
 
-![Screenshot of Project info card in the Google CLoud Console](./images/gcp-project-info-card.png)
+![Screenshot of Project info card in the Google Cloud Console](./images/gcp-project-info-card.png){ width=405 }
 
 The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
 

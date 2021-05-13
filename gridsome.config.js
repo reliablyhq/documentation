@@ -65,6 +65,7 @@ module.exports = {
         plugins: [
           '@gridsome/remark-prismjs',
           'remark-admonitions',
+          'remark-attr',
         ],
         remark: {
           autolinkHeadings: {
