@@ -58,7 +58,7 @@ article <a href="https://cloud.google.com/blog/products/devops-sre/sre-fundament
 
 ## Managing your SLOs with the Reliably CLI
 
-The Reliably CLI supports a number of [commands](./slo-commands/) to allow you to manage and define your SLOs.
+The Reliably CLI provides the  `slo init` and `slo report` commands to allow you to define and report on your SLOs.
 
 
 Define your SLOs in the terminal with the Reliably CLI.
@@ -83,12 +83,6 @@ Generate actionable reports.
     title="Live SLO reports"
     description="Monitor your SLO's live and generate near realtime reports."
     link="/guides/slo/live-reporting/"
-  />
-
-  <ArticleCard
-    title="Reliably SLO commands"
-    description="Define and report on you Service Levels Objectives."
-    link="/guides/slo/slo-commands/"
   />
 </MarkdownTwoColumns>
 
