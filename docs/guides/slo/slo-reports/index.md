@@ -24,8 +24,8 @@ will need to be authenticated.
 
 ## Usage
 
-```
-$ reliably slo report
+```console
+reliably slo report
 ```
 <AsciiPlayer id="409053" />
 
@@ -40,8 +40,8 @@ Reliably will look for a file named `reliably.yaml` in your  working directory.
 You tell the CLI to use another file by specifying its path specified with the
 `--manifest` or `-m` flag.
 
-```
-$ reliably slo report --manifest path/to/file.yaml
+```console
+reliably slo report --manifest path/to/file.yaml
 ```
 
 ## Output format
@@ -53,11 +53,11 @@ You can select between output formats with the `--format` or `-f` flag.
 Tabbed output is the default format for SLO reports.
 
 ```console
-$ reliably slo report --format tabbed
+reliably slo report --format tabbed
 ```
 
 ```reliably
-<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format tabbed
+<span class="token dollar"></span>reliably slo report --format tabbed
                                           <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
   Service #1: http-api                           
   <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
@@ -76,18 +76,18 @@ The simple output will remove the tabs, and use glyphs instead of emojis for
 your SLO status, and will not display SLO target and delta.
 
 ```console
-$ reliably slo report --format simple
+reliably slo report --format simple
 ```
 
 ```reliably
-<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format simple
+<span class="token dollar"></span>reliably slo report --format simple
 <span class="token yellow">Service #1: http-api</span>
 <span class="token green">✓</span> 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
 <span class="token green">✓</span> 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
 <span class="token red">✕</span> 99% of requests under 300ms: 77.46% (last 1d) [objective: 99%, delta: -21.54%]
 <span class="token red">✕</span> 99.9% of requests under 1s: 98.59% (last 1d) [objective: 99.9%, delta: -1.31%]
 
-Service #2: products-api
+<span class="token yellow">Service #2: products-api</span>
 <span class="token green">✓</span> 99% availability over 1 day: 100.00% (last 1d) [objective: 99%, delta: 1.00%]
 <span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
 ```
@@ -95,12 +95,12 @@ Service #2: products-api
 If you want to disable the glyph coloring, you can use the `--no-color` global
 flag.
 
-```
-$ reliably slo report --format simple --no-color
+```console
+reliably slo report --format simple --no-color
 ```
 
 ```reliably
-<span class="token purple">❯</span> <span class="token green">reliably</span> slo report --format simple --no-color
+<span class="token dollar"></span>reliably slo report --format simple --no-color
 Service #1: http-api
 ✓ 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
 ✓ 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
@@ -117,16 +117,16 @@ Service #2: products-api
 You can generate a JSON-formatted SLO report for consumption in third-party
 tools.
 
-```
-$ reliably slo report --format json
+```console
+reliably slo report --format json
 ```
 
 ### Markdown Output
 
 You can generate a markdown-formatted SLO report.
 
-```
-$ reliably slo report --format markdown
+```console
+reliably slo report --format markdown
 ```
 
 :::tip Tip
@@ -145,8 +145,8 @@ $ reliably slo report --format markdown
 An SLO report status can be monitored via the terminal using the `--watch / -w` flag. This flag
 will continuously fetch and update the report every 3 seconds.
 
-```
-$ reliably slo report --watch
+```console
+reliably slo report --watch
 ```
 
 ```reliably
@@ -183,10 +183,10 @@ aws_secret_access_key = <your secret access key>
 
 ### Google Cloud Platform
 
-You can authenticate be using the  `GOOGLE_APPLICATION_CREDENTIALS` environment variable. It is set to the file path of the JSON files that contains your service account key.
+You can authenticate be using the `GOOGLE_APPLICATION_CREDENTIALS` environment variable. It is set to the file path of the JSON files that contains your service account key.
 
 ```console
-$ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
 ```
 
 <a href="https://cloud.google.com/docs/authentication/getting-started" target="_blank" rel="noopener noreferer">Read more about authentication methods</a> in the Google Cloud documentation.
