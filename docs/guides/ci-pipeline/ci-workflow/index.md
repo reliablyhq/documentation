@@ -13,7 +13,7 @@ The CLI has a `workflow` command to automatically generates the workflow file
 for you in your current repository.
 
 ```console
-$ reliably workflow
+reliably workflow
 ```
 
 You will then be prompted to choose one of the targeted platforms,
@@ -49,10 +49,11 @@ If you already know the platform you are targetting, and don't want to
 enter the interactive mode, you can use the `--platform` flag:
 
 ```console
-$ reliably workflow --platform github
+reliably workflow --platform github
 ```
 
 The supported platforms values are:
+
 * github
 * gitlab
 * circleci
@@ -63,7 +64,7 @@ If you don't want us to generate the workflow file in your current repository,
 we can display it on the standard output, by using the `--stdout` flag.
 
 ```console
-$ reliably workflow --platform github --stdout
+reliably workflow --platform github --stdout
 name: Reliably workflow
 on: push
 ...

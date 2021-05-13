@@ -67,7 +67,9 @@ In the command window enter these commands:
 ```console
 curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o reliably
 chmod u+x reliably
+```
 
+```console
 curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
 ./reliably scan kubernetes manifest.yaml
 ```

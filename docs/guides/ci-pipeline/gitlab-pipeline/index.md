@@ -11,7 +11,7 @@ Adding Reliably to your GitHub repositories is as simple as adding GitLab CI/CD
 to your repository.
 
 :::note Note
-  The sources used in this walkthrough are available in this
+  The source code used in this walkthrough is available in this
   [demo repository](https://gitlab.com/reliably/reliably-demo/).
 :::
 
