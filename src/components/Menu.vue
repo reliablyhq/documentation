@@ -12,7 +12,7 @@
         <g-link to="/reference/">Reference</g-link>
       </div>
     </div>
-    <h4 class="sidebar-title" v-else>{{ current }}</h4>
+    <h4 class="sidebar-title" v-if="$route.path !== '/'">{{ current }}</h4>
     <nav class="new-sidebar-nav">
       <template v-if="current === 'Getting Started'">
         <template v-for="(l, index) in gettingStartedLinks" >
