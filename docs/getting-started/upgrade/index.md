@@ -5,6 +5,9 @@ categories: ["getting-started"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Upgrading the Reliably CLI
 
 When there is a new release of the Reliably CLI available, the CLI will output

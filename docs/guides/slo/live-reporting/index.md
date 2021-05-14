@@ -5,6 +5,9 @@ categories: ["guides", "slo"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Live Reporting
 
 When you have [defined](./define-slos/) your Service Level Objectives (SLOs), monitoring them gives you a great indication to the state of you system. You can use the Reliably CLI for this.

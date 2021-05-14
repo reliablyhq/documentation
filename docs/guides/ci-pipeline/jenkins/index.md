@@ -5,6 +5,9 @@ categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Add Reliably to your Jenkins Build
 
 Adding Reliably to your Jenkins build is as simple as adding a job to
