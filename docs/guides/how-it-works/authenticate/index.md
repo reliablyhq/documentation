@@ -19,6 +19,7 @@ The Reliably CLI will use the Reliably API to gather suggestions and store scan
 ```console
 reliably auth login
 ```
+<CopyToClipboard />
 
 You will be prompted for your preferred authentication method, select the way
  you want to authenticate with the arrow keys, and then select enter.

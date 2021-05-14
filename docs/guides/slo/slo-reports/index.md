@@ -27,6 +27,8 @@ will need to be authenticated.
 ```console
 reliably slo report
 ```
+<CopyToClipboard />
+
 <AsciiPlayer id="409053" />
 
 The `reliably slo report` command will by default use the `reliably.yaml` file in your current directory.  You can specify an alternative manifest file with the `-m` flag. If there is no local manifest file specified Relaibly will use the current manifest for your organisation on the Relaibly server.
@@ -43,6 +45,7 @@ You tell the CLI to use another file by specifying its path specified with the
 ```console
 reliably slo report --manifest path/to/file.yaml
 ```
+<CopyToClipboard />
 
 ## Output format
 
@@ -55,6 +58,7 @@ Tabbed output is the default format for SLO reports.
 ```console
 reliably slo report --format tabbed
 ```
+<CopyToClipboard />
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format tabbed
@@ -78,6 +82,7 @@ your SLO status, and will not display SLO target and delta.
 ```console
 reliably slo report --format simple
 ```
+<CopyToClipboard />
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format simple
@@ -98,6 +103,7 @@ flag.
 ```console
 reliably slo report --format simple --no-color
 ```
+<CopyToClipboard />
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format simple --no-color
@@ -120,6 +126,7 @@ tools.
 ```console
 reliably slo report --format json
 ```
+<CopyToClipboard />
 
 ### Markdown Output
 
@@ -128,6 +135,7 @@ You can generate a markdown-formatted SLO report.
 ```console
 reliably slo report --format markdown
 ```
+<CopyToClipboard />
 
 :::tip Tip
   You can use a tool like <a href="https://pandoc.org/" target="_blank" rel="noopener noreferer">Pandoc</a> to convert the output generated from Reliably
@@ -165,6 +173,7 @@ You can authenticate be using the `GOOGLE_APPLICATION_CREDENTIALS` environment v
 ```console
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
 ```
+<CopyToClipboard />
 
 <a href="https://cloud.google.com/docs/authentication/getting-started" target="_blank" rel="noopener noreferer">Read more about authentication methods</a> in the Google Cloud documentation.
 

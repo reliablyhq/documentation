@@ -15,13 +15,14 @@ for you in your current repository.
 ```console
 reliably workflow
 ```
+<CopyToClipboard />
 
 You will then be prompted to choose one of the targeted platforms,
 for which we can generate a default workflow template.
 
-```console
-? Select your CI/CD platform to create the Reliably workflow  [Use arrows to move, type to filter]
-> GitHub
+```reliably
+<span class="token green">?</span> <span class="token bold">Select your CI/CD platform to create the Reliably workflow</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
+<span class="token blue bold">> GitHub</span>
   GitLab
   CircleCI
 ```
@@ -51,6 +52,7 @@ enter the interactive mode, you can use the `--platform` flag:
 ```console
 reliably workflow --platform github
 ```
+<CopyToClipboard />
 
 The supported platforms values are:
 

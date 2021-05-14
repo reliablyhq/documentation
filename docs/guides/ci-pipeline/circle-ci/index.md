@@ -16,9 +16,11 @@ This guide will show you how you can add Reliably to your
 
 :::note Note
   You can automatically generate the workflow file using our CLI:
+  ```console
+  reliably workflow --platform circleci
   ```
-  $ reliably workflow --platform circleci
-  ```
+  <CopyToClipboard />
+
 :::
 
 ## Set up a project in CircleCI

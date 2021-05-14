@@ -93,21 +93,24 @@ You can get the project ID and resource name from the gcloud CLI or the Google C
 The **project ID** can be found by running:
 
 ```console
-$ gcloud config get-value project
+gcloud config get-value project
 ```
+<CopyToClipboard />
 
 If you want to use a different project than the current one configured on your
 machine, list all of them with:
 
 ```console
-$ gcloud projects list
+gcloud projects list
 ```
+<CopyToClipboard />
 
 The **resource name** can be found with:
 
 ```console
-$ gcloud compute url-maps list
+gcloud compute url-maps list
 ```
+<CopyToClipboard />
 
 #### Google Cloud Console
 

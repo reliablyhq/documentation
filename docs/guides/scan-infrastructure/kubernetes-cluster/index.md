@@ -32,6 +32,7 @@ manifest files, with the `--live` flag:
 ```console
 reliably scan kubernetes --live
 ```
+<CopyToClipboard />
 
 The command will generate an output that offers advice about reliability
 concerns from your cluster. An example for the generated output could be:
@@ -58,13 +59,15 @@ file:
 ```console
 KUBECONFIG=/reliably/kube-config reliably scan kubernetes --live
 ```
+<CopyToClipboard />
 
 You can also override the path for the kubeconfig by adding the `--kubeconfig`
 or `-k` flag and providing a path:
 
-```
+```console
 reliably scan kubernetes --live --kubeconfig=/reliably/kube-config
 ```
+<CopyToClipboard />
 
 :::note
 If using both the `KUBECONFIG` environment variable and the `--kubeconfig` flag,

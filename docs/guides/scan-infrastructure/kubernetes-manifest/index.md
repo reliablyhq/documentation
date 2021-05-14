@@ -6,8 +6,6 @@ status: published
 type: doc
 ---
 
-import Spacer from '~/components/Spacer.vue'
-
 # Scan Kubernetes Manifests
 
 Reliably helps you discover reliability concerns you may want to pay attention

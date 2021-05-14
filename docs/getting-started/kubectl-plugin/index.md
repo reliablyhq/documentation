@@ -52,8 +52,13 @@ directory in your `PATH`:
 
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o $HOME/bin/kubectl-reliably -s
-$ chmod +x ~/bin/kubectl-reliably
 ```
+<CopyToClipboard />
+
+```console
+chmod +x ~/bin/kubectl-reliably
+```
+<CopyToClipboard />
 
 ## Usage
 
@@ -63,6 +68,7 @@ Github, you can run the plugin with:
 ```console
 kubectl reliably
 ```
+<CopyToClipboard />
 
 You should see the Reliably CLI help page.
 
