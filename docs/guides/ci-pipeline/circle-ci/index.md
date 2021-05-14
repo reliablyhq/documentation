@@ -5,6 +5,9 @@ categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Add Reliably to your CircleCI Build
 
 :::note

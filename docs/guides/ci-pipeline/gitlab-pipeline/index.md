@@ -5,6 +5,9 @@ categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Add Reliably to your GitLab CI/CD Pipeline
 
 Adding Reliably to your GitHub repositories is as simple as adding GitLab CI/CD

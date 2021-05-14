@@ -6,6 +6,7 @@ status: published
 type: doc
 ---
 import AsciiPlayer from '~/components/AsciiPlayer.vue'
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 
 # Generate Service Level Objectives reports
 

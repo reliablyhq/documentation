@@ -5,6 +5,9 @@ categories: ["getting-started"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Run Reliably as a `kubectl` Plugin
 
 The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)

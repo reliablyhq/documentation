@@ -5,6 +5,9 @@ categories: ["guides", "how-it-works"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # How Reliably CLI works
 
 ## Scan Resources

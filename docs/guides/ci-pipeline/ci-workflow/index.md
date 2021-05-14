@@ -5,6 +5,9 @@ categories: ["guides", "ci-pipeline"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Generate your CI/CD workflow
 
 Reliably can be used as part of your CI/CD workflow.

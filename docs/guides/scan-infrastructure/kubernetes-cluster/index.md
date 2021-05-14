@@ -5,6 +5,9 @@ categories: ["guides", "scan-infrastructure"]
 status: published
 type: doc
 ---
+
+import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
 # Scan a Kubernetes Cluster
 
 You can use the [Reliably CLI][reliablyCLI] to discover the state of resources
