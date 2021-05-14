@@ -23,6 +23,7 @@ To monitor your SLOs live via the terminal, add the `--watch / -w` flag.
 ```console
 reliably slo report --watch
 ```
+<CopyToClipboard />
 
 ```reliably
 <span class="token purple">Refreshing SLO report every 3 seconds.</span> Press CTRL+C to quit.

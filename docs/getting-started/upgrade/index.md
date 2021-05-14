@@ -24,12 +24,14 @@ On macOS
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 On Linux
 
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 With that, you are good to go, with the new version!
 

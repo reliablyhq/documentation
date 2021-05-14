@@ -66,13 +66,23 @@ In the command window enter these commands:
 
 ```console
 curl -s -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o reliably
+```
+<CopyToClipboard />
+
+```console
 chmod u+x reliably
 ```
+<CopyToClipboard />
 
 ```console
 curl -s -O https://raw.githubusercontent.com/reliablyhq/action-demo/main/manifest.yaml
+```
+<CopyToClipboard />
+
+```console
 ./reliably scan kubernetes manifest.yaml
 ```
+<CopyToClipboard />
 
 What does this do?
 

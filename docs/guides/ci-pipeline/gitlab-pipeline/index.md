@@ -17,9 +17,11 @@ to your repository.
 
 :::note Note
   You can automatically generate the workflow file using our CLI:
+  ```console
+  reliably workflow --platform gitlab
   ```
-  $ reliably workflow --platform gitlab
-  ```
+  <CopyToClipboard />
+
 :::
 
 ## Setup your Reliably access token as Variable
@@ -156,7 +158,6 @@ with the call to Reliably:
 script:
   - reliably scan kubernetes $SOURCE_CODE --format codeclimate --output gl-code-quality-report.json
 ```
-
 
 ### Rules to conditionally include the job in the Pipeline
 

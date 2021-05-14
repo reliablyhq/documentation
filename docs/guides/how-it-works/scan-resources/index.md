@@ -20,6 +20,7 @@ you can run:
 ```console
 reliably scan kubernetes .
 ```
+<CopyToClipboard />
 
 If you want to scan a cluster using your default Kubernetes configuration file,
 you can run:
@@ -27,6 +28,7 @@ you can run:
 ```console
 reliably scan kubernetes --live
 ```
+<CopyToClipboard />
 
 Full details for `reliably scan kubernetes` are covered in the
 [kubernetes scan][reliably-scan-kubernetes] section in the reference documentation.

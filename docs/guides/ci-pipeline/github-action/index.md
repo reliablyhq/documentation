@@ -209,7 +209,3 @@ Each alert is displayed in the context in which it was triggered. In this exampl
 ## Next?
 
 Congratulations, you now have Reliably plugged into a repository on GitHub so that Reliably can start surfacing Reliability Suggestions as you evolve your code. Next take a look at the various features and toggles available on your Reliably GitHub action to take full control of how Reliably surfaces Reliability Suggestions.
-
-
-
-

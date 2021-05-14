@@ -27,12 +27,14 @@ On Linux
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 Make it executable.
 
 ```console
 chmod +x /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 You're good to go!
 
@@ -67,6 +69,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64/)
 from your browser. To make Reliably convenient to run move the
@@ -78,6 +81,7 @@ want to rename it:
 ```console
 mv reliably-darwin-amd64 reliably
 ```
+<CopyToClipboard />
 
 Make the file executable. If needed, change the path to reliably to match the
 location you chose.
@@ -85,12 +89,14 @@ location you chose.
 ```console
 chmod +x /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 Then in a terminal window execute:
 
 ```console
 reliably --version
 ```
+<CopyToClipboard />
 
 You should see the current ```reliably``` cli version displayed.
 
@@ -116,6 +122,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64)
 from your browser. To make Reliably convenient to run move the
@@ -127,6 +134,7 @@ want to rename it:
 ```console
 mv reliably-darwin-amd64 reliably
 ```
+<CopyToClipboard />
 
 If you want to check the file has not been corrupted, navigate to the directory
 where you downloaded the Reliably and check the md5 checksum.
@@ -144,12 +152,14 @@ location you chose.
 ```console
 chmod +x /usr/local/bin/reliably
 ```
+<CopyToClipboard />
 
 Then in a terminal window execute:
 
 ```console
 reliably --version
 ```
+<CopyToClipboard />
 
 You should see the current ```reliably``` cli version displayed.
 
@@ -185,12 +195,14 @@ To execute ```reliably CLI``` you will need to rename the file and add a
 ```console
 move .\reliably-windows-amd64 .\reliably.exe
 ```
+<CopyToClipboard />
 
 Then execute:
 
 ```console
 .\reliably.exe --version
 ```
+<CopyToClipboard />
 
 You should see the current Reliably CLI version displayed.
 
