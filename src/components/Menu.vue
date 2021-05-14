@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-menu">
-    <div class="sidebar-dropdown" @keyup.esc.prevent="close">
+    <div class="sidebar-dropdown" @keyup.esc.prevent="close" v-if="false">
       <button class="sidebar-dropdown__button" @click.stop="openMenu = !openMenu">
         {{ current }}
         <SelectIcon />
@@ -12,6 +12,7 @@
         <g-link to="/reference/">Reference</g-link>
       </div>
     </div>
+    <h4 class="sidebar-title" v-else>{{ current }}</h4>
     <nav class="new-sidebar-nav">
       <template v-if="current === 'Getting Started'">
         <template v-for="(l, index) in gettingStartedLinks" >
@@ -264,6 +265,14 @@ export default {
         }
       }
     }
+  }
+
+  .sidebar-title {
+    margin-top: .2em;
+    padding-left: .5em;
+
+    font-size: 1.2em;
+    font-family: 'Filson Pro';
   }
 
   .new-sidebar-nav {
