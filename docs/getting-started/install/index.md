@@ -36,6 +36,14 @@ chmod +x /usr/local/bin/reliably
 ```
 <CopyToClipboard />
 
+On Windows
+
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
+```
+
+<CopyToClipboard />
+
 You're good to go!
 
 You can check everything is working with the `reliably --version` and you're
@@ -165,7 +173,31 @@ You should see the current ```reliably``` cli version displayed.
 
 ### Windows 10
 
-* Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
+
+#### Install with curl
+
+The quick and easy way to install the  `reliably cli` on Windows is to use `curl`:
+
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
+```
+
+<CopyToClipboard />
+
+
+:::note Note
+The above command assumes you have the `curl` command available and you have a `bin` folder in your home directory. For ease of use, ensure the `bin` folder is on your path.
+
+You can install the `reliably cli` in any directory you like. Just update the `curl` command above as required.
+
+`curl` is available as a Windows 10 command after version 1706. On other versions of Windows, you can [download curl] from the official curl website.
+:::
+
+[download curl]:https://curl.se/download.html
+
+#### Manual Install
+
+Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
 
 When you select the download button you may see a browser warning:
 
