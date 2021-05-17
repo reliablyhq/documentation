@@ -197,7 +197,7 @@ You can install the Reliably CLI in any directory you like. Just update the `cur
 
 #### Manual Install
 
-Download the latest [Windows 10 Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
+Download the latest [Reliably CLI release for Windows 10](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
 
 When you select the download button you may see a browser warning:
 
