@@ -176,7 +176,7 @@ You should see the current ```reliably``` cli version displayed.
 
 #### Install with curl
 
-The quick and easy way to install the  `reliably cli` on Windows is to use `curl`:
+The quick and easy way to install the Reliably CLI on Windows is to use `curl`:
 
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
