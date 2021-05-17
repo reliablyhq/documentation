@@ -188,7 +188,7 @@ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-wind
 :::note Note
 The above command assumes you have the `curl` command available and you have a `bin` folder in your home directory. For ease of use, ensure the `bin` folder is on your path.
 
-You can install the `reliably cli` in any directory you like. Just update the `curl` command above as required.
+You can install the Reliably CLI in any directory you like. Just update the `curl` command above as required.
 
 `curl` is available as a Windows 10 command after version 1706. On other versions of Windows, you can [download curl] from the official curl website.
 :::
