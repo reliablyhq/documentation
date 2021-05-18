@@ -18,13 +18,13 @@ Service Level Objectives identify what you should care about on your system.
 
 With Reliably, the manifest file is at the centre of how you manage and report against your system objectives.
 
-The Reliably manifest will identify one or more Services. Each service will have one or more SLOs. Each SLO will have a target, this is expressed as a percentage. Associated with each SLO, you can define one or more SLIs. The SLI is used to collect metrics to determine if the SLO is meeting its objective.
+The Reliably manifest will identify one or more Services. Each service will have one or more SLOs. Each SLO will have a target, expressed as a percentage. Associated with each SLO, you can define one or more SLIs. The SLI is used to collect metrics to determine if the SLO is meeting its objective.
 
-To get you started with SLOs, you can use the Reliably `slo report init` command to generate a reliably manifest.
+To get you started with SLOs, you can use the Reliably `slo report init` command to generate a Reliably manifest.
 
 <AsciiPlayer id="QogWMsBCW5Y3Zmgka5OdCKHDo" />
 
-An example Reliably Manifest is shown here:
+An example Reliably Manifest is:
 
 ```yaml
 services:
@@ -66,7 +66,19 @@ services:
 
 Reliably will use this manifest to generate a Reliably SLO report. Reliably currently supports GCP and AWS as platforms for services. Reliably will extend the supported platforms in future releases.
 
-Reliably will determine the status of your SLOs by gathering metrics from the associated SLIs from the platform provider.
+### What does the SLO Report Command do
+
+When the Reliably `slo report` command is entered the `cli` will go through the following steps:
+
+* It will read/load the manifest file. The location for the manifest file defaults to `reliably.yaml` in the current working directory. You can alterntively specify the path to the mainifest with the -m / --manifest flag.
+
+* The manifest will define a list of services and SLOs. Each SLO can optionally have one or more SLIs.
+
+* The SLIs are measures that allow metrics collection from a cloud provider. Reliably will average the metrics collected over the time period for all the SLIs.
+
+* Once all the SLOs are computed, the report is sent to the Reliably SAAS. The Reliably SAAS will store the report and use the stored reports to generate trends from the report history.
+
+* Finaly the `cli` will write out the report in the desired format either to standard out or to a local file.
 
 ### Time Window
 
@@ -97,34 +109,49 @@ The period of the observation window must be less than 1 year.
 
 ### Availability SLO
 
-For availability, Reliably will calculate the percentage of error responses in
- the time window. All 5xx status responses are counted as errors.
+For availability, the Reliably CLI will fetch the error rate over the entire time period. The avaialbility is computed as 100 - error rate. The error rate is calculated as: Sum of (HTTP 5xx requests/Sum of all requests) * 100
+
+
 
 ### Latency SLO
 
-For latency reliably will determine the percentage of responses under the
- threshold specified for the SLO.
+For latency, the Rleialby CLI will fetch the 99-percentile latency for every minute over the total time period. It will count the number of times the 99-precentile is above the threshold and divide it by the total number of minutes to get the value as percentage.
+
+#### Where does the Reliably CLI get the Data from
+
+The Reliably CLI uses monitoring metrics from the Cloud Provider. For AWS the CLI uses the Cloudwatch API to agregate data based on the defined time window. For GCP the CLi will query the GCP Monitoring API.
+
+:::warning Warning
+
+In order for the Reliably CLI to be able to query your service provider, your client needs to be authenticated. The Reliably CLI uses the credentials configured for the cloud provider client.
+
+* [Authenticating with AWS](/docs/guides/slo/slo-reports/#aws)
+* [Authenticating with GCP](/docs/guides/slo/slo-reports/#google-cloud-platform)
+
+:::
 
 ### Reliability Report
 
 For all the SLOs defined in the manifest, Reliably will construct a report
  showing if the target for the SLO is met or not. You can specify different
- output formats for the SLO report (see link). The default tabbed output for a
+ output formats for the [SLO report]. The default table output for a
  manifest would be:
+
+ [SLO report]:/docs/reference/cli/reliably-slo-report/
 
 
 ```reliably
-<span class="token dollar"></span>reliably slo report --format tabbed
-                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
-  Service #1: http-api                           
-  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
-  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day        
-  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day        
-  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day        
-                                                                           
-  Service #2: products-api                       
-  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day        
-  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day   
+<span class="token dollar"></span>reliably slo report --format table
+                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>
+  Service #1: http-api
+  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour
+  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
+  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day
+  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day
+
+  Service #2: products-api
+  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day
+  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
 ```
 
 ## More on that subject
