@@ -115,7 +115,7 @@ For availability, the Reliably CLI will fetch the error rate over the entire tim
 
 ### Latency SLO
 
-For latency, the Rleialby CLI will fetch the 99-percentile latency for every minute over the total time period. It will count the number of times the 99-precentile is above the threshold and divide it by the total number of minutes to get the value as percentage.
+For latency, the Reliably CLI will fetch the 99-percentile latency for every minute over the total time period. It will count the number of times the 99-percentile is above the threshold and divide it by the total number of minutes to get the value as percentage.
 
 #### Where does the Reliably CLI get the Data from
 
