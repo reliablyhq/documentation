@@ -109,7 +109,7 @@ The period of the observation window must be less than 1 year.
 
 ### Availability SLO
 
-For availability, the Reliably CLI will fetch the error rate over the entire time period. The avaialbility is computed as 100 - error rate. The error rate is calculated as: Sum of (HTTP 5xx requests/Sum of all requests) * 100
+For availability, the Reliably CLI will fetch the error rate over the entire time period. The availability is computed as 100 - error rate. The error rate is calculated as: Sum of (HTTP 5xx requests/Sum of all requests) * 100
 
 
 
