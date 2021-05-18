@@ -74,7 +74,7 @@ When the Reliably `slo report` command is entered the `cli` will go through the 
 
 * The manifest will define a list of services and SLOs. Each SLO can optionally have one or more SLIs.
 
-* The SLIs are measures that allow metrics collection from a cloud provider. Reliably will average the metrics collected over the time period for all the SLIs.
+* The SLIs are measures that allow metrics collection from a cloud provider. Reliably will collect the metrics over the time period for all the SLIs.
 
 * Once all the SLOs are computed, the report is sent to the Reliably SAAS. The Reliably SAAS will store the report and use the stored reports to generate trends from the report history.
 
