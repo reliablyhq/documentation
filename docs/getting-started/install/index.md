@@ -17,15 +17,15 @@ your PATH.
 
 On macOS
 
-```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+```reliably
+<span class="token dollar"></span>curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 <CopyToClipboard />
 
 On Linux
 
-```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+```reliably
+<span class="token dollar"></span>curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
 <CopyToClipboard />
 
@@ -41,7 +41,6 @@ On Windows
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
 ```
-
 <CopyToClipboard />
 
 You're good to go!
@@ -169,7 +168,7 @@ reliably --version
 ```
 <CopyToClipboard />
 
-You should see the current ```reliably``` cli version displayed.
+You should see the current Reliably CLI version displayed.
 
 ### Windows 10
 
@@ -181,7 +180,6 @@ The quick and easy way to install the Reliably CLI on Windows is to use `curl`:
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
 ```
-
 <CopyToClipboard />
 
 

@@ -27,10 +27,10 @@ import data from '~/data/getting-started-index-data.json'
     link="/getting-started/install/"
   />
   <ArticleCard
-    title="Upgrade the Reliably CLI"
+    title="Updte the Reliably CLI"
     description="If you already have the  Reliably CLI installed, you can easily
-    upgrade to the latest version of Reliably."
-    link="/getting-started/upgrade/"
+    update to the latest version of Reliably."
+    link="/getting-started/update/"
   />
   <ArticleCard
     title="Login to Reliably"
