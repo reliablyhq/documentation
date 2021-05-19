@@ -17,15 +17,15 @@ your PATH.
 
 On macOS
 
-```reliably
-<span class="token dollar"></span>curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
 ```
 <CopyToClipboard />
 
 On Linux
 
-```reliably
-<span class="token dollar"></span>curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
 ```
 <CopyToClipboard />
 
