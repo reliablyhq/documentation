@@ -9,8 +9,25 @@ type: doc
 
 Report my slo metrics
 
+### Synopsis
+
+Generates a report of your SLOs.
+
+It is also possible to generate the report to different files &
+formats at once, with using '--format' and '--output' flags with
+comma-separated list as values.
+
 ```
 reliably slo report [flags]
+```
+
+### Examples
+
+```
+  $ reliably slo report
+  $ reliably slo report -f text
+  $ reliably slo report -f markdown -o report.md
+  $ reliably slo report -f yaml,json -o o.yaml,o.json
 ```
 
 ### Options
