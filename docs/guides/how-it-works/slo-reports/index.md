@@ -109,13 +109,21 @@ The period of the observation window must be less than 1 year.
 
 ### Availability SLO
 
-For availability, the Reliably CLI will fetch the error rate over the entire time period. The availability is computed as 100 - error rate. The error rate is calculated as: Sum of (HTTP 5xx requests/Sum of all requests) * 100
+An Availability SLO allows you to specify a target availability percentage for a Service. That target percentage is the percentage of the time that the service should be avaialble.
 
+#### Measuring Avaialibilty SLOs
 
+The Reliably CLI allows you to measure you SLO targets. For availability, Reliably will calculate the percentage of error responses in
+ the time window. All 5xx status responses are counted as errors.
 
 ### Latency SLO
 
-For latency, the Reliably CLI will fetch the 99-percentile latency for every minute over the total time period. It will count the number of times the 99-percentile is above the threshold and divide it by the total number of minutes to get the value as percentage.
+A Latency SLO allows you to specify a threshold latency for a service and a target percentage. The percentage gives the target percentage of responses within that threshold latency.
+
+#### Measuring Latency SLOs
+
+For latency reliably will determine the percentage of responses under the
+ threshold specified for the SLO.
 
 #### Where does the Reliably CLI get the Data from
 
