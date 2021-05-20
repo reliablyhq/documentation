@@ -109,7 +109,7 @@ The period of the observation window must be less than 1 year.
 
 ### Availability SLO
 
-An Availability SLO allows you to specify a target availability percentage for a Service. That target percentage is the percentage of the time that the service should be avaialble.
+An Availability SLO allows you to specify a target availability percentage for a Service. That target percentage is the percentage of the time that the service should be available.
 
 #### Measuring Avaialibilty SLOs
 
