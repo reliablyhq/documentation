@@ -13,13 +13,13 @@ import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 While running any command, when a new release is available on GitHub,
 a message will be output at end of the command output.
 
-```
-A new release of reliably is available: 0.15.0 → 0.16.0
+```reliably
+<span class="token yellow">A new release of reliably is available:</span><span class="token blue">0.15.0</span> → <span class="token blue">0.16.0</span>
 
-Details of the new release can be found here:
+<span class="token yellow">Details of the new release can be found here:</span>
 https://github.com/reliablyhq/cli/releases/tag/v0.16.0
 
-To upgrade on your system run:
+<span class="token yellow">To upgrade on your system run:</span>
 $ reliably update
 ```
 
