@@ -57,66 +57,68 @@ You can select between output formats with the `--format` or `-f` flag.
 Tabbed output is the default format for SLO reports.
 
 ```console
-reliably slo report --format tabbed
+reliably slo report --format table
 ```
 <CopyToClipboard />
 
 ```reliably
-<span class="token dollar"></span>reliably slo report --format tabbed
-                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>  
-  Service #1: http-api                           
-  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour       
-  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day        
-  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day        
-  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day        
-                                                                           
-  Service #2: products-api                       
-  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day        
-  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day   
+<span class="token dollar"></span>reliably slo report --format table
+                                          <span class="token purple bold">Current Objective</span>   <span class="token purple bold">/ Time Window</span>  <span class="token purple bold">Type</span>             <span class="token purple bold">Trend</span>
+  Service #1: http-api
+  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%        /  1h0m0s      Availability     <span class="token green">✓ ✓ ✓ ✓</span>
+  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%      /  1d          Availability     <span class="token green">✓ ✓ ✓ ✓ ✓</span>
+  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%        /  1d          Latency          <span class="token green">✓</span> <span class="token red">✕</span> <span class="token green">✓ ✓</span><span class="token red"> ✕</span>
+  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%      /  1d          Latency          <span class="token green">✓ ✓ ✓ ✓</span><span class="token red"> ✕</span>
+
+  Service #2: products-api
+  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%        /  1d          Availability      <span class="token green">✓ ✓ ✓ ✓ ✓</span>
+  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%      /  1d          Latency           <span class="token green">✓ ✓ ✓ ✓ ✓</span>
 ```
 
-### Simple Output
 
-The simple output will remove the tabs, and use glyphs instead of emojis for
+
+### Text Output
+
+The text output will remove the tabs, and use glyphs instead of emojis for
 your SLO status, and will not display SLO target and delta.
 
 ```console
-reliably slo report --format simple
+reliably slo report --format text
 ```
 <CopyToClipboard />
 
 ```reliably
-<span class="token dollar"></span>reliably slo report --format simple
+<span class="token dollar"></span>reliably slo report --format text
 <span class="token yellow">Service #1: http-api</span>
-<span class="token green">✓</span> 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
-<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
-<span class="token red">✕</span> 99% of requests under 300ms: 77.46% (last 1d) [objective: 99%, delta: -21.54%]
-<span class="token red">✕</span> 99.9% of requests under 1s: 98.59% (last 1d) [objective: 99.9%, delta: -1.31%]
+<span class="token green">✓</span> 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
+<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+<span class="token red">✕</span> 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
+<span class="token red">✕</span> 99.9% of requests under 1s: 98.59%  [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 <span class="token yellow">Service #2: products-api</span>
-<span class="token green">✓</span> 99% availability over 1 day: 100.00% (last 1d) [objective: 99%, delta: 1.00%]
-<span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
+<span class="token green">✓</span> 99% availability over 1 day: 100.00% [objective: 99% / 1d , delta: 1.00%, type: Availablity]
+<span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 
 If you want to disable the glyph coloring, you can use the `--no-color` global
 flag.
 
 ```console
-reliably slo report --format simple --no-color
+reliably slo report --format text --no-color
 ```
 <CopyToClipboard />
 
 ```reliably
-<span class="token dollar"></span>reliably slo report --format simple --no-color
+<span class="token dollar"></span>reliably slo report --format text --no-color
 Service #1: http-api
-✓ 99% availability over 1 hour: 100.00% (last 1h0m0s) [objective: 99%, delta: 1.00%]
-✓ 99.5% availability over 1 day: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
-✕ 99% of requests under 300ms: 77.46% (last 1d) [objective: 99%, delta: -21.54%]
-✕ 99.9% of requests under 1s: 98.59% (last 1d) [objective: 99.9%, delta: -1.31%]
+✓ 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
+✓ 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+✕ 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
+✕ 99.9% of requests under 1s: 98.59% [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 Service #2: products-api
-✓ 99% availability over 1 day: 100.00% (last 1d) [objective: 99%, delta: 1.00%]
-✓ 99.5% of products API requests under 200ms: 100.00% (last 1d) [objective: 99.5%, delta: 0.50%]
+✓ 99% availability over 1 day: 100.00% [objective: 99% / 1d, delta: 1.00%, type: Availablity]
+✓ 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 
 ### JSON Output
