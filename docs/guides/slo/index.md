@@ -7,9 +7,13 @@ type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
 import AsciiPlayer from '~/components/AsciiPlayer.vue'
+import BigLink from '~/components/BigLink.vue';
+
+import IconDefine from '~/assets/images/icons/edit.svg';
+import IconSLO from '~/assets/images/icons/activity.svg';
+import IconLiveSLO from '~/assets/images/icons/watch.svg';
 
 import data from '~/data/slo-index-data.json'
 
@@ -70,21 +74,33 @@ Generate actionable reports.
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="Define your Service Level Objectives"
-    description="Learn how to define and measure your SLOs."
-    link="/guides/slo/define-slos/"
-  />
-  <ArticleCard
-    title="Generate SLO reports"
-    description="Fetch data from your cloud provider and generate comprehensive SLO reports."
-    link="/guides/slo/slo-reports/"
-  />
-  <ArticleCard
-    title="Live SLO reports"
-    description="Monitor your SLO's live and generate near realtime reports."
-    link="/guides/slo/live-reporting/"
-  />
+  <BigLink to="/guides/slo/define-slos/" :external="false" :dark="true">
+    <template v-slot:header>
+      Define your Service Level Objectives
+    </template>
+    <template v-slot:icon>
+      <IconDefine />
+    </template>
+    <p>Learn how to define and measure your SLOs.</p>
+  </BigLink>
+  <BigLink to="/guides/slo/slo-reports/" :external="false" :dark="true">
+    <template v-slot:header>
+      Generate SLO reports
+    </template>
+    <template v-slot:icon>
+      <IconSLO />
+    </template>
+    <p>Fetch data from your cloud provider and generate comprehensive SLO reports.</p>
+  </BigLink>
+  <BigLink to="/guides/slo/live-reporting/" :external="false" :dark="true">
+    <template v-slot:header>
+      Live SLO reports
+    </template>
+    <template v-slot:icon>
+      <IconLiveSLO />
+    </template>
+    <p>Monitor your SLO's live and generate near realtime reports.</p>
+  </BigLink>
 </MarkdownTwoColumns>
 
 

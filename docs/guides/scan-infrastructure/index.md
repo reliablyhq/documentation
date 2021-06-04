@@ -7,8 +7,11 @@ type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
+import BigLink from '~/components/BigLink.vue';
+
+import IconScan from '~/assets/images/icons/search.svg';
+import IconCluster from '~/assets/images/icons/server.svg';
 
 import data from '~/data/scan-infrastructure-index-data.json'
 
@@ -28,16 +31,24 @@ covered too, with <code>reliably scan kubernetes --live</code>!
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="Scan a Kubernetes Manifest"
-    description="Surface potential reliability issues in your Kubernetes manifests."
-    link="/guides/scan-infrastructure/kubernetes-manifest/"
-  />
-  <ArticleCard
-    title="Scan a Kubernetes Cluster"
-    description="Get reliability suggestions for your running Kubernetes clusters."
-    link="/guides/scan-infrastructure/kubernetes-cluster/"
-  />
+  <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
+    <template v-slot:header>
+      Scan a Kubernetes Manifest
+    </template>
+    <template v-slot:icon>
+      <IconScan />
+    </template>
+    <p>Surface potential reliability issues in your Kubernetes manifests.</p>
+  </BigLink>
+  <BigLink to="/guides/scan-infrastructure/kubernetes-cluster/" :external="false" :dark="true">
+    <template v-slot:header>
+      Scan a Kubernetes Cluster
+    </template>
+    <template v-slot:icon>
+      <IconCluster />
+    </template>
+    <p>Get reliability suggestions for your running Kubernetes clusters.</p>
+  </BigLink>
 </MarkdownTwoColumns>
 
 ## Other articles

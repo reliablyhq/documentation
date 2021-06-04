@@ -7,8 +7,13 @@ type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
+import BigLink from '~/components/BigLink.vue';
+
+import IconInstall from '~/assets/images/icons/download.svg';
+import IconUpgrade from '~/assets/images/icons/arrow-up-right.svg';
+import IconLogin from '~/assets/images/icons/log-in.svg';
+import IconPlugin from '~/assets/images/icons/box.svg';
 
 import data from '~/data/getting-started-index-data.json'
 
@@ -21,28 +26,42 @@ import data from '~/data/getting-started-index-data.json'
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="Install Reliably"
-    description="Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes."
-    link="/getting-started/install/"
-  />
-  <ArticleCard
-    title="Upgrade the Reliably CLI"
-    description="If you already have the  Reliably CLI installed, you can easily
-    upgrade to the latest version of Reliably."
-    link="/getting-started/upgrade/"
-  />
-  <ArticleCard
-    title="Login to Reliably"
-    description="Authenticate the Reliably CLI with Reliably.com"
-    link="/getting-started/login/"
-  />
-   <ArticleCard
-    title="Kubectl Plugin"
-    description="Run Reliably as a kubectl Plugin"
-    link="/getting-started/kubectl-plugin//"
-  />
-
-
+  <BigLink to="/getting-started/install/" :external="false" :dark="true">
+    <template v-slot:header>
+      Install Reliably
+    </template>
+    <template v-slot:icon>
+      <IconInstall />
+    </template>
+    <p>Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes.</p>
+  </BigLink>
+  <BigLink to="/getting-started/upgrade/" :external="false" :dark="true">
+    <template v-slot:header>
+      Upgrade the Reliably CLI
+    </template>
+    <template v-slot:icon>
+      <IconUpgrade />
+    </template>
+    <p>If you already have the  Reliably CLI installed, you can easily
+    upgrade to the latest version of Reliably.</p>
+  </BigLink>
+  <BigLink to="/getting-started/login/" :external="false" :dark="true">
+    <template v-slot:header>
+      Login to Reliably
+    </template>
+    <template v-slot:icon>
+      <IconLogin />
+    </template>
+    <p>Authenticate the Reliably CLI with Reliably.com</p>
+  </BigLink>
+  <BigLink to="/getting-started/kubectl-plugin/" :external="false" :dark="true">
+    <template v-slot:header>
+      Kubectl Plugin
+    </template>
+    <template v-slot:icon>
+      <IconPlugin />
+    </template>
+    <p>Run Reliably as a kubectl Plugin</p>
+  </BigLink>
 </MarkdownTwoColumns>
 

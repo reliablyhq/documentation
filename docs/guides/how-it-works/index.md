@@ -9,6 +9,10 @@ import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
 import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
+import BigLink from '~/components/BigLink.vue';
+
+import IconScan from '~/assets/images/icons/search.svg';
+import IconSLO from '~/assets/images/icons/activity.svg';
 
 import data from '~/data/how-it-works-index-data.json'
 
@@ -26,16 +30,24 @@ import data from '~/data/how-it-works-index-data.json'
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="Scan Resources"
-    description="How does the Reliably CLI scan resources?"
-    link="/guides/how-it-works/scan-resources/"
-  />
-  <ArticleCard
-    title="SLO Reports"
-    description="How does the Reliably CLI generate SLO Reports?"
-    link="/guides/how-it-works/slo-reports/"
-  />
+  <BigLink to="/guides/how-it-works/scan-resources/" :external="false" :dark="true">
+    <template v-slot:header>
+      Scan Resources
+    </template>
+    <template v-slot:icon>
+      <IconScan />
+    </template>
+    <p>How does the Reliably CLI scan resources?</p>
+  </BigLink>
+  <BigLink to="/guides/how-it-works/slo-reports/" :external="false" :dark="true">
+    <template v-slot:header>
+      SLO Reports
+    </template>
+    <template v-slot:icon>
+      <IconSLO />
+    </template>
+    <p>How does the Reliably CLI generate SLO Reports?</p>
+  </BigLink>
 </MarkdownTwoColumns>
 
 ## Other articles
