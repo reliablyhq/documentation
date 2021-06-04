@@ -76,10 +76,13 @@ export default {
   // height: 2em;
   // width: 2em;
 
-  background-color: var(--yellow);
+  background-color: var(--yellow-500);
   // border: 2px solid red;
   opacity: 0;
   cursor: pointer;
+
+  color: var(--body-color);
+  text-shadow: none;
 
   transition: all .2s ease-in-out;
 

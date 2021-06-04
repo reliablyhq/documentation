@@ -1,11 +1,13 @@
 <template>
   <header class="header">
     <div class="container">
-      <a href="/" class="header-logo">
-        <ReliablyLogo />
-        <span class="screen-reader-text">Reliably</span>
-      </a>
-      <g-link class="header-docs-home" to="/">docs</g-link>
+      <div class="header__logo">
+        <a href="/" class="header-logo">
+          <ReliablyLogo />
+          <span class="screen-reader-text">Reliably</span>
+        </a>
+        <g-link class="header-docs-home" to="/">docs</g-link>
+      </div>
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
         <g-link class="nav__link" to="/guides/">Guides</g-link>
@@ -58,63 +60,53 @@ export default {
 
   .container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     max-width: 124rem;
-    padding-right: 2rem; // Allows us to center the menu
+    padding-right: 2rem;
     padding-left: 2rem;
-  }
 
-  &-logo {
+    @media (min-width: 50em) {
+      flex-direction: row;
+    }
+  }
+  &__logo {
     display: flex;
     align-items: center;
 
-    svg {
-      height: 2em;
+    .header-logo {
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 2em;
+      }
     }
-  }
 
-  &-docs-home {
-    position: relative;
-
-    display: inline-block;
-    margin-left: .4em;
-    padding: .4em .3em;
-
-    color: var(--heading-color-dark);
-    font-family: 'Agrandir', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    transform: translateY(.2rem);
-
-    &::before {
-      content: '/';
+    .header-docs-home {
+      position: relative;
 
       display: inline-block;
-      margin-right: .4em;
+      height: 1.8rem;
+      margin-left: .4em;
+      padding: 0 .3em;
 
-      transform: translateY(-.1em);
-    }
+      background-color: var(--yellow-500);
+      border-radius: .2rem;
 
-    &::after {
-      content: '';
+      color: var(--heading-color);
+      font-size: 1.2rem;
+      // font-family: 'Agrandir', sans-serif;
+      // font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
 
-      position: absolute;
-      top: calc(100% - .5em);
-      left: 1.4em;
+      transform: translateY(.2rem);
+      transition: all .1s ease-in-out;
 
-      display: block;
-      height: .3rem;
-      width: calc(100% - 2em);
-
-      background-color: transparent;
-    }
-
-    &:hover {
-      &::after {
-        background-color: var(--yellow-500);
+      &:hover {
+        transform: scale(1.1) translateY(.2rem);
       }
     }
   }
@@ -156,6 +148,14 @@ export default {
           background-color: var(--yellow-500);
         }
       }
+    }
+  }
+
+  &__github {
+    display: none;
+
+    @media (min-width: 60em) {
+      display: block;
     }
   }
 }
