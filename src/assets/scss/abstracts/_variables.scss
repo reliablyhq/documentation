@@ -1,86 +1,79 @@
 :root {
-  --blue: #b5d1cc;
-  --brown: #371722;
-  --red: #d81c36;
-  --yellow: #f5b111;
-
-  --blue-100: #f4f9f8;
-  --blue-200: #e1edeb;
-  --blue-300: #dbeae7;
-  --blue-400: #c4dfda;
-  --blue-500: var(--blue);
-  --blue-600: #94b5af;
-  --blue-700: #4f847a;
-  --blue-800: #1a3d37;
-  --blue-900: #0c1f1b;
-
-  --blue-400-rgb: 196, 223, 218;
-  --blue-700-rgb: 79, 132, 122;
-  --blue-900-rgb: 26, 61, 55;
-
-  --red-100: #ffd0d6;
-  --red-200: #f599a5;
-  --red-300: #e96778;
-  --red-400: #e04459;
-  --red-500: var(--red);
-  --red-600: #bb1027;
-  --red-700: #9b071b;
-  --red-800: #850516;
-  --red-900: #5a000c;
-
-  --yellow-dark: #b9850a;
-  --yellow-light: #f8e8c2;
-  
-  --grey-100: #f4f4f4;
-  --grey-200: #e1e0e0;
-  --grey-300: #d7d6d6;
-  --grey-400: #acacac;
-  --grey-500: #838383;
-  --grey-600: #5f5f5f;
-  --grey-700: #3d3d3d;
-  --grey-800: #202020;
-  --grey-900: #141414;
+  --blue: hsl(170, 29%, 75%);   // #b5d1cc
+  --red: hsl(349, 100%, 46%);   // #d81c36
+  --brown: hsl(339, 49%, 16%);  // #371722
+  --yellow: hsl(41, 100%, 50%); // #f5b111
 
 
-  --body-color: var(--blue-900);
-  --body-link-color: var(--red-400);
-  --inline-code-bg: rgba(var(--blue-400-rgb),.5);
+  --blue-100: hsl(170, 31%, 97%);
+  --blue-200: hsl(170, 31%, 90%);
+  --blue-300: var(--blue); // hsl(170, 29%, 75%)
+  --blue-400: hsl(170, 25%, 60%);
+  --blue-500: hsl(170, 25%, 50%);
+  --blue-600: hsl(170, 40%, 35%);
+  --blue-700: hsl(170, 50%, 20%);
+  --blue-800: hsl(170, 75%, 14%); // #093e36
+  --blue-900: hsl(168, 90%, 8%);  // #02271f
+
+  --red-100: hsl(349, 100%, 95%);
+  --red-200: hsl(349, 100%, 84%);
+  --red-300: hsl(349, 100%, 72%);
+  --red-400: hsl(349, 100%, 60%);
+  --red-500: var(--red); // hsl(349, 100%, 46%)
+  --red-600: hsl(349, 100%, 35%);
+  --red-700: hsl(349, 100%, 27%);
+  --red-800: hsl(349, 100%, 15%);
+  --red-900: hsl(349, 100%, 8%);
+
+  --yellow-100: hsl(51, 100%, 95%);
+  --yellow-200: hsl(49, 100%, 84%);
+  --yellow-300: hsl(46, 100%, 73%);
+  --yellow-400: hsl(44, 100%, 62%);
+  --yellow-500: var(--yellow); // hsl(41, 100%, 50%)
+  --yellow-600: hsl(37, 100%, 40%);
+  --yellow-700: hsl(31, 100%, 30%);
+  --yellow-700: hsl(21, 100%, 25%);
+  --yellow-800: var(--brown); // hsl(339, 49%, 16%)
+  --yellow-900: hsl(339, 55%, 9%);
+
+  --grey-100: hsl(170, 9%, 96%);
+  --grey-200: hsl(170, 8%, 85%);
+  --grey-300: hsl(170, 7%, 70%);
+  --grey-400: hsl(170, 6%, 59%);
+  --grey-500: hsl(170, 5%, 48%);
+  --grey-600: hsl(170, 6%, 37%);
+  --grey-700: hsl(170, 7%, 26%);
+  --grey-800: hsl(170, 8%, 15%);
+  --grey-900: hsl(170, 9%, 8%);
+
+  --reliably-cli-blue: #44c4d1;
+  --reliably-cli-green: #42c731;
+  --reliably-cli-purple: #e34ce2;
+  --reliably-cli-red: hsl(360, 75%, 63%);
+  --reliably-cli-yellow :#b8b731;
+
+  --body-color: var(--grey-700);
+  --heading-color: var(--blue-900);
+  --body-link-color: var(--yellow-600);
+  --text-color-dark: var(--blue-200); // For use on dark backgrounds
+  --heading-color-dark: var(--blue-100); // For use on dark backgrounds
+
+  --inline-code-text: var(--red-600);
+  --inline-code-bg: var(--red-100);
   --code-block-bg: var(--blue-900);
+
+  --btn-primary-text: white;
+  --btn-primary-bg: var(--blue-600);
+  --btn-secondary-text: var(--blue-800);
+  --btn-secondary-bg: var(--blue-300);
+  --btn-tertiary-text: var(--yellow-800);
+  --btn-tertiary-bg: var(--yellow-500);
+  --btn-danger-text: white;
+  --btn-danger-bg: var(--red-500);
 
   --danger-color: #8f68a8;
 
   --monospace-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
-  --reliably-cli-blue: #44c4d1;
-  --reliably-cli-green: #42c731;
-  --reliably-cli-purple: #e34ce2;
-  --reliably-cli-red: #d5482f;
-  --reliably-cli-yellow :#b8b731;
-
-  // --body-color: hsla(0, 0, 27, 1);
-  
-  --body-color-light: #444;
-  --body-color-lighter: hsla(0, 0%, 95%, 0.8);
-  --primary-color: var(--red);
-  --primary-color-dark: var(--brown);
-  --header-height: 58px;
-  --bg: white;
-  --bg-secondary: var(--blue);
-  --bg-transparent: rgba(255, 255, 255, .9);
-  --bg-teritary: #f7f9f8;
-  --dark-bg: #0d2538;
-  --code-bg: #0e2233;
-  --select-color: rgba(212, 53, 159, .2);
-  --inline-code-text: #b32585;
-  // --inline-code-bg: rgba(212, 53, 159, .03);
-  --border-color: var(--blue);
-  --border-color-darker: #cfe6e6;
-  --mark-color: #fff8ec;
   --border-radius: 5px;
-  --success-bg: #5bb19640;
-  --space: 25px;
-  --space-x2: 50px;
-  --code-color: #fdf9f3;
-  --glow: 2px 2px 15px 0 var(--border-color);
-
 }
