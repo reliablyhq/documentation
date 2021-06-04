@@ -39,9 +39,9 @@ export default {
   flex: 1;
 
   &--secondary {
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--blue-300);
+    border-top: 1px solid var(--blue-500);
+    border-bottom: 1px solid var(--blue-500);
 
     + .section--secondary {
       border-top-color: transparent;
@@ -68,19 +68,19 @@ export default {
     position: relative;
     z-index: 2;
 
-    max-width: calc(100vwq - 30rem - 25px - 220px);
+    max-width: calc(100vw - 30rem - 25px - 220px);
   }
 
   &--dark {
-    color: #FFF;
-    background: var(--dark-bg);
+    color: var(--text-color-dark);
+    background: var(--blue-800);
 
     p {
       color: currentColor;
     }
 
     h1, h2, h3, h4, a {
-      color: #FFF;
+      color: var(--heading-color-dark);
     }
   }
 }

@@ -4,7 +4,7 @@
     :class="{ copied: displayCopyConfirmation }"
     @click="copyToClipboard"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M28.25 20.75h7.5A11.25 11.25 0 0047 9.5a7.5 7.5 0 017.5 7.5v37.5A7.5 7.5 0 0147 62H17a7.5 7.5 0 01-7.5-7.5V17A7.5 7.5 0 0117 9.5a11.25 11.25 0 0011.25 11.25zM24.5 9.5a7.5 7.5 0 0115 0 3.75 3.75 0 01-3.75 3.75h-7.5A3.75 3.75 0 0124.5 9.5z" fill-rule="evenodd"/></svg>
+    <IconClipboard />
     {{ label }} <span class="screen-reader-text">to clipboard</span>
   </button>
 </template>
@@ -21,7 +21,13 @@
 // ```
 // <CopyToClipboard />
 //
+
+import IconClipboard from '~/assets/images/icons/clipboard.svg';
+
 export default {
+  components: {
+    IconClipboard,
+  },
   data() {
     return {
       label: "Copy",
@@ -76,18 +82,20 @@ export default {
   // height: 2em;
   // width: 2em;
 
-  background-color: var(--yellow);
+  background-color: var(--yellow-500);
   // border: 2px solid red;
   opacity: 0;
   cursor: pointer;
 
+  color: var(--body-color);
+  text-shadow: none;
+
   transition: all .2s ease-in-out;
 
   svg {
-    height: .8em;
-    margin-right: .5em;
-
-    fill: var(--body-color);
+    height: 1em;
+    
+    vertical-align: -.1rem;
   }
 
   &.copied {

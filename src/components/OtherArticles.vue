@@ -36,7 +36,7 @@ export default {
   }
 
   a {
-    color: var(--red);
+    color: var(--body-link-color);
     text-decoration: none;
 
     &:hover {

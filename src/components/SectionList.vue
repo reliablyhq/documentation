@@ -111,7 +111,6 @@ export default {
       }
 
       a {
-        color: var(--red);
         text-decoration: none;
 
         &:hover {
@@ -123,7 +122,7 @@ export default {
       color: currentColor;
       text-decoration: underline dotted;
       &:hover {
-        color: var(--red);
+        color: var(--body-link-color);
       }
     }
   }

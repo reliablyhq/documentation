@@ -7,8 +7,11 @@ type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
 import OtherArticles from '~/components/OtherArticles.vue'
+import BigLink from '~/components/BigLink.vue';
+
+import IconGitHub from '~/assets/images/icons/github.svg';
+import IconWorkflow from '~/assets/images/icons/rotate-cw.svg';
 
 import data from '~/data/ci-pipeline-index-data.json'
 
@@ -27,16 +30,24 @@ import data from '~/data/ci-pipeline-index-data.json'
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="GitHub Action"
-    description="The Reliably GitHub Action allows you to get suggestions for each PR."
-    link="/guides/ci-pipeline/github-action/"
-  />
-  <ArticleCard
-    title="CI Workflow Generation"
-    description="Use the CLI to generate YAML workflow template files for GitHub, GitLab, and Circle CI."
-    link="/guides/ci-pipeline/gitlab-pipeline/"
-  />
+  <BigLink to="/guides/ci-pipeline/github-action/" :external="false" :dark="true">
+    <template v-slot:header>
+      GitHub Action
+    </template>
+    <template v-slot:icon>
+      <IconGitHub />
+    </template>
+    <p>The Reliably GitHub Action allows you to get suggestions for each PR.</p>
+  </BigLink>
+  <BigLink to="/guides/ci-pipeline/ci-workflow/" :external="false" :dark="true">
+    <template v-slot:header>
+      CI Workflow Generation
+    </template>
+    <template v-slot:icon>
+      <IconWorkflow />
+    </template>
+    <p>Use the CLI to generate YAML workflow template files for GitHub, GitLab, and Circle CI.</p>
+  </BigLink>
 </MarkdownTwoColumns>
 
 ## Other articles

@@ -5,12 +5,15 @@ categories: ["guides"]
 status: published
 type: overview
 ---
-import PageIntroduction from '~/components/PageIntroduction.vue'
-import SectionList from '~/components/SectionList.vue'
-import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
+import PageIntroduction from '~/components/PageIntroduction.vue';
+import SectionList from '~/components/SectionList.vue';
+import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue';
+import BigLink from '~/components/BigLink.vue';
 
-import data from '~/data/guides-index-data.json'
+import IconScan from '~/assets/images/icons/search.svg';
+import IconSLO from '~/assets/images/icons/activity.svg';
+
+import data from '~/data/guides-index-data.json';
 
 # Guides
 
@@ -20,16 +23,24 @@ import data from '~/data/guides-index-data.json'
 
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="Scan a Kubernetes Manifest"
-    description="Use the Reliably CLI to scan a Kubernetes manifest and make your infrastructure more reliable in minutes."
-    link="/guides/scan-infrastructure/kubernetes-manifest/"
-  />
-  <ArticleCard
-    title="Define and Measure SLOs"
-    description="Use the Reliably CLI to define Service Level Objectives and measure your System's indicators."
-    link="/guides/slo/"
-  />
+  <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
+    <template v-slot:header>
+      Scan a Kubernetes Manifest
+    </template>
+    <template v-slot:icon>
+      <IconScan />
+    </template>
+    <p>Use the Reliably CLI to scan a Kubernetes manifest and make your infrastructure more reliable in minutes.</p>
+  </BigLink>
+  <BigLink to="/guides/slo/" :external="false" :dark="true">
+    <template v-slot:header>
+      Define and Measure SLOs
+    </template>
+    <template v-slot:icon>
+      <IconSLO />
+    </template>
+    <p>Use the Reliably CLI to define Service Level Objectives and measure your System's indicators.</p>
+  </BigLink>
 
 </MarkdownTwoColumns>
 

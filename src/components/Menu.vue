@@ -276,27 +276,50 @@ export default {
   }
 
   .new-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
     h5 {
       margin-top: 2em;
-      margin-bottom: 0;
+      margin-bottom: 1rem;
 
       font-size: 1em;
       font-weight: 600;
     }
 
     a {
-      display: block;
-      padding: 1rem;
+      position: relative;
+
+      // display: block;
+      // padding: 1rem;
+      margin: 1rem;
 
       color: var(--body-color);
       text-decoration: none;
 
-      &:hover {
-        background-color: var(--blue-200);
+      &:hover,
+      &.active--exact {
+        // background-color: var(--blue-200);
+        color: var(--yellow-600);
       }
 
       &.active--exact {
-        background-color: var(--blue-400);
+        // background-color: var(--blue-200);
+        &::before {
+          content: '';
+
+          position: absolute;
+          top: -.2rem;
+          left: -1rem;
+
+          display: block;
+          height: calc(100% + .4rem);
+          width: .4rem;
+
+          background-color: var(--yellow-600);
+          // border-radius: .3rem;
+        }
+
       }
     }
 
