@@ -22,7 +22,6 @@ will need to be authenticated.
 * [Authenticating with AWS](#aws)
 * [Authenticating with GCP](#google-cloud-platform)
 :::
-
 ## Usage
 
 ```console

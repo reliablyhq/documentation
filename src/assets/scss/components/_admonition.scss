@@ -15,19 +15,62 @@
   }
 
   &-important {
-    background-color: var(--blue-500);
+    background-color: var(--blue-700);
+
+    color: var(--text-color-dark);
+
+    .admonition-icon {
+      svg {
+        fill: var(--text-color-dark);
+        stroke: var(--text-color-dark);
+      }
+    }
+
+    .admonition-heading {
+      h5 {
+        color: var(--text-color-dark);
+      }
+    }
+
+    a {
+      color: var(--yellow-500);
+    }
   }
 
   &-tip {
-    background-color: rgb(204, 235, 204);
+    background-color: var(--blue-300);
   }
 
   &-note {
-    background-color: var(--yellow);
+    background-color: var(--blue-200);
   }
 
-  &-warning,
+  &-warning {
+    background-color: var(--red-100);
+
+    color: var(--red-700);
+
+    .admonition-icon {
+      svg {
+        fill: var(--red-700);
+        stroke: var(--red-700);
+      }
+    }
+
+    .admonition-heading {
+      h5 {
+        color: var(--red-700);
+      }
+    }
+
+    a {
+      color: var(--yellow-600);
+    }
+  }
+
   &-danger {
+    background-color: var(--red-600);
+
     color: white;
 
     .admonition-icon {
@@ -44,17 +87,7 @@
     }
 
     a {
-      color: var(--yellow);
+      color: var(--yellow-400);
     }
-  }
-
-  &-warning {
-    background-color: var(--red-500);
-  }
-
-  &-danger {
-    background-color: var(--danger-color);
-
-    color: white;
   }
 }
