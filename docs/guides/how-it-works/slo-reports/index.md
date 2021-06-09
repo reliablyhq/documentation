@@ -150,16 +150,16 @@ For all the SLOs defined in the manifest, Reliably will construct a report
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format table
-                                          <span class="token purple bold">Actual</span>   <span class="token purple bold">Target</span>  <span class="token purple bold">Delta</span>    <span class="token purple bold">Time Window</span>
+                                          <span class="token purple bold">Current Objective</span>   <span class="token purple bold">/ Time Window</span>  <span class="token purple bold">Type</span>             <span class="token purple bold">Trend</span>
   Service #1: http-api
-  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%     1.00%    1 hour
-  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
-  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%     -21.54%  1 day
-  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%   -1.31%   1 day
+  <span class="token emoji">✅</span> 99% availability over 1 hour         <span class="token green bold">100.00%</span>  99%        /  1h0m0s      Availability     <span class="token green">✓ ✓ ✓ ✓</span>
+  <span class="token emoji">✅</span> 99.5% availability over 1 day        <span class="token green bold">100.00%</span>  99.5%      /  1d          Availability     <span class="token green">✓ ✓ ✓ ✓ ✓</span>
+  <span class="token emoji">❌</span> 99% of requests under 300ms          <span class="token red bold">77.46%</span>   99%        /  1d          Latency          <span class="token green">✓</span> <span class="token red">✕</span> <span class="token green">✓ ✓</span><span class="token red"> ✕</span>
+  <span class="token emoji">❌</span> 99.9% of requests under 1s           <span class="token red bold">98.59%</span>   99.9%      /  1d          Latency          <span class="token green">✓ ✓ ✓ ✓</span><span class="token red"> ✕</span>
 
   Service #2: products-api
-  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%     1.00%    1 day
-  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
+  <span class="token emoji">✅</span> 99% availability over 1 day          <span class="token green bold">100.00%</span>  99%        /  1d          Availability      <span class="token green">✓ ✓ ✓ ✓ ✓</span>
+  <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%      /  1d          Latency           <span class="token green">✓ ✓ ✓ ✓ ✓</span>
 ```
 
 ### Custom Reports
