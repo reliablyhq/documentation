@@ -51,9 +51,9 @@ reliably slo report --manifest path/to/file.yaml
 
 You can select between output formats with the `--format` or `-f` flag.
 
-### Tabbed output
+### Table output
 
-Tabbed output is the default format for SLO reports.
+Table output is the default format for SLO reports.
 
 ```console
 reliably slo report --format table
