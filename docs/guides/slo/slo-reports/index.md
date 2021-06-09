@@ -150,6 +150,28 @@ reliably slo report --format markdown
   The command above will by default generate HTML output.
 :::
 
+### Report Templates
+
+You can use templates to  generate an SLO report. This allows you to build reports using your own format based on templates.
+
+```console
+reliably slo report -t /path/to/template.tmpl
+```
+<CopyToClipboard />
+
+You can combine this with the '-o' option to write the output to a file:
+
+```console
+reliably slo report -t /path/to/template.tmpl -o /path/to/report.txt
+```
+<CopyToClipboard />
+
+The How it Works Guide on [SLO Report Templates] fully explains how to create your own templates for Reliably
+
+[SLO Report Templates]: guides/how-it-works/report-templates/
+
+
+
 ## Provider Authentication
 
 For the CLI to be able to connect to your provider and fetch data, you will need

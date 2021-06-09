@@ -55,6 +55,9 @@
 - title: SLO Reports
   link: /guides/how-it-works/slo-reports/
   sub: true
+- title: SLO Report Templates
+  link: /guides/how-it-works/report-templates/
+  sub: true
 - title: Authentication
   link: /guides/how-it-works/authenticate/
   sub: true

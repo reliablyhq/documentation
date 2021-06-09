@@ -162,9 +162,17 @@ For all the SLOs defined in the manifest, Reliably will construct a report
   <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%   0.50%    1 day
 ```
 
+### Custom Reports
+
+The Reliably CLI supports custom reports from templates, so you can generate your own report formats. This section explains how to use [Reports from Templates]
+
+[Reports from Templates]: /docs/guides/how-it-works/report-templates/
+
+
+
 ## More on that subject
 
-[How Reliably Scans Resources](/docs/guides/how-it-works/scan-resources/)
+[Reliably SLO Report templates](/docs/guides/how-it-works/report-templates/)
 
 [How the Reliably API works](/docs/guides/how-it-works/api/)
 

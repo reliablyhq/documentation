@@ -59,6 +59,10 @@
         "link": "/guides/how-it-works/slo-reports/"
       },
       {
+        "title": "SLO Report Templates",
+        "link": "/guides/how-it-works/report-templates/"
+      },
+      {
         "title": "API",
         "link": "/guides/how-it-works/api/"
       }
