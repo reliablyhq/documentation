@@ -168,7 +168,7 @@ reliably slo report -t /path/to/template.tmpl -o /path/to/report.txt
 
 The How it Works Guide on [SLO Report Templates] fully explains how to create your own templates for Reliably
 
-[SLO Report Templates]: guides/how-it-works/report-templates/
+[SLO Report Templates]: /docs/guides/how-it-works/report-templates/
 
 
 
