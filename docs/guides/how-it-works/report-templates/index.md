@@ -193,7 +193,7 @@ The columns are then populated using Reliably CLI functions. All the functions t
 
 Again the block is completed by the range `{{ end }}` delimiter.
 
-The report concludes by including a subscript section that shows the version and date of the Reliably CLI that generated the report. This uses a Reliably CLI function to provide the version info.
+The report concludes by including a section that shows the version and date of the Reliably CLI that generated the report. This uses a Reliably CLI function to provide the version info.
 
 ```
 <small>Generating with: The Reliably CLI Version {{ reliablyVersion }}</small>
@@ -228,7 +228,7 @@ type Report struct {
 The struct includes:
 
 - The **APIVersion** supported by the CLI.
-- The **Timestamp** the report was generated.
+- The **Timestamp** the report was generated at.
 - An array of **Services**.
 
 ### Service
@@ -375,7 +375,7 @@ svcLevelGetTrends takes 3 arguments:
 - A Service Level Oject
 - An array of Report object containing recent history
 
-It returns a string with emojis shown the results of SLI Reports in your recent history.
+It returns a string with a series of icons showing shown the results of SLI Reports in your recent history.
 
 An example showing measures where four of the SLOs are met and one SLO that is not met:
 
@@ -389,13 +389,13 @@ The service name comes from `$service.ServiceName` assuming the `$service` varia
 {{ range $index, $service := $report.Services }}
 ```
 
-The Service Level object comes from `$sl` variable assuming the `$sl` varialbe is setup like:
+The Service Level object comes from `$sl` variable, assuming it is set up like:
 
 ```
 {{ range $ind, $sl := $service.ServiceLevels -}}
 ```
 
-The array of reports comes from the `$reps` variable assuming this varaible is setup with:
+The array of reports comes from the `$reps` variable, assuming it is set up with:
 
 ```
 {{ $reps := .Lreps }}
@@ -406,9 +406,9 @@ errBudgetPercentage takes a Service Level object as a single argument and return
 
 ### func errBudgetAllowedDownTime (sl ServiceLevel) string
 
-errBudgetAllowedDownTime takes a Service Level object as a single argument and returns a string with the Allowed downtime for the Service Level.
+errBudgetAllowedDownTime takes a Service Level object as a single argument and returns a string with the allowed downtime for the Service Level.
 
-The Allowed downtime is calculated from the Error Budget and the Observation Window for the Service Level.
+The allowed downtime is calculated from the Error Budget and the Observation Window for the Service Level.
 
 ### func errBudgetConsumed (sl ServiceLevel) string
 
@@ -420,7 +420,7 @@ errBudgetRemain takes a Service Level object as a single argument and returns a 
 
 ## Generating Custom Reports
 
-This section although its a bit long explains how you can use template files to create Reliably SLO Reports. You can use the example provided as a starting point and then modify to generate your own report format from a template.
+This section explains how you can use template files to create Reliably SLO Reports. You can use the example provided as a starting point and then modify it to generate your own report format from a template.
 
 ## More on that subject
 
