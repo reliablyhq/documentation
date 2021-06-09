@@ -1,6 +1,6 @@
 ---
-title: Using ReportTemaplates
-excerpt: How Reliably CLI creates reportsd from report tempates.
+title: Using Report Templates
+excerpt: How Reliably CLI creates reports from report tempates.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc
@@ -16,7 +16,7 @@ The Reliably CLI supports SLO Reports from external templates. An SLO Report fro
 reliably slo report -t /path/to/template-file.tmpl
 ```
 
-Where -t flag specifies a template filename or a path to a template file. The template file must exist and contain valid template syntax.
+Where the `-t` flag specifies a template filename or a path to a template file. The template file must exist and contain valid template syntax.
 
 :::note Note
   If the path or the file does not exist, the Reliably CLI will indicate an Error:
@@ -37,7 +37,7 @@ The types used in the Reliably CLI report are also documented. The [Reliably Rep
 
 ## An Example Report Template
 
-It's is probably easier to work through an example report in the first instance. The following report is a markdown report but in theory you can use the templates for any text-based output format.
+It's probably easier to work through an example report in the first instance. The following report is a markdown report, but in theory you can use the templates for any text-based output format.
 
 ```
 # Reliably Simple SLO Report
@@ -84,7 +84,7 @@ The Error Budget metrics are:
 
 {{ end }}
 
-<sub>Generating with: The Reliably CLI Version {{ reliablyVersion }}</sub>
+<small>Generating with: The Reliably CLI Version {{ reliablyVersion }}</small>
 
 ````
 
@@ -95,7 +95,7 @@ The report template as mentioned above uses [Go template package](https://golang
 The first few lines are raw text that get included into the output as is, in this case this is markdown text.
 
 :::note Note
-When a report template is Executed it is passed a data object. The data object is reference in the report template to populate output report with data. In the case of the Reliably SLO report the data object passed is documented in [Report Data] section.
+When a report template is executed it is passed a data object. The data object is referenced in the report template to populate the output report with data. In the case of the Reliably SLO report, the data object passed is documented in [Report Data] section.
 :::
 
 [Report Data]: #about-report-data
@@ -121,7 +121,7 @@ This line is using some of the go templating syntax where it is using a range ty
 
 `## Service #{{ serviceNo $index}}: {{$service.Name}}`
 
-The first entry with the range loop add's a header to the report using markdown syntax and it includes the `$index` variable. The name of the service from the `.Name` sub-field from the `$service` variable is also used. Both the `$index` & `$service` are asigned as part of the range call above.
+The first entry with the range loop adds a header to the report using markdown syntax and it includes the `$index` variable. The name of the service from the `.Name` sub-field from the `$service` variable is also used. Both the `$index` & `$service` are assigned as part of the range call above.
 
 The next section is using a markdown format table. The columns, column names and widths are setup with the `|` marker, this block of text is included in the output as is.
 
@@ -189,19 +189,19 @@ The columns of the table are then populated with a further range loop, this time
 
 The `range` statement at the top , set's up a `$ind` and an  `$sl` variable. The `$sl` is set up from the `$service.ServiceLevels` subfield on the referenced `$service` variable. It also set's an an index (`$ind~) that can be used as required.
 
-The columns are then populated using Reliably CLI functions. All the functions take as a prameter a Service Level object from the `$sl` variable.
+The columns are then populated using Reliably CLI functions. All the functions take as a parameter a Service Level object from the `$sl` variable.
 
 Again the block is completed by the range `{{ end }}` delimiter.
 
 The report concludes by including a subscript section that shows the version and date of the Reliably CLI that generated the report. This uses a Reliably CLI function to provide the version info.
 
 ```
-<sub>Generating with: The Reliably CLI Version {{ reliablyVersion }}</sub>
+<small>Generating with: The Reliably CLI Version {{ reliablyVersion }}</small>
 ```
 
 ## About Report Data
 
-When the 'reliably slo report' runs, it generates Report data. It is this Report data that is used when populating output reports from report templates. The report data object used when processing templates, is defined as follows:
+When the `reliably slo report` runs, it generates Report data. This Report data is used when populating output reports from report templates. The report data object used when processing templates, is defined as follows:
 
 The top-level report is from the following go struct:
 
@@ -245,11 +245,11 @@ type Service struct {
 
 - **Dependencies** is a string list of dependent services.
 - **ServiceLevels** is an array of Services levels that are part of the service
-- **Name** the name of the service.
+- **Name** is the name of the service.
 
 ### Service Level
 
-A Service can have one or more ServiceLevels. It is the ServiceLevel that holds the essential SLO content.
+A Service can have one or more ServiceLevels. The ServiceLevel holds the essential SLO content.
 
 ```go
 type ServiceLevel struct {
@@ -268,7 +268,7 @@ The Service level consists of:
 - The **Name** for the Service Level.
 - The **Type** of the Service Level, this currently either Availablity or Latency.
 - An overal **Objective** as a percentage, e.g this service will be 95% available.
-- A **Period**, an iso8601 Duration, this is the time Period that is used for the Service Level e.g PT1H. For further information on the time window for an SLI see [SLO Report Time Window].
+- A **Period**, an ISO 8601 Duration, is the time period that is used for the Service Level, e.g PT1H. For further information on the time window for an SLI see [SLO Report Time Window].
 - The **Result** of an Service Level indicator.
 - The actual **Observation window** that was used for the Service Level report. This consists of a From time and a To time.
 - **errored** is a flag that indicates if this particular Service Level Indicator errored in it's retrieval process.
@@ -294,9 +294,9 @@ type Window struct {
 
 ### Service Level Result
 
-The Service Level result show the results of the SLI collection. This consists of the **Actual** level acheived in the period and the **Delta**. The **Delta** is the difference between the Actual and the Objective.
+The Service Level result shows the results of the SLI collection. This consists of the **actual** level achieved in the period and the **Delta**. The **Delta** is the difference between the actual measurement and the Objective.
 
-For example if the Actual measure is 98% avaiablity and the Objective is 100%, then the Delta will be 2%. The **SloIsMet** flag indicates if the SLO has been met during this measurement period.
+For example, if the actual measure is 98% availability and the Objective is 100%, then the Delta will be 2%. The **SloIsMet** flag indicates if the SLO has been met during this measurement period.
 
 ```go
 type ServiceLevelResult struct {
@@ -307,23 +307,35 @@ type ServiceLevelResult struct {
 ```
 ## Functions to use in a Report
 
-Internally the Rleaibly CLI uses a function map to process function calls from the templates. This section lists the current functions that can be used in the templates.
+Internally the Reliably CLI uses a function map to process function calls from the templates. This section lists the functions that can be used in the templates.
 
-### dateTime Function
+### func dateTime (t time.Time) string
 
-This function takes a single argument which is a [Go Time] Type. The report timestamp is available as the `.Timestamp` subfield of the report. The date format in the report is the default RFC1123 format.
+dateTime takes a [Go Time] Type and returns a string with the report date and time.
 
-### reliablyVersion Function
+The date format in the report is the default RFC1123 format.
 
-This function take no arguments and outputs the version of the CLI that is in use and the data that version was created.
+The report timestamp is available as the `.Timestamp` subfield of the report.
 
-### serviceNo
+### func reliablyVersion () string
 
-This function takes a single argument which is int, this is expected to be based on an index into the service report which is a zero based index, so the function simply adds 1 to give a Service Number.
+reliablyVersion takes no arguments and returns a string that contains the version of the CLI that is in use and the date that version was created.
 
-### svcLevelGetStatusIcon
+### func serviceNo (i int) int
 
-This function takes a Service Level object as a single argument. It will return one of the Ascii text icons show below. This is dependent on the Result contained in the Service Level object pass in. If the  result is **SloIsMet** it will return the ✅, if it is not met it will return ❌. If the result is `nil` it will return the Unknown icon.
+serviceNo takes single argument of type `int` and returns an int, which is hte service nu,ber.
+
+As the services in the service report are in a zero-based index array, the function simply adds 1 to give a Service Number.
+
+### func svcLevelGetStatusIcon (sl ServiceLevel) string
+
+svcLevelGetStatusIcon takes a Service Level object as a single argument and will return a string with one of the emojis shown below.
+
+This is dependent on the Result contained in the Service Level object passed in.
+
+If the result is **SloIsMet** it will return ✅, if it is not met it will return ❌.
+
+If the result is `nil` it will return the "Unknown" icon (a question mark).
 
 ```
 iconTick    = "✅"
@@ -331,35 +343,41 @@ iconEx      = "❌"
 iconUnknown = "❔"
 ```
 
-### svcLevelGetName
+### func svcLevelGetName (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the ServiceLevel name.
+svcLevelGetName takes a Service Level object as a single argument and will return a string with the Service Level name.
 
-### svcLevelGetActualResult
+### func svcLevelGetActualResult (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the Actual result acheived as a percentage.
+svcLevelGetActualResult takes a Service Level object as a single argument and will return a string with the Actual result achieved as a percentage.
 
-### svcLevelGetObjective
+### func svcLevelGetObjective (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the Objective for the Service Level as a percentage.
+svcLevelGetObjective takes a Service Level object as a single argument and  returns a string with the Objective for the Service Level as a percentage.
 
-### svcLevelGetTimeWindow
+### func svcLevelGetTimeWindow (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the duration of the time window in humanised form. A humanised duration could be 1 hour, 1 day, etc.
+svcLevelGetTimeWindow takes a Service Level object as a single argument and returns a string with the duration of the time window in humanised form.
 
-### svcLevelGetType
+A humanised duration could be 1 hour, 1 day, etc.
 
-This function takes a Service Level object as a single argument and will return a string with the type of Service Level. This would currently be either Availiablity or Lstency.
+### func svcLevelGetType  (sl ServiceLevel) string
 
-### svcLevelGetTrends
+svcLevelGetType takes a Service Level object as a single argument and will return a string with the type of Service Level.
 
-This function takes 3 arguments:
+This would currently be either Availablity or Latency.
+
+### func svcLevelGetTrends (svcName string, sl ServiceLevel, lrs *[]Report) string
+
+svcLevelGetTrends takes 3 arguments:
 
 - A string with the Service Name
 - A Service Level Oject
 - An array of Report object containing recent history
 
-It will return an icon shown the results of SLI Reports in your recent history. An example showing measures where the SLO is met and one where the SLO is not met is shown below:
+It returns a string with emojis shown the results of SLI Reports in your recent history.
+
+An example showing measures where four of the SLOs are met and one SLO that is not met:
 
 ```reliably
 <span class="token green">✓ ✓</span><span class="token red"> ✕</span><span class="token green"> ✓ ✓</span>
@@ -382,21 +400,23 @@ The array of reports comes from the `$reps` variable assuming this varaible is s
 ```
 {{ $reps := .Lreps }}
 ```
-### errBudgetPercentage
+### func errBudgetPercentage (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the error budget for the Service Level as a percentage.
+errBudgetPercentage takes a Service Level object as a single argument and returns a string with the error budget for the Service Level as a percentage.
 
-### errBudgetAllowedDownTime
+### func errBudgetAllowedDownTime (sl ServiceLevel) string
 
-This function takes a Service Level object as a single argument and will return a string with the Allowed downtime for the Service Level. The Allowed downtime is calculated from the Error Budget and the Observation Window for the Service Level.
+errBudgetAllowedDownTime takes a Service Level object as a single argument and returns a string with the Allowed downtime for the Service Level.
 
-### errBudgetConsumed
+The Allowed downtime is calculated from the Error Budget and the Observation Window for the Service Level.
 
-This function takes a Service Level object as a single argument and will return a string with the Error Budget Consumed in the Time Period for the Service Level.
+### func errBudgetConsumed (sl ServiceLevel) string
 
-### errBudgetRemain
+errBudgetConsumed takes a Service Level object as a single argument and returns a string with the Error Budget Consumed in the Time Period for the Service Level.
 
-This function takes a Service Level object as a single argument and will return a string with the Error Budget Remaining in the Time Period for the Service Level.
+### func errBudgetRemain (sl ServiceLevel) string
+
+errBudgetRemain takes a Service Level object as a single argument and returns a string with the Error Budget Remaining in the Time Period for the Service Level.
 
 ## Generating Custom Reports
 
