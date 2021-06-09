@@ -88,13 +88,20 @@ The Error Budget metrics are:
 
 ````
 
-The report template as mention above uses [Go template package](https://golang.org/pkg/text/template/) syntax. Here we will go through the report line by line.
+The report template as mentioned above uses [Go template package](https://golang.org/pkg/text/template/) syntax. Here we will go through the report line by line.
 
 ### Report Template Explained
 
 The first few lines are raw text that get included into the output as is, in this case this is markdown text.
 
-The first line that uses the Go Template syntax is `{{ $report := .Rep }}`. This is assigning the .Rep field of a Reliably report to a variable `$report` for use elsewhere in the template.
+:::note Note
+When a report template is Executed it is passed a data object. The data object is reference in the report template to populate output report with data. In the case of the Reliably SLO report the data object passed is documented in [Report Data] section.
+:::
+
+[Report Data]: #about-report-data
+
+
+The first line that uses the Go Template syntax is `{{ $report := .Rep }}`. This is assigning the .Rep subfield of a Reliably report to a variable `$report` for use elsewhere in the template.
 
 The next line with content is going to include the time the report was generated:
 
@@ -130,7 +137,7 @@ Then there is another range loop using the go temaple syntax.
 This is using the `ServiceLevels` subfield of the Reliably Report that is referenced by the `$service` variable.
 
 :::note Note
-  Note the use of the hyphen(-) character in the template delimiters, this informs the template to ignore all white space until the next template delimiter. See the section on [Text and spaces](https://golang.org/pkg/text/template/#hdr-Text_and_spaces).
+  Note the use of the hyphen(-) character in the template delimiters, this informs the template to ignore all white space until the next template delimiter. See the section on [Text and spaces](https://golang.org/pkg/text/template/#hdr-Text_and_spaces) in the Go Text Templates documentation.
 :::
 
 The content of the range loop populates the table column by column, each using Reliably CLI functions. All the functions take as a prameter a Service Level object from the `$sl` variable that is setup in the range loop above. The exception being the `svcLevelGetTrends` function which takes 3 input variables:
@@ -194,7 +201,7 @@ The report concludes by including a subscript section that shows the version and
 
 ## About Report Data
 
-When the 'reliably slo report' runs, it generates Report data. It is this Report data that is used when populating output reports from report templates. The report data is defined as follows:
+When the 'reliably slo report' runs, it generates Report data. It is this Report data that is used when populating output reports from report templates. The report data object used when processing templates, is defined as follows:
 
 The top-level report is from the following go struct:
 
@@ -262,7 +269,7 @@ The Service level consists of:
 - The **Type** of the Service Level, this currently either Availablity or Latency.
 - An overal **Objective** as a percentage, e.g this service will be 95% available.
 - A **Period**, an iso8601 Duration, this is the time Period that is used for the Service Level e.g PT1H. For further information on the time window for an SLI see [SLO Report Time Window].
-- the **Result** of an Service Level indicator.
+- The **Result** of an Service Level indicator.
 - The actual **Observation window** that was used for the Service Level report. This consists of a From time and a To time.
 - **errored** is a flag that indicates if this particular Service Level Indicator errored in it's retrieval process.
 
