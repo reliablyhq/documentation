@@ -21,6 +21,13 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 </PageIntroduction>
 
 <MarkdownTwoColumns>
+ <Card
+    title="Introducing SLOs"
+    description="We're adding SLO support to the Reliably CLI. Declare your SLOs and dependencies and start monitoring what you care about."
+    color="yellow"
+    :links="data['card-2'].links"
+    :svg="data['card-2'].svg"
+  />
   <Card
     title="Reliable Kubernetes Clusters"
     description="Install the Reliably CLI to scan your Kubernetes manifests and clusters, and make them more reliable in minutes."
@@ -28,13 +35,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
     :button="data['card-1'].button"
     :svg="data['card-1'].svg"
   />
-  <Card
-    title="Introducing SLOs"
-    description="We're adding SLO support to the Reliably CLI. Declare your SLOs and dependencies and start monitoring what you care about."
-    color="yellow"
-    :links="data['card-2'].links"
-    :svg="data['card-2'].svg"
-  />
+
 </MarkdownTwoColumns>
 
 
