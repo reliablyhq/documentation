@@ -23,16 +23,8 @@ import data from '~/data/guides-index-data.json';
 
 
 <MarkdownTwoColumns>
-  <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
-    <template v-slot:header>
-      Scan a Kubernetes Manifest
-    </template>
-    <template v-slot:icon>
-      <IconScan />
-    </template>
-    <p>Use the Reliably CLI to scan a Kubernetes manifest and make your infrastructure more reliable in minutes.</p>
-  </BigLink>
-  <BigLink to="/guides/slo/" :external="false" :dark="true">
+
+<BigLink to="/guides/slo/" :external="false" :dark="true">
     <template v-slot:header>
       Define and Measure SLOs
     </template>
@@ -42,15 +34,20 @@ import data from '~/data/guides-index-data.json';
     <p>Use the Reliably CLI to define Service Level Objectives and measure your System's indicators.</p>
   </BigLink>
 
+  <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
+    <template v-slot:header>
+      Scan a Kubernetes Manifest
+    </template>
+    <template v-slot:icon>
+      <IconScan />
+    </template>
+    <p>Use the Reliably CLI to scan a Kubernetes manifest and make your infrastructure more reliable in minutes.</p>
+  </BigLink>
+
+
 </MarkdownTwoColumns>
 
-<SectionList
-    title="Scan your Infrastructure"
-    categoryName="scan-infrastructure"
-    description="Scans your manifests and clusters with the Reliably CLI."
-    link="/guides/scan-infrastructure/"
-    :list="data['scan-infrastructure'].links"
-/>
+
 
 <SectionList
     title="Service Level Objectives"
@@ -58,6 +55,14 @@ import data from '~/data/guides-index-data.json';
     description="Declare and measure SLOs in the CLI."
     link="/guides/slo/"
     :list="data['slo-links'].links"
+/>
+
+<SectionList
+    title="Scan your Infrastructure"
+    categoryName="scan-infrastructure"
+    description="Scans your manifests and clusters with the Reliably CLI."
+    link="/guides/scan-infrastructure/"
+    :list="data['scan-infrastructure'].links"
 />
 
 <SectionList
