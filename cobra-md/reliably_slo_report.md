@@ -28,16 +28,19 @@ reliably slo report [flags]
   $ reliably slo report -f text
   $ reliably slo report -f markdown -o report.md
   $ reliably slo report -f yaml,json -o o.yaml,o.json
+  $ reliably slo report -t slo-report.tmpl
+  $ reliably slo report -t slo-report.tmpl -o slo-report.txt
 ```
 
 ### Options
 
 ```
-  -f, --format string     specify the report format. Allowed Values: [json yaml text table markdown] (default "table")
+  -f, --format string     specify the report format. Allowed Values: [json yaml text table markdown template] (default "table")
   -h, --help              help for report
   -m, --manifest string   the location of the manifest file (default "reliably.yaml")
   -o, --output string     where the report should be written to
       --service string    the name of the service
+  -t, --template string   the name of the template to use for the report output
   -w, --watch             continuously watch for changes in report output
 ```
 
