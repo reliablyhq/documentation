@@ -31,18 +31,37 @@ The Reliably CLI provides a set of functions to enable users to populate reports
 
 [Report Functions]: #functions-to-use-in-a-report
 
-The types used in the Reliably CLI report are also documented. The [Reliably Report Data] types can also be used to populate reports.
+The types used in the Reliably CLI report are also documented. You can use the [Reliably Report Data] types to populate reports.
 
 [Reliably Report Data]: #about-report-data
 
 ## An Example Report Template
 
-It's probably easier to work through an example report in the first instance. The following report is a markdown report, but in theory you can use the templates for any text-based output format.
+It's probably easier to work through an example report in the first instance. The following report is a markdown report, but you can use the templates for any text-based output format.
 
 ```
+
 # Reliably Simple SLO Report
 
-Service Level Objectives identify what you should care about on your system. They are what good looks like for the users of your system. If an SLO is underperforming, it will be impacting your users in some way.
+<style>
+html {
+	font-family: sans-serif;
+}
+table, th, td {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+  }
+td {
+	padding: 5px;
+}
+</style>
+
+
+Service Level Objectives identify what you should care about on your system.
+
+They are what good looks like for the users of your system.
+
+If an SLO is underperforming, it will be impacting your users in some way.
 
 For more details of an SLO report, see the Reliably documentation on [How the Reliably CLI works]
 
@@ -53,46 +72,48 @@ For more details of an SLO report, see the Reliably documentation on [How the Re
 Report time: {{ dateTime $report.Timestamp }}
 {{ $reps := .Lreps }}
 {{ range $index, $service := $report.Services }}
+
 ## Service #{{ serviceNo $index}}: {{$service.Name}}
 
-|  | Name                            | Current | Objective| Time Window | Type  | Trend |
-|--|-------------------------------- | ------- | -------- |------------ |-------|-------|
+| | Name | Current | Objective| Time Window | Type  | Trend |
+|-|------------| ---:| ---:|---:|----|:--:|
 {{ range $ind, $sl := $service.ServiceLevels -}}
-|{{- svcLevelGetStatusIcon $sl -}}
-{{- svcLevelGetName $sl -}}|
-{{- svcLevelGetActualResult $sl}}|
-{{- svcLevelGetObjective $sl }}|
-{{- svcLevelGetTimeWindow $sl }}|
-{{- svcLevelGetType $sl }}|
-{{- svcLevelGetTrends $service.Name $sl $reps }}
+	|{{- svcLevelGetStatusIcon $sl -}}
+	|{{- svcLevelGetName $sl -}}|
+  {{- svcLevelGetActualResult $sl}}|
+  {{- svcLevelGetObjective $sl }}|
+  {{- svcLevelGetTimeWindow $sl }}|
+  {{- svcLevelGetType $sl }}|
+  {{- svcLevelGetTrends $service.Name $sl $reps }}
 {{ end }}
 
 The Error Budget metrics are:
 
-|  Type    | Name          |ErrorBudget(%)|Time Window|Downtime|Consumed|Remain
-| -------- | --------------|--------------|-----------|--------|--------|--------|
+| Type | Name | ErrorBudget(%) | Time Window | Downtime | Consumed | Remain
+|-|------|--:|--:|--:|--:|--:|
 {{ range $ind, $sl := $service.ServiceLevels -}}
-|{{- svcLevelGetType $sl -}}|
-{{- svcLevelGetName $sl}}|
-{{- svcLevelGetTimeWindow $sl }}|
-{{- errBudgetPercentage $sl }}|
-{{- errBudgetAllowedDownTime $sl }}|
-{{- errBudgetConsumed $sl }}|
-{{- errBudgetRemain $sl }}|
+  |{{- svcLevelGetType $sl -}}|
+  {{- svcLevelGetName $sl}}|
+  {{- errBudgetPercentage $sl }}|
+  {{- svcLevelGetTimeWindow $sl }}|
+  {{- errBudgetAllowedDownTime $sl }}|
+  {{- errBudgetConsumed $sl }}|
+  {{- errBudgetRemain $sl }}|
 {{ end }}
-
 
 {{ end }}
 
 <small>Generating with: The Reliably CLI Version {{ reliablyVersion }}</small>
 
-````
+```
 
 The report template as mentioned above uses [Go template package](https://golang.org/pkg/text/template/) syntax. Here we will go through the report line by line.
 
 ### Report Template Explained
 
 The first few lines are raw text that get included into the output as is, in this case this is markdown text.
+
+The `<style>` section is treated as raw text and is included in the output as is. This applies some minimal styling to the generated report.
 
 :::note Note
 When a report template is executed it is passed a data object. The data object is referenced in the report template to populate the output report with data. In the case of the Reliably SLO report, the data object passed is documented in [Report Data] section.
@@ -106,8 +127,11 @@ The first line that uses the Go Template syntax is `{{ $report := .Rep }}`. This
 The next line with content is going to include the time the report was generated:
 
 ```
+
 Report time: {{ dateTime $report.Timestamp }}
+
 ```
+
 
 Here the template will call one of the Reliably CLI functions `dateTime` and pass an input parameter from the report using `$report.Timestamp`. The report has a subfield of Timestamp, this timestamp is passed to the `dateTime` function.
 
@@ -123,14 +147,17 @@ This line is using some of the go templating syntax where it is using a range ty
 
 The first entry with the range loop adds a header to the report using markdown syntax and it includes the `$index` variable. The name of the service from the `.Name` sub-field from the `$service` variable is also used. Both the `$index` & `$service` are assigned as part of the range call above.
 
-The next section is using a markdown format table. The columns, column names and widths are setup with the `|` marker, this block of text is included in the output as is.
+The next section is using a markdown format table. The table is using the markdown format for tables as described in the [Tables Section in Markdown Cheetsheets]. Here we are using the second line to determine the formating for the table. Note the use of the `:` to determine justification of the column.
+
+[Tables Section in Markdown Cheetsheets]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
+
 
 ```
-|  | Name                            | Current | Objective| Time Window | Type  | Trend |
-|--|-------------------------------- | ------- | -------- |------------ |-------|-------|
+| | Name | Current | Objective| Time Window | Type  | Trend |
+|-|------------| ---:| ---:|---:|----|:--:|
 ```
 
-Then there is another range loop using the go temaple syntax.
+Then there is another range loop using the go template syntax.
 
 `{{ range $ind, $sl := $service.ServiceLevels -}}`
 
@@ -168,9 +195,11 @@ The Error Budget metrics are:
 
 Then the markdown table is setup with:
 
-```
-|  Type    | Name          |ErrorBudget(%)|Time Window|Downtime|Consumed|Remain
-| -------- | --------------|--------------|-----------|--------|--------|--------|
+```markdown
+
+| Type | Name | ErrorBudget(%) | Time Window | Downtime | Consumed | Remain
+|-|------|--:|--:|--:|--:|--:|
+
 ```
 
 The columns of the table are then populated with a further range loop, this time we show the complate range block:
