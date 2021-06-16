@@ -77,7 +77,7 @@ spec:
 
 ## Simple behaviour sequence
 
-![simple behaviour flow](/static/images/simple-behaviour-flow.png)
+![simple behaviour flow](./simple-behaviour-flow.png)
 
 ## Relationships
 
