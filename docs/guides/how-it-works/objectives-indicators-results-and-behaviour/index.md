@@ -81,7 +81,7 @@ spec:
 
 ## Relationships
 
-Entities at Reliably all have the ability to be related to other entities based on the labels that define those entites. As  however, entity relationships at Reliably are always calculated at runtime - we don't require certain things to relate to other things, we allow the user to define a relationship at any point, and then we use that relatiobship accordingly.
+Entities at Reliably all have the ability to be related to other entities based on the labels that define those entites. As  however, entity relationships at Reliably are always calculated at runtime - we don't require certain things to relate to other things, we allow the user to define a relationship at any point, and then we use that relationship accordingly.
 
 ### Labels & Relationships
 
