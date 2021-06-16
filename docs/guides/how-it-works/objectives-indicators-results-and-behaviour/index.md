@@ -2,7 +2,7 @@
 title: Objectives, Indicators, Results and Behaviour
 excerpt: Learn how objectives relate to indicators, which create results, which drive behaviour.
 categories: ["guides", "how-it-works"]
-status: draft
+status: published
 type: overview
 ---
 
@@ -12,13 +12,13 @@ The Reliably ecosystem is constructed of these 4 elements. Using instances of ea
 
 ## Everything is an entity
 
-Within reliably, every single you tell us is defined as an `entity`. An entity has identity, and it also has 0 or more relationships to other entities, but it also cannot be created directly - its more like a `base class` (but not by us, since we work with Golang :D). What this means is that it is possible for any information in Reliably to relate to any other information in reliably. This is incredibly valuable when invoking behaviour - I'll explin more about this later in this article.
+Within Reliably, every single you tell us is defined as an `entity`. An entity has identity, and it also has 0 or more relationships to other entities, but it also cannot be created directly - its more like a `base class` (but not by us, since we work with Golang :D). What this means is that it is possible for any information in Reliably to relate to any other information in reliably. This is incredibly valuable when invoking behaviour - I'll explin more about this later in this article.
 
 ## Lets talk about structure
 
 Structure is everything! It defines everything about the types of thing we work with. Lets draw a picture of some of our most common entities.
 
-**At Reliably we love the idea of declarative syntax, so every single type that you are likely to use can be defined as an entity in yaml, so thats what I'll use to diagram this structure**
+**At Reliably we love the idea of declarative syntax, so every single type that you are likely to use can be defined as an entity in yaml, so thats what I'll use to diagram this structure.**
 
 ### Metadata
 
@@ -92,7 +92,7 @@ required to send a message to you when an objective you are 'related to' on chan
 
 #### Relationship rules
 
-`each of the properties of the relationship selector must match a label of candidate entity`
+**Each of the properties of the relationship selector must match a label of candidate entity.**
 
 What this means is that only if each key/value pair in the `relatedTo` selector matches a `label` in a given entity will a relationship exist.
 
