@@ -1,6 +1,14 @@
 {
   "links": [
     {
+      "label": "SLO Reports",
+      "link": "/guides/how-it-works/slo-reports/"
+    },
+    {
+      "label": "SLO Reports Templates",
+      "link": "/guides/how-it-works/report-templates/"
+    },
+    {
       "label": "Rules",
       "link": "/guides/how-it-works/rules/"
     },

@@ -49,14 +49,17 @@
 - title: How it works
   link: /guides/how-it-works/
   sub: false
-- title: Scan Resources
-  link: /guides/how-it-works/scan-resources/
+- title: Objectives, indicators, results and behaviour
+  link: /guides/how-it-works/objectives-indicators-results-and-behaviour/
   sub: true
 - title: SLO Reports
   link: /guides/how-it-works/slo-reports/
   sub: true
 - title: SLO Report Templates
   link: /guides/how-it-works/report-templates/
+  sub: true
+- title: Scan Resources
+  link: /guides/how-it-works/scan-resources/
   sub: true
 - title: Authentication
   link: /guides/how-it-works/authenticate/

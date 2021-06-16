@@ -30,6 +30,15 @@ import data from '~/data/how-it-works-index-data.json'
 ## Main articles
 
 <MarkdownTwoColumns>
+  <BigLink to="/guides/how-it-works/objectives-indicators-results-and-behaviour/" :external="false" :dark="true">
+    <template v-slot:header>
+      Objectives, indicators, results and behaviour
+    </template>
+    <template v-slot:icon>
+      <IconSLO />
+    </template>
+    <p>Discover the Reliably ecosystem, and how its elements work together.</p>
+  </BigLink>
   <BigLink to="/guides/how-it-works/scan-resources/" :external="false" :dark="true">
     <template v-slot:header>
       Scan Resources
@@ -38,15 +47,6 @@ import data from '~/data/how-it-works-index-data.json'
       <IconScan />
     </template>
     <p>How does the Reliably CLI scan resources?</p>
-  </BigLink>
-  <BigLink to="/guides/how-it-works/slo-reports/" :external="false" :dark="true">
-    <template v-slot:header>
-      SLO Reports
-    </template>
-    <template v-slot:icon>
-      <IconSLO />
-    </template>
-    <p>How does the Reliably CLI generate SLO Reports?</p>
   </BigLink>
 </MarkdownTwoColumns>
 

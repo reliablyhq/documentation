@@ -22,8 +22,8 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 
 <MarkdownTwoColumns>
  <Card
-    title="Introducing SLOs"
-    description="We're adding SLO support to the Reliably CLI. Declare your SLOs and dependencies and start monitoring what you care about."
+    title="Objectives, indicators, results and behaviour"
+    description="Introducing SLO support to the Reliably CLI. Learn how objectives relate to indicators, which create results, which drive behaviour"
     color="yellow"
     :links="data['card-2'].links"
     :svg="data['card-2'].svg"
