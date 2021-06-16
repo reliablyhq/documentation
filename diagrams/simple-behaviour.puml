@@ -1,0 +1,23 @@
+@startuml
+title Simple Behaviour Flow
+!theme cerulean-outline
+autonumber
+
+participant CLI as cli
+participant "Objective Manifest" as man
+participant "Observability System" as obs
+participant "ReliablyHQ" as rel
+participant "Events" as ev
+participant "WebHook" as webhook
+
+cli -> man: read
+cli -> obs: query
+cli -> cli: create indicator
+cli -> rel: send indicator
+rel -> rel: lookup matching objectives
+loop foreach objective
+    rel -> rel: create objective_result
+    rel -> ev: raise
+    ev -> webhook: handle events
+end
+@endum

@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@gridsome/transformer-remark": "^0.6.4",
-    "node-sass": "^5.0.0",
+    "node-sass": "v6.0",
     "sass-loader": "^10.1.1",
     "vue-svg-inline-loader": "^2.1.2"
   }
