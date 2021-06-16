@@ -24,14 +24,14 @@ import data from '~/data/guides-index-data.json';
 
 <MarkdownTwoColumns>
 
-<BigLink to="/guides/slo/" :external="false" :dark="true">
+<BigLink to="/guides/how-it-works/objectives-indicators-results-and-behaviour/" :external="false" :dark="true">
     <template v-slot:header>
-      Define and Measure SLOs
+      Objectives, indicators, results and behaviour
     </template>
     <template v-slot:icon>
       <IconSLO />
     </template>
-    <p>Use the Reliably CLI to define Service Level Objectives and measure your System's indicators.</p>
+    <p>Discover the Reliably ecosystem, and how its elements work together.</p>
   </BigLink>
 
   <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
