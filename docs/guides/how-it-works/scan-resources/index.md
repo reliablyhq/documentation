@@ -33,10 +33,10 @@ reliably scan kubernetes --live
 ```
 <CopyToClipboard />
 
-Full details for `reliably scan kubernetes` are covered in the
-[kubernetes scan][reliably-scan-kubernetes] section in the reference documentation.
+The full details of the `reliably scan kubernetes` command are covered in the
+[reliably scan kubernetes] section of the reference documentation.
 
-[reliably-scan-kubernetes]: /reference/cli/reliably-scan-kubernetes/
+[reliably scan kubernetes]:  /docs/reference/cli/reliably-scan-kubernetes/
 
 ### Kubernetes
 
