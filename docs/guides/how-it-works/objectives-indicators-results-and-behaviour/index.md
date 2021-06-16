@@ -12,7 +12,7 @@ The Reliably ecosystem is constructed of these 4 elements. Using instances of ea
 
 ## Everything is an entity
 
-Within Reliably, every single thing you tell us is defined as an `entity`. An entity has identity, and it also has 0 or more relationships to other entities, but it also cannot be created directly - its more like a `base class` (but not by us, since we work with Golang :D). What this means is that it is possible for any information in Reliably to relate to any other information in reliably. This is incredibly valuable when invoking behaviour - I'll explin more about this later in this article.
+Within Reliably, every single thing you tell us is defined as an `entity`. An entity has identity, and it also has 0 or more relationships to other entities, but it also cannot be created directly - its more like a `base class` (but not by us, since we work with Golang :D). What this means is that it is possible for any information in Reliably to relate to any other information in reliably. This is incredibly valuable when invoking behaviour - I'll explain more about this later in this article.
 
 ## Lets talk about structure
 
