@@ -19,7 +19,7 @@ depending on your needs.
 
 Apart from the standard list output, we support YAML and JSON structured
 content, SARIF and CodeCLimate formats for your CI/CD workflows, an _extended_
-output that displays best practice for each suggestions, and a _tabbed_ output
+output that displays best practice for each suggestions, and a _table_ output
 ideal for human eyes.
 
 The output format selection is made with the `-f` or `--format` flags.
@@ -27,22 +27,22 @@ The output format selection is made with the `-f` or `--format` flags.
 The `--format` or `-f` flag supports the following options, which are described in the
 rest of this guide:
 
-* `simple`
+* `text`
 * `json`
 * `yaml`
 * `sarif`
 * `codeclimate`
 * `extended`
-* `tabbed`
+* `table`
 
-## Standard output with `simple`
+## Standard output with `text`
 
-The `-f simple` flag is the standard output. It is equivalent to not using the
+The `-f text` flag is the standard output. It is equivalent to not using the
 format flag at all.
 
 
 ```reliably
-<span class="token dollar"></span>reliably scan kubernetes . -f simple
+<span class="token dollar"></span>reliably scan kubernetes . -f text
 Pod:chaostoolkit:0:0 [<span class="token purple">warning</span>] You shall not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image.
 Pod:nginx-deployment-5bf87f5f59-q9xsp:0:0 [<span class="token purple">warning</span>] Only images from approved registry can be run.
 Deployment:hello-node:0:0 [<span class="token red">error</span>] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
@@ -56,7 +56,7 @@ Deployment:nginx-deployment:0:0 [<span class="token purple">warning</span>] With
 If you want to remove the colors, you can use the global `--no-color` flag.
 
 ```reliably
-<span class="token dollar"></span>reliably scan kubernetes . -f simple --no-color
+<span class="token dollar"></span>reliably scan kubernetes . -f text --no-color
 Pod:chaostoolkit:0:0 [warning] You shall not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image.
 Pod:nginx-deployment-5bf87f5f59-q9xsp:0:0 [warning] Only images from approved registry can be run.
 Deployment:hello-node:0:0 [error] Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
@@ -67,38 +67,38 @@ Deployment:nginx-deployment:0:0 [warning] Without the 'minReadySeconds' property
 7 suggestions found
 ```
 
-## Tabbed output with `tabbed`
+## Table output with `table`
 
-The tabbed output is the more visual one, aiming at being easy to scan and
+The table output is the more visual one, aiming at being easy to scan and
 understand. It's output is sorted in a decreasing **Error**, **Warning**,
 **Info** order. Lines might be truncated to prevent wrapping.
 
 ```reliably
-<span class="token dollar"></span>reliably scan kubernetes --format tabbed
+<span class="token dollar"></span>reliably scan kubernetes --format table
 Results:
-<span class="token red">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0007  Setting a high cpu request may render pod scheduling difficult or starve other pods 
+<span class="token red">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0007  Setting a high cpu request may render pod scheduling difficult or starve other pods
 <span class="token red">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0009  Not setting a cpu requests means the pod will be allowed to consume the entire available CPU (unless the cluster has set a global limit)
-<span class="token purple">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0013  A rollout strategy can reduce the risk of downtime 
+<span class="token purple">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0013  A rollout strategy can reduce the risk of downtime
 <span class="token purple">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0014  Without the 'minReadySeconds' property set, pods are considered available from the first time the readiness probe is valid. Settings this value indicates how long it the pod should be ready for before being considered available.
-<span class="token purple">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0001  You should specify a number of replicas 
+<span class="token purple">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0001  You should specify a number of replicas
 <span class="token purple">■</span>  manifests/pod.yaml         Kubernetes:Pod                K8S-POD-0001  You should not use the default 'latest' image tag. It causes ambiguity and leads to the cluster not pulling the new image
-<span class="token purple">■</span>  manifests/pod.yaml         Kubernetes:Pod                K8S-POD-0003  Only images from an approved registry can be run 
-<span class="token yellow">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0012  Image pull policy should usually not be set to 'Always' 
-<span class="token yellow">■</span>  test-manifest.yaml:92:1    Kubernetes:PodSecurityPolicy  K8S-PSP-0001  Enabling privileged can lead to unwanted escalation from the container's process 
-<span class="token yellow">■</span>  test-manifest.yaml:92:1    Kubernetes:PodSecurityPolicy  K8S-PSP-0007  To reduce risk of accessing files outside of an allowed paths, it's best to make them read only 
+<span class="token purple">■</span>  manifests/pod.yaml         Kubernetes:Pod                K8S-POD-0003  Only images from an approved registry can be run
+<span class="token yellow">■</span>  manifests/deployment.yaml  Kubernetes:Deployment         K8S-DPL-0012  Image pull policy should usually not be set to 'Always'
+<span class="token yellow">■</span>  test-manifest.yaml:92:1    Kubernetes:PodSecurityPolicy  K8S-PSP-0001  Enabling privileged can lead to unwanted escalation from the container's process
+<span class="token yellow">■</span>  test-manifest.yaml:92:1    Kubernetes:PodSecurityPolicy  K8S-PSP-0007  To reduce risk of accessing files outside of an allowed paths, it's best to make them read only
 <span class="token blue bold">Summary:</span>
   <span class="token red bold">10 suggestions found</span>
   <span class="token yellow">■</span> 3 info - <span class="token purple">■</span> 5 warning - <span class="token red">■</span> 2 error
 ```
 
-The tabbed output supports the `--no-color` global flag, but it pretty much
+The table output supports the `--no-color` global flag, but it pretty much
 defeats its purpose!
 
 ## Best practice examples with `extended`
 
 When running a CLI scan, the resulting suggestions can be displayed
 with an optional example of a best practice to be applied. To do so, you'll
-need to run the `scan` command with the specific `extended` format. 
+need to run the `scan` command with the specific `extended` format.
 The CLI will output the list of suggestions with examples, as well as a
 recap summary:
 
@@ -152,7 +152,7 @@ spec:
       maxSurge: 2        # how many pods we can add at a time
       maxUnavailable: 0  # maxUnavailable define how many pods can be unavailable
                          # during the rolling update
-    
+
 
 <span class="token blue bold">Summary:</span>
   <span class="token red bold">4 suggestions found</span>
