@@ -7,7 +7,7 @@ type: doc
 ---
 ## reliably slo report
 
-Report my slo metrics
+generate the SLOs report
 
 ### Synopsis
 

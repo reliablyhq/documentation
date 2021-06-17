@@ -29,6 +29,8 @@ A collection of functions to configure and use an SLO
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
+* [reliably slo agent](/docs/reference/cli/reliably-slo-agent/)	 - runs in agent mode sending SLIs to Reliably
 * [reliably slo init](/docs/reference/cli/reliably-slo-init/)	 - initialise the slo portion of the manifest
-* [reliably slo report](/docs/reference/cli/reliably-slo-report/)	 - Report my slo metrics
+* [reliably slo report](/docs/reference/cli/reliably-slo-report/)	 - generate the SLOs report
+* [reliably slo sync](/docs/reference/cli/reliably-slo-sync/)	 - synchronize the objectives from your manifest with Reliably
 
