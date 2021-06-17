@@ -2,7 +2,11 @@
 title: Sending custom indicators
 excerpt: Learn how to send indicators to Reliably directly, without using Reliably tools like the CLI or agent.
 categories: ["guides", "how-it-works"]
+<<<<<<< HEAD
 status: draft
+=======
+status: published
+>>>>>>> b0c3b3c09e861b56b5bc2f9a126094f81c693963
 type: overview
 ---
 
@@ -22,7 +26,11 @@ There are a couple of you'll need to know before you try to send an `indicator` 
 
 * An `indicator` must match the `indicatorSelector` of an `objective` in order for calculation and behaviour be triggered. This is done by having the `labels` of the `indicator` match the fields in the `indicatorSelector` of the `objective`.
 * An `indicator` must have a valid time window. Normally this window is defined by an `objective`, but that is not a true requirement.
+<<<<<<< HEAD
 * the `percent` value must be a number between 0 and 100.
+=======
+* The `percent` value must be a number between 0 and 100.
+>>>>>>> b0c3b3c09e861b56b5bc2f9a126094f81c693963
 
 ### Matching Indicators to Objectives
 
