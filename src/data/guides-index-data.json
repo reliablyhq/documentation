@@ -19,8 +19,8 @@
   "slo-links": {
     "links": [
       {
-        "title": "Define SLOs",
-        "link": "/guides/slo/define-slos/"
+        "title": "Send custom indicators",
+        "link": "/guides/slo/sending-custom-indicators/"
       },
       {
         "title": "Generate SLO reports",

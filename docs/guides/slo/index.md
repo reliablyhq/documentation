@@ -14,6 +14,7 @@ import BigLink from '~/components/BigLink.vue';
 import IconDefine from '~/assets/images/icons/edit.svg';
 import IconSLO from '~/assets/images/icons/activity.svg';
 import IconLiveSLO from '~/assets/images/icons/watch.svg';
+import IconUpload from '~/assets/images/icons/upload-cloud.svg';
 
 import data from '~/data/slo-index-data.json'
 
@@ -130,6 +131,15 @@ Generate actionable reports.
       <IconLiveSLO />
     </template>
     <p>Monitor your SLO's live and generate near realtime reports.</p>
+  </BigLink>
+  <BigLink to="/guides/slo/sending-custom-indicators/" :external="false" :dark="true">
+    <template v-slot:header>
+      Send Custom Indicators
+    </template>
+    <template v-slot:icon>
+      <IconUpload />
+    </template>
+    <p>Learn how to send indicators to Reliably directly, without using Reliably tools like the CLI or agent.</p>
   </BigLink>
 </MarkdownTwoColumns>
 
