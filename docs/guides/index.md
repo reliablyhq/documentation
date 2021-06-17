@@ -34,14 +34,14 @@ import data from '~/data/guides-index-data.json';
     <p>Discover the Reliably ecosystem, and how its elements work together.</p>
   </BigLink>
 
-  <BigLink to="/guides/scan-infrastructure/kubernetes-manifest/" :external="false" :dark="true">
+  <BigLink to="/guides/slo/define-slos/" :external="false" :dark="true">
     <template v-slot:header>
-      Scan a Kubernetes Manifest
+      Define Service Level Objectives
     </template>
     <template v-slot:icon>
       <IconScan />
     </template>
-    <p>Use the Reliably CLI to scan a Kubernetes manifest and make your infrastructure more reliable in minutes.</p>
+    <p>Learn how to use the Reliably CLI to define your SLOs.</p>
   </BigLink>
 
 

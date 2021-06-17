@@ -10,6 +10,9 @@
 - title: Live SLO reports
   link: /guides/slo/live-reporting/
   sub: true
+- title: Send custom indicators
+  link: /guides/slo/sending-custom-indicators/
+  sub: true
 
 - title: Scan your Infrastructure
   link: /guides/scan-infrastructure/
