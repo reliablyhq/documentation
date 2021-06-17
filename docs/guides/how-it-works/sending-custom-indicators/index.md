@@ -67,8 +67,22 @@ You'll also need to send an auth token.
 
 ### Sending with `curl`
 
-todo: write an example here...
-
-### Sending with `powershell`
-
-todo: write an example here...
+```bash
+RELIABLY_DATA=`{
+    "Metadata": {
+        "Labels": {
+            "warehouse": "uk1",
+            "product_category": "soft toys"
+        }
+    },
+    "From": "2021-01-01T00:00:00Z",
+    "To": "2021-02-01T00:00:00Z",
+    "Value": 99.35
+}`
+```
+```bash
+ENDPOINT = https://api.reliably.com/entities/v1/$RELIABLY_ORG/indicators
+```
+```bash
+curl -x PUT -d $RELIABLY_DATA -H "Authorization: bearer $RELIABLY_TOKEN" $ENDPOINT
+```
