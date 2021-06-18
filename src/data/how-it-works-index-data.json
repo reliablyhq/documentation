@@ -19,6 +19,10 @@
     {
       "label": "API",
       "link": "/guides/how-it-works/api/"
+    },
+    {
+      "label": "Manifest Migration",
+      "link": "/guides/how-it-works/migrate-manifest/"
     }
 
   ]

@@ -12,37 +12,47 @@ import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 
 ## YAML manifest
 
-Service Levels Objectives in Reliably are defined in a `reliably.yaml` manifest file. Below is an example manifest defining two services, http-api and products-api, each with its own SLO.
+Service Levels Objectives in Reliably are defined in a `reliably.yaml` manifest file. Below is an example manifest defining two objectives, api-availability and api-latency, each with its own SLO.
 
 ```yaml
-services:
-- name: http-api
-  service-levels:
-  - name: 99% availability over 1 hour
-    type: availability
-    slo: 99
-    sli:
-    - id: arn:partition:service:region:account-id:resource-id
-      provider: aws
-    window: PT1H
-- name: products-api
-  service-levels:
-  - name: 99.5% of products API requests under 200ms
-    type: latency
-    criteria:
-      threshold: 200ms
-    slo: 99.5
-    sli:
-    - id: project-id/google-cloud-load-balancers/resource-id
-      provider: gcp
-    window: PT24H
+apiVersion: reliably.com/v1
+kind: Objective
+metadata:
+  labels:
+    name: api-availability
+    service: reliably-api
+spec:
+  indicatorSelector:
+    category: availability
+    gcp_loadbalancer_name: example-lb
+    gcp_project_id: example-id
+  objectivePercent: 99
+  window: 1h0m0s
+---
+apiVersion: reliably.com/v1
+kind: Objective
+metadata:
+  labels:
+    name: api-latency
+    service: reliably-api
+spec:
+  indicatorSelector:
+    category: latency
+    gcp_loadbalancer_name: example-lb
+    gcp_project_id: example-id
+    latency_target: 300ms
+    percentile: "99"
+  objectivePercent: 99
+  window: 24h0m0s
 ```
 
 ### Observation window
 
 SLOs are defined by the percentage of "good" events over a time window. You can use 1 hour, 1 day, 1 week, or 1 month preset observation windows, or define a custom one.
 
-Definition of custom observation windows follows the **ISO8601** standard. You can define a duration with one of the following two formats:
+To define a observation windows construct a string representing a duration with the format: `24h30m0.5s`.
+
+<!-- Definition of custom observation windows follows the **ISO8601** standard. You can define a duration with one of the following two formats:
 
 * P[n]DT[n]H[n]M
 * P[n]W
@@ -57,31 +67,33 @@ Examples:
 | P2D            | 2 days                          |
 | PT24H          | 24 hours                        |
 | PT10M          | 10 minutes                      |
-| P3DT7H36M      | 3 days, 7 hours, and 36 minutes |
+| P3DT7H36M      | 3 days, 7 hours, and 36 minutes | -->
 
 ### AWS resources
 
 Resources on AWS are identified with their Amazon Resource Name. Learn more
 about <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="_blank" rel="noopener noreferer">ARNs in the AWS documentation</a>.
 
-You will want to provide this information in the following format:
+You can provide this information in the following format:
 
 ```yaml
-resources:
-  - id: arn:partition:service:region:account-id:resource-id
-    provider: aws
+spec:
+  indicatorSelector:
+    aws_arn: arn:partition:service:region:account-id:resource-id
 ```
 
 Note the `arn:` prefix.
 
 ### Google Cloud Platform resources
 
-GCP resources are identified with a project ID, the resource type, and the resource name.
+GCP resources are identified with a project ID, and the resource name.
 
 ```yaml
-resources:
-  - id: project-XXXXXX/google-cloud-load-balancers/resource-name
-    provider: gcp
+spec:
+  indicatorSelector:
+    category: latency
+    gcp_loadbalancer_name: example-lb
+    gcp_project_id: example-id
 ```
 
 :::note
@@ -179,8 +191,8 @@ If you select the latency SLO type, you will also be prompted to provide a **thr
 <span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span> <span class="token blue">custom</span>
 <span class="token green">?</span> <span class="token bold">Define your custom observation window</span> <span class="token blue">[? for help]</span>
 ```
-
-Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows.
+<!-- 
+Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows. -->
 
 ### Service Resource
 
