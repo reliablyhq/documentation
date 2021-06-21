@@ -1,5 +1,12 @@
 <template>
   <header class="header">
+    <div v-if="displayHeaderMessage" class="header__message">
+      <div class="container">
+        <p>
+          We've updated Reliably's manifest structure. <g-link to="/guides/how-it-works/migrate-manifest/">Discover how to update your existing manifests.</g-link> <button @click="discardHeaderMessage"><span class="screen-reader-text">Discard this message></span><IconClose /></button>
+        </p>
+      </div>
+    </div>
     <div class="container">
       <div class="header__logo">
         <a href="/" class="header-logo">
@@ -33,10 +40,33 @@ query {
 
 <script>
 import ReliablyLogo from '@/assets/images/reliably-logo.svg';
+import IconClose from '~/assets/images/icons/x.svg';
 
 export default {
   components: {
     ReliablyLogo,
+    IconClose,
+  },
+  data() {
+    return {
+      displayHeaderMessage: true,
+    }
+  },
+  mounted() {
+    if (localStorage.getItem("reliablyDisplayHeaderMessage") === null) {
+      localStorage.reliablyDisplayHeaderMessage = true;
+    } else if (localStorage.reliablyDisplayHeaderMessage === "false") {
+      // because localStorage only stores strings...
+      this.displayHeaderMessage = false;
+    } else if (localStorage.reliablyDisplayHeaderMessage === "true") {
+      this.displayHeaderMessage = true;
+    }
+  },
+  methods: {
+    discardHeaderMessage() {
+      this.displayHeaderMessage = false;
+      localStorage.reliablyDisplayHeaderMessage = false;
+    }
   }
 }
 </script>
@@ -48,6 +78,7 @@ export default {
   z-index: 20;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: auto;
   padding: .2em 0;
@@ -57,6 +88,43 @@ export default {
   // @media screen and (min-width: 39.5rem) {
   //   padding-bottom: 0;
   // }
+
+  &__message {
+    width: 100%;
+
+    background-color: var(--red-500);
+
+    color: white;
+    text-align: center;
+
+    p {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      width: 100%;
+    }
+
+    a {
+      color: var(--yellow-300);
+    }
+
+    button {
+      margin-left: 1.6rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      color: white;
+
+      svg {
+        height: 1.6rem;
+        width: 1.6rem;
+
+        vertical-align: -.3rem;
+
+        stroke-width: 4;
+      }
+    }
+  }
 
   .container {
     display: flex;

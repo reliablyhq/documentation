@@ -63,6 +63,37 @@
     }
   }
 
+  &--svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.6rem;
+    width: 3.6rem;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+
+    &--light { // For darker backgrounds
+      &:hover {
+        background-color: var(--blue-600);
+      }
+    }
+
+    &--dark { // For lighter backgrounds
+      &:hover {
+        background-color: var(--blue-200);
+      }
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+
+  }
+
   &--cta {
     padding-right: calc(1.5em + 2rem);
 
