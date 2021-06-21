@@ -73,3 +73,6 @@
 - title: Rules
   link: /guides/how-it-works/rules/
   sub: true
+- title: Manifest Migration
+  link: /guides/how-it-works/migrate-manifest/
+  sub: true
