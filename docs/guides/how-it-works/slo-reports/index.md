@@ -18,7 +18,7 @@ Service Level Objectives identify what you should care about on your system.
 
 With Reliably, the manifest file is at the centre of how you manage and report against your system objectives.
 
-The [Reliably Manifest](/guides/slo/define-slos/#yaml-manifest) will identify one or more Objectives.
+The [Reliably Manifest](/docs/guides/slo/define-slos/#yaml-manifest) will identify one or more Objectives.
 
 To get you started with Objectives, you can use the Reliably `slo report init` command to generate a Reliably manifest.
 
