@@ -8,11 +8,11 @@ type: doc
 
 # Integrating with Slack
 
-Reliably now supports integration with Slack. It is possiblt to configure Realibly to send a message to Slack when the budget for a given objective is less than the threshold set in the alert configuration.
+Reliably supports integration with Slack. It is possible to configure Realibly to send a message to Slack when the budget for a given objective is less than the threshold set in the alert configuration.
 
 ## Creating an alert
 
-As with all artifcats in reliably, a the `Slack Alert Criteria` is described in `yaml`. It looks like this:
+As with all artifacts in Reliably, the `Slack Alert Criteria` is described in `yaml`. It looks like this:
 
 ```yaml
 ApiVersion: reliably/v1
@@ -35,6 +35,7 @@ Spec:
 ## Example
 
 **Objective**
+
 ```yaml
 ApiVersion: reliably/v1
 Kind: Objective
@@ -45,12 +46,13 @@ Metadata:
 Spec:
     IndicatorSelector:
         category: error_rate
-        aws_resource_arn: some-real-arn
+        aws_resource_arn: arn:partition:service:region:account-id:resource-id
     ObjectivePercent: 1
     Window: 1h
 ```
 
 **Slack Alert Criteria**
+
 ```yaml
 ApiVersion: reliably/v1
 Kind: SlackAlertCriteria
@@ -67,6 +69,7 @@ Spec:
 ```
 
 In this scenario, when an indicator is sent that matches the **Objective**, the difference between the actual performance and the objective performance will be calculated. This value is then used by the **Slack Alert Criteria** to decide if:
+
 1. the criteria matches the objective. In this case it does because the labels of the **Objective** match the **SlackAlertCriteria.Spec.ObjectiveSelector** parameters.
 2. the calculated remaining percent is less than the threshold defined in the **SlackAlertCriteria.Spec.RemainingPercentThreshold**.
 
