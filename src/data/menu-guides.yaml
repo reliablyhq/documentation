@@ -64,9 +64,6 @@
 - title: Scan Resources
   link: /guides/how-it-works/scan-resources/
   sub: true
-- title: Authentication
-  link: /guides/how-it-works/authenticate/
-  sub: true
 - title: API
   link: /guides/how-it-works/api/
   sub: true
