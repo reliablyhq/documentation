@@ -1,6 +1,6 @@
 ---
 title: Manage your organizations
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Create organizations and invite other users to collaborate with you.
 categories: ["getting-started"]
 status: published
 type: doc
@@ -11,7 +11,7 @@ In order to work collaborately with Reliably, you can have several users
 contributing to and interacting with a shared organization.
 
 While every user has its own default organization, it is possible to create
-new organizations, as well as allowing & restricting the organization access
+new organizations, as well as allowing and restricting the organization access
 to some users.
 
 ## Create a new organization
@@ -52,7 +52,7 @@ You can list all your organizations, for which you are either owner or member:
 ```
 
 :::tip Tip
-  The arrow at begin of the line indicates the current active organization.
+  The star at begin of the line indicates the current active organization.
 :::
 
 
@@ -69,8 +69,8 @@ You can delete your own organizations by running `reliably org delete`
 ```
 
 :::note Note
-You can only delete organizations for which you are owner of.
-You can not delete an organization when you are only a member.
+You can only delete organizations you own.
+You cannot delete an organization of which you are just a member.
 :::
 
 To delete in non-interactive mode, you can pass the organization name as
@@ -104,7 +104,7 @@ the organization name as command line argument: `reliably org set <org-name>`
 
 ## View your current organization
 
-To see the active organization and its details, simply run `reliably org current`.
+To see the active organization and its details, run `reliably org current`.
 
 ```reliably
 <span class="token dollar"></span>reliably org current
@@ -142,13 +142,14 @@ the `--org` flag.
 <span class="token green">✓</span> user 'reliably-ci' added to organization 'other-org'
 ```
 
-## Removes members from an organization
+## Remove members from an organization
 
-You can remove any user from your organization, by running `reliably org remove-user <username>`
-Once removed, the user will no longer have access to the organization space nor data.
+You can remove any user from your organization, by running `reliably org remove-user <username>`.
+
+Once removed, the user will no longer have access to the organization's space nor data.
 
 :::note Note
-You need to know the reliably username of the user to remove.
+You need to know the Reliably username of the user to remove them.
 :::
 
 ```reliably
