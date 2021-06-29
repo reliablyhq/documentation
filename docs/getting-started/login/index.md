@@ -82,3 +82,16 @@ Logged out of reliably.com account 'user'
 Your client session is now logged out from Reliably and you can no further
 pass commands to Reliably.
 
+## Authenticate for CI/CD
+
+When running the CLI in a CI/CD environment or simply where interactive login
+is not wanted, the CLI can be authenticated by using the `RELIABLY_TOKEN`
+environment variable.
+Using the environment variable overriddes the token stored into the config.
+
+```
+$ export RELIABLY_TOKEN=6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+Once the environment variable is defined, any command of the CLI will
+be able to make authenticated calls to Reliably.
