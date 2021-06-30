@@ -1,6 +1,6 @@
 ---
 title: How Reliably CLI works
-excerpt: Everything you can do with the Reliably CLI, and how we do it.
+excerpt: Authentication to Reliably is done through GitHub or GitLab.
 categories: ["guides", "how-it-works"]
 status: not-published
 type: doc

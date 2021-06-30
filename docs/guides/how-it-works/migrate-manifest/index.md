@@ -1,6 +1,6 @@
 ---
 title: Migrate Deprecated Manifests
-excerpt: Learn how to migrate your deprecated manifests 
+excerpt: We've made changes to the Reliably manifest format. Learn how to migrate your deprecated manifests.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

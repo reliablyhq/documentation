@@ -1,54 +1,25 @@
-<template>
-  <DocsLayout :subtitles="subtitles">
-    <div class="post mb" v-html="$page.doc.content" />
-  </DocsLayout>
-</template>
-
-<page-query>
-query ($id: ID!) {
-  doc: cliPage (id: $id) {
-    title
-    path
-    headings (depth: h1) {
-      value
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteDescription
+      siteUrl
     }
-    subtitles: headings {
-      depth
-      value
-      anchor
-    }
-    content
   }
-  metadata {
-    siteName
-    siteDescription
-    siteUrl
-  }
-}
-</page-query>
+</static-query>
 
 <script>
 export default {
-  computed: {
-    subtitles() {
-      // Remove h1, h4, h5, h6 titles
-      let subtitles = this.$page.doc.subtitles.filter(function(value, index, arr){
-        return [2,3].includes(value.depth)
-      })
-      return subtitles
-    }
-  },
   metaInfo () {
-    const siteUrl = this.$page.metadata.siteUrl
+    const siteUrl = this.$static.metadata.siteUrl
     const postPath = this.$page.doc.path
     const image = "this.$page.doc.image?.path"
     const imagePath = "/docs/images/reliably.png"
-    const description = `Reliably reference page for the ${this.$page.doc.title} CLI command.`
 
     return {
       title: this.$page.doc.title,
       meta: [
-        { key: 'description', name: 'description', content: description },
+        { key: 'description', name: 'description', content: this.$page.doc.excerpt },
         { key: 'og:url', property: 'og:url', content: `${siteUrl}${postPath}` },
         {
           key: 'og:title',
@@ -63,7 +34,7 @@ export default {
         {
           key: 'og:description',
           property: 'og:description',
-          content: description
+          content: this.$page.doc.excerpt
         },
         {
           key: 'og:image',
@@ -83,7 +54,7 @@ export default {
         {
           key: 'twitter:description',
           name: 'twitter:description',
-          content: description
+          content: this.$page.doc.excerpt
         },
         {
           key: 'twitter:card',

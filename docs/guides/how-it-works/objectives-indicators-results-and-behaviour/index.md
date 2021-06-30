@@ -1,6 +1,6 @@
 ---
 title: Objectives, Indicators, Results and Behaviour
-excerpt: Learn how objectives relate to indicators, which create results, which drive behaviour.
+excerpt: Data is at the heart of Reliably. Learn how objectives relate to indicators, which create results, which drive behaviour.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

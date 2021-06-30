@@ -8,6 +8,8 @@
 query ($id: ID!) {
   doc: docPage (id: $id) {
     title
+    path
+    excerpt
     headings (depth: h1) {
       value
     }
@@ -21,7 +23,10 @@ query ($id: ID!) {
 </page-query>
 
 <script>
+import SEO from '@/mixins/SEO'
+
 export default {
+  mixins: [SEO],
   computed: {
     links() {
       return {
@@ -39,11 +44,15 @@ export default {
       return subtitles
     }
   },
-  metaInfo () {
-    const { title, headings } = this.$page.doc
-    return {
-      title: title || (headings.length ? headings[0].value : undefined)
-    }
-  }
+  // metaInfo () {
+  //   const { title, headings } = this.$page.doc
+  //   console.log(this.$page)
+  //   return {
+  //     title: title || (headings.length ? headings[0].value : undefined),
+  //     meta: [
+  //       { name: 'description', content: this.$page.description }
+  //     ]
+  //   }
+  // }
 }
 </script>
