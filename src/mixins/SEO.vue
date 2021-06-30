@@ -14,7 +14,7 @@ export default {
     const siteUrl = this.$static.metadata.siteUrl
     const postPath = this.$page.doc.path
     const image = "this.$page.doc.image?.path"
-    const imagePath = "/docs/images/reliably.png"
+    const imagePath = `${this.$static.metadata.siteUrl}/docs/images/reliably.png`
 
     return {
       title: this.$page.doc.title,
@@ -39,7 +39,7 @@ export default {
         {
           key: 'og:image',
           property: 'og:image',
-          content: '/docs/images/reliably.png'
+          content: imagePath
         },
         {
           key: 'og:image:width',
@@ -64,7 +64,7 @@ export default {
         {
           key: 'twitter:image',
           property: 'twitter:image',
-          content: '/docs/images/reliably.png'
+          content: imagePath
         },
         {
           key: 'twitter:title',
@@ -80,7 +80,7 @@ export default {
             '@type': 'BlogPosting',
             description: this.$page.doc.description,
             headline: this.$page.doc.title,
-            image: '/docs/images/reliably.png'
+            image: imagePath
           }
         }
       ]
