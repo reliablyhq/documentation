@@ -14,7 +14,7 @@ export default {}
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
 
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 70rem) {
     grid-template-columns: repeat(auto-fit, minmax(320px, calc(50% - 2rem)));
   }
 }

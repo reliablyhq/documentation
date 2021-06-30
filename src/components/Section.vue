@@ -67,8 +67,6 @@ export default {
   &--inner {
     position: relative;
     z-index: 2;
-
-    max-width: calc(100vw - 30rem - 25px - 220px);
   }
 
   &--dark {
