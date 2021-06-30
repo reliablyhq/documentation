@@ -1,6 +1,6 @@
 ---
 title: Loging in to Reliably
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Login to Reliably with the Reliably CLI to monitor SLOs, scans Kubernetes clusters and manifests and collaborate with teammates.
 categories: ["getting-started"]
 status: published
 type: doc

@@ -1,6 +1,6 @@
 ---
 title: CLI Reference
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: The complete Reliably CLI reference.
 categories: ["reference", "cli"]
 status: published
 type: overview

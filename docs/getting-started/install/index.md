@@ -1,6 +1,6 @@
 ---
 title: Install Reliably
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Install the Reliably CLI on macOS, Linux, or Windows.
 categories: ["getting-started"]
 status: published
 type: doc
@@ -172,7 +172,6 @@ reliably --version
 You should see the current ```reliably``` cli version displayed.
 
 ### Windows 10
-
 
 #### Install with curl
 

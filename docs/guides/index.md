@@ -1,6 +1,6 @@
 ---
 title: Guides
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Our guides and examples help you make the most of Reliably to make systems more reliable.
 categories: ["guides"]
 status: published
 type: overview

@@ -1,6 +1,6 @@
 ---
 title: How Reliably CLI creates SLO Reports
-excerpt: How Reliably creates SLO Reports.
+excerpt: How Reliably creates SLO Reports from your manifests.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc

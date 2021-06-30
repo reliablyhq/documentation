@@ -1,6 +1,6 @@
 ---
 title: Where do the rules come from?
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: Reliably relies on sets of rules to identify patterns in your resources that might result in unreliable behaviour for your system.
 categories: ["guides", "how-it-works"]
 status: published
 type: doc
