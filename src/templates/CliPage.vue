@@ -42,7 +42,7 @@ export default {
     const siteUrl = this.$page.metadata.siteUrl
     const postPath = this.$page.doc.path
     const image = "this.$page.doc.image?.path"
-    const imagePath = `${this.$static.metadata.siteUrl}/docs/images/reliably.png`
+    const imagePath = `${this.$page.metadata.siteUrl}/docs/images/reliably.png`
     const description = `Reliably reference page for the ${this.$page.doc.title} CLI command.`
 
     return {
