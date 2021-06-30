@@ -2,7 +2,7 @@
 title: How Reliably CLI works
 excerpt: Everything you can do with the Reliably CLI, and how we do it.
 categories: ["guides", "how-it-works"]
-status: published
+status: not-published
 type: doc
 ---
 
