@@ -75,6 +75,22 @@ See how to [set an environment variable in a project]
 
 You can see how to [retrieve your access token](/docs/getting-started/login/#retrieve-your-access-token/).
 
+## Setup your Reliably organization as environment variable
+
+You shall define the organization to work on, when using the CLI, by defining
+the `RELIABLY_ORG` as an environment variable.
+
+To retrieve your currently active organization, run:
+`reliably org current`.
+
+:::note Note
+  You can use either the organization ID or name as `RELIABLY_ORG` value.
+:::
+
+:::tip Tip
+  If not specified, the logged in user's default organization will be used.
+:::
+
 ## Create the Reliably job
 
 We will now define Reliably as a job, before adding it to a
@@ -142,6 +158,7 @@ jobs:
       - image: ghcr.io/reliablyhq/cli/cli:latest
         environment:
           RELIABLY_TOKEN: $RELIABLY_TOKEN
+          RELIABLY_ORG: $RELIABLY_ORG
     working_directory: /home
     steps:
       - checkout # check out the code in the project directory

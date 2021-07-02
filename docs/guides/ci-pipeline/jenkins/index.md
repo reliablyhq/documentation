@@ -61,6 +61,22 @@ You can see how to [retrieve your access token](/docs/getting-started/login/#ret
 
 ![Inject Reliably token as env var](./images/jenkins-inject-password.png)
 
+## Setup your Reliably organization
+
+You shall define the organization to work on, when using the CLI, by defining
+ `RELIABLY_ORG` as environment variable.
+
+To retrieve your currently active organization, run:
+`reliably org current`.
+
+:::note Note
+  You can use either the organization ID or name as `RELIABLY_ORG` value.
+:::
+
+:::tip Tip
+  If not specified, the logged in user's default organization will be used.
+:::
+
 ### Add Reliably as a Build step
 
 In the new job display that appears next select the Build tab, then select *Execute Shell* from the *Add Build Step* dropdown menu

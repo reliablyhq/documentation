@@ -45,6 +45,12 @@ https://github.com/OWNER/REPO/settings/secrets/actions/new
 
 You can retrieve your access token by running:
 $ reliably auth status --show-token
+
+You must define RELIABLY_ORG as a Secret in your repository settings:
+https://github.com/reliablyhq/cli/settings/secrets/actions/new
+
+You can retrieve your current organization information by running:
+$ reliably org current
 ```
 
 ## Specify the platform
