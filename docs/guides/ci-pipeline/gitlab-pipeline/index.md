@@ -45,6 +45,22 @@ You can see how to [retrieve your access token](/docs/getting-started/login/#ret
   or the CLI will not be able to work with merge requests from branches.
 :::
 
+## Setup your Reliably organization as Variable
+
+You shall define the organization to work on, when using the CLI, by defining
+the `RELIABLY_ORG` environment variable as a masked variable.
+
+To retrieve your currently active organization, run:
+`reliably org current`.
+
+:::note Note
+  You can use either the organization ID or name as `RELIABLY_ORG` value.
+:::
+
+:::tip Tip
+  If not specified, the logged in user's default organization will be used.
+:::
+
 ## Add GitLab CI/CD to your repository
 
 For this walkthrough, we're going to add a CI/CD Pipeline to a new GitLab
@@ -170,7 +186,7 @@ going to define rule that will determine when the Reliably job will be included.
 
 ```yaml
   rules:
-    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN
+    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN && $RELIABLY_ORG
       changes:
         - "manifests/*.{yaml}"
 ```
@@ -181,6 +197,7 @@ The rules in this case are:
 * If those changes are to `.yaml` files
 * In the `manifests` folder in the repository
 * If the `RELIABLY_TOKEN` variable is defined
+* If the `RELIABLY_ORG` variable is defined
 
 Then the job will be included.
 
@@ -241,7 +258,7 @@ code_quality:
     expose_as: 'Code Quality Report'
     paths: [gl-code-quality-report.json]
   rules:
-    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN
+    - if: $CI_COMMIT_BRANCH && $RELIABLY_TOKEN && $RELIABLY_ORG
       changes:
         - "manifests/*.{yaml}"
 ```

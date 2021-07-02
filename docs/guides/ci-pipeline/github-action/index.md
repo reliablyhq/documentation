@@ -35,6 +35,22 @@ or follow the [documentation](https://docs.github.com/en/actions/reference/encry
 We'll name our secret `RELIABLY_HOST`, as used in the workflow example.
 You can choose another one of your liking but remember to change it in the workflow accordingly.
 
+## Setup your Reliably organization as Secret
+
+You shall define the organization to work on, when using the CLI, by defining
+the `RELIABLY_ORG` environment variable as a secret.
+
+To retrieve your currently active organization, run:
+`reliably org current`.
+
+:::note Note
+  You can use either the organization ID or name as `RELIABLY_ORG` value.
+:::
+
+:::tip Tip
+  If not specified, the logged in user's default organization will be used.
+:::
+
 ## Add a new workflow to your repository
 
 For this walkthrough we're going to add a fresh workflow to a repository, however
@@ -52,6 +68,7 @@ on:
 
 env:
   RELIABLY_TOKEN: ${{ secrets.RELIABLY_TOKEN }}
+  RELIABLY_ORG: ${{ secrets.RELIABLY_ORG }}
 
 jobs:
   reliably:
@@ -101,6 +118,7 @@ on:
 
 env:
   RELIABLY_TOKEN: ${{ secrets.RELIABLY_TOKEN }}
+  RELIABLY_ORG: ${{ secrets.RELIABLY_ORG }}
 
 jobs:
   reliably:
