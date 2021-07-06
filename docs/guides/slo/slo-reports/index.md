@@ -1,5 +1,5 @@
 ---
-title: Generate SLO reports
+title: Generate SLO Reports
 excerpt: Use the Reliably CLI to generate Service Level Objective reports.
 categories: ["guides", "slo"]
 status: published
@@ -8,20 +8,10 @@ type: doc
 import AsciiPlayer from '~/components/AsciiPlayer.vue'
 import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 
-# Generate Service Level Objectives reports
+# Generate SLO Reports
 
-Now that you have [defined your SLOs](/docs/guides/slo/define-slos/), you can use the
-Reliably CLI to query your resources for SLIs and generate SLO reports.
+Now that you have defined objectives and generated indicators, you can use the Reliably CLI to view your SLO report. This is done with the `reliably slo report` command.
 
-This is done with the `reliably slo report` command.
-
-:::note
-In order for the Reliably CLI to be able to query your service provider, you
-will need to be authenticated.
-
-* [Authenticating with AWS](#aws)
-* [Authenticating with GCP](#google-cloud-platform)
-:::
 ## Usage
 
 ```console
@@ -31,27 +21,32 @@ reliably slo report
 
 <AsciiPlayer id="409053" />
 
-The `reliably slo report` command will by default use the `reliably.yaml` file in your current directory.  You can specify an alternative manifest file with the `-m` flag. If there is no local manifest file specified Relaibly will use the current manifest for your organisation on the Relaibly server.
+The `reliably slo report` command will by default provide results for each objective in your organization. There are two ways to filter the report.
 
-Once a manifest is identfied the Relaibly CLI will fetch data from your service providers, agregate the data if you have
-several services defined as indicators for your SLO, and return error rates and latency numbers for the duration window specified in your manifest. The report will show the details of how you service is performing against those objectives.
 
-### Specify YAML file
+### Selector Filter
 
-Reliably will look for a file named `reliably.yaml` in your  working directory.
-You tell the CLI to use another file by specifying its path specified with the
-`--manifest` or `-m` flag.
+- You may filter by using the `-l, --selector` flag with a selector such as `service=example_api,category=latency`.
 
 ```console
-reliably slo report --manifest path/to/file.yaml
+reliably slo report -l service=example_api,category=latency
 ```
 <CopyToClipboard />
 
-## Output format
+### Manifest Filter
+
+- Additional filtering can be done with a manifest file and the flag `-m`. This filters your report to only view the objectives defined in your manifest. 
+
+```console
+reliably slo report -m reliably.yaml
+```
+<CopyToClipboard />
+
+## Output Format
 
 You can select between output formats with the `--format` or `-f` flag.
 
-### Table output
+### Table Output
 
 Table output is the default format for SLO reports.
 
@@ -170,8 +165,8 @@ The How it Works Guide on [SLO Report Templates] fully explains how to create yo
 
 [SLO Report Templates]: /docs/guides/how-it-works/report-templates/
 
-
-
+<!-- This needs to be moved to another area -->
+<!-- 
 ## Provider Authentication
 
 For the CLI to be able to connect to your provider and fetch data, you will need
@@ -203,7 +198,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/my-key.json"
 
 :::note
 To fetch the required data, your service account will need a specific permission: "Monitoring Viewer"
-:::
+::: -->
 
 ## Reference
 
