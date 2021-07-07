@@ -35,7 +35,7 @@ import data from '~/data/slo-index-data.json'
 * [Measure and Report your SLOs]
 * [Live Report on your SLOs]
 
-[Define SLOs with the Reilaibly CLI]: /docs/guides/slo/define-slos/
+[Define SLOs with the Reliably CLI]: /docs/guides/slo/define-slos/
 [Measure and Report your SLOs]: /docs/guides/slo/slo-reports/
 [Live Report on your SLOs]: /docs/guides/slo/live-reporting/
 
