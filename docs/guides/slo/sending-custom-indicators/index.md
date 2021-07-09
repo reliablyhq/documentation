@@ -35,8 +35,8 @@ metadata:
     labels:
         name: my fulfilled orders objective
 spec:
-    target: 99.5
-    window: 1month
+    objectivePercent: 99.5
+    window: 1d
     indicatorSelector:
         warehouse: uk1
         product_category: soft toys
@@ -54,7 +54,7 @@ metadata:
 spec:
     from: 2021-01-01T00:00:00Z
     to: 2021-02-01T00:00:00Z
-    percentage: 99.35
+    percent: 99.35
 ```
 
 Since the `labels` of the `indicator` matches the properties of the `indicatorSelector` of the `objective` we are able to say that the `indicator` matches the `objective`, and we can go ahead and process the `result` the comparison (which in this case produces a delta of `-0.15%`).
@@ -69,19 +69,21 @@ You'll also need to send an auth token.
 
 ```bash
 RELIABLY_DATA=`{
-    "Metadata": {
-        "Labels": {
+    "metadata": {
+        "labels": {
             "warehouse": "uk1",
             "product_category": "soft toys"
         }
     },
-    "From": "2021-01-01T00:00:00Z",
-    "To": "2021-02-01T00:00:00Z",
-    "Value": 99.35
+    "spec": {
+        "from": "2021-01-01T00:00:00Z",
+        "to": "2021-02-01T00:00:00Z",
+        "percent": 99.35
+    }
 }`
 ```
 ```bash
-ENDPOINT = https://api.reliably.com/entities/v1/$RELIABLY_ORG/indicators
+ENDPOINT = https://api.reliably.com/entities/$RELIABLY_ORG/reliably.com/v1/indicator
 ```
 ```bash
 curl -x PUT -d $RELIABLY_DATA -H "Authorization: bearer $RELIABLY_TOKEN" $ENDPOINT
