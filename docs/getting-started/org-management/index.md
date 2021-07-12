@@ -10,9 +10,8 @@ type: doc
 In order to work collaborately with Reliably, you can have several users
 contributing to and interacting with a shared organization.
 
-While every user has its own default organization, it is possible to create
-new organizations, as well as allowing and restricting the organization access
-to some users.
+While all users have their own default organization, it is possible to create
+new organizations, as well as allowing and restricting the organization access to some users.
 
 ## Create a new organization
 
