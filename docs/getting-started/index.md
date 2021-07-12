@@ -54,14 +54,5 @@ import data from '~/data/getting-started-index-data.json'
     </template>
     <p>Authenticate the Reliably CLI with Reliably.com</p>
   </BigLink>
-  <BigLink to="/getting-started/kubectl-plugin/" :external="false" :dark="true">
-    <template v-slot:header>
-      Kubectl Plugin
-    </template>
-    <template v-slot:icon>
-      <IconPlugin />
-    </template>
-    <p>Run Reliably as a kubectl Plugin</p>
-  </BigLink>
 </MarkdownTwoColumns>
 

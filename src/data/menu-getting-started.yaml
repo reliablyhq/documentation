@@ -10,6 +10,3 @@
 - title: Manage your organizations
   link: /getting-started/org-management/
   sub: false
-- title: Kubectl Plugin
-  link: /getting-started/kubectl-plugin/
-  sub: false
